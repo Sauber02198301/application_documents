@@ -132,6 +132,7 @@ body {
 .img_logoHeader_style {
     border-radius: 50%;
     border: inset 3px rgb(100 112 177 / 68%);
+    box-shadow: 6px 5px 2px 0px #000000c7, 3px 3px 12px 3px #ffffff, 6px -4px 15px 1px #8e455c, 3px 2px 14px 9px rgb(189 90 123 / 79%), -8px 0px 0px 0px #000000, -4px -2px 7px 2px #613c3c6e, 4px 3px 11px 4px #fafafa, 2px 3px 16px 13px rgb(0 0 0 / 85%);
 }
 
 .main_section {
@@ -174,6 +175,9 @@ body {
     gap: 30px;
     margin: 30px;
     padding: 25px;
+    height: 100%;
+    justify-content: center;
+    box-shadow: 6px 5px 2px 0px #000000c7, 3px 3px 12px 3px #ffffff, 7px 6px 15px 4px #8e455c, 3px 2px 14px 9px rgb(189 90 123 / 79%), 1px 1px 7px 0px #000000b5, -4px -2px 7px 2px #613c3c6e, 4px 3px 11px 4px #fafafa, 2px 3px 16px 13px rgb(0 0 0 / 85%);
 }
 
 .display_childStyle {
