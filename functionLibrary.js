@@ -68,6 +68,17 @@ const functionsFactory = {
 
     },
 
+    domTerminationFunction(html_tag, callInstruction) {
+        /*
+            Legende:
+            html_tag = DOM_Section was entfernt werden soll.
+            callInstruction = welches loeschen ausgefuehrt werden soll
+
+            (.innerHTML ='', bei gezielten terminations benutzt man die Methoden removeChild() diese erwartet die position die entfernt werden soll, 
+            genauso gibt dazu diese keyWords "firstChild" || "lastChild", in verbindung mit removeChild() eine starke kombination).
+        */
+    },
+
     functionsCheck(functionsName, valueContent, domArea) {
         /* 
             Legende
@@ -303,6 +314,27 @@ const functionsFactory = {
 
     animationFunction(functionsName, objectText, html_tag) {
         console.log(functionsName, objectText, html_tag);
+        /*
+            Legende
+
+            functionsName = die aufzurufende function's Name der mit functionsCheck ueberprueft wird,
+            objectText = das object mit den auszulesenden Werten zum anzeigen oder verarbeiten.
+            html_tag = Das Ziel DOM
+
+        */
+        html_tag.addEventListener('transitionend', (/* eventuel der auszufuehrende functions aufruf */) => {
+            if (html_tag.innerHTML.trim() !== '') {
+                //opacity & transition ausblenden lassen  und dann leeren 
+                console.log('dom ist befuelt');
+                html_tag.innerHTML = '';
+                this.functionsCheck(functionsName, objectText, html_tag);
+            } else {
+                // wenn leer im dom_setzen und dann wieder mit opacity und transition einblenden lassen
+
+                console.log('dom ist leer');
+                this.functionsCheck(functionsName, objectText, html_tag);
+            };
+        }, { once: true });
 
         if (html_tag.innerHTML.trim() !== '') {
             console.log('dom ist befuelt');
@@ -345,9 +377,7 @@ const functionsFactory = {
             legende 
             content = das zu bearbeitende Object,
             dom_content = Ziel_DOM
-
         */
-
 
         if (!content || !dom_content) { return console.error('undefined or null'); };
         if (typeof content === 'object' && Array.isArray(content)) { return console.error('this is a Array'); };
@@ -390,6 +420,17 @@ const functionsFactory = {
 
     activeControlSlideShow(contentObject, DOM_content) {
         console.log(contentObject, DOM_content);
+        /*
+            Legende 
+            contentObject = das auszulesende Object,
+            DOM_contend = Ziel DOM
+
+            Notiz es kann sein wenn ich die function einmal durch den Boolean beende das hier eventuell ein Fehler 
+            aufkommen kann also muss mann das hier im spaeteren verlauf sehen. Wenn ich den Text content anhalten werde weil ich den ganzen inhalt terminieren muss. 
+            Wegen des aufrufen eines anderem Programm deswegen im hinterkopf behalten den DOM display_sectionCenter alles separat halten und eine eigen boolean function hier fuer erstellen!
+            Das ist der Hauptanzeige Container fuer die Programme
+        
+        */
 
         if (typeof contentObject === 'object' && Array.isArray(contentObject)) { return console.error('this is a Array'); };
         const { slideShow_intro, intervalReset, objectContent, functionsName, classList } = contentObject;
@@ -405,10 +446,16 @@ const functionsFactory = {
 
     slideShowInterval(active, functionsName, childContent, dom_content) {
         console.log(active, functionsName, childContent, dom_content);
-
+        /*
+            Legende SetInterval 
+            active = boolean wert zum aktivieren, 
+            functionsName = der functions Aufruf Name "string",
+            childContent = kinder Object,
+            dom_content = Der Ziel DOM_Bereich
+        */
         const copySlideInterval = structuredClone(slideShowImportValue);
         let { index, counter } = copySlideInterval;
-        index = childContent.length -1;
+        index = childContent.length - 1;
         console.log(index);
         let = childContentCounter = childContent[0];
         this.functionsCheck(functionsName, childContentCounter, dom_content);
@@ -421,7 +468,7 @@ const functionsFactory = {
                 counter = 0;
                 childContent[counter];
                 console.log(childContent[counter]);
-               this.animationFunction(functionsName, childContent[counter], dom_content);
+                this.animationFunction(functionsName, childContent[counter], dom_content);
             } else {
                 console.log(childContent[counter]);
                 counter++;
@@ -429,7 +476,7 @@ const functionsFactory = {
                 console.log(counter);
                 console.log(childContent[counter]);
             };
-        }, 40000);
+        }, 4000);
 
     },
 
