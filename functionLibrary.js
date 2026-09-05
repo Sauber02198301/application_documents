@@ -429,7 +429,7 @@ const functionsFactory = {
                 console.log(counter);
                 console.log(childContent[counter]);
             };
-        }, 10000);
+        }, 40000);
 
     },
 
