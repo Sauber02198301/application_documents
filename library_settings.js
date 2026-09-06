@@ -72,20 +72,28 @@ const createTextNode = {
                 "Mit freundlichen Grüßen",
                 "Dennis Nickel"
             ],
+        },
+        {
+            "classList": "textSection_three",
+            "createTextNode": [
+                "Erfolg ist kein Glück,",
+                "sondern nur das Ergebnis von Blut, Schweiß und Tränen.",
+                "— Kontra K"
+            ],
         }
     ],
 
-    "instaContent": { "classList": "icon_Insta_css", /*"createTextNode": "&#xf16d;"*/ },// insta
-    "gitHubContent": { "classList": "icon_gitHub_css", /*"createTextNode": "&#xf092;"*/ }, // gitHub
-    "btn_kontra_k": { "classList": "dropBtn_class", "createTextNode": "Kontra K - Erfolg ist kein Glück" },
-    "btn_lebenslauf": {"classList": "dropBtn_class", "createTextNode": "Kontra K - Erfolg ist kein Glück"}
+"instaContent": { "classList": "icon_Insta_css", /*"createTextNode": "&#xf16d;"*/ },// insta
+"gitHubContent": { "classList": "icon_gitHub_css", /*"createTextNode": "&#xf092;"*/ }, // gitHub
+"btn_lebenslauf": { "classList": "dropBtnText_class", "createTextNode": "Lebenslauf" },
+"btn_bdi_II": { "classList": "dropBtnText_class", "createTextNode": "BDI-II Depressionstest" }
 };
 
 const btn_elements = {
     // {"classList": "", "dataset": { "action": "" }, "textSpanContent_function": { "createTextNode":"" }}
     "dropDownBtn": [
-        { "classList": "btn_dropDown_css", "dataset": { "action": "kontra_k" }, "textSpanContent_function": { "createTextNode": "btn_kontra_k" } },
-        { "classList": "btn_dropDown_css", "dataset": { "action": "lebenslauf" }, "textSpanContent_function": { "createTextNode": "btn_lebenslauf" } }
+        { "classList": "btn_dropDown_css", "dataset": { "action": "lebenslauf" }, "textSpanContent_function": { "createTextNode": "btn_lebenslauf" } },
+        { "classList": "btn_dropDown_css", "dataset": { "action": "bdi_II" }, "textSpanContent_function": { "createTextNode": "btn_bdi_II" } }
     ],
 
     "contactBtn": { "classList": "btn_contactFooter_css", "dataset": { "action": "contact_id" }, "chipImg_Text_createrFunction": { "createTextNode": "contact_text" } }
@@ -252,15 +260,15 @@ const classList = {
     ],
 
     "contact_section_css": [
-        {"add": "flex_container"},
-        {"add": "footer_btn_section"},
-        {"add": "contactBoxStyle"}
+        { "add": "flex_container" },
+        { "add": "footer_btn_section" },
+        { "add": "contactBoxStyle" }
     ],
 
     "btn_contactFooter_css": [
-        {"add": "flex_container"},
-        {"add": "btn_secondary"},
-        {"add": "contactBtnStyle"}
+        { "add": "flex_container" },
+        { "add": "btn_secondary" },
+        { "add": "contactBtnStyle" }
     ],
 
     "anchorFooter_css": [
@@ -282,9 +290,15 @@ const classList = {
     ],
 
     "btn_dropDown_css": [
-        {"add": "flex_container"},
-        {"add": "btn_secondary"},
-        {"add": "btnStyle_dropdownBtn"}
-    ]
+        { "add": "flex_container" },
+        { "add": "btn_secondary" },
+        { "add": "btnStyle_dropdownBtn" }
+    ],
+
+    "dropBtnText_class": [
+        { "add": "font_standardValue" },
+        { "add": "btn_primaryText" },
+        { "add": "navBtn_text" }
+    ],
 
 }

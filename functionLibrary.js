@@ -335,9 +335,9 @@ const functionsFactory = {
                     default: break;
 
                 };
-                arrayText.push(structuredClone(newTextObject))
+                
             });
-
+            arrayText.push(structuredClone(newTextObject))
             this.objectRendering_function(arrayText, html_tag);
             return;
         };
