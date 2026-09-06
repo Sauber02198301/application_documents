@@ -50,7 +50,7 @@ const mainContent = {
                                     "active_automaticSlideShow": {
                                         "textslideContent_function": {
                                             "createTextNode": "mainText_intro"
-                                        },  
+                                        },
                                         "slideShow_intro": true
                                     }
                                 }
@@ -67,7 +67,16 @@ const mainContent = {
             {
                 "createElement": "footer_tag",
                 "classList": "footer_css",
-                //"childItems": null
+                "childItems": [
+                    {
+                        "createElement": "div_tag",
+                        "classList": "logo_container_css",
+                        "hyperlinkContent_function": {
+                            "anchor": "anchorFooter",
+                        },
+
+                    }
+                ]
             }
         ]
     }

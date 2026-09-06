@@ -74,7 +74,12 @@ const createTextNode = {
             ],
         }
     ],
+
+    "instaContent": { "classList": "icon_footer_css", "createTextNode": "&#xf16d;" },// insta
+    "gitHubContent": { "classList": "icon_footer_css", "createTextNode": "&#xf092;" } // gitHub
 };
+
+
 
 const toggleEvent = {
     "webside_toggle": false,
@@ -97,6 +102,18 @@ const slideShow_content = {
     "intervalReset": null,
     "slideShow_intro": false,
     "classList": null,
+};
+
+const anchor = {
+    "anchorFooter": [
+        { "classList": "anchorFooter_css", "href": "insta", "textSpanContent_function": { "createTextNode": "instaContent" } },// insta
+        { "classList": "anchorFooter_css", "href": "gitHub", "textSpanContent_function": { "createTextNode": "gitHubContent" } } // gitHub
+    ],
+};
+
+const href = {
+    "insta": "https://www.instagram.com/sauber0183/?hl=de",
+    "gitHub": "https://github.com/Sauber02198301"
 };
 
 const src = {
@@ -210,6 +227,25 @@ const classList = {
         { "add": "font_standardValue" },
         { "add": "introText_style" },
         { "add": "setThree" }
-    ]
+    ],
+
+    "logo_container_css": [
+        { "add": "flex_container" },
+        { "add": "footer_icon_section" },
+        { "add": "iconContainerStyle" }
+    ],
+
+    "anchorFooter_css": [
+        { "add": "flex_container" },
+        { "add": "anchor_settings" },
+        { "add": "anchor_footerStyle" }
+    ],
+
+    "icon_footer_css": [
+        { "add": "block_container" },
+        { "add": "font_standardValue" },
+        { "add": "fa" }
+
+    ],
 
 }

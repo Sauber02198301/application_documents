@@ -1,0 +1,40 @@
+
+    
+"animationFunction": {
+                                            "fadeOut": {
+                                                "fadeBoolean": false,
+                                                "style": {
+                                                    "opacity": 0,
+                                                },
+                                                "domTerminationFunction": {
+                                                    "innerHTML": "",
+                                                },
+                                            },
+                                            "fadeIn": {
+                                                "fadeBoolean": true,
+                                                "style": {
+                                                    "opacity": 1
+                                                },
+                                            },
+                                        },
+                                    
+if (html_tag.innerHTML.trim() !== '') {
+            console.log('dom ist befuelt');
+            html_tag.innerHTML = '';
+            this.functionsCheck(functionsName, objectText, html_tag);
+        } else {
+            console.log('dom ist leer');
+            this.functionsCheck(functionsName, objectText, html_tag);
+        };
+        if (html_tag.innerHTML.trim() !== '') {
+            console.log('dom ist befuelt');
+            html_tag.innerHTML = '';
+            this.functionsCheck(functionsName, objectText, html_tag);
+        } else {
+            console.log('dom ist leer');
+            this.functionsCheck(functionsName, objectText, html_tag);
+        };
+
+        const altKey = this.libraryContent(keyword, propertyValue);
+                        this.assignment_altElement(keyword, altKey, html_tag);
+                        break

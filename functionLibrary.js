@@ -25,14 +25,12 @@ const functionsFactory = {
                         this.assignmentStatementCSS(keyword, propertyValue, html_tag);
                         break;
                     case 'src':
+                    case 'alt':
+                    case 'href':
                         const srcKey = this.libraryContent(keyword, propertyValue);
                         console.log(srcKey);
                         this.assignment_srcElement(keyword, srcKey, html_tag);
                         break;
-                    case 'alt':
-                        const altKey = this.libraryContent(keyword, propertyValue);
-                        this.assignment_altElement(keyword, altKey, html_tag);
-                        break
                     case 'dataset':
                         console.log(keyword, propertyValue);
                         this.assignment_dataset_action(keyword, propertyValue, html_tag);
@@ -50,6 +48,7 @@ const functionsFactory = {
                         break;
                     case 'textSpanContent_function':
                     case 'active_automaticSlideShow':
+                    case 'hyperlinkContent_function':
                         console.log(keyword, propertyValue);
                         this.functionsCheck(keyword, propertyValue, html_tag);
                         break;
@@ -68,15 +67,22 @@ const functionsFactory = {
 
     },
 
-    domTerminationFunction(html_tag, callInstruction) {
+    domTerminationFunction(html_tag, callInstruction, instructionValue, toExecuteObject, functionsCall) {
         /*
             Legende:
             html_tag = DOM_Section was entfernt werden soll.
             callInstruction = welches loeschen ausgefuehrt werden soll
+            instructionValue = der zu vergebene wert / tauschwert.
+            toExecute)bject = das zu bearbeitende object
+            functionsCall functions aufruf,
 
             (.innerHTML ='', bei gezielten terminations benutzt man die Methoden removeChild() diese erwartet die position die entfernt werden soll, 
             genauso gibt dazu diese keyWords "firstChild" || "lastChild", in verbindung mit removeChild() eine starke kombination).
         */
+
+
+
+
     },
 
     functionsCheck(functionsName, valueContent, domArea) {
@@ -108,6 +114,22 @@ const functionsFactory = {
         const foundContent = libraryBook[keyword][propertyValue];
         console.log(foundContent);
         return foundContent;
+    },
+
+    assignmentObjectContent(finishObject, htmlObject) {
+        /* 
+            Legende 
+            finischObject = ist der neu erstelte container,
+            htmlObject = die html_eigenschaftswerte 
+        */
+        console.log(finishObject, htmlObject);
+        if (typeof htmlObject === 'object' && Array.isArray(htmlObject)) { htmlObject.forEach((htmlObject) => this.assignmentObjectContent(finishObject, htmlObject)); return };
+
+        Object.entries(htmlObject).forEach(([keyword, valueContent]) => {
+            console.log(keyword, valueContent);
+            finishObject[keyword] = valueContent;
+        });
+        return structuredClone(finishObject);
     },
 
     assignmentCreateElement(assignmentKey, assignmentContent) {
@@ -205,7 +227,8 @@ const functionsFactory = {
         classObject.forEach((classObject) => {
             Object.entries(classObject).forEach(([classKey, className]) => {
                 console.log(classKey, className);
-                if (typeof className === 'string' && className.length < 0) { return; };
+
+                if (typeof className === 'string' && className.length <= 0) { return; };
                 html_tag[attributeClass][classKey](className);
             });
         });
@@ -265,10 +288,31 @@ const functionsFactory = {
         */
         let textContend = null;
         const arrayText = [];
-
+        const newTextObject = {
+            createElement: 'span_tag',
+        };
         Object.entries(objectContend).forEach(([textKey, textValue]) => textContend = this.libraryContent(textKey, textValue));
         console.log(textContend);
-        if (typeof textContend === 'object' && !Array.isArray(textContend)) { return console.error('this is a object'); };
+        if (typeof textContend === 'object' && !Array.isArray(textContend)) {
+
+            Object.entries(textContend).forEach(([textKey, valueKey]) => {
+                console.log(textKey, valueKey);
+                switch (textKey) {
+                    case 'classList':
+                        console.log(textKey, valueKey, newTextObject);
+                        newTextObject[textKey] = valueKey;
+                        break;
+                    case 'createTextNode':
+                        console.log(textKey, valueKey, newTextObject);
+                        newTextObject[textKey] = valueKey;
+                        arrayText.push(structuredClone(newTextObject));
+                        break;
+                    default: break;
+                };
+            });
+            this.objectRendering_function(arrayText, html_tag);
+            return;
+        };
 
         textContend.forEach((textContend) => {
             console.log(textContend);
@@ -289,7 +333,6 @@ const functionsFactory = {
         const arrayList = [];
         let cTN = {
             createElement: 'span_tag',
-
         };
         if (typeof objectContend === 'object' && Array.isArray(objectContend)) { return console.error('this is Array'); };
         Object.entries(objectContend).forEach(([textKey, valueKey]) => {
@@ -312,7 +355,39 @@ const functionsFactory = {
         this.objectRendering_function(arrayList, html_tag);
     },
 
-    animationFunction(functionsName, objectText, html_tag) {
+    hyperlinkContent_function(anchorObject, html_tag) {
+        /*
+            Legende 
+            anchorObject = das zu entpackende hyperlinkObject
+            html_tag = das Ziel DOM
+        */
+        console.log(anchorObject, html_tag, 'hyperlink');
+        const anchorArrayList = [];
+        const anchorMetaData = {
+            "createElement": "a_tag",
+
+        };
+        if (typeof anchorObject === 'object' && Array.isArray(anchorObject)) {
+            console.error('this is a array');
+            anchorObject.forEach((anchorObject) => this.hyperlinkContent_function(anchorObject, html_tag));
+            return;
+        };
+
+        Object.entries(anchorObject).forEach(([anchorKey, anchorValue]) => {
+            console.log(anchorKey, anchorValue);
+            const anchorTextContent = this.libraryContent(anchorKey, anchorValue);
+            console.log(anchorTextContent);
+            if (!Array.isArray(anchorTextContent)) { return console.error('this is array'); };
+            anchorTextContent.forEach((anchorTextContent) => {
+                console.log(anchorTextContent);
+                anchorArrayList.push(this.assignmentObjectContent(anchorMetaData, anchorTextContent));
+            });
+        });
+        console.log(anchorArrayList);
+        this.objectRendering_function(anchorArrayList, html_tag);
+    },
+
+    animation_fadeOutFunction(functionsName, objectText, html_tag) {
         console.log(functionsName, objectText, html_tag);
         /*
             Legende
@@ -322,12 +397,17 @@ const functionsFactory = {
             html_tag = Das Ziel DOM
 
         */
+        html_tag.classList.add('is-hidden');
+        html_tag.style.opacity = 0;
         html_tag.addEventListener('transitionend', (/* eventuel der auszufuehrende functions aufruf */) => {
             if (html_tag.innerHTML.trim() !== '') {
                 //opacity & transition ausblenden lassen  und dann leeren 
+
                 console.log('dom ist befuelt');
                 html_tag.innerHTML = '';
                 this.functionsCheck(functionsName, objectText, html_tag);
+                html_tag.classList.remove('is-hidden');
+                html_tag.style.opacity = 1;
             } else {
                 // wenn leer im dom_setzen und dann wieder mit opacity und transition einblenden lassen
 
@@ -335,16 +415,6 @@ const functionsFactory = {
                 this.functionsCheck(functionsName, objectText, html_tag);
             };
         }, { once: true });
-
-        if (html_tag.innerHTML.trim() !== '') {
-            console.log('dom ist befuelt');
-            html_tag.innerHTML = '';
-            this.functionsCheck(functionsName, objectText, html_tag);
-        } else {
-            console.log('dom ist leer');
-            this.functionsCheck(functionsName, objectText, html_tag);
-        };
-
 
     },
 
@@ -468,15 +538,17 @@ const functionsFactory = {
                 counter = 0;
                 childContent[counter];
                 console.log(childContent[counter]);
-                this.animationFunction(functionsName, childContent[counter], dom_content);
+                console.log(dom_content);
+                this.animation_fadeOutFunction(functionsName, childContent[counter], dom_content);
             } else {
                 console.log(childContent[counter]);
                 counter++;
-                this.animationFunction(functionsName, childContent[counter], dom_content);
+                console.log(dom_content);
+                this.animation_fadeOutFunction(functionsName, childContent[counter], dom_content);
                 console.log(counter);
                 console.log(childContent[counter]);
             };
-        }, 4000);
+        }, 40000);
 
     },
 
