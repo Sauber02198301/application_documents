@@ -301,15 +301,20 @@ const functionsFactory = {
                     case 'classList':
                         console.log(textKey, valueKey, newTextObject);
                         newTextObject[textKey] = valueKey;
+
                         break;
                     case 'createTextNode':
                         console.log(textKey, valueKey, newTextObject);
                         newTextObject[textKey] = valueKey;
-                        arrayText.push(structuredClone(newTextObject));
+
                         break;
+
                     default: break;
+
                 };
+                arrayText.push(structuredClone(newTextObject))
             });
+
             this.objectRendering_function(arrayText, html_tag);
             return;
         };

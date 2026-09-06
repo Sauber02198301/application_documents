@@ -75,8 +75,8 @@ const createTextNode = {
         }
     ],
 
-    "instaContent": { "classList": "icon_footer_css", "createTextNode": "&#xf16d;" },// insta
-    "gitHubContent": { "classList": "icon_footer_css", "createTextNode": "&#xf092;" } // gitHub
+    "instaContent": { "classList": "icon_Insta_css", /*"createTextNode": "&#xf16d;"*/ },// insta
+    "gitHubContent": { "classList": "icon_gitHub_css", /*"createTextNode": "&#xf092;"*/} // gitHub
 };
 
 
@@ -241,11 +241,16 @@ const classList = {
         { "add": "anchor_footerStyle" }
     ],
 
-    "icon_footer_css": [
-        { "add": "block_container" },
-        { "add": "font_standardValue" },
-        { "add": "fa" }
+    "icon_gitHub_css": [
+        { "add": "font_iconValue" },
+        { "add": "fa" },
+        { "add": "fa-github-square" }
+    ],
 
+    "icon_Insta_css": [
+        { "add": "font_iconValue" },
+        { "add": "fa" },
+        { "add": "fa-instagram" }
     ],
 
 }
