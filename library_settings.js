@@ -76,10 +76,21 @@ const createTextNode = {
     ],
 
     "instaContent": { "classList": "icon_Insta_css", /*"createTextNode": "&#xf16d;"*/ },// insta
-    "gitHubContent": { "classList": "icon_gitHub_css", /*"createTextNode": "&#xf092;"*/} // gitHub
+    "gitHubContent": { "classList": "icon_gitHub_css", /*"createTextNode": "&#xf092;"*/ }, // gitHub
+    "btn_kontra_k": { "classList": "dropBtn_class", "createTextNode": "Kontra K - Erfolg ist kein Glück" },
+    "btn_lebenslauf": {"classList": "dropBtn_class", "createTextNode": "Kontra K - Erfolg ist kein Glück"}
 };
 
+const btn_elements = {
+    // {"classList": "", "dataset": { "action": "" }, "textSpanContent_function": { "createTextNode":"" }}
+    "dropDownBtn": [
+        { "classList": "btn_dropDown_css", "dataset": { "action": "kontra_k" }, "textSpanContent_function": { "createTextNode": "btn_kontra_k" } },
+        { "classList": "btn_dropDown_css", "dataset": { "action": "lebenslauf" }, "textSpanContent_function": { "createTextNode": "btn_lebenslauf" } }
+    ],
 
+    "contactBtn": { "classList": "btn_contactFooter_css", "dataset": { "action": "contact_id" }, "chipImg_Text_createrFunction": { "createTextNode": "contact_text" } }
+
+};
 
 const toggleEvent = {
     "webside_toggle": false,
@@ -117,12 +128,17 @@ const href = {
 };
 
 const src = {
-    "headerLogo": "imgContent/dynamicLogo.png"
+    "headerLogo": "imgContent/dynamicLogo.png",
+    "contactLogo": "imgContent/dennis_logo.png"
 };
 
 const alt = {
     "logo_header_accessible": "levelUp & < >"
 };
+
+const action = {
+
+}
 
 const classList = {
     /*
@@ -235,6 +251,18 @@ const classList = {
         { "add": "iconContainerStyle" }
     ],
 
+    "contact_section_css": [
+        {"add": "flex_container"},
+        {"add": "footer_btn_section"},
+        {"add": "contactBoxStyle"}
+    ],
+
+    "btn_contactFooter_css": [
+        {"add": "flex_container"},
+        {"add": "btn_secondary"},
+        {"add": "contactBtnStyle"}
+    ],
+
     "anchorFooter_css": [
         { "add": "flex_container" },
         { "add": "anchor_settings" },
@@ -252,5 +280,11 @@ const classList = {
         { "add": "fa" },
         { "add": "fa-instagram" }
     ],
+
+    "btn_dropDown_css": [
+        {"add": "flex_container"},
+        {"add": "btn_secondary"},
+        {"add": "btnStyle_dropdownBtn"}
+    ]
 
 }

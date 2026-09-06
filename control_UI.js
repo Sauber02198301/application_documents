@@ -6,6 +6,7 @@ const libraryBook = {
     "src": src,
     "alt": alt,
     "href": href,
+    "btn_elements": btn_elements,
     "createTextNode": createTextNode,
     "functionsFactory": functionsFactory,
     "toggleUI_active": toggleUI_active,

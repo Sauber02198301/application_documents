@@ -262,8 +262,31 @@ const functionsFactory = {
             Object_contend = das zu bearbeitende Object
             html_tag = ziel Dom
         */
+        
+
         console.log(Object_contend, dom_area);
-        if (typeof Object_contend === 'object' && !Array.isArray(Object_contend)) { return console.error('this is a Object not a Array'); };
+        if (typeof Object_contend === 'object' && !Array.isArray(Object_contend)) {
+            const arrayList = [];
+            let objectElement = null;
+            const btnObject = {
+                createElement: 'button_tag',
+            };
+            Object.entries(Object_contend).forEach(([keyword, valueContent]) => {
+                console.log(keyword, valueContent);
+                objectElement = this.libraryContent(keyword, valueContent);
+
+                if (!Array.isArray(objectElement)) { return console.error('this_is_not_a_array') };
+                objectElement.forEach((objectElement) => { 
+                    console.log(objectElement); 
+                    arrayList.push(this.assignmentObjectContent(btnObject, objectElement));
+
+                });
+            });
+            console.log(objectElement, arrayList);
+            this.objectRendering_function(arrayList, dom_area);
+            return;
+        };
+
         Object_contend.forEach((Object_contend) => {
             console.log(Object_contend);
             const btnObject = {
@@ -358,6 +381,10 @@ const functionsFactory = {
         });
         console.log(arrayList);
         this.objectRendering_function(arrayList, html_tag);
+    },
+
+    chipImg_Text_createrFunction(objectContend, html_tag) {
+
     },
 
     hyperlinkContent_function(anchorObject, html_tag) {

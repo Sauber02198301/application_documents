@@ -32,6 +32,12 @@ const mainContent = {
                     {
                         "createElement": "nav_tag",
                         "classList": "nav_css",
+                        "childItems": {
+                            "createBtn_function": {
+                                "btn_elements": "dropDownBtn"
+                            }
+                        }
+
                     },
                     {
                         "createElement": "div_tag",
@@ -70,6 +76,13 @@ const mainContent = {
                 "childItems": [
                     {
                         "createElement": "div_tag",
+                        "classList": "contact_section_css",
+                        "createBtn_function": {
+                            "btn_elements": "contactBtn"
+                        }
+                    },
+                    {
+                        "createElement": "div_tag",
                         "classList": "logo_container_css",
                         "hyperlinkContent_function": {
                             "anchor": "anchorFooter",
@@ -81,6 +94,8 @@ const mainContent = {
         ]
     }
 };
+
+
 
 /*
             {
