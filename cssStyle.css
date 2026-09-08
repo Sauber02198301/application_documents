@@ -62,6 +62,13 @@ body {
     text-shadow: 0px 1px 1px rgb(255 255 255 / 35%);
 }
 
+.anchor_settings {
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
 .body_section {
     min-width: 100dvh;
     grid-template-areas:
@@ -260,17 +267,13 @@ body {
     max-width: 205px;
     max-height: 60px;
     /* align-self: center; */
-    justify-content: space-between;
-    position: relative;
-    right: 100px;
+    /*justify-content: space-between;*/
+    /*position: relative;*/
+    /*right: 100px;*/
     gap: 25px;
+    margin: 10px;
     background-color: #8e7cb6ab;
     border-radius: 50px;
     border: solid #ffffff 2px;
 }
 
-.anchor_settings {
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-}
