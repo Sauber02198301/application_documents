@@ -46,8 +46,8 @@
     .btnStyle_dropdownBtn {
         min-width: auto;
         max-width: 100px;
-        min-height: 50px;
-        max-height: 50px;
+        min-height: 30px;
+        max-height: 40px;
     }
 
     .img_header_section {
