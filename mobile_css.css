@@ -34,8 +34,10 @@
     .btnHome_style {
         max-width: 100px;
         max-height: 40px;
-        top: 30px;
-        left: 25px;
+        /*top: 30px;*/
+        /*left: 25px;*/
+        margin-left: 20px;
+        margin-bottom: 15px;
         box-shadow: 2px 0px 9px 2px rgba(0, 0, 0, 0.7), 2px -1px 18px 4px rgba(0, 0, 0, 0.7);
     }
 
@@ -53,6 +55,8 @@
     .img_header_section {
         top: 20px;
         right: 30px;
+        margin-right: 30px;
+        margin-top: 30px;
         max-width: 85px;
         max-height: 100px;
         box-shadow: 3px 2px 2px 0px #000000c7, 2px 0px 6px 1px #ffffff94, 1px -2px 0px 0px #8e455c, 3px 2px 14px 9px rgb(189 90 123 / 79%), -2px -3px 4px 0px #000000, -10px -4px 9px 2px #613c3c6e, 2px 2px 10px 3px #fafafa, 0px 2px 9px 5px rgb(0 0 0 / 85%);
