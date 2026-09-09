@@ -334,4 +334,38 @@ const classList = {
         { "add": "contact_img_style" }
     ],
 
+    "nameContact_css": [
+        { "add": "flex_container" },
+        { "add": "contact_nameBox" },
+        { "add": "contact_name_box_style" }
+    ],
+
+    "contactheaderBox": [
+        { "add": "flex_container" },
+        { "add": "contact_headerBox" },
+        { "add": "contact_headerBox_style" }
+    ],
+
+    "contactText_css": [
+        { "add": "font_standardValue" },
+        { "add": "contact_h2_text" },
+        { "add": "contact_h2_style" }
+    ],
+
+    "textContactId": [
+        { "add": "font_standardValue" },
+        { "add": "contactText" },
+        { "add": "contactTextStyle" }
+    ],
+    "p_Contact_box": [
+        { "add": "flex_container" },
+        { "add": "contact_paragraphBox" },
+        { "add": "contact_paragraphBox_style" }
+    ],
+    "contactTextBox": [
+        { "add": "flex_container" },
+        { "add": "contact_textBox" },
+        { "add": "contact_Textbox_style" }
+    ]
+
 }

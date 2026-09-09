@@ -68,6 +68,20 @@ body {
     text-shadow: 0px 1px 1px rgb(255 255 255 / 35%);
 }
 
+.contact_h2_text {
+    text-shadow: none;
+    color: white;
+    font-weight: bold;
+    font-size: 38px;
+}
+
+.contactText {
+    color: #ffffff;
+    text-shadow: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .anchor_settings {
     align-items: center;
     justify-items: center;
@@ -285,10 +299,10 @@ body {
 .contact_box_mainSection {
     position: absolute;
     left: 302px;
-    top: 315px;
+    top: 338px;
     width: 1375px;
-    height: 585px;
-    background-color: #ffffff;
+    height: 570px;
+    background-color: #000000;
     border: solid 3px #00000033;
     opacity: 0;
     transition: opacity 3s ease-in-out;
@@ -296,6 +310,10 @@ body {
 
 .contact_img_style {
     border-right: solid 2px rgba(255, 255, 255, 0.515);
+    border-right: solid 2px rgba(255, 255, 255, 0.515);
+    border-left: solid 2px rgba(255, 255, 255, 0.515);
+    background-color: black;
+
 }
 
 .contact_box_mainSection.contactActive {
@@ -303,8 +321,36 @@ body {
     transition: opacity 3s ease-in-out;
 }
 
+.contact_nameBox {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact_name_box_style {
+    border: none;
+}
+
 .contact_imgChild_box {
     background-color: #000000b5;
+    justify-content: center;
+}
+
+.contact_headerBox {
+    justify-content: center;
+    align-items: center;
+    max-height: 80px;
+}
+
+.contact_textBox {
+    flex-direction: column;
+}
+
+.contact_paragraphBox {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .footer_section {

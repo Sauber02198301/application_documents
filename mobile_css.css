@@ -124,13 +124,18 @@
     }
 
     .contactBtnStyle {
-        max-width: 240px;
+        max-width: 200px;
         max-height: 40px;
     }
 
     .contact_imgChild_box {
         background-color: #373a43b5;
         justify-content: center;
+    }
+
+    .contact_btn_imgStyle {
+        max-height: 90px;
+        max-width: 65px;
     }
 
     .contact_box_mainSection {
@@ -151,6 +156,11 @@
         flex-direction: column;
     }
 
+    .contact_imgChild_box {
+        background-color: #000000b5;
+        max-height: 380px;
+    }
+
     .contact_img_style {
         height: 100px;
         width: 100px;
@@ -161,8 +171,9 @@
         height: 350px;
         width: 300px;
         scale: 0.9;
-        border: double 10px white;
-        background-color: black;
+        border: solid 2px #ffffff;
+        background-color: #000000;
+        border-radius: 2px;
     }
 
     .footer_section {
