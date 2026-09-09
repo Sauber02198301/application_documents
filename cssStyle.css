@@ -325,7 +325,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
 }
 
 .contact_name_box_style {

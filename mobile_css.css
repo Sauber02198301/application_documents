@@ -18,6 +18,10 @@
         color: #000000;
     }
 
+    .contactText {
+        font-size: 13px;
+    }
+
     .body_section {
         min-width: 100%;
         width: 100%;
