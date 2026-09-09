@@ -65,6 +65,17 @@ const mainContent = {
                             {
                                 "createElement": "div_tag",
                                 "classList": "contentDisplayRight_css"
+                            },
+                            {
+                                "createElement": "div_tag",
+                                "classList": "contactBox_css",
+                                "childItems": [
+                                    {
+                                        "createElement": "div_tag",
+                                        "classList": "img_conatct_imagesBox_css",
+                                        "childItems": { "createElement": "img_tag", "classList": "img_contactPicture", "src": "contact_img", "alt": "img_man"}
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -77,8 +88,10 @@ const mainContent = {
                     {
                         "createElement": "div_tag",
                         "classList": "contact_section_css",
-                        "createBtn_function": {
-                            "btn_elements": "contactBtn"
+                        "childItems": {
+                            "createBtn_function": {
+                                "btn_elements": "contactBtn"
+                            }
                         }
                     },
                     {

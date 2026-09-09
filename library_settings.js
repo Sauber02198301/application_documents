@@ -83,10 +83,10 @@ const createTextNode = {
         }
     ],
 
-"instaContent": { "classList": "icon_Insta_css", /*"createTextNode": "&#xf16d;"*/ },// insta
-"gitHubContent": { "classList": "icon_gitHub_css", /*"createTextNode": "&#xf092;"*/ }, // gitHub
-"btn_lebenslauf": { "classList": "dropBtnText_class", "createTextNode": "Lebenslauf" },
-"btn_bdi_II": { "classList": "dropBtnText_class", "createTextNode": "BDI-II Depressionstest" }
+    "instaContent": { "classList": "icon_Insta_css", /*"createTextNode": "&#xf16d;"*/ },// insta
+    "gitHubContent": { "classList": "icon_gitHub_css", /*"createTextNode": "&#xf092;"*/ }, // gitHub
+    "btn_lebenslauf": { "classList": "dropBtnText_class", "createTextNode": "Lebenslauf" },
+    "btn_bdi_II": { "classList": "dropBtnText_class", "createTextNode": "BDI-II Depressionstest" },
 };
 
 const btn_elements = {
@@ -96,8 +96,8 @@ const btn_elements = {
         { "classList": "btn_dropDown_css", "dataset": { "action": "bdi_II" }, "textSpanContent_function": { "createTextNode": "btn_bdi_II" } }
     ],
 
-    "contactBtn": { "classList": "btn_contactFooter_css", "dataset": { "action": "contact_id" }, "chipImg_Text_createrFunction": { "createTextNode": "contact_text" } }
-
+    "contactBtn": [{ "classList": "btn_contactFooter_css", "dataset": { "action": "contact_id" }, "childItems": [{ "createElement": "img_tag", "classList": "contactChip_img", "src": "contactLogo", "alt": "chipImg_footer" }, { "createElement": "span_tag", "classList": "contactChip_text_footer", "createTextNode": "Kontakt" }] }],
+    //"chipImg_Text_createrFunction": { "createTextNode": "contact_text" }
 };
 
 const toggleEvent = {
@@ -137,11 +137,14 @@ const href = {
 
 const src = {
     "headerLogo": "imgContent/dynamicLogo.png",
-    "contactLogo": "imgContent/dennis_logo.png"
+    "contactLogo": "imgContent/dennis_logo.png",
+    "contact_img": "imgContent/A6E64024-1ED4-4EED-A050-0D4C3E9F06BD_1_105_c.png",
 };
 
 const alt = {
-    "logo_header_accessible": "levelUp & < >"
+    "logo_header_accessible": "levelUp & < >",
+    "chipImg_footer": "Ein Bild von eines Mann mittlerem Alter. Es steht der Name Dennis im Text",
+    "img_man": "Ein Mann mittlers Alter",
 };
 
 const action = {
@@ -265,12 +268,6 @@ const classList = {
         { "add": "contactBoxStyle" }
     ],
 
-    "btn_contactFooter_css": [
-        { "add": "flex_container" },
-        { "add": "btn_secondary" },
-        { "add": "contactBtnStyle" }
-    ],
-
     "anchorFooter_css": [
         { "add": "flex_container" },
         { "add": "anchor_settings" },
@@ -299,6 +296,42 @@ const classList = {
         { "add": "font_standardValue" },
         { "add": "btn_primaryText" },
         { "add": "navBtn_text" }
+    ],
+
+    "btn_contactFooter_css": [
+        { "add": "flex_container" },
+        { "add": "btn_secondary" },
+        { "add": "contactBtnStyle" }
+    ],
+
+    "contactChip_text_footer": [
+        { "add": "font_standardValue" },
+        { "add": "contactChip_text" },
+        { "add": "contactChip_text_style" }
+    ],
+
+    "contactChip_img": [
+        { "add": "block_container" },
+        { "add": "contact_btn_img" },
+        { "add": "contact_btn_imgStyle" }
+    ],
+
+    "contactBox_css": [
+        { "add": "flex_container" },
+        { "add": "contact_box_mainSection" },
+        { "add": "contact_box_style" }
+    ],
+
+    "img_conatct_imagesBox_css": [
+        { "add": "flex_container" },
+        { "add": "contact_imgChild_box" },
+        { "add": "contact_imgChild_box_style" }
+    ],
+
+    "img_contactPicture": [
+        { "add": "block_container" },
+        { "add": "contact_img" },
+        { "add": "contact_img_style" }
     ],
 
 }

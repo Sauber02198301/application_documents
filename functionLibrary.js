@@ -220,9 +220,9 @@ const functionsFactory = {
             html_tag = Das zu bearbeitende Object
         */
         const classObject = this.libraryContent(attributeClass, classValue);
-        console.log(classObject);
+        console.log(attributeClass,classObject);
         if (!classObject) { return console.error('classObject is null || undefind'); };
-        if (typeof classObject === 'object' && !Array.isArray(classObject)) { console.error('this is a Object or null || undefind') };
+        if (typeof classObject === 'object' && !Array.isArray(classObject) || typeof classObject === 'string') { return classObject; console.error('this is a Object or null || undefind') };
         html_tag[attributeClass] = '';
         classObject.forEach((classObject) => {
             Object.entries(classObject).forEach(([classKey, className]) => {

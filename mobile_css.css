@@ -21,7 +21,7 @@
     .body_section {
         min-width: 100%;
         width: 100%;
-        grid-template-rows: 85px 1fr 60px;
+        grid-template-rows: 85px 1fr 95px;
         gap: 8px;
     }
 
@@ -117,6 +117,52 @@
         max-width: 0;
         max-height: 0;
         display: none;
+    }
+
+    .contactBoxStyle {
+        margin-left: 10px;
+    }
+
+    .contactBtnStyle {
+        max-width: 240px;
+        max-height: 40px;
+    }
+
+    .contact_imgChild_box {
+        background-color: #373a43b5;
+        justify-content: center;
+    }
+
+    .contact_box_mainSection {
+        top: 175px;
+        left: 35px;
+        width: 365px;
+        min-height: 660px;
+        max-height: 710px;
+        flex-direction: column;
+    }
+
+    .contactActive {
+        top: 175px;
+        left: 35px;
+        width: 365px;
+        min-height: 660px;
+        max-height: 710px;
+        flex-direction: column;
+    }
+
+    .contact_img_style {
+        height: 100px;
+        width: 100px;
+    }
+
+    .contact_img_style {
+        justify-self: center;
+        height: 350px;
+        width: 300px;
+        scale: 0.9;
+        border: double 10px white;
+        background-color: black;
     }
 
     .footer_section {

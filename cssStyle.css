@@ -55,6 +55,12 @@ body {
     font-weight: bold;
 }
 
+.contactChip_text {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .fa {
     color: rgb(115 243 243);
     font-size: 55px;
@@ -76,7 +82,7 @@ body {
         'main'
         'footer'
     ;
-    grid-template-rows: 200px 1fr 85px;
+    grid-template-rows: 195px 1fr 110px;
     gap: 15px;
     position: relative;
 }
@@ -138,6 +144,24 @@ body {
     border: solid 2px #00000057;
     -webkit-box-shadow: -10px 2px 27px 8px rgba(0, 0, 0, 0.7), -10px 2px 27px 8px rgba(0, 0, 0, 0.7);
     box-shadow: 2px 0px 20px 5px rgb(244 242 242 / 70%), 1px 1px 11px 5px rgb(43 30 213 / 78%);
+}
+
+.btnStyle_dropdownBtn:hover {
+    transform: scale(1.05);
+    background-color: #0000001f;
+}
+
+.btnStyle_dropdownBtn:active {
+    transform: scale(0.9);
+}
+
+.contactBtnStyle {
+    max-width: 240px;
+    max-height: 70px;
+    border-radius: 40px;
+    gap: 20px;
+    background-color: rgba(211, 193, 251, 0.609);
+    border: #ffffff 2px solid;
 }
 
 .header_section {
@@ -258,6 +282,31 @@ body {
     background-color: #00000040;
 }
 
+.contact_box_mainSection {
+    position: absolute;
+    left: 302px;
+    top: 315px;
+    width: 1375px;
+    height: 585px;
+    background-color: #ffffff;
+    border: solid 3px #00000033;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+.contact_img_style {
+    border-right: solid 2px rgba(255, 255, 255, 0.515);
+}
+
+.contact_box_mainSection.contactActive {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+}
+
+.contact_imgChild_box {
+    background-color: #000000b5;
+}
+
 .footer_section {
     grid-area: footer;
     background-image: url(imgContent/headerLogo_without_text.jpeg);
@@ -267,6 +316,20 @@ body {
     align-items: center;
     justify-content: end;
     /*margin-top: 60px;*/
+}
+
+.contactBoxStyle {
+    margin-left: 50px;
+    align-items: center;
+}
+
+.contact_btn_imgStyle {
+    max-height: 100px;
+    max-width: 80px;
+    scale: 1.23;
+    border-radius: 50%;
+    border: solid 2px #ffffff;
+    z-index: 1;
 }
 
 .footer_style {
@@ -282,7 +345,7 @@ body {
     /*position: relative;*/
     /*right: 100px;*/
     gap: 25px;
-    margin: 10px;
+    margin: 50px;
     background-color: #8e7cb6ab;
     border-radius: 50px;
     border: solid #ffffff 2px;

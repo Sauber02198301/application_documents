@@ -12,20 +12,20 @@ const libraryBook = {
     "toggleUI_active": toggleUI_active,
 };
 
-function btnUI_clickFunction(clickEvent) {
-    console.log(clickEvent);
-    const dropDown = document.querySelector('.nav_style');
+function btnUI_clickFunction(clickEvent, dom_className) {
+    console.log(clickEvent, dom_className);
+    const domContainer = document.querySelector(`.${dom_className}`);
 
-    console.log(dropDown.classList.contains(clickEvent));
-    if (!dropDown.classList.contains(clickEvent)) {
+    console.log(domContainer.classList.contains(clickEvent));
+    if (!domContainer.classList.contains(clickEvent)) {
 
-        dropDown.classList.add(clickEvent);
-        dropDown.style.opacity = 1;
+        domContainer.classList.add(clickEvent);
+        domContainer.style.opacity = 1;
 
     } else {
 
-        dropDown.classList.remove(clickEvent);
-        dropDown.style.opacity = 0;
+        domContainer.classList.remove(clickEvent);
+        domContainer.style.opacity = 0;
 
     };
 

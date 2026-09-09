@@ -17,9 +17,22 @@ DOM_bodyContainer.addEventListener('click', (t) => {
 
             case 'btnHome_open':
             console.log(btn_primaryClick);
-            btnUI_clickFunction('toggle_dropDown');
+            btnUI_clickFunction('toggle_dropDown', 'nav_style');
             //console.log(typeof btnFunctionsLibrary.btnUI_clickFunction[btn_secondaryClick.dataset.action] === 'function');
                 break;
+            default: break;
+        };
+
+    };
+
+    if (btn_secondaryClick && DOM_bodyContainer.contains(btn_secondaryClick)) {
+
+        switch(btn_secondaryClick.dataset.action) {
+            case 'contact_id':
+
+                console.log(btn_secondaryClick);
+            btnUI_clickFunction('contactActive', 'contact_box_mainSection');
+            break;
             default: break;
         };
 
