@@ -12,6 +12,25 @@ const libraryBook = {
     "toggleUI_active": toggleUI_active,
 };
 
+function btnUI_clickFunction(clickEvent) {
+    console.log(clickEvent);
+    const dropDown = document.querySelector('.nav_style');
+
+    console.log(dropDown.classList.contains(clickEvent));
+    if (!dropDown.classList.contains(clickEvent)) {
+
+        dropDown.classList.add(clickEvent);
+        dropDown.style.opacity = 1;
+
+    } else {
+
+        dropDown.classList.remove(clickEvent);
+        dropDown.style.opacity = 0;
+
+    };
+
+}
+
 function UI_checkControl(contentObject, dom_name, activeBoolean) {
     console.log(contentObject, dom_name, activeBoolean);
     if (!document.querySelector(`.${dom_name}`)) { return console.error('the_domContent can\'t not assain') };
@@ -55,7 +74,7 @@ function UI_checkControl(contentObject, dom_name, activeBoolean) {
 
 function activeBoolean_function(keyword, valueCode, activeBoolean) {
     console.log(keyword, valueCode, activeBoolean);
-    
+
     if (!libraryBook[keyword] && !libraryBook[keyword][valueCode]) { return console.error('booleanContent_not_found'); };
     console.log(libraryBook[keyword][valueCode]);
     if (typeof libraryBook[keyword][valueCode] !== 'boolean') { return console.error('this_is_no_a_boolean'); };
@@ -71,17 +90,19 @@ function activeBoolean_function(keyword, valueCode, activeBoolean) {
 function searchFunction(keyword, funcKey, oblectCont, domArea) {
     console.log(keyword, funcKey, oblectCont, domArea);
     if (!libraryBook[keyword] && !libraryBook[keyword][funcKey]) { return console.error('this_is_not_found'); };
-    if(typeof oblectCont === 'object' && Array.isArray(oblectCont)) {
+    if (typeof oblectCont === 'object' && Array.isArray(oblectCont)) {
         console.log('this_is_array');
-        if (typeof libraryBook[keyword][funcKey] !== 'function') { return console.error('function_is_not_locate')};
+        if (typeof libraryBook[keyword][funcKey] !== 'function') { return console.error('function_is_not_locate') };
         libraryBook[keyword][funcKey](oblectCont, domArea);
-        return; 
+        return;
     } else {
         console.log('this_isObject');
         libraryBook[keyword][funcKey]([oblectCont], domArea);
         return
     };
 };
+
+
 
 UI_checkControl(mainContent, 'body_section', true);
 

@@ -6,8 +6,8 @@ const btn_secondary_class = 'btn_secondary';
 
 DOM_bodyContainer.addEventListener('click', (t) => {
 
-    const btn_primaryClick = t.target.closest(`${btn_primary_class}`);
-    const btn_secondaryClick = t.target.closest(`${btn_secondary_class}`);
+    const btn_primaryClick = t.target.closest(`.${btn_primary_class}`);
+    const btn_secondaryClick = t.target.closest(`.${btn_secondary_class}`);
 
     console.log(t);
 
@@ -17,6 +17,8 @@ DOM_bodyContainer.addEventListener('click', (t) => {
 
             case 'btnHome_open':
             console.log(btn_primaryClick);
+            btnUI_clickFunction('toggle_dropDown');
+            //console.log(typeof btnFunctionsLibrary.btnUI_clickFunction[btn_secondaryClick.dataset.action] === 'function');
                 break;
             default: break;
         };
