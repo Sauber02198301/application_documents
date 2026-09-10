@@ -92,136 +92,164 @@ const mainContent = {
                                             },
                                             {
                                                 "createElement": "div_tag",
-                                                "classList": "contactTextBox",
-                                                "childItems": [
-                                                    {
-                                                        "createElement": "p_tag",
-                                                        "classList": "p_Contact_box",
-                                                        "childItems": [
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "Autodidaktischer"
-                                                            },
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "Softwareentwickler"
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "createElement": "p_tag",
-                                                        "classList": "p_Contact_box",
-                                                        "childItems": [
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "Vanilla JavaScript"
-                                                            },
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "•"
-                                                            },
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "Systemarchitektur"
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "createElement": "p_tag",
-                                                        "classList": "p_Contact_box",
-                                                        "childItems": [
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "Praktikant IT"
-                                                            },
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "&"
-                                                            },
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "Softwareentwicklung"
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "createElement": "p_tag",
-                                                        "classList": "p_Contact_box",
-                                                        "childItems": [
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "Web-"
-                                                            },
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "&"
-                                                            },
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "Anwendungsentwicklung"
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "createElement": "p_tag",
-                                                        "classList": "p_Contact_box",
-                                                        "childItems": [
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "Autark"
-                                                            },
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "•"
-                                                            },
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "Praxisorientiert"
-                                                            },
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "•"
-                                                            },
-                                                            {
-                                                                "createElement": "span_tag",
-                                                                "classList": "textContactId",
-                                                                "createTextNode": "Fokussiert"
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
+                                                "classList": "flipCard_contact",
+                                                "childItems": {
+                                                    "createElement": "div_tag",
+                                                    "classList": "flipCard_inner",
+                                                    "childItems": [
+                                                        {
+                                                            "createElement": "div_tag",
+                                                            "classList": "contactTextBox_flipCard_front",
+                                                            "childItems": [
+                                                                {
+                                                                    "createElement": "p_tag",
+                                                                    "classList": "p_Contact_box",
+                                                                    "childItems": [
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "Autodidaktischer"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "Softwareentwickler"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "createElement": "p_tag",
+                                                                    "classList": "p_Contact_box",
+                                                                    "childItems": [
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "Vanilla JavaScript"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "•"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "Systemarchitektur"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "createElement": "p_tag",
+                                                                    "classList": "p_Contact_box",
+                                                                    "childItems": [
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "Praktikant IT"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "&"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "Softwareentwicklung"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "createElement": "p_tag",
+                                                                    "classList": "p_Contact_box",
+                                                                    "childItems": [
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "Web-"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "&"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "Anwendungsentwicklung"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "createElement": "p_tag",
+                                                                    "classList": "p_Contact_box",
+                                                                    "childItems": [
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "Autark"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "•"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "Praxisorientiert"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "•"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "textContactId",
+                                                                            "createTextNode": "Fokussiert"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "createElement": "div_tag",
+                                                            "classList": "contactTextFlipBoxBack",
+                                                            "childItems": [
+                                                                {
+                                                                    "createElement": "div_tag",
+                                                                    "classList": "emailContact",
+                                                                    "childItems": [
+                                                                        {
+                                                                            "createElement": "span_tag",
+                                                                            "classList": "emailFont_text",
+                                                                            "createTextNode": "Email:"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "a_tag",
+                                                                            "classList": "anchorEmailContact",
+                                                                            "href": "emailAdress",
+                                                                            "childItems": {
+                                                                                "createElement": "span_tag",
+                                                                                "classList": "emailFont_text",
+                                                                                "createTextNode": "d.nickel85@outlook.de"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "createElement": "div_tag",
+                                                                    "classList": "logo_container_css",
+                                                                    "hyperlinkContent_function": {
+                                                                        "anchor": "anchorFooter",
+                                                                    },
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
                                             },
-                                            {
-                                                "createElement": "div_tag",
-                                                "classList": "contactTextFlipBox",
-                                                "childItems": [
-                                                    {
-                                                        "createElement": "div_tag",
-                                                        "classList": "emailContact",
-                                                        "childItems": [
-                                                            {
-                                                                "createElement": "p_tag",
-                                                                "classList": ""
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
                                         ]
                                     },
                                 ]
@@ -243,14 +271,7 @@ const mainContent = {
                             }
                         }
                     },
-                    {
-                        "createElement": "div_tag",
-                        "classList": "logo_container_css",
-                        "hyperlinkContent_function": {
-                            "anchor": "anchorFooter",
-                        },
 
-                    }
                 ]
             }
         ]

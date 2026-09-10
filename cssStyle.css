@@ -343,8 +343,39 @@ body {
     max-height: 80px;
 }
 
-.contact_textBox {
+.flipCard_parent {
+    perspective: 1000px;
     flex-direction: column;
+}
+
+.flipCard_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipCard_parent:hover .flipCard_inner {
+    transform: rotateY(180deg);
+}
+
+.contact_flipCardFront_textBox, .contact_flipCardBack_textBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    flex-direction: column;
+}
+
+.contact_flipCardBack_textBox {
+    transform: rotateY(180deg);
+}
+
+.emailContact {
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
 }
 
 .contact_paragraphBox {

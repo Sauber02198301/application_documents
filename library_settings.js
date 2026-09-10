@@ -132,7 +132,8 @@ const anchor = {
 
 const href = {
     "insta": "https://www.instagram.com/sauber0183/?hl=de",
-    "gitHub": "https://github.com/Sauber02198301"
+    "gitHub": "https://github.com/Sauber02198301",
+    "emailAdress": "mailto:d.nickel85@outlook.de"
 };
 
 const src = {
@@ -357,15 +358,53 @@ const classList = {
         { "add": "contactText" },
         { "add": "contactTextStyle" }
     ],
+
     "p_Contact_box": [
         { "add": "flex_container" },
         { "add": "contact_paragraphBox" },
         { "add": "contact_paragraphBox_style" }
     ],
-    "contactTextBox": [
+
+    "flipCard_contact": [
         { "add": "flex_container" },
-        { "add": "contact_textBox" },
+        { "add": "flipCard_parent" },
+        { "add": "flipCard_parentStyle" }
+    ],
+
+    "flipCard_inner": [
+        { "add": "flex_container" },
+        { "add": "flipCard_inner" },
+        { "add": "flipCard_style" }
+    ],
+
+    "contactTextBox_flipCard_front": [
+        { "add": "flex_container" },
+        { "add": "contact_flipCardFront_textBox" },
         { "add": "contact_Textbox_style" }
+    ],
+
+    "contactTextFlipBoxBack": [
+        { "add": "flex_container" },
+        { "add": "contact_flipCardBack_textBox" },
+        { "add": "contact_Textbox_style" }
+    ],
+
+    "emailContact": [
+        { "add": "flex_container" },
+        { "add": "emailContact" },
+        { "add": "emailContactStyle_css" }
+    ],
+
+    "anchorEmailContact": [
+        { "add": "flex_container" },
+        { "add": "anchorEmailContact" },
+        { "add": "anchorEmailContact_style" }
+    ],
+
+    "emailFont_text": [
+        { "add": "font_standardValue" },
+        { "add": "contactText" },
+        { "add": "contactTextStyle" }
     ]
 
 }
