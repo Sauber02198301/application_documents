@@ -84,11 +84,18 @@ const mainContent = {
                                             {
                                                 "createElement": "header_tag",
                                                 "classList": "contactheaderBox",
-                                                "childItems": {
-                                                    "createElement": "h2_tag",
-                                                    "classList": "contactText_css",
-                                                    "createTextNode": "Dennis Nickel"
-                                                },
+                                                "childItems": [
+                                                    {
+                                                        "createElement": "h1_tag",
+                                                        "classList": "contactTextIntro_css",
+                                                        "createTextNode": "Mein Name ist"
+                                                    },
+                                                    {
+                                                        "createElement": "h2_tag",
+                                                        "classList": "contactText_css",
+                                                        "createTextNode": "Dennis Nickel"
+                                                    }
+                                                ],
                                             },
                                             {
                                                 "createElement": "div_tag",

@@ -350,7 +350,13 @@ const classList = {
     "contactText_css": [
         { "add": "font_standardValue" },
         { "add": "contact_h2_text" },
-        { "add": "contact_h2_style" }
+        { "add": "contactTextStyle" }
+    ],
+
+    "contactTextIntro_css": [
+        { "add": "font_standardValue" },
+        { "add": "contact_h1_text" },
+        { "add": "contactTextStyle" }
     ],
 
     "textContactId": [

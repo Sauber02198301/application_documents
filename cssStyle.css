@@ -68,18 +68,22 @@ body {
     text-shadow: 0px 1px 1px rgb(255 255 255 / 35%);
 }
 
+.contact_h1_text {
+    font-size: 39px;
+}
+
 .contact_h2_text {
-    text-shadow: none;
-    color: white;
+    font-size: 33px;
+}
+
+.contactTextStyle {
+    color: #ffffff;
     font-weight: bold;
-    font-size: 38px;
+    text-shadow: none;
 }
 
 .contactText {
-    color: #ffffff;
-    text-shadow: none;
     font-size: 18px;
-    font-weight: bold;
 }
 
 .anchor_settings {
@@ -89,32 +93,30 @@ body {
     text-decoration: none;
 }
 
+.grid_container {
+    display: grid;
+}
+
+.flex_container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.block_container {
+    display: block;
+}
+
 .body_section {
-    min-width: 100dvh;
+    min-height: 100dvh;
+    min-width: 100%;
     grid-template-areas:
         'header'
         'main'
         'footer'
     ;
     grid-template-rows: 195px 1fr 110px;
-    gap: 15px;
-    position: relative;
-}
-
-.grid_container {
-    display: grid;
-    height: 100%;
-    width: 100%;
-}
-
-.flex_container {
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-
-.block_container {
-    display: block;
+    gap: 25px;
 }
 
 .btn_primary,
@@ -185,8 +187,9 @@ body {
     background-image: url(imgContent/headerLogo_without_text.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center top -290px;
-    max-height: 200px;
+    background-position: center -305px;
+    aspect-ratio: 1/1;
+    max-height: 185px;
     min-width: 100%;
 }
 
@@ -219,7 +222,8 @@ body {
     background-size: cover;
     overflow: auto;
     z-index: 1;
-    width: none;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .main_style {
@@ -323,9 +327,7 @@ body {
 
 .contact_nameBox {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+    gap: 15px;
 }
 
 .contact_name_box_style {
@@ -340,12 +342,16 @@ body {
 .contact_headerBox {
     justify-content: center;
     align-items: center;
-    max-height: 80px;
+    gap: 20px;
+    max-height: 140px;
+    max-width: 90%;
+    border-bottom: solid 2px #ffffff;
 }
 
 .flipCard_parent {
     perspective: 1000px;
     flex-direction: column;
+    max-width: 90%;
 }
 
 .flipCard_inner {
@@ -360,7 +366,8 @@ body {
     transform: rotateY(180deg);
 }
 
-.contact_flipCardFront_textBox, .contact_flipCardBack_textBox {
+.contact_flipCardFront_textBox,
+.contact_flipCardBack_textBox {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -370,11 +377,21 @@ body {
 
 .contact_flipCardBack_textBox {
     transform: rotateY(180deg);
+    align-items: center;
+    justify-content: space-between;
 }
 
-.emailContact {
+.fa-instagram:hover,
+.fa-github-square:hover {
+    color: rgba(0, 0, 255, 0.324);
+}
+
+.emailContact,
+.anchorEmailContact {
     justify-content: center;
-    width: 100%;
+    max-height: 80px;
+    max-width: 85%;
+    align-items: center;
     gap: 20px;
 }
 
