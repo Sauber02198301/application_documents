@@ -7,15 +7,30 @@ const mainContent = {
                 "classList": "header_css",
                 "childItems": [
                     {
-                        "createBtn_function": [
-                            {
-                                "classList": "btn_Home_css",
-                                "dataset": { "action": "btnHome_open" },
-                                "textSpanContent_function": {
-                                    "createTextNode": "btnHome_text",
-                                }
-                            }
-                        ]
+                        "createElement": "div_tag",
+                        "classList": "controlNavBtn_container",
+                        "childItems": {
+                            "createBtn_function": [
+                                {
+                                    "classList": "btn_Home_css",
+                                    "dataset": { "action": "btnHome_open" },
+                                    "textSpanContent_function": {
+                                        "createTextNode": "btnHome_text",
+                                    }
+                                },
+                                {
+                                    "createElement": "nav_tag",
+                                    "classList": "nav_css",
+                                    "childItems": [
+                                        {
+                                            "createBtn_function": {
+                                                "btn_elements": "dropDownBtn"
+                                            }
+                                        }
+                                    ]
+                                },
+                            ]
+                        },
                     },
                     {
                         "createElement": "img_tag",
@@ -29,16 +44,7 @@ const mainContent = {
                 "createElement": "main_tag",
                 "classList": "main_css",
                 "childItems": [
-                    {
-                        "createElement": "nav_tag",
-                        "classList": "nav_css",
-                        "childItems": {
-                            "createBtn_function": {
-                                "btn_elements": "dropDownBtn"
-                            }
-                        }
 
-                    },
                     {
                         "createElement": "div_tag",
                         "classList": "contentDisplay_css",

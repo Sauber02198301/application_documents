@@ -167,6 +167,12 @@ const classList = {
         { "add": "header_style" }
     ],
 
+    "controlNavBtn_container": [
+        { "add": "flex_container" },
+        { "add": "navigation_container" },
+        { "add": "navigation_containerStyle" }
+    ],
+
     "nav_css": [
         { "add": "flex_container" },
         { "add": "nav_section" },

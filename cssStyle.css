@@ -95,6 +95,8 @@ body {
 
 .grid_container {
     display: grid;
+    height: 100%;
+    width: 100%;
 }
 
 .flex_container {
@@ -108,8 +110,8 @@ body {
 }
 
 .body_section {
+    width: 100%;
     min-height: 100dvh;
-    min-width: 100%;
     grid-template-areas:
         'header'
         'main'
@@ -230,7 +232,6 @@ body {
     border-top: solid 2px #00000061;
     border-bottom: solid 2px #00000061;
     box-shadow: 1px 1px 7px 0px #000000b5, 1px 1px 7px 2px #ffffff, 0px -3px 13px 0px #fafafa, -2px 4px 4px 7px rgb(0 0 0 / 81%), 1px 1px 7px 0px #000000b5, 1px 1px 7px 2px #ffffff, 1px -3px 6px 0px #4a3030, 2px -7px 3px 5px rgb(0 0 0 / 81%);
-
 }
 
 .nav_section {
@@ -241,12 +242,12 @@ body {
     background-color: rgb(194 144 255 / 43%);
     border-bottom: solid 2px #000000a3;
     /*padding-left: 25px;*/
-    transition: opacity 2s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 .nav_section.toggle_dropDown {
     opacity: 1;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 .display_sectionMain {
@@ -309,7 +310,7 @@ body {
     background-color: #000000;
     border: solid 3px #00000033;
     opacity: 0;
-    transition: opacity 3s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 .contact_img_style {
@@ -322,7 +323,7 @@ body {
 
 .contact_box_mainSection.contactActive {
     opacity: 1;
-    transition: opacity 3s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 .contact_nameBox {
