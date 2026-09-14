@@ -8,25 +8,28 @@
     .navBtn_text {
         font-size: 12px;
         font-weight: bold;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
     .body_section {
-        grid-template-rows: 125px 1fr 85px;
-        min-height: 100dvh;
-        min-width: 100dvw;
-
+        grid-template-rows: auto 1fr auto;
     }
 
     .header_section {
-        max-height: 100%;
-        max-width: 100%;
-        aspect-ratio: 1/1;
+        padding: 0px;
+    }
+
+    .navigation_container {
+        padding: 15px;
+        margin: 6px;
+        flex-direction: column;
+        gap: 11px;
     }
 
     .nav_section {
         z-index: 2;
         flex-direction: column;
-        max-height: 80px;
         /* padding-left: 25px; */
         gap: 5%;
     }
@@ -37,15 +40,14 @@
     }
 
     .btnStyle_dropdownBtn {
-        max-width: 40.5%;
-        max-height: 49.5%;
+        max-width: 130px;
         background-color: #00000088;
         border: solid 1px #ffffffe3;
         box-shadow: 2px 0px 9px 2px rgba(0, 0, 0, 0.7), 2px -1px 18px 4px rgba(0, 0, 0, 0.7);
     }
 
     .img_header_section {
-        top: 12%;
+        top: 10.3%;
         right: 0%;
         z-index: 2;
         max-width: 50%;
@@ -63,21 +65,22 @@
         background-color: #00000027;
         flex-direction: column;
         overflow: hidden;
+        padding: 0;
+        margin: 0;
     }
 
     .display_sectionLeft {
         border-bottom: solid 2px #ffffff;
-        min-width: 100%;
-        max-height: 10%;
+        border-right: none;
+        padding: 15px;
         background-color: #f09cec7d;
     }
 
     .display_sectionCenter {
         flex-direction: column;
         justify-content: center;
-        max-width: 95%;
-        max-height: 75%;
-        margin: 2%;
+        padding: 5px;
+        margin: 2px;
         justify-content: center;
         align-items: center;
         overflow: auto;
@@ -236,6 +239,10 @@
         background-color: rgba(211, 193, 251, 0.609);
         border: #ffffff 2px solid;
         z-index: 1;
+    }
+
+    .footer_section {
+        padding: 40px;
     }
 
 
