@@ -10,6 +10,8 @@ const libraryBook = {
     "createTextNode": createTextNode,
     "functionsFactory": functionsFactory,
     "toggleUI_active": toggleUI_active,
+    "mainAreaContent": mainAreaContent,
+    "mainUiBoolaenSetting": mainUiBoolaenSetting,
 };
 
 function btnUI_clickFunction(clickEvent, dom_className) {
@@ -20,12 +22,12 @@ function btnUI_clickFunction(clickEvent, dom_className) {
     if (!domContainer.classList.contains(clickEvent)) {
 
         domContainer.classList.add(clickEvent);
-        domContainer.style.opacity = 1;
+       //domContainer.style.opacity = 1;
 
     } else {
 
         domContainer.classList.remove(clickEvent);
-        domContainer.style.opacity = 0;
+        //domContainer.style.opacity = 0;
 
     };
 

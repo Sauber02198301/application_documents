@@ -1,0 +1,242 @@
+@media screen and (max-width: 768px) {
+
+    .homeBtn_style {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .navBtn_text {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .body_section {
+        grid-template-rows: 125px 1fr 85px;
+        min-height: 100dvh;
+        min-width: 100dvw;
+
+    }
+
+    .header_section {
+        max-height: 100%;
+        max-width: 100%;
+        aspect-ratio: 1/1;
+    }
+
+    .nav_section {
+        z-index: 2;
+        flex-direction: column;
+        max-height: 80px;
+        /* padding-left: 25px; */
+        gap: 5%;
+    }
+
+    .btnHome_style {
+        max-width: 100px;
+        max-height: 40px;
+    }
+
+    .btnStyle_dropdownBtn {
+        max-width: 40.5%;
+        max-height: 49.5%;
+        background-color: #00000088;
+        border: solid 1px #ffffffe3;
+        box-shadow: 2px 0px 9px 2px rgba(0, 0, 0, 0.7), 2px -1px 18px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .img_header_section {
+        top: 12%;
+        right: 0%;
+        z-index: 2;
+        max-width: 50%;
+        max-height: 13%;
+        aspect-ratio: 1 / 1;
+        transform: translate(-30%, -49%);
+    }
+
+    .main_section {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .display_sectionMain {
+        background-color: #00000027;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .display_sectionLeft {
+        border-bottom: solid 2px #ffffff;
+        min-width: 100%;
+        max-height: 10%;
+        background-color: #f09cec7d;
+    }
+
+    .display_sectionCenter {
+        flex-direction: column;
+        justify-content: center;
+        max-width: 95%;
+        max-height: 75%;
+        margin: 2%;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+    }
+
+    .paragraph_mainStyle {
+        flex-direction: column;
+        max-height: 90%;
+        background-color: #f0f8ff4a;
+        border: solid 2px #00000059;
+        opacity: 1;
+        transition: opacity 1.2s ease-in-out;
+        overflow-y: auto;
+        max-width: 85%;
+        min-width: 70%;
+        box-shadow: none;
+        justify-content: normal;
+        padding-left: 5%;
+        padding-right: 7%;
+        padding-bottom: 3%;
+        padding-top: 3%;
+    }
+
+    .introText_style {
+        font-size: 19px;
+    }
+
+    .display_sectionRight {
+        border-top: solid 2px #ffffff;
+        border-left: none;
+        min-width: 100%;
+        max-height: 12%;
+        background-color: #f09cec7d;
+    }
+
+    .contact_box_mainSection {
+        position: fixed;
+        top: 49%;
+        left: 50%;
+        min-width: 90%;
+        min-height: 61%;
+        flex-direction: column;
+    }
+
+    .contactActive {
+        position: fixed;
+        top: 49%;
+        left: 50%;
+        min-width: 90%;
+        min-height: 61%;
+        flex-direction: column;
+    }
+
+    .contact_imgChild_box {
+        background-color: #373a43b5;
+        justify-content: center;
+        max-height: 260px;
+    }
+
+    .contact_img_style {
+        max-width: 50%;
+        max-height: 100%;
+        scale: 1;
+        aspect-ratio: 1 / 1;
+        border-right: solid 2px rgba(255, 255, 255, 0.515);
+        border-right: solid 2px rgba(255, 255, 255, 0.515);
+        border-left: solid 2px rgba(255, 255, 255, 0.515);
+        background-color: black;
+    }
+
+    .contact_headerBox {
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        max-height: 140px;
+        max-width: 90%;
+        border-bottom: solid 2px #ffffff;
+    }
+
+    .contact_nameBox {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .contact_headerBox {
+        flex-direction: column;
+        max-height: 40%;
+    }
+
+    .flipCard_parent {
+        perspective: 1000px;
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .flipCard_inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .flipCard_parent:hover .flipCard_inner {
+        transform: rotateY(180deg);
+    }
+
+    .contact_flipCardFront_textBox,
+    .contact_flipCardBack_textBox {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        flex-direction: column;
+    }
+
+    .contact_flipCardBack_textBox {
+        transform: rotateY(180deg);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .fa-instagram:hover,
+    .fa-github-square:hover {
+        color: rgba(0, 0, 255, 0.324);
+    }
+
+    .emailContact,
+    .anchorEmailContact {
+        justify-content: center;
+        max-height: 80px;
+        max-width: 85%;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contact_paragraphBox {
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer_btn_section {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contactBtnStyle {
+        position: unset;
+        max-width: 45%;
+        max-height: 45%;
+        /* justify-content: space-between; */
+        border-radius: 40px;
+        gap: 27%;
+        background-color: rgba(211, 193, 251, 0.609);
+        border: #ffffff 2px solid;
+        z-index: 1;
+    }
+
+
+}

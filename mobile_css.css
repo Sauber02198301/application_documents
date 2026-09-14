@@ -120,7 +120,7 @@
             'main'
             'footer'
         ;
-        grid-template-rows: 125px 1fr 75px;
+        grid-template-rows: 125px 1fr 85px;
         gap: 8px;
     }
 
@@ -194,7 +194,7 @@
     .btnStyle_dropdownBtn {
         background-color: rgba(135, 206, 250, 0.626);
         max-width: 100px;
-        max-height: 40px;
+        min-height: 35px;
         border-bottom: solid 1px rgba(0, 0, 0, 0.412);
     }
 
@@ -230,10 +230,11 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        overflow-y: auto;
+        /*overflow-y: auto;*/
         z-index: 0;
         min-width: 100%;
-        min-height: 100%;
+        /*height: 100%;
+        min-height: 0;*/
     }
 
     .main_style {
@@ -242,6 +243,8 @@
 
     .display_sectionMain {
         flex-direction: column;
+        /*min-height: 100%;
+        overflow: visible;*/
         min-width: 100%;
         z-index: 1;
     }
@@ -257,7 +260,9 @@
 
     .display_sectionCenter {
         min-width: 100%;
-        max-height: 95%;
+        /*min-height: 100%;
+        overflow: visible;*/
+        /*justify-content: flex-start;*/
     }
 
     /*
@@ -277,15 +282,19 @@
         flex-direction: column;
         background-color: #f0f8ff4a;
         gap: 15px;
-        margin: 30px;
-        padding: 25px;
-        max-height: 80%;
-        overflow-y: auto;
+        margin: 15px auto;
+        padding: 15px;
+        width: 90%;
+        /*height: auto;
+        max-height: none;
+        overflow: visible;*/
+        -webkit-overflow-scrolling: touch;
         opacity: 1;
         transition: opacity 1.2s ease-in-out;
+        /*justify-content: flex-start;*/
     }
 
-    .paragraph_mainStyle.is-hidden {
+    .is-hidden {
         opacity: 0;
         transition: opacity 1.2s ease-in-out;
     }
@@ -298,7 +307,20 @@
         min-height: 40px;
     }
 
-    .contact_box_mainSection,
+    .contact_box_mainSection {
+        position: fixed;
+        top: 52%;
+        left: 50%;
+        flex-direction: column;
+        transform: translate(-50%, -50%);
+        max-width: 90%;
+        max-height: 61%;
+        background-color: #000000;
+        border: solid 3px #00000033;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
     .contactActive {
         position: fixed;
         top: 52%;
@@ -343,11 +365,6 @@
         flex-direction: column;
         gap: 10px;
         align-items: center;
-    }
-
-    .contactBtnStyle {
-        max-width: 200px;
-        max-height: 40px;
     }
 
     .contact_headerBox {
@@ -432,6 +449,7 @@
     .contactBoxStyle {
         justify-content: center;
         align-items: center;
+        margin-left: 0;
     }
 
     .contact_btn_imgStyle {
@@ -467,8 +485,6 @@
         max-height: 90px;
         max-width: 65px;
     }
-
-
 
     /*
     .contact_box_mainSection.contactActive {
@@ -513,7 +529,7 @@
     .contactBtnStyle {
         justify-content: space-evenly;
         max-width: 200px;
-        max-height: 50px;
+        max-height: 70%;
         border-radius: 40px;
         gap: 5px;
         background-color: rgba(211, 193, 251, 0.609);

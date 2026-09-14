@@ -52,6 +52,12 @@ const functionsFactory = {
                         console.log(keyword, propertyValue);
                         this.functionsCheck(keyword, propertyValue, html_tag);
                         break;
+                    case 'mainUiBoolaenSetting':
+                        console.error('functionControlUi aufruf', keyword, propertyValue);
+                        console.log(typeof libraryBook[keyword][keyword] === 'function');
+                        if (typeof libraryBook[keyword][keyword] !== 'function') { return; };
+                        libraryBook[keyword][keyword](propertyValue, html_tag);
+                        break;
                     default: break;
                 };
             });
@@ -220,7 +226,7 @@ const functionsFactory = {
             html_tag = Das zu bearbeitende Object
         */
         const classObject = this.libraryContent(attributeClass, classValue);
-        console.log(attributeClass,classObject);
+        console.log(attributeClass, classObject);
         if (!classObject) { return console.error('classObject is null || undefind'); };
         if (typeof classObject === 'object' && !Array.isArray(classObject) || typeof classObject === 'string') { return classObject; console.error('this is a Object or null || undefind') };
         html_tag[attributeClass] = '';
@@ -262,7 +268,7 @@ const functionsFactory = {
             Object_contend = das zu bearbeitende Object
             html_tag = ziel Dom
         */
-        
+
 
         console.log(Object_contend, dom_area);
         if (typeof Object_contend === 'object' && !Array.isArray(Object_contend)) {
@@ -276,8 +282,8 @@ const functionsFactory = {
                 objectElement = this.libraryContent(keyword, valueContent);
 
                 if (!Array.isArray(objectElement)) { return console.error('this_is_not_a_array') };
-                objectElement.forEach((objectElement) => { 
-                    console.log(objectElement); 
+                objectElement.forEach((objectElement) => {
+                    console.log(objectElement);
                     arrayList.push(this.assignmentObjectContent(btnObject, objectElement));
 
                 });
@@ -335,7 +341,7 @@ const functionsFactory = {
                     default: break;
 
                 };
-                
+
             });
             arrayText.push(structuredClone(newTextObject))
             this.objectRendering_function(arrayText, html_tag);
@@ -585,3 +591,113 @@ const functionsFactory = {
     },
 
 };
+
+const mainUiBoolaenSetting = {
+    /*
+        Legende 
+        hier baue ich die dom_mainArea Control Ui sie soll dann aufpassen das die Display
+        area nur ein Elemnent offen / anzeigt. 
+
+        functionControlUi = globales FunctionsObject
+        controlUiFunctionMain() = contol function was gerade aktiv ist.
+
+    */
+
+    controlUnit: {
+        introArea: false,
+        bdi_IIArea: true,
+        lebenslaufArea: false,
+    },
+
+    dom_terminationFunction(html_tag) {
+
+        if (html_tag.innerHTML.trim() !== "") {
+            console.log('domElement ist befuelt');
+        } else {
+            console.log('dom ist leer');
+        }
+
+    },
+
+    resetBooleanFunction(toTurnName, toTurnKey, changeName, changeKey, html_tag) {
+        console.log(toTurnName, toTurnKey, changeName, changeKey, html_tag);
+        /*
+            Legende
+            booleanEvent: 
+                toTurnName = das booleanEvent aufruf,
+                toTurnKey = der booleanEvent toggleEvent
+            ;
+            html_tag = zu loeschende domContent;
+        */
+        if (toTurnName !== changeName) {
+            console.log(changeName);
+            if (toTurnKey === changeKey) {
+                this.controlUnit[changeName] = false;
+                this.dom_terminationFunction(html_tag);
+            };
+        }
+
+    },
+
+    activeBooleanEvent(activeBooleanName, activeBoolean, html_tag, childItems) {
+        console.log(activeBooleanName, activeBoolean, html_tag, childItems);
+        /*
+            Legende
+                activeBooleanName = der zu aktivierende Boolean,
+                activeBoolean = der Boolean Wert, 
+                html_tag = DOM_content,
+                childItems = das childObject
+        */
+        if( this.controlUnit[activeBooleanName] !== activeBoolean) {
+            this.controlUnit[activeBooleanName] = activeBoolean;
+            const childArray = Array.isArray(childItems) ?  childItems : [childItems]; 
+            console.log(childArray);
+            functionsFactory.objectRendering_function(childArray, html_tag);
+            return;
+        };
+
+    },
+
+    mainUiBoolaenSetting(propertyValue, html_tag) {
+        console.log(propertyValue, html_tag)
+        if (Array.isArray(propertyValue)) { propertyValue.forEach((propertyValue) => mainUiBoolaenSetting(propertyValue, html_tag)); return; }
+
+        let childObject = null;
+
+
+        Object.entries(propertyValue).forEach(([keyword, contentValue]) => {
+            /* 
+                Legende 
+                keyword = property Schluesselwort
+                contentValue = property Wert 
+                Hier wird das Object ausgelesen und zu gewiesen
+            */
+
+            console.log(keyword, contentValue)
+            switch (keyword) {
+                case 'mainAreaContent':
+                    console.log(keyword, contentValue);
+                    childObject = functionsFactory.libraryContent(keyword, contentValue);
+                    break;
+                case 'introArea':
+                    Object.entries(this.controlUnit).forEach(([booleanKey, booleanValue]) => {
+                        console.log(booleanKey, booleanValue);
+                        if (keyword !== booleanKey) {
+                            console.log(keyword, booleanKey);
+                            this.resetBooleanFunction(keyword, contentValue, booleanKey, booleanValue, html_tag);
+
+                        } else {
+                            console.log(keyword, booleanKey, contentValue, booleanValue);
+                            this.activeBooleanEvent(keyword, contentValue, html_tag, childObject)
+                        };
+                    });
+
+                    break;
+                default: break;
+            };
+        });
+        console.log(this.controlUnit);
+        console.log(childObject);
+    },
+
+}

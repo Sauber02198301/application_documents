@@ -44,7 +44,6 @@ const mainContent = {
                 "createElement": "main_tag",
                 "classList": "main_css",
                 "childItems": [
-
                     {
                         "createElement": "div_tag",
                         "classList": "contentDisplay_css",
@@ -56,21 +55,27 @@ const mainContent = {
                             {
                                 "createElement": "div_tag",
                                 "classList": "contentDisplayCenter_css",
-                                "childItems": {
-                                    "createElement": "p_tag",
-                                    "classList": "p_textCont_css",
-                                    "active_automaticSlideShow": {
-                                        "textslideContent_function": {
-                                            "createTextNode": "mainText_intro"
-                                        },
-                                        "slideShow_intro": true
-                                    }
+                                "mainUiBoolaenSetting": {
+                                    "mainAreaContent": "introTextContent",
+                                    "introArea": true
                                 }
 
                             },
                             {
                                 "createElement": "div_tag",
-                                "classList": "contentDisplayRight_css"
+                                "classList": "contentDisplayRight_css",
+                                "childItems": [
+                                    {
+                                        "createElement": "div_tag",
+                                        "classList": "contact_section_css",
+                                        "childItems": {
+                                            "createBtn_function": {
+                                                "btn_elements": "contactBtn"
+                                            }
+                                        }
+                                    },
+
+                                ]
                             },
                             {
                                 "createElement": "div_tag",
@@ -274,22 +279,64 @@ const mainContent = {
             {
                 "createElement": "footer_tag",
                 "classList": "footer_css",
-                "childItems": [
-                    {
-                        "createElement": "div_tag",
-                        "classList": "contact_section_css",
-                        "childItems": {
-                            "createBtn_function": {
-                                "btn_elements": "contactBtn"
-                            }
-                        }
-                    },
-
-                ]
             }
         ]
     }
 };
+
+const mainAreaContent = {
+    "introTextContent": {
+        "createElement": "p_tag",
+        "classList": "p_textCont_css",
+        "active_automaticSlideShow": {
+            "textslideContent_function": {
+                "createTextNode": "mainText_intro"
+            },
+            "slideShow_intro": true
+        }
+    },
+
+    "vita_content": {
+        "createElement": "div_tag",
+        "classList": "vita_css",
+        "childItems": [
+            {
+                "createElement": "header_tag",
+                "classList": "vitaHeader_css",
+                "childItems": [
+                    {
+                        "createElement": "div_tag",
+                        "classList": "vita_hContent_css",
+                        "childItems": [
+                            {
+                                "createElement": "h2_tag",
+                                "classList": "viteText_css",
+                                "createTextNode": "vitaHeadingText"
+                            },
+                            {
+                                "createElement": "h3_tag",
+                                "classList": "viteText_css",
+                                "createTextNode": "vita_workLife_time"
+                            }
+                        ]
+                    },
+                    {
+                        "createElement": "div_tag",
+                        "classList": "vita_logoContent_css",
+                        "childItems": [
+                            {
+                                "createElement": "img_tag",
+                                "classList": "vita_img_css",
+                                "src": "vitaLogo_heading",
+                                "alt": "vitaHelpText"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+}
 
 
 
@@ -299,5 +346,10 @@ const mainContent = {
                 "classList": "nav_css",
                 //"settingFunction": { "childItems": "btn_navBar_elements", "functionFactory": "btnFunction" }
             },
+
+
+            "childItems": {
+                                    
+                                }
 
 */
