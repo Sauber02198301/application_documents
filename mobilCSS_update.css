@@ -12,6 +12,14 @@
         padding-right: 12px;
     }
 
+    .contact_h1_text {
+        font-size: 17px;
+    }
+
+    .contact_h2_text {
+        font-size: 14px;
+    }
+
     .body_section {
         grid-template-rows: auto 1fr auto;
     }
@@ -47,18 +55,16 @@
     }
 
     .img_header_section {
-        top: 10.3%;
+        top: 14.3%;
         right: 0%;
         z-index: 2;
-        max-width: 50%;
-        max-height: 13%;
         aspect-ratio: 1 / 1;
         transform: translate(-30%, -49%);
     }
 
     .main_section {
-        max-width: 100%;
-        max-height: 100%;
+        overflow: visible;
+
     }
 
     .display_sectionMain {
@@ -67,6 +73,7 @@
         overflow: hidden;
         padding: 0;
         margin: 0;
+        border: none;
     }
 
     .display_sectionLeft {
@@ -79,8 +86,9 @@
     .display_sectionCenter {
         flex-direction: column;
         justify-content: center;
-        padding: 5px;
-        margin: 2px;
+        width: auto;
+        padding: 10px;
+        margin: 13px;
         justify-content: center;
         align-items: center;
         overflow: auto;
@@ -88,67 +96,52 @@
 
     .paragraph_mainStyle {
         flex-direction: column;
-        max-height: 90%;
+        gap: 8px;
+        text-align: left;
         background-color: #f0f8ff4a;
         border: solid 2px #00000059;
         opacity: 1;
         transition: opacity 1.2s ease-in-out;
-        overflow-y: auto;
-        max-width: 85%;
-        min-width: 70%;
+        overflow-y: visible;
+        padding: 7px;
         box-shadow: none;
         justify-content: normal;
-        padding-left: 5%;
-        padding-right: 7%;
-        padding-bottom: 3%;
-        padding-top: 3%;
     }
 
     .introText_style {
-        font-size: 19px;
+        font-size: 15px;
     }
 
     .display_sectionRight {
         border-top: solid 2px #ffffff;
         border-left: none;
-        min-width: 100%;
-        max-height: 12%;
+        padding: 15px;
         background-color: #f09cec7d;
     }
 
     .contact_box_mainSection {
         position: fixed;
         top: 49%;
-        left: 50%;
-        min-width: 90%;
-        min-height: 61%;
+        left: 49%;
         flex-direction: column;
-    }
-
-    .contactActive {
-        position: fixed;
-        top: 49%;
-        left: 50%;
-        min-width: 90%;
-        min-height: 61%;
-        flex-direction: column;
+        justify-self: center;
+        align-self: center;
+        overflow-y: scroll;
+        padding: 40px;
     }
 
     .contact_imgChild_box {
         background-color: #373a43b5;
         justify-content: center;
-        max-height: 260px;
+        padding: 0;
+        margin: 0;
     }
 
     .contact_img_style {
-        max-width: 50%;
-        max-height: 100%;
         scale: 1;
-        aspect-ratio: 1 / 1;
-        border-right: solid 2px rgba(255, 255, 255, 0.515);
-        border-right: solid 2px rgba(255, 255, 255, 0.515);
-        border-left: solid 2px rgba(255, 255, 255, 0.515);
         background-color: black;
+        margin: 0;
+        padding: 0;
     }
 
     .contact_headerBox {
@@ -164,6 +157,7 @@
         flex-direction: column;
         gap: 10px;
         align-items: center;
+        min-width: 0;
     }
 
     .contact_headerBox {
@@ -219,9 +213,28 @@
     }
 
     .contact_paragraphBox {
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 5px;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .contactText {
+        letter-spacing: 0;
+        font-size: 13px;
+        font-weight: unset;
+    }
+
+    .contactTextStyle {
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer_section {
+        padding: 3px;
+        justify-content: center;
     }
 
     .footer_btn_section {
@@ -231,19 +244,16 @@
 
     .contactBtnStyle {
         position: unset;
-        max-width: 45%;
-        max-height: 45%;
+        min-width: 230px;
+        padding: 10px;
         /* justify-content: space-between; */
         border-radius: 40px;
-        gap: 27%;
-        background-color: rgba(211, 193, 251, 0.609);
-        border: #ffffff 2px solid;
-        z-index: 1;
+        gap: 60px;
     }
-
-    .footer_section {
-        padding: 40px;
+    
+    .contact_btn_imgStyle {
+        max-width: 35px;
+        max-height: 50px;
     }
-
 
 }

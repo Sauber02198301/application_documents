@@ -32,8 +32,8 @@ body {
 }
 
 .fa {
-    color: #ffffff;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.881), 0px -1px 0px rgba(0, 0, 0, 0.881), 1px 0px 0px rgba(0, 0, 0, 0.881), -1px 0px 0px rgba(0, 0, 0, 0.881);
+    color: #000000;
+    text-shadow: 0px 1px 1px rgb(255 255 255 / 88%), 0px -1px 0px rgb(254 254 254 / 88%), 1px 0px 0px rgb(255 255 255 / 88%), -1px 0px 0px rgb(255 255 255 / 24%);
 }
 
 .homeBtn_style {
@@ -54,6 +54,25 @@ body {
     font-size: 25px;
 }
 
+.contactChip_text_style {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.contactTextStyle {
+    padding: 4px;
+    margin: 2px;
+    color: #000000;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.881), 0px -1px 0px rgb(255, 255, 255), 1px 0px 0px rgb(255, 255, 255), -1px 0px 0px rgb(255, 255, 255);
+}
+
+.contactText {
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .grid_container {
     display: grid;
 }
@@ -72,7 +91,7 @@ body {
         'main'
         'footer'
     ;
-    grid-template-rows: auto 1fr 110px;
+    grid-template-rows: auto 1fr auto;
 }
 
 .header_section {
@@ -83,7 +102,7 @@ body {
     background-position: center 44.8%;
     justify-content: space-between;
     border-bottom: solid 2px #ffffff;
-    padding: 45px;
+    padding: 25px;
 }
 
 .navigation_container {
@@ -177,15 +196,16 @@ body {
     justify-content: center;
     overflow: hidden;
     z-index: 1;
+    padding: 12px;
     /*aspect-ratio: 1/1;*/
     /*min-height: 100%;*/
 }
 
 .display_sectionMain {
     background-color: #00000027;
-    padding: 100px;
     margin: 10px;
-    max-height: 100%;
+    min-height: 80%;
+    border: solid 2px white;
 }
 
 .paragraph_mainStyle {
@@ -198,8 +218,8 @@ body {
     opacity: 1;
     transition: opacity 1.2s ease-in-out;
     overflow-y: auto;
-    padding: 23px;
-    margin: 1px;
+    padding: 15px;
+    margin: 5px;
     justify-content: center;
     /*box-shadow: 6px 5px 2px 0px #000000c7, 3px 3px 12px 3px #ffffff, 7px 6px 15px 4px #8e455c, 3px 2px 14px 9px rgb(189 90 123 / 79%), 1px 1px 7px 0px #000000b5, -4px -2px 7px 2px #613c3c6e, 4px 3px 11px 4px #fafafa, 2px 3px 16px 13px rgb(0 0 0 / 85%);*/
 }
@@ -211,13 +231,14 @@ body {
 
 .display_sectionLeft {
     border-right: solid 2px #ffffff;
-    padding: 120px;
+    padding: 12px;
+    min-width: 230px;
     background-color: #f09cec7d;
 }
 
 .display_sectionCenter {
     flex-direction: column;
-   /* min-width: 66%;
+    /* min-width: 66%;
     max-height: 93%;*/
     justify-content: center;
     margin: 2%;
@@ -230,7 +251,8 @@ body {
 
 .display_sectionRight {
     border-left: solid 2px #ffffff;
-    max-width: 13%;
+    padding: 12px;
+    min-width: 230px;
     background-color: #f09cec7d;
 }
 
@@ -239,19 +261,27 @@ body {
     left: 45%;
     top: 55%;
     transform: translate(-50%, -50%);
-    width: 70%;
-    height: 60%;
+    padding: 20px;
+    margin: 5px;
     background-color: #000000;
     border: solid 3px #00000033;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
+.contact_imgChild_box {
+    background-color: #5f4848b5;
+    border: solid 1px aliceblue;
+    justify-content: center;
+    padding: 15px;
+    margin: 10px;
+}
+
 .contact_img_style {
-    border-right: solid 2px rgba(255, 255, 255, 0.515);
-    border-right: solid 2px rgba(255, 255, 255, 0.515);
-    border-left: solid 2px rgba(255, 255, 255, 0.515);
+    border: solid 2px #ffffff;
     background-color: black;
+    padding: 5px;
+    margin: 3px;
 
 }
 
@@ -261,32 +291,32 @@ body {
 }
 
 .contact_nameBox {
+    min-width: 540px;
+    padding: 5px;
+    margin: 5px;
     flex-direction: column;
-    gap: 15px;
+    gap: 35px;
 }
 
 .contact_name_box_style {
     border: none;
 }
 
-.contact_imgChild_box {
-    background-color: #000000b5;
-    justify-content: center;
-}
-
 .contact_headerBox {
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    max-height: 140px;
-    max-width: 90%;
+    padding: 5px;
+    margin: 5px;
+    gap: 11px;
     border-bottom: solid 2px #ffffff;
 }
 
 .flipCard_parent {
     perspective: 1000px;
     flex-direction: column;
-    max-width: 90%;
+    width: 100%;
+    height: 80%;
 }
 
 .flipCard_inner {
@@ -324,15 +354,23 @@ body {
 .emailContact,
 .anchorEmailContact {
     justify-content: center;
-    max-height: 80px;
-    max-width: 85%;
+    padding: 10px;
     align-items: center;
     gap: 20px;
+}
+
+.anchor_settings {
+    padding: 10px;
+    margin: 10px;
+    font-size: 70px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .contact_paragraphBox {
     justify-content: center;
     align-items: center;
+    padding: 5px;
     gap: 10px;
 }
 
@@ -342,25 +380,23 @@ body {
     background-position: center 45%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 40px;
+    padding: 20px;
+    border-top: solid 2px #ffffff;
 }
 
 .footer_btn_section {
-    align-items: center;
-    flex-direction: column;
+    padding: 5px;
     justify-content: end;
-    padding: 15px;
 }
 
 .contactBtnStyle {
-    position: relative;
-    bottom: 8%;
-    /* left: 1%; */
-    max-width: 65%;
-    max-height: 8%;
+    min-width: 250px;
+    max-height: 70px;
+    margin: 6px;
+    padding: 7px 7px;
     /* justify-content: space-between; */
     border-radius: 40px;
-    gap: 27%;
+    gap: 45px;
     background-color: rgba(211, 193, 251, 0.609);
     border: #ffffff 2px solid;
     z-index: 1;

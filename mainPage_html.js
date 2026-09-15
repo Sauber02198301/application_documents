@@ -64,18 +64,7 @@ const mainContent = {
                             {
                                 "createElement": "div_tag",
                                 "classList": "contentDisplayRight_css",
-                                "childItems": [
-                                    {
-                                        "createElement": "div_tag",
-                                        "classList": "contact_section_css",
-                                        "childItems": {
-                                            "createBtn_function": {
-                                                "btn_elements": "contactBtn"
-                                            }
-                                        }
-                                    },
 
-                                ]
                             },
                             {
                                 "createElement": "div_tag",
@@ -279,12 +268,25 @@ const mainContent = {
             {
                 "createElement": "footer_tag",
                 "classList": "footer_css",
+                "childItems": [
+                    {
+                        "createElement": "div_tag",
+                        "classList": "contact_section_css",
+                        "childItems": {
+                            "createBtn_function": {
+                                "btn_elements": "contactBtn"
+                            }
+                        }
+                    },
+
+                ]
             }
         ]
     }
 };
 
 const mainAreaContent = {
+    
     "introTextContent": {
         "createElement": "p_tag",
         "classList": "p_textCont_css",

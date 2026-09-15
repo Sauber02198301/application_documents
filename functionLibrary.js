@@ -664,7 +664,6 @@ const mainUiBoolaenSetting = {
 
         let childObject = null;
 
-
         Object.entries(propertyValue).forEach(([keyword, contentValue]) => {
             /* 
                 Legende 
@@ -691,6 +690,11 @@ const mainUiBoolaenSetting = {
                             this.activeBooleanEvent(keyword, contentValue, html_tag, childObject)
                         };
                     });
+
+                    break;
+                case 'vita_area':
+
+                    console.log('text');
 
                     break;
                 default: break;

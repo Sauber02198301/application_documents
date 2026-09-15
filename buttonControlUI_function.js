@@ -16,9 +16,9 @@ DOM_bodyContainer.addEventListener('click', (t) => {
         switch (btn_primaryClick.dataset.action) {
 
             case 'btnHome_open':
-            console.log(btn_primaryClick);
-            btnUI_clickFunction('toggle_dropDown', 'nav_style');
-            //console.log(typeof btnFunctionsLibrary.btnUI_clickFunction[btn_secondaryClick.dataset.action] === 'function');
+                console.log(btn_primaryClick);
+                btnUI_clickFunction('toggle_dropDown', 'nav_style');
+                //console.log(typeof btnFunctionsLibrary.btnUI_clickFunction[btn_secondaryClick.dataset.action] === 'function');
                 break;
             default: break;
         };
@@ -27,12 +27,18 @@ DOM_bodyContainer.addEventListener('click', (t) => {
 
     if (btn_secondaryClick && DOM_bodyContainer.contains(btn_secondaryClick)) {
 
-        switch(btn_secondaryClick.dataset.action) {
+        switch (btn_secondaryClick.dataset.action) {
             case 'contact_id':
 
                 console.log(btn_secondaryClick);
-            btnUI_clickFunction('contactActive', 'contact_box_mainSection');
-            break;
+                btnUI_clickFunction('contactActive', 'contact_box_mainSection');
+                break;
+            case 'lebenslauf':
+                console.log(btn_secondaryClick);
+                const displaySection = document.querySelector('.display_sectionCenter');
+                const copyVita = mainAreaContent.vita_content
+                mainUiBoolaenSetting.mainUiBoolaenSetting() 
+                break;
             default: break;
         };
 
