@@ -106,10 +106,6 @@ const toggleEvent = {
 
 };
 
-const toggleUI_active = {
-    "slideShow_intro": false,
-}
-
 const slideShowImportValue = {
     "index": 0,
     "counter": 0

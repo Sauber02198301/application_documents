@@ -55,9 +55,9 @@ const mainContent = {
                             {
                                 "createElement": "div_tag",
                                 "classList": "contentDisplayCenter_css",
-                                "mainUiBoolaenSetting": {
+                                "UI_functionsEvent": {
                                     "mainAreaContent": "introTextContent",
-                                    "introArea": true
+                                    "createTextNode": "mainText_intro"
                                 }
 
                             },
@@ -286,16 +286,10 @@ const mainContent = {
 };
 
 const mainAreaContent = {
-    
+
     "introTextContent": {
         "createElement": "p_tag",
         "classList": "p_textCont_css",
-        "active_automaticSlideShow": {
-            "textslideContent_function": {
-                "createTextNode": "mainText_intro"
-            },
-            "slideShow_intro": true
-        }
     },
 
     "vita_content": {
@@ -353,5 +347,12 @@ const mainAreaContent = {
             "childItems": {
                                     
                                 }
+
+                                
+        "active_automaticSlideShow": {
+
+            "slideShow_intro": true
+
+        }
 
 */

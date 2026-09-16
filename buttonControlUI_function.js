@@ -9,6 +9,8 @@ DOM_bodyContainer.addEventListener('click', (t) => {
     const btn_primaryClick = t.target.closest(`.${btn_primary_class}`);
     const btn_secondaryClick = t.target.closest(`.${btn_secondary_class}`);
 
+    const displaySection = document.querySelector('.display_sectionCenter');
+
     console.log(t);
 
     if (btn_primaryClick && DOM_bodyContainer.contains(btn_primaryClick)) {
@@ -35,9 +37,15 @@ DOM_bodyContainer.addEventListener('click', (t) => {
                 break;
             case 'lebenslauf':
                 console.log(btn_secondaryClick);
-                const displaySection = document.querySelector('.display_sectionCenter');
-                const copyVita = mainAreaContent.vita_content
-                mainUiBoolaenSetting.mainUiBoolaenSetting() 
+
+                const vitaObject = {
+                    'mainAreaContent': 'vita_content',
+                    'vitaArea': true
+                };
+
+                const cleanDOM = dom_terminationFunction(displaySection, slideShow_content, false);
+
+                //mainUiBoolaenSetting.mainUiBooleanSetting(vitaObject, displaySection); 
                 break;
             default: break;
         };
@@ -45,3 +53,23 @@ DOM_bodyContainer.addEventListener('click', (t) => {
     };
 
 });
+
+function dom_terminationFunction(html_element, slideShow_content, intervalBoolean) {
+    console.log(html_element, slideShow_content, intervalBoolean);
+
+    Object.entries(slideShow_content).forEach(([keyName, propertyValue]) => {
+        console.log(keyName, propertyValue);
+        if (typeof propertyValue === 'boolean') {
+            slideShow_content[keyName] = intervalBoolean;
+        };
+    });
+    console.log(slideShow_content);
+    if (html_element.innerHTML.trim() !== "") {
+        console.log('domElement ist befuelt');
+        
+    } else {
+        console.log('dom ist leer');
+
+    };
+
+};

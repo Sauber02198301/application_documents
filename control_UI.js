@@ -9,10 +9,10 @@ const libraryBook = {
     "btn_elements": btn_elements,
     "createTextNode": createTextNode,
     "functionsFactory": functionsFactory,
-    "toggleUI_active": toggleUI_active,
     "mainAreaContent": mainAreaContent,
-    "mainUiBoolaenSetting": mainUiBoolaenSetting,
+    "mainUiBooleanSetting": mainUiBoolaenSetting,
 };
+
 
 function btnUI_clickFunction(clickEvent, dom_className) {
     console.log(clickEvent, dom_className);
@@ -22,7 +22,7 @@ function btnUI_clickFunction(clickEvent, dom_className) {
     if (!domContainer.classList.contains(clickEvent)) {
 
         domContainer.classList.add(clickEvent);
-       //domContainer.style.opacity = 1;
+        //domContainer.style.opacity = 1;
 
     } else {
 
@@ -104,6 +104,32 @@ function searchFunction(keyword, funcKey, oblectCont, domArea) {
     };
 };
 
+let currentSlideEvent = null;
+let introIntervall = null;
+
+const controlUnit = {
+
+    
+
+    changeContentArea(opjectElement, html_tag) {
+        console.log(opjectElement, html_tag);
+
+        let parentContainer = null;
+        
+
+        Object.entries(opjectElement).forEach(([keyword, valueCode]) => {
+
+
+
+            console.error(keyword, valueCode);
+            this.intervalActive = valueCode
+
+        });
+
+
+    },
+
+};
 
 
 UI_checkControl(mainContent, 'body_section', true);

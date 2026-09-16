@@ -47,16 +47,22 @@ const functionsFactory = {
                         console.log(html_tag);
                         break;
                     case 'textSpanContent_function':
-                    case 'active_automaticSlideShow':
+                    //case 'active_automaticSlideShow':
                     case 'hyperlinkContent_function':
                         console.log(keyword, propertyValue);
                         this.functionsCheck(keyword, propertyValue, html_tag);
                         break;
-                    case 'mainUiBoolaenSetting':
+                    case 'mainUiBooleanSetting':
                         console.error('functionControlUi aufruf', keyword, propertyValue);
                         console.log(typeof libraryBook[keyword][keyword] === 'function');
                         if (typeof libraryBook[keyword][keyword] !== 'function') { return; };
                         libraryBook[keyword][keyword](propertyValue, html_tag);
+                        break;
+                    case 'UI_functionsEvent':
+
+                        console.log(keyword, propertyValue);
+                        controlUnit.changeContentArea(propertyValue, html_tag);
+
                         break;
                     default: break;
                 };
@@ -606,16 +612,12 @@ const mainUiBoolaenSetting = {
     controlUnit: {
         introArea: false,
         bdi_IIArea: true,
-        lebenslaufArea: false,
+        vitaArea: false,
     },
 
     dom_terminationFunction(html_tag) {
 
-        if (html_tag.innerHTML.trim() !== "") {
-            console.log('domElement ist befuelt');
-        } else {
-            console.log('dom ist leer');
-        }
+
 
     },
 
@@ -629,48 +631,36 @@ const mainUiBoolaenSetting = {
             ;
             html_tag = zu loeschende domContent;
         */
-        if (toTurnName !== changeName) {
-            console.log(changeName);
-            if (toTurnKey === changeKey) {
-                this.controlUnit[changeName] = false;
-                this.dom_terminationFunction(html_tag);
-            };
-        }
+
 
     },
 
     activeBooleanEvent(activeBooleanName, activeBoolean, html_tag, childItems) {
         console.log(activeBooleanName, activeBoolean, html_tag, childItems);
-        /*
-            Legende
-                activeBooleanName = der zu aktivierende Boolean,
-                activeBoolean = der Boolean Wert, 
-                html_tag = DOM_content,
-                childItems = das childObject
-        */
-        if( this.controlUnit[activeBooleanName] !== activeBoolean) {
-            this.controlUnit[activeBooleanName] = activeBoolean;
-            const childArray = Array.isArray(childItems) ?  childItems : [childItems]; 
-            console.log(childArray);
-            functionsFactory.objectRendering_function(childArray, html_tag);
-            return;
-        };
+
 
     },
 
-    mainUiBoolaenSetting(propertyValue, html_tag) {
+    mainUiBooleanSetting(propertyValue, html_tag) {
         console.log(propertyValue, html_tag)
-        if (Array.isArray(propertyValue)) { propertyValue.forEach((propertyValue) => mainUiBoolaenSetting(propertyValue, html_tag)); return; }
+
+    },
+
+};
+
+
+/*
+    if (Array.isArray(propertyValue)) { propertyValue.forEach((propertyValue) => mainUiBoolaenSetting(propertyValue, html_tag)); return; }
 
         let childObject = null;
 
         Object.entries(propertyValue).forEach(([keyword, contentValue]) => {
-            /* 
+            
                 Legende 
                 keyword = property Schluesselwort
                 contentValue = property Wert 
                 Hier wird das Object ausgelesen und zu gewiesen
-            */
+            
 
             console.log(keyword, contentValue)
             switch (keyword) {
@@ -679,12 +669,13 @@ const mainUiBoolaenSetting = {
                     childObject = functionsFactory.libraryContent(keyword, contentValue);
                     break;
                 case 'introArea':
+                case 'vitaArea':
                     Object.entries(this.controlUnit).forEach(([booleanKey, booleanValue]) => {
                         console.log(booleanKey, booleanValue);
                         if (keyword !== booleanKey) {
                             console.log(keyword, booleanKey);
                             this.resetBooleanFunction(keyword, contentValue, booleanKey, booleanValue, html_tag);
-
+                            
                         } else {
                             console.log(keyword, booleanKey, contentValue, booleanValue);
                             this.activeBooleanEvent(keyword, contentValue, html_tag, childObject)
@@ -702,6 +693,37 @@ const mainUiBoolaenSetting = {
         });
         console.log(this.controlUnit);
         console.log(childObject);
-    },
 
-}
+        
+            Legende
+                activeBooleanName = der zu aktivierende Boolean,
+                activeBoolean = der Boolean Wert, 
+                html_tag = DOM_content,
+                childItems = das childObject
+        
+        if (this.controlUnit[activeBooleanName] !== activeBoolean) {
+            this.controlUnit[activeBooleanName] = activeBoolean;
+            const childArray = Array.isArray(childItems) ? childItems : [childItems];
+            console.log(childArray);
+            functionsFactory.objectRendering_function(childArray, html_tag);
+            return;
+        };
+
+        if (toTurnName !== changeName) {
+            console.log(changeName);
+            if (toTurnKey === changeKey) {
+                this.controlUnit[changeName] = false;
+                this.dom_terminationFunction(html_tag);
+            };
+        }
+
+     if (html_tag.innerHTML.trim() !== "") {
+            console.log('domElement ist befuelt');
+            //html_tag.innerHTML = "";
+            return;
+        } else {
+            console.log('dom ist leer');
+            return;
+        }
+
+*/
