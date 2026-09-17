@@ -38,10 +38,7 @@ DOM_bodyContainer.addEventListener('click', (t) => {
             case 'lebenslauf':
                 console.log(btn_secondaryClick);
 
-                const vitaObject = {
-                    'mainAreaContent': 'vita_content',
-                    'vitaArea': true
-                };
+                
 
                 const cleanDOM = dom_terminationFunction(displaySection, slideShow_content, false);
 

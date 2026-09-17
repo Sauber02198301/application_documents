@@ -1,19 +1,3 @@
-const libraryBook = {
-    "toggleEvent": toggleEvent,
-    "createElement": createElement,
-    "classList": classList,
-    "anchor": anchor,
-    "src": src,
-    "alt": alt,
-    "href": href,
-    "btn_elements": btn_elements,
-    "createTextNode": createTextNode,
-    "functionsFactory": functionsFactory,
-    "mainAreaContent": mainAreaContent,
-    "mainUiBooleanSetting": mainUiBoolaenSetting,
-};
-
-
 function btnUI_clickFunction(clickEvent, dom_className) {
     console.log(clickEvent, dom_className);
     const domContainer = document.querySelector(`.${dom_className}`);
@@ -104,31 +88,105 @@ function searchFunction(keyword, funcKey, oblectCont, domArea) {
     };
 };
 
-let currentSlideEvent = null;
-let introIntervall = null;
 
 const controlUnit = {
 
-    
+    currentSlideEvent: null,
+    introIntervall: null,
+    intrevalIndex: 0,
 
-    changeContentArea(opjectElement, html_tag) {
-        console.log(opjectElement, html_tag);
+    currentSlideEventFunction(currentKey, currentValue) {
+        console.error(currentKey, currentValue);
+        if (currentValue === 'mainText_intro') {
+            this.currentSlideEvent = functionsFactory.libraryContent(currentKey, currentValue);
+            if (!this.currentSlideEvent) {
 
-        let parentContainer = null;
-        
+            } else {
 
-        Object.entries(opjectElement).forEach(([keyword, valueCode]) => {
+            };
+        }
+    },
+
+    animationsFunction(currenObject, htmlTag, functionsName) {
+        console.log(currenObject, htmlTag, functionsName);
+
+        htmlTag.classList.add('is-hidden');
+        htmlTag.style.opacity = 0;
+        htmlTag.addEventListener('transitionend', () => {
+
+            if (htmlTag.innerHTML.trim() !== "") {
+
+                htmlTag.innerHTML = '';
+                functionsFactory.functionsCheck(functionsName, currenObject, htmlTag);
+                htmlTag.classList.remove('is-hidden');
+                htmlTag.style.opacity = 1;
+
+            } else {
+                htmlTag.style.opacity = 1;
+                functionsFactory.functionsCheck(functionsName, currenObject, htmlTag);
+            }
+
+        }, { once: true });
+    },
+
+    introIntervallFunction(html_tag) {
+        console.error(html_tag);
+        const current_length = this.currentSlideEvent.length - 1;
+        const parentHTML = html_tag;
+
+        let currentSlide = this.currentSlideEvent[this.intrevalIndex];
+        functionsFactory.functionsCheck('textslideContent_function', this.currentSlideEvent[this.intrevalIndex]);
+
+        introIntervall = setInterval(() => {
+
+            console.log(this.currentSlideEvent[this.intrevalIndex], current_length, parentHTML);
+            if (this.intrevalIndex === current_length) {
+                this.intrevalIndex = 0;
+                this.animationsFunction(this.currentSlideEvent[this.intrevalIndex], parentHTML, 'textslideContent_function');
+            } else {
+                this.intrevalIndex++;
+                console.log(this.intrevalIndex);
+
+                this.animationsFunction(this.currentSlideEvent[this.intrevalIndex], parentHTML, 'textslideContent_function');
+            };
 
 
-
-            console.error(keyword, valueCode);
-            this.intervalActive = valueCode
-
-        });
-
+        }, 20000);
 
     },
 
+    changeContentArea(objectElement, html_tag) {
+        console.error(objectElement, html_tag);
+
+
+        Object.entries(objectElement).forEach(([keyword, valueCode]) => this.currentSlideEventFunction(keyword, valueCode));
+        if (!this.introIntervall) {
+            console.error('curentSlideEvent is null');
+            return;
+        } else {
+            console.error('currentSlideEvent have data');
+            if (this.introIntervall) { clearInterval(this.introIntervall) };
+            this.introIntervallFunction(html_tag);
+        };
+
+    },
+
+};
+
+const libraryBook = {
+    "toggleEvent": toggleEvent,
+    "createElement": createElement,
+    "classList": classList,
+    "anchor": anchor,
+    "src": src,
+    "alt": alt,
+    "href": href,
+    "btn_elements": btn_elements,
+    "createTextNode": createTextNode,
+    "functionsFactory": functionsFactory,
+    "mainAreaContent": mainAreaContent,
+    "mainUiBooleanSetting": mainUiBoolaenSetting,
+    "controlUnit": controlUnit,
 };
 
 

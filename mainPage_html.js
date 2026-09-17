@@ -1,3 +1,14 @@
+const introContent = {
+    "createElement": "p_tag",
+    "classList": "p_textCont_css",
+    "UI_functionsEvent": {
+        "createTextNode": "mainText_intro"
+    }
+};
+
+
+
+
 const mainContent = {
     "toggleEvent": "webside_toggle",
     "functionsFactory": {
@@ -55,11 +66,7 @@ const mainContent = {
                             {
                                 "createElement": "div_tag",
                                 "classList": "contentDisplayCenter_css",
-                                "UI_functionsEvent": {
-                                    "mainAreaContent": "introTextContent",
-                                    "createTextNode": "mainText_intro"
-                                }
-
+                                "introContent": introContent
                             },
                             {
                                 "createElement": "div_tag",
@@ -284,6 +291,8 @@ const mainContent = {
         ]
     }
 };
+
+
 
 const mainAreaContent = {
 

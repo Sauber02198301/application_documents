@@ -36,10 +36,10 @@ const functionsFactory = {
                         this.assignment_dataset_action(keyword, propertyValue, html_tag);
                         break;
                     case 'childItems':
+                    case 'introContent':
                         console.log(keyword, propertyValue);
                         this.createChildFunction(propertyValue, html_tag);
                         break;
-
                     case 'createBtn_function':
                     case 'assignment_paragraph_function':
                         console.log(keyword, propertyValue);
@@ -59,7 +59,6 @@ const functionsFactory = {
                         libraryBook[keyword][keyword](propertyValue, html_tag);
                         break;
                     case 'UI_functionsEvent':
-
                         console.log(keyword, propertyValue);
                         controlUnit.changeContentArea(propertyValue, html_tag);
 
