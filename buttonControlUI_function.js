@@ -37,10 +37,8 @@ DOM_bodyContainer.addEventListener('click', (t) => {
                 break;
             case 'lebenslauf':
                 console.log(btn_secondaryClick);
-
-                
-
-                const cleanDOM = dom_terminationFunction(displaySection, slideShow_content, false);
+                controlUnit.changeContentArea(btn_secondaryClick.dataset.action);
+                //const cleanDOM = dom_terminationFunction(displaySection, slideShow_content, false);
 
                 //mainUiBoolaenSetting.mainUiBooleanSetting(vitaObject, displaySection); 
                 break;

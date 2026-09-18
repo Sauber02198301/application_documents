@@ -40,48 +40,54 @@ const createTextNode = {
         { "createTextNode": "menu", "classList": "iconText_css" },
     ],
 
+    "closeVitaText": [
+        { "createTextNode": "close", "classList": "btn_VitaText_css" },
+        { "createTextNode": "close", "classList": "iconCloseText_css" },
+    ],
+
     "mainText_intro": [
         {
             "classList": "textSection_one",
             "createTextNode": [
-                "Für mich stand schnell fest, dass ich mich bei WAGO im Bereich der IT und Softwareentwicklung einbringen möchte.",
-                "Um Ihnen mein selbst angeeignetes Wissen nicht nur theoretisch, sondern direkt praktisch zu beweisen, habe ich verschiedene Anwendungen entwickelt, die meine Vielseitigkeit zeigen.",
-                "Neben einer Software zur Auswertung des BDI-II-Tests habe ich ein simulationsbasiertes Energiemanagement-System programmiert.",
-                "Dieses orientiert sich direkt an Ihrer Produktpalette und stellt Verbräuche im Haushaltskontext logisch dar.",
-                "In meinem beigefügten Lebenslauf habe ich meinen gesamten Werdegang niedergeschrieben.",
-                "Er zeigt, wer ich bin, welche praktischen Erfahrungen mich ausmachen und mit welcher großen Motivation ich diesen Neustart anstrebe."
-            ],
+                "Die Begeisterung für Computer und Technik begleitet mich schon seit meiner Jugend.",
+                "Auch wenn mein beruflicher Weg zunächst in eine andere Richtung führte, habe ich mich privat kontinuierlich und mit großer Leidenschaft weiterentwickelt.",
+                "Ob das Planen, Zusammenstellen und Konfigurieren kompletter PC-Systeme inklusive BIOS-Setup oder anspruchsvolle Hardware-Reparaturen an MacBooks – wie das Beheben von Display- und Sensorfehlern sowie Firmware-Wiederherstellungen:",
+                "Ich liebe es, komplexen Ursachen auf den Grund zu gehen und funktionierende Lösungen zu finden.",
+                "Um mein technisches Profil abzurunden, habe ich mich intensiv in die moderne Software- und Webentwicklung eingearbeitet.",
+                "Neben soliden Kenntnissen in HTML und CSS liegt mein Schwerpunkt dabei vor allem auf JavaScript, mit dem ich bereits eigene praxisnahe Anwendungen und Logiken umsetze."
+            ]
         },
         {
             "classList": "textSection_two",
             "createTextNode": [
-                "Dass mein Weg mich zu WAGO führt, verdanke ich einem glücklichen Zufall und einem inspirierenden Gespräch auf den AzubiVibes.",
-                "Dieses Treffen hat in mir eine ganz neue Motivation entfacht.",
-                "Während mir die klassischen, starren Bildungswege in der Vergangenheit oft Steine in den Weg gelegt haben, weiß ich heute genau, wo meine Stärken liegen.",
-                "Mein Weg zeichnet sich dadurch aus, dass ich mir komplexe Systeme mit unbändiger Disziplin, Ausdauer und Schweiß vollkommen autark erarbeite.",
-                "Wenn mich ein Projekt packt, entwickele ich einen absoluten Biss, um logische und stabile Lösungen zu erschaffen.",
-                "Ich muss und möchte härter arbeiten als andere, um mein Potenzial voll auszuschöpfen, und genau diese Energie möchte ich gewinnbringend in Ihr Team einbringen."
-            ],
+                "Meine Faszination für Technik endet nicht bei der Software: Aktuell realisiere ich eigene Hardware-Projekte, wie den anspruchsvollen Umbau klassischer Handheld-Konsolen.",
+                "Dabei modifiziere ich Gehäuse präzise, um moderne Komponenten wie einen Raspberry Pi, separate Power-Management-Platinen und IPS-Displays samt Konverterboards auf engstem Raum einzubinden – inklusive feiner Lötarbeiten an Schnittstellen und Stromversorgung.",
+                "Wo klassische Bildungswege oft an Grenzen stießen, habe ich gelernt, mir selbst anspruchsvolle Systeme vollkommen autark und strukturiert anzueignen.",
+                "Wenn mich ein Projekt packt, entwickle ich einen absoluten Biss, um logische und stabile Lösungen zu erschaffen."
+            ]
         },
         {
             "classList": "textSection_three",
             "createTextNode": [
-                "Ein Praktikum in Ihrem Haus ist für mich der nächste logische Schritt, um meine praktischen Fähigkeiten in einem professionellen Umfeld zu vertiefen und aktiv an echten Herausforderungen mitzuwirken.",
-                "Ich brenne darauf, Ihnen zu zeigen, was in mir steckt und wie ich Ihr Team mit meinem Fokus verstärken kann.",
-                "Über die Gelegenheit, mich Ihnen in einem persönlichen Gespräch vorzustellen und meine Anwendungen im Detail zu präsentieren, freue ich mich sehr.",
+                "Genau diese Kombination aus logischem Denken, Hardware-Verständnis und Software-Entwicklung möchte ich nun im professionellen Umfeld einbringen.",
+                "Ein Einstieg bzw. Praktikum in Ihrem Haus ist für mich der nächste logische Schritt, um an echten Herausforderungen mitzuwirken und Ihr Team tatkräftig zu unterstützen.",
+                "In meinem beigefügten Lebenslauf finden Sie meinen bisherigen Werdegang. Er zeigt, wer ich bin, welche praktischen Erfahrungen mich ausmachen und mit welcher großen Motivation ich diesen Neustart anstrebe.",
+                "Über die Gelegenheit, mich Ihnen in einem persönlichen Gespräch vorzustellen und meine Projekte im Detail zu präsentieren, freue ich mich sehr.",
                 "Mit freundlichen Grüßen",
                 "Dennis Nickel"
-            ],
+            ]
         },
         {
             "classList": "textSection_three",
             "createTextNode": [
-                "Erfolg ist kein Glück,",
-                "sondern nur das Ergebnis von Blut, Schweiß und Tränen.",
+                "Erfolg ist kein Glück, sondern nur das Ergebnis von Blut, Schweiß und Tränen.",
                 "— Kontra K"
-            ],
+            ]
         }
     ],
+
+    "vitaHeadingText": "Lebenslauf",
+    "vita_workLife_time": "Die Einzelnen Lebensstation",
 
     "instaContent": { "classList": "icon_Insta_css", /*"createTextNode": "&#xf16d;"*/ },// insta
     "gitHubContent": { "classList": "icon_gitHub_css", /*"createTextNode": "&#xf092;"*/ }, // gitHub
@@ -102,22 +108,12 @@ const btn_elements = {
 
 const toggleEvent = {
     "webside_toggle": false,
-    "dropDown": false,
-
 };
 
 const slideShowImportValue = {
     "index": 0,
     "counter": 0
 }
-
-const slideShow_content = {
-    "functionsName": null,
-    "objectContent": null,
-    "intervalReset": null,
-    "slideShow_intro": false,
-    "classList": null,
-};
 
 const anchor = {
     "anchorFooter": [
@@ -143,10 +139,6 @@ const alt = {
     "chipImg_footer": "Ein Bild von eines Mann mittlerem Alter. Es steht der Name Dennis im Text",
     "img_man": "Ein Mann mittlers Alter",
 };
-
-const action = {
-
-}
 
 const classList = {
     /*
@@ -233,6 +225,18 @@ const classList = {
         { "add": "font_standardValue" },
         { "add": "btn_primaryText" },
         { "add": "homeBtn_style" }
+    ],
+
+    "btn_VitaText_css": [
+        { "add": "font_standardValue" },
+        { "add": "vita_BtnSecondary" },
+        { "add": "vitaText" }
+    ],
+
+    "iconCloseText_css": [
+        { "add": "material-symbols-outlined" },
+        { "add": "vitaText" },
+        { "add": "" }
     ],
 
     "p_textCont_css": [
@@ -413,6 +417,49 @@ const classList = {
         { "add": "font_standardValue" },
         { "add": "contactText" },
         { "add": "contactTextStyle" }
+    ],
+
+    "vita_css": [
+        { "add": "flex_container" },
+        { "add": "vitaSection" },
+        { "add": "vitaSectionStyle" }
+    ],
+
+    "vitaHeader_css": [
+        { "add": "flex_container" },
+        { "add": "vite_headingSection" },
+        { "add": "vita_headingStyle" }
+    ],
+
+    "vita_hContent_css": [
+        { "add": "flex_container" },
+        { "add": "headingTextContent" },
+        { "add": "vita_headingText_style" }
+    ],
+
+    "vitaText_h2_css": [
+        { "add": "font_standardValue" },
+        { "add": "vitaText_h2" },
+        { "add": "vitaTextStyle" }
+    ],
+
+    "vitaTexth3": [
+        { "add": "font_standardValue" },
+        { "add": "vitaText_h3" },
+        { "add": "vitaTextStyle" }
+    ],
+
+    "vita_logoContent_css": [
+        { "add": "flex_container" },
+        { "add": "img_vitaContainer" },
+        { "add": "img_vitaContainerStyle" }
+    ],
+
+    "vita_img_css": [
+        { "add": "block_container" },
+        { "add": "img_vita" },
+        { "add": "img_vitaStyle" }
     ]
+
 
 }

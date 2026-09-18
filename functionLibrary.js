@@ -58,15 +58,21 @@ const functionsFactory = {
                         if (typeof libraryBook[keyword][keyword] !== 'function') { return; };
                         libraryBook[keyword][keyword](propertyValue, html_tag);
                         break;
-                    case 'UI_functionsEvent':
+                    case 'controlUnit':
                         console.log(keyword, propertyValue);
                         controlUnit.changeContentArea(propertyValue, html_tag);
+                        //hier sendet er die abruf daten wieder an die controlUnit zurueck
 
                         break;
                     default: break;
                 };
             });
-            this.dom_parring(domArea, html_tag);
+            if (!domArea) {
+                return html_tag;
+            } else {
+                this.dom_parring(domArea, html_tag);
+            };
+
         });
 
     },
@@ -217,6 +223,7 @@ const functionsFactory = {
             assignValue = zuweisungstext,
             html_tag = dom_content
         */
+
         const node = document[assignKey](assignValue);
         html_tag.appendChild(node);
         return;
@@ -366,8 +373,8 @@ const functionsFactory = {
         this.objectRendering_function(arrayText, html_tag);
     },
 
-    textslideContent_function(objectContend, html_tag) {
-        console.log(objectContend, html_tag);
+    textslideContent_function(objectContend, child_dom, html_tag) {
+        console.log(objectContend, child_dom, html_tag);
 
         const arrayList = [];
         let cTN = {
@@ -390,8 +397,9 @@ const functionsFactory = {
                 default: break;
             };
         });
+        child_dom.childItems = arrayList;
         console.log(arrayList);
-        this.objectRendering_function(arrayList, html_tag);
+        return arrayList;
     },
 
     chipImg_Text_createrFunction(objectContend, html_tag) {
@@ -430,37 +438,6 @@ const functionsFactory = {
         this.objectRendering_function(anchorArrayList, html_tag);
     },
 
-    animation_fadeOutFunction(functionsName, objectText, html_tag) {
-        console.log(functionsName, objectText, html_tag);
-        /*
-            Legende
-
-            functionsName = die aufzurufende function's Name der mit functionsCheck ueberprueft wird,
-            objectText = das object mit den auszulesenden Werten zum anzeigen oder verarbeiten.
-            html_tag = Das Ziel DOM
-
-        */
-        html_tag.classList.add('is-hidden');
-        html_tag.style.opacity = 0;
-        html_tag.addEventListener('transitionend', (/* eventuel der auszufuehrende functions aufruf */) => {
-            if (html_tag.innerHTML.trim() !== '') {
-                //opacity & transition ausblenden lassen  und dann leeren 
-
-                console.log('dom ist befuelt');
-                html_tag.innerHTML = '';
-                this.functionsCheck(functionsName, objectText, html_tag);
-                html_tag.classList.remove('is-hidden');
-                html_tag.style.opacity = 1;
-            } else {
-                // wenn leer im dom_setzen und dann wieder mit opacity und transition einblenden lassen
-
-                console.log('dom ist leer');
-                this.functionsCheck(functionsName, objectText, html_tag);
-            };
-        }, { once: true });
-
-    },
-
     mainActiveUI(fillCallUp, activeBoolean, propertyKey, boolenValue) {
         console.log(fillCallUp, activeBoolean, propertyKey, boolenValue);
         /* 
@@ -483,169 +460,11 @@ const functionsFactory = {
         return boolenValue;
     },
 
-    active_automaticSlideShow(content, dom_content) {
-        console.log(content, dom_content, "activeAutomatic");
 
-        /*
-            legende 
-            content = das zu bearbeitende Object,
-            dom_content = Ziel_DOM
-        */
-
-        if (!content || !dom_content) { return console.error('undefined or null'); };
-        if (typeof content === 'object' && Array.isArray(content)) { return console.error('this is a Array'); };
-
-        Object.entries(content).forEach(([contendKey, propertyValue]) => {
-            console.log(contendKey, propertyValue);
-            /*
-                Legende arrowFunction
-                contendKey = propertyKey's
-                propertyValue = the extraction Value
-
-                the Switch extraition the only values and assignment to the variablen => active, functionsName, childContent
-            */
-            switch (contendKey) {
-
-                case 'textslideContent_function':
-                    console.log(contendKey, propertyValue);
-                    slideShow_content.functionsName = contendKey;
-                    let extractionText = null;
-                    Object.entries(propertyValue).forEach(([libraryKey, libraryValue]) => extractionText = this.libraryContent(libraryKey, libraryValue));
-                    console.log(extractionText);
-                    slideShow_content.objectContent = extractionText;
-                    break;
-                case 'classList':
-                    console.log(contendKey, propertyValue);
-                    slideShow_content[contendKey] = propertyValue;
-                    break;
-                case 'slideShow_intro':
-                    if (slideShow_content[contendKey] !== propertyValue) {
-                        console.log(slideShow_content[contendKey]);
-                        slideShow_content[contendKey] = propertyValue;
-                        this.activeControlSlideShow(slideShow_content, dom_content);
-                        return;
-                    };
-                    break;
-                default: break;
-            };
-        });
-    },
-
-    activeControlSlideShow(contentObject, DOM_content) {
-        console.log(contentObject, DOM_content);
-        /*
-            Legende 
-            contentObject = das auszulesende Object,
-            DOM_contend = Ziel DOM
-
-            Notiz es kann sein wenn ich die function einmal durch den Boolean beende das hier eventuell ein Fehler 
-            aufkommen kann also muss mann das hier im spaeteren verlauf sehen. Wenn ich den Text content anhalten werde weil ich den ganzen inhalt terminieren muss. 
-            Wegen des aufrufen eines anderem Programm deswegen im hinterkopf behalten den DOM display_sectionCenter alles separat halten und eine eigen boolean function hier fuer erstellen!
-            Das ist der Hauptanzeige Container fuer die Programme
-        
-        */
-
-        if (typeof contentObject === 'object' && Array.isArray(contentObject)) { return console.error('this is a Array'); };
-        const { slideShow_intro, intervalReset, objectContent, functionsName, classList } = contentObject;
-        console.log(slideShow_intro, intervalReset, objectContent, functionsName, classList);
-        if (!slideShow_intro) {
-
-        } else {
-            if (intervalReset) { clearInterval(intervalReset) };
-            this.slideShowInterval(intervalReset, functionsName, objectContent, DOM_content);
-        };
-
-    },
-
-    slideShowInterval(active, functionsName, childContent, dom_content) {
-        console.log(active, functionsName, childContent, dom_content);
-        /*
-            Legende SetInterval 
-            active = boolean wert zum aktivieren, 
-            functionsName = der functions Aufruf Name "string",
-            childContent = kinder Object,
-            dom_content = Der Ziel DOM_Bereich
-        */
-        const copySlideInterval = structuredClone(slideShowImportValue);
-        let { index, counter } = copySlideInterval;
-        index = childContent.length - 1;
-        console.log(index);
-        let = childContentCounter = childContent[0];
-        this.functionsCheck(functionsName, childContentCounter, dom_content);
-        console.log(childContentCounter)
-        active = setInterval(() => {
-
-            console.log(index, counter);
-            console.log(active, functionsName, childContent, dom_content);
-            if (index === counter) {
-                counter = 0;
-                childContent[counter];
-                console.log(childContent[counter]);
-                console.log(dom_content);
-                this.animation_fadeOutFunction(functionsName, childContent[counter], dom_content);
-            } else {
-                console.log(childContent[counter]);
-                counter++;
-                console.log(dom_content);
-                this.animation_fadeOutFunction(functionsName, childContent[counter], dom_content);
-                console.log(counter);
-                console.log(childContent[counter]);
-            };
-        }, 40000);
-
-    },
 
 };
 
-const mainUiBoolaenSetting = {
-    /*
-        Legende 
-        hier baue ich die dom_mainArea Control Ui sie soll dann aufpassen das die Display
-        area nur ein Elemnent offen / anzeigt. 
 
-        functionControlUi = globales FunctionsObject
-        controlUiFunctionMain() = contol function was gerade aktiv ist.
-
-    */
-
-    controlUnit: {
-        introArea: false,
-        bdi_IIArea: true,
-        vitaArea: false,
-    },
-
-    dom_terminationFunction(html_tag) {
-
-
-
-    },
-
-    resetBooleanFunction(toTurnName, toTurnKey, changeName, changeKey, html_tag) {
-        console.log(toTurnName, toTurnKey, changeName, changeKey, html_tag);
-        /*
-            Legende
-            booleanEvent: 
-                toTurnName = das booleanEvent aufruf,
-                toTurnKey = der booleanEvent toggleEvent
-            ;
-            html_tag = zu loeschende domContent;
-        */
-
-
-    },
-
-    activeBooleanEvent(activeBooleanName, activeBoolean, html_tag, childItems) {
-        console.log(activeBooleanName, activeBoolean, html_tag, childItems);
-
-
-    },
-
-    mainUiBooleanSetting(propertyValue, html_tag) {
-        console.log(propertyValue, html_tag)
-
-    },
-
-};
 
 
 /*

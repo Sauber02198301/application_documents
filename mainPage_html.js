@@ -1,14 +1,3 @@
-const introContent = {
-    "createElement": "p_tag",
-    "classList": "p_textCont_css",
-    "UI_functionsEvent": {
-        "createTextNode": "mainText_intro"
-    }
-};
-
-
-
-
 const mainContent = {
     "toggleEvent": "webside_toggle",
     "functionsFactory": {
@@ -66,7 +55,7 @@ const mainContent = {
                             {
                                 "createElement": "div_tag",
                                 "classList": "contentDisplayCenter_css",
-                                "introContent": introContent
+                                "controlUnit": "activeDefault",
                             },
                             {
                                 "createElement": "div_tag",
@@ -292,8 +281,6 @@ const mainContent = {
     }
 };
 
-
-
 const mainAreaContent = {
 
     "introTextContent": {
@@ -302,6 +289,14 @@ const mainAreaContent = {
     },
 
     "vita_content": {
+
+    },
+};
+
+// mein Lebenslauf object 
+
+const lebenslauf = [
+    {
         "createElement": "div_tag",
         "classList": "vita_css",
         "childItems": [
@@ -315,7 +310,7 @@ const mainAreaContent = {
                         "childItems": [
                             {
                                 "createElement": "h2_tag",
-                                "classList": "viteText_css",
+                                "classList": "viteText_h2_css",
                                 "createTextNode": "vitaHeadingText"
                             },
                             {
@@ -336,12 +331,20 @@ const mainAreaContent = {
                                 "alt": "vitaHelpText"
                             }
                         ]
+                    },
+                    {
+                        "createElement": "button_tag",
+                        "classList": "closeVita",
+                        "dataset": { "action": "closeVita"},
+                        "textSpanContent_function": {
+                            "createTextNode": "closeVitaText"
+                        }
                     }
                 ]
             }
         ]
-    },
-}
+    }
+];
 
 
 
