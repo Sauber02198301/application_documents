@@ -288,10 +288,17 @@ const mainAreaContent = {
         "classList": "p_textCont_css",
     },
 
-    "vita_content": {
-
-    },
 };
+
+const vitaFolder = {
+
+    "createTextNode": "schoolFolder",
+    "parentObject": {
+        "createElement": "p_tag",
+        "classList": "p_vitaContent"
+    }
+
+}
 
 // mein Lebenslauf object 
 
@@ -311,12 +318,12 @@ const lebenslauf = [
                             {
                                 "createElement": "h2_tag",
                                 "classList": "viteText_h2_css",
-                                "createTextNode": "vitaHeadingText"
+                                "createTextNode": "Lebenslauf"
                             },
                             {
                                 "createElement": "h3_tag",
-                                "classList": "viteText_css",
-                                "createTextNode": "vita_workLife_time"
+                                "classList": "viteText_h3_css",
+                                "createTextNode": "Die Einzelnen Lebensstationen"
                             }
                         ]
                     },
@@ -334,12 +341,68 @@ const lebenslauf = [
                     },
                     {
                         "createElement": "button_tag",
-                        "classList": "closeVita",
-                        "dataset": { "action": "closeVita"},
+                        "classList": "btn_VitaBtn_css",
+                        "dataset": { "action": "closeVita" },
                         "textSpanContent_function": {
                             "createTextNode": "closeVitaText"
                         }
                     }
+                ]
+            },
+            {
+                "createElement": "div_tag",
+                "classList": "vitaMainSection_css",
+                "childItems": [
+                    {
+                        "createElement": "div_tag",
+                        "classList": "vitaMainLeft_css",
+                        "childItems": [
+                            {
+                                "createElement": "div_tag",
+                                "classList": "vitaBox_one_css",
+                                "childItems": [
+                                    {
+                                        "createElement": "div_tag",
+                                        "classList": "boxOne_header_css",
+                                        "childItems": [
+                                            {
+                                                "createElement": "h2_tag",
+                                                "classList": "vitaLifeHeading_css",
+                                                "createTextNode": "Schulabschluss"
+                                            },
+                                            {
+                                                "createElement": "h3_tag",
+                                                "classList": "vitaLifeHeading_h3_css",
+                                                "createTextNode": `Ich habe am 12.06.2002 meinen Hauptschulabschluss, an der Graf Wilhelm Schule gemacht.`
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        // popUp vomZeugnis und einen Main Bereich mit einer kleinen beschreibung. 
+                                        "createElement": "div_tag",
+                                        "classList": "boxOne_mainSection",
+                                        "textCreaterFunction": {
+                                            "createTextNode": "schoolFolder",
+                                            "parentObject": {
+                                                "createElement": "p_tag",
+                                                "classList": "p_vitaSchooltext_css"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "createElement": "div_tag",
+                        "classList": "vitaCenterLine_css",
+
+                    },
+                    {
+                        "createElement": "div_tag",
+                        "classList": "vitaMainRight_css",
+                        //"childItems": ""
+                    },
                 ]
             }
         ]

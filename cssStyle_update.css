@@ -73,6 +73,17 @@ body {
     font-weight: bold;
 }
 
+.vitaText_h2 {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.vitaText_h3 {
+    letter-spacing: 1px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
 .grid_container {
     display: grid;
 }
@@ -174,8 +185,8 @@ body {
     position: absolute;
     top: 5%;
     right: 5%;
-    max-height: 25%;
-    max-width: 30%;
+    max-height: 20%;
+    max-width: 20%;
     scale: 1.20;
     z-index: 2;
 }
@@ -193,10 +204,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    justify-content: center;
+    /*justify-content: center;*/
     overflow: hidden;
     z-index: 1;
-    padding: 12px;
+    /*padding: 12px;*/
     /*aspect-ratio: 1/1;*/
     /*min-height: 100%;*/
 }
@@ -204,10 +215,32 @@ body {
 .display_sectionMain {
     background-color: #00000027;
     margin: 10px;
-    min-height: 90%;
-    border: solid 2px white;
+    min-height: 97%;
+    /*border: solid 2px white;*/
     overflow: visible;
 
+}
+
+.display_sectionLeft {
+    border-right: solid 2px #ffffff;
+    padding: 12px;
+    min-width: 230px;
+    background-color: #f09cec7d;
+}
+
+.display_sectionCenter {
+    flex-direction: column;
+    min-width: 72%;
+    /*max-height: 93%;*/
+    opacity: 1;
+    transition: opacity 1.2s ease-in-out;
+    /*justify-content: center;
+    align-items: center;*/
+}
+
+.is-hidden {
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
 }
 
 .paragraph_mainStyle {
@@ -227,31 +260,128 @@ body {
     /*box-shadow: 6px 5px 2px 0px #000000c7, 3px 3px 12px 3px #ffffff, 7px 6px 15px 4px #8e455c, 3px 2px 14px 9px rgb(189 90 123 / 79%), 1px 1px 7px 0px #000000b5, -4px -2px 7px 2px #613c3c6e, 4px 3px 11px 4px #fafafa, 2px 3px 16px 13px rgb(0 0 0 / 85%);*/
 }
 
-.display_sectionLeft {
-    border-right: solid 2px #ffffff;
-    padding: 12px;
-    min-width: 230px;
-    background-color: #f09cec7d;
-}
-
-.display_sectionCenter {
+.vitaSection {
     flex-direction: column;
-    /* min-width: 66%;
-    max-height: 93%;*/
-    justify-content: center;
-    margin: 2%;
-    padding: 12px;
-    width: 100%;
-    height: 80%;
-    opacity: 1;
-    transition: opacity 1.2s ease-in-out;
-    /*justify-content: center;
-    align-items: center;*/
+    padding: 10px;
+    margin: 5px;
+    height: 100%;
 }
 
-.is-hidden {
-    opacity: 0;
-    transition: opacity 1.2s ease-in-out;
+.vitaSectionStyle {
+    background-color: #77c1e673;
+}
+
+.vite_headingSection {
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+
+}
+
+.vita_headingStyle {
+    background-image: url(imgContent/headerLogo_without_text.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 45%;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+}
+
+.headingTextContent {
+    flex-direction: column;
+    min-width: 30%;
+    align-items: center;
+    padding-left: 30px;
+    gap: 10px;
+}
+
+.vita_headingText_style {
+    padding: 10px;
+}
+
+.vita_btnCloseStyle {
+    padding: 10px;
+    margin-right: 20px;
+    background-color: #9386dd6b;
+}
+
+.vitaBtnStyle {
+    padding: 20px;
+}
+
+.vitaMainSection {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.vitaMainSectionStyle {
+    background-color: rgba(41, 126, 231, 0.379);
+}
+
+.vitaLeftBox {
+    flex-direction: column;
+    justify-self: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.vitaLeftBoxStyle {
+    background-color: rgba(128, 128, 128, 0.371);
+}
+
+.vitaBox_one {
+    flex-direction: column;
+    width: 60%;
+    height: 70%;
+    align-items: center;
+    padding: 16px;
+    margin-top: 15px;
+    background-color: aqua;
+    width: 70%;
+    gap: 10px;
+}
+
+.header_box_school {
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header_box_schoolStyle {
+    background-image: url(imgContent/headerLogo_without_text.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+}
+
+.vitaTextSchool {
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+
+.centerLineVita {
+    position: sticky;
+    min-width: 10px;
+    justify-self: center;
+}
+
+.centerLineStyle {
+    background-color: white;
+    border-left: solid 1px #000000;
+    border-right: solid 1px #000000;
+}
+
+.vitaRightBox {
+    justify-self: end;
+    flex-direction: column;
+}
+
+.vitaRight_style {
+    background-color: rgba(128, 128, 128, 0.371);
 }
 
 .display_sectionRight {

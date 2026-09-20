@@ -35,13 +35,15 @@ const createElement = {
 
 const createTextNode = {
 
+
+
     "btnHome_text": [
         { "createTextNode": "Home", "classList": "btn_text_css" },
         { "createTextNode": "menu", "classList": "iconText_css" },
     ],
 
     "closeVitaText": [
-        { "createTextNode": "close", "classList": "btn_VitaText_css" },
+        { "createTextNode": "Close", "classList": "VitaTextBtn_css" },
         { "createTextNode": "close", "classList": "iconCloseText_css" },
     ],
 
@@ -82,6 +84,18 @@ const createTextNode = {
             "createTextNode": [
                 "Erfolg ist kein Glück, sondern nur das Ergebnis von Blut, Schweiß und Tränen.",
                 "— Kontra K"
+            ]
+        }
+    ],
+
+    "schoolFolder": [
+        {
+            "classList": "",
+            "createTextNode": [
+                "Der formelle Schulabschluss bildete das Fundament für meinen Einstieg in das Berufsleben.",
+                "Während starre Schulsysteme mein technisches Interesse damals noch nicht abbilden konnten,",
+                "zeigte sich schon früh meine ausgeprägte Neigung zu logischen Zusammenhängen,",
+                "C-Hardware und handwerklichem Arbeiten."
             ]
         }
     ],
@@ -227,10 +241,16 @@ const classList = {
         { "add": "homeBtn_style" }
     ],
 
-    "btn_VitaText_css": [
+    "btn_VitaBtn_css": [
+        { "add": "flex_container" },
+        { "add": "btn_secondary" },
+        { "add": "vita_btnCloseStyle" }
+    ],
+
+    "VitaTextBtn_css": [
         { "add": "font_standardValue" },
-        { "add": "vita_BtnSecondary" },
-        { "add": "vitaText" }
+        { "add": "vitaText" },
+        { "add": "btnVitaTextStyle" }
     ],
 
     "iconCloseText_css": [
@@ -437,13 +457,13 @@ const classList = {
         { "add": "vita_headingText_style" }
     ],
 
-    "vitaText_h2_css": [
+    "viteText_h2_css": [
         { "add": "font_standardValue" },
         { "add": "vitaText_h2" },
         { "add": "vitaTextStyle" }
     ],
 
-    "vitaTexth3": [
+    "viteText_h3_css": [
         { "add": "font_standardValue" },
         { "add": "vitaText_h3" },
         { "add": "vitaTextStyle" }
@@ -459,7 +479,54 @@ const classList = {
         { "add": "block_container" },
         { "add": "img_vita" },
         { "add": "img_vitaStyle" }
-    ]
+    ],
 
+    "vitaMainSection_css": [
+        { "add": "flex_container" },
+        { "add": "vitaMainSection" },
+        { "add": "vitaMainSectionStyle" },
+    ],
+
+    "vitaMainLeft_css": [
+        { "add": "flex_container" },
+        { "add": "vitaLeftBox" },
+        { "add": "vitaLeftBoxStyle" }
+    ],
+
+    "vitaCenterLine_css": [
+        { "add": "flex_container" },
+        { "add": "centerLineVita" },
+        { "add": "centerLineStyle" }
+    ],
+
+    "vitaMainRight_css": [
+        { "add": "flex_container" },
+        { "add": "vitaRightBox" },
+        { "add": "vitaRight_style" }
+    ],
+
+    "vitaBox_one_css": [
+        { "add": "flex_container" },
+        { "add": "vitaBox_one" },
+        { "add": "vitaBox_oneStyle" }
+    ],
+
+    "boxOne_header_css": [
+        { "add": "flex_container" },
+        { "add": "header_box_school" },
+        { "add": "header_box_schoolStyle" }
+    ],
+
+    "vitaLifeHeading_css": [
+        { "add": "font_standardValue" },
+        { "add": "vitaTextSchool" },
+        { "add": "vitaTextSchool_style" }
+    ],
+
+    "vitaText_css": [
+        { "add": "font_standardValue" },
+        { "add": "vitaText_propertys" },
+        { "add": "vitaTextStyle" }
+    ]
 
 }

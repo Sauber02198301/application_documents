@@ -157,6 +157,7 @@ const controlUnit = {
         this.introIntervall = setInterval(() => {
             if (intervalIndex === intervalLength) {
                 intervalIndex = 0;
+                copyContent = structuredClone(childHTML);
                 //console.error(intervalObject, childHTML, this.parentHTML, currentSlideEvent, intervalIndex, intervalLength);
                 this.currentSlideEventFunction(this.parentHTML, intervalObject[intervalIndex], copyContent);
             } else {
@@ -168,7 +169,7 @@ const controlUnit = {
 
             };
 
-        }, 10000);
+        }, 30000);
 
     },
 
@@ -244,6 +245,7 @@ const libraryBook = {
     "functionsFactory": functionsFactory,
     "mainAreaContent": mainAreaContent,
     "controlUnit": controlUnit,
+    "vitaFolder": vitaFolder
 };
 
 

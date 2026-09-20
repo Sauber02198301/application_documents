@@ -62,7 +62,10 @@ const functionsFactory = {
                         console.log(keyword, propertyValue);
                         controlUnit.changeContentArea(propertyValue, html_tag);
                         //hier sendet er die abruf daten wieder an die controlUnit zurueck
-
+                        break;
+                    case 'textCreaterFunction': 
+                        // test function fuer eine neue Text auslesung / verarbeitung
+                        console.error(keyword, propertyValue);
                         break;
                     default: break;
                 };
