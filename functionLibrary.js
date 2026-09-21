@@ -5,7 +5,8 @@ const functionsFactory = {
 
         if (!domArea) { console.error('domArea_is_null_or_undefined'); };
         let html_tag = null;
-
+        // der object abruf hackt noch etwas, ich habe hier das problem wenn es kein array ist bricht er ab hier muss ich noch 
+        // eine sicherung einbauen die das Object in einen array verpackt und wieder die function aufruft um das array durch zu senden. 
         propertyKey.forEach((propertyKey) => {
             Object.entries(propertyKey).forEach(([keyword, propertyValue]) => {
                 //console.log(keyword, propertyValue);
@@ -47,6 +48,7 @@ const functionsFactory = {
                         console.log(html_tag);
                         break;
                     case 'textSpanContent_function':
+                    // Ich muss ein paar functionen optimieren und unnötige entfernen oder mit andere functionen zusammen setzen / ergenzen. 
                     //case 'active_automaticSlideShow':
                     case 'hyperlinkContent_function':
                         console.log(keyword, propertyValue);
@@ -63,9 +65,16 @@ const functionsFactory = {
                         controlUnit.changeContentArea(propertyValue, html_tag);
                         //hier sendet er die abruf daten wieder an die controlUnit zurueck
                         break;
-                    case 'textCreaterFunction': 
+                    case 'textCreaterFunction':
                         // test function fuer eine neue Text auslesung / verarbeitung
                         console.error(keyword, propertyValue);
+                        break;
+                    case 'vitaEvaluationFunction':
+                        console.error(keyword, propertyValue);
+                        let vitaObject = null;
+                        if (typeof libraryBook[keyword] !== 'function') { return console.error('this_is_not_a_function'); };
+                        libraryBook[keyword](propertyValue);
+                        return;
                         break;
                     default: break;
                 };
@@ -466,6 +475,20 @@ const functionsFactory = {
 
 
 };
+
+function searchLibraryContent(libraryKey, libraryProperty) {
+    console.log(libraryKey, libraryProperty);
+
+
+    const searchObject = libraryBook[libraryKey][libraryProperty] || null;
+    console.error(searchObject);
+
+    if (!searchObject) { return console.error('this is null || undefined'); };
+
+    return searchObject;
+};
+
+
 
 
 

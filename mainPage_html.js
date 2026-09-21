@@ -356,56 +356,24 @@ const lebenslauf = [
                     {
                         "createElement": "div_tag",
                         "classList": "vitaMainLeft_css",
-                        "childItems": [
-                            {
-                                "createElement": "div_tag",
-                                "classList": "vitaBox_one_css",
-                                "childItems": [
-                                    {
-                                        "createElement": "div_tag",
-                                        "classList": "boxOne_header_css",
-                                        "childItems": [
-                                            {
-                                                "createElement": "h2_tag",
-                                                "classList": "vitaLifeHeading_css",
-                                                "createTextNode": "Schulabschluss"
-                                            },
-                                            {
-                                                "createElement": "h3_tag",
-                                                "classList": "vitaLifeHeading_h3_css",
-                                                "createTextNode": `Ich habe am 12.06.2002 meinen Hauptschulabschluss, an der Graf Wilhelm Schule gemacht.`
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        // popUp vomZeugnis und einen Main Bereich mit einer kleinen beschreibung. 
-                                        "createElement": "div_tag",
-                                        "classList": "boxOne_mainSection",
-                                        "textCreaterFunction": {
-                                            "createTextNode": "schoolFolder",
-                                            "parentObject": {
-                                                "createElement": "p_tag",
-                                                "classList": "p_vitaSchooltext_css"
-                                            }
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
                     },
                     {
                         "createElement": "div_tag",
                         "classList": "vitaCenterLine_css",
-
                     },
                     {
                         "createElement": "div_tag",
                         "classList": "vitaMainRight_css",
-                        //"childItems": ""
                     },
                 ]
-            }
+            },
+
         ]
+    },
+    {
+        "vitaEvaluationFunction": {
+            "vitaContent": "vita_timeline_entries"
+        }
     }
 ];
 

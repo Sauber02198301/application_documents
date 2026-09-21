@@ -245,7 +245,9 @@ const libraryBook = {
     "functionsFactory": functionsFactory,
     "mainAreaContent": mainAreaContent,
     "controlUnit": controlUnit,
-    "vitaFolder": vitaFolder
+    "vitaFolder": vitaFolder,
+    "vitaContent": vitaContent,
+    "vitaEvaluationFunction": vitaEvaluationFunction,
 };
 
 

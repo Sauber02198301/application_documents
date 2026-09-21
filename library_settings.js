@@ -527,6 +527,12 @@ const classList = {
         { "add": "font_standardValue" },
         { "add": "vitaText_propertys" },
         { "add": "vitaTextStyle" }
+    ],
+
+    "vita_para_css": [
+        { "add": "flex_container" },
+        { "add": "para_container" },
+        { "add": "para_containerStyle" }
     ]
 
 }
