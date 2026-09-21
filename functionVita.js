@@ -31,6 +31,36 @@ const vitaContent = {
                     }
                 ]
             }
+        },
+        {
+            "side": "rightSide",
+            "childContent": {
+                "createElement": "div_tag",
+                "classList": "vitaBoxLeft_css",
+                "textContent": [
+                    {
+                        "title": { "createElement": "h2_tag", "classList": "viteText_h2_css", "createTextNode": "Einjährige Berufsfachschule Fahrzeugtechnik" },
+                        "data": { "createElement": "h3_tag", "classList": "viteText_h3_css", "createTextNode": "08/2002 – 07/2003" },
+                        "institution": { "createElement": "h3_tag", "classList": "viteText_h3_css", "createTextNode": "Berufsbildende Schulen des Landkreises Schaumburg, Stadthagen" },
+                        "description": {
+                            "parentObject": {
+                                "createElement": "p_tag",
+                                "classList": "vita_paraRight_css",
+                            },
+                            "childObject": {
+                                "createElement": "span_tag",
+                                "classList": "vitaText_css",
+                            },
+                            "createTextNode": [
+                                "Grundausbildung im Berufsfeld Metall- und Fahrzeugtechnik (Fachpraxis und Fachtheorie)",
+                                "Fertigungsverfahren und Werkstoffbearbeitung (Trennen, Ur- und Umformen, Fügen)",
+                                "Grundlagen der Maschinen-, Geräte- und Elektrotechnik",
+                                "Erfolgreicher Abschluss (anerkannt als erstes Ausbildungsjahr)"
+                            ]
+                        }
+                    }
+                ]
+            }
         }
     ],
 
@@ -41,7 +71,7 @@ function textExtraction(stringObject, spanContent, i) {
     const copy_spanContent = structuredClone(spanContent);
 
     copy_spanContent.createTextNode = stringObject;
-    console.log(copy_spanContent);
+    //console.log(copy_spanContent);
     return copy_spanContent;
 };
 
@@ -51,10 +81,13 @@ function extractionDescription(description) {
     console.log(parentObject, childObject, createTextNode);
     if (!Array.isArray(createTextNode)) { return; };
     const arrayList = [];
+   
     createTextNode.forEach((createTextNode, index) => arrayList.push(textExtraction(createTextNode, childObject, index)));
     console.log(arrayList);
+
     parentObject.childItems = arrayList;
-    return structuredClone(parentObject);
+    const copyParent = structuredClone(parentObject);
+    return copyParent;
 };
 
 function extractionVitaChild(key, value, htmlDOM) {
@@ -66,9 +99,10 @@ function extractionVitaChild(key, value, htmlDOM) {
     functionsFactory.objectRendering_function([data], htmlDOM);
     functionsFactory.objectRendering_function([institution], htmlDOM);
 
-    const createObject = extractionDescription(description);
+    const createObject = []
+    createObject.push(extractionDescription(description));
     console.log(createObject);
-    functionsFactory.objectRendering_function([createObject], htmlDOM);
+    functionsFactory.objectRendering_function(createObject, htmlDOM);
 
 };
 
@@ -134,12 +168,15 @@ function vitaEvaluationFunction(vitaObject) {
         //console.log(side, childContent);
         setOne = sideContent[side];
         childObject = childContent;
+
+        const domContent = document.querySelector(`.${setOne}`);
+        extractionVitaContent(childObject, domContent);
     });
 
-    const domContent = document.querySelector(`.${setOne}`);
+
 
     //console.log(domContent, childObject);
-    extractionVitaContent(childObject, domContent);
+
 };
 
 

@@ -511,6 +511,12 @@ const classList = {
         { "add": "vitaBox_oneStyle" }
     ],
 
+    "vitaBoxLeft_css": [
+        { "add": "flex_container"},
+        { "add": "vitaBox_one_left"},
+        { "add": "vitaBox_oneStyle"}
+    ],
+
     "boxOne_header_css": [
         { "add": "flex_container" },
         { "add": "header_box_school" },

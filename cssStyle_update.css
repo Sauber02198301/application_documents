@@ -331,10 +331,24 @@ body {
 
 .vitaLeftBoxStyle {
     background-color: rgba(128, 128, 128, 0.371);
-
 }
 
 .vitaBox_one {
+    flex-direction: column;
+    height: 70%;
+    align-items: center;
+    padding: 16px;
+    margin-top: 15px;
+    background-image: url(imgContent/mainLogo.png);
+    background-size: cover;
+    border: solid 1px #000000;
+    width: 70%;
+    gap: 10px;
+    overflow-y: auto;
+    z-index: 2;
+}
+
+.vitaBox_one_left {
     flex-direction: column;
     height: 70%;
     align-items: center;
@@ -401,8 +415,9 @@ body {
 }
 
 .vitaRightBox {
-    justify-self: end;
+    align-items: center;
     flex-direction: column;
+    width: 52%;
 }
 
 .vitaRight_style {
