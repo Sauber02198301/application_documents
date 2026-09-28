@@ -1,0 +1,30 @@
+.portfolioSection {
+    padding: 0.8em;
+    margin: 0.8em;
+    padding-top: 0.5em;
+    margin-top: 0.1em;
+    flex-direction: column;
+    gap: 0.6em;
+    border-bottom: solid 1px #c0c0c0c4;
+}
+
+.portfolio_h1_style {
+    padding: 0.3em;
+    margin: 0.4em;
+    padding-bottom: 0.8em;
+    border-bottom: solid 1px #c0c0c09e;
+}
+
+.portfolioBox,
+.headerPortfolio,
+.photoPortfolio_section {
+    padding: 0.8em;
+    /*margin: 0.8em;*/
+    gap: 0.4em;
+    flex-direction: column;
+}
+
+.portfolioStyle_h3,
+.portfolioStyle_h4 {
+    padding: 0.3em;
+}

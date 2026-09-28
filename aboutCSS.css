@@ -1,0 +1,59 @@
+.about_section {
+    padding: 0.5em;
+    margin: 0.5em;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.about_boxOne {
+    flex-direction: column;
+    margin: 0.5em;
+    border-bottom: solid 1px rgba(192, 192, 192, 0.567);
+}
+
+.about_h1_style {
+    border-bottom: solid 1px rgba(192, 192, 192, 0.567);
+    padding: 0.5em;
+    margin: 0.3em;
+    padding-bottom: 1em;
+}
+
+.about_h2_style {
+    padding: 0em;
+    margin: 0.6em;
+}
+
+.paraAbout_section,
+.portfolio_para {
+    margin: 0.5em;
+    padding: 0.9em;
+    padding-bottom: 1.3em;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.spanAboutStyle {
+    font-size: 1.1rem;
+}
+
+.lastAboutBoxOne {
+    padding-bottom: 0em;
+    margin-bottom: 0em;
+}
+
+.footerAnchorList {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.8em;
+    margin: 0.8em;
+    gap: 0.7em;
+    border-bottom: solid 1px rgba(192, 192, 192, 0.681);
+}
+
+.anchor_footerAbout {
+    padding: 0.8em;
+    margin: 0.8em;
+}

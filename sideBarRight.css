@@ -1,0 +1,71 @@
+.sideBarRight {
+    background: #395662b2;
+    position: relative;
+    justify-content: center;
+    grid-area: sideBarRight;
+    flex-direction: column;
+
+}
+
+.imgBox {
+    position: relative;
+    overflow: hidden;
+    top: 0%;
+    height: 100%;
+    gap: 20px;
+    flex-direction: column;
+    z-index: 0;
+    transition: top 5s ease-in-out;
+}
+
+.imgBoxSetting {
+    animation-name: slideAnimation;
+    animation-duration: 18s;
+    animation-timing-function: linear;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slideAnimation {
+    0% {
+        top: 0%;
+    }
+
+    25% {
+        top: 25%;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    75% {
+        top: 75%;
+    }
+
+    100% {
+        top: 100%;
+    }
+
+    75% {
+        top: 75%;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    25% {
+        top: 25%;
+    }
+
+    0% {
+        top: 0%;
+    }
+}
+
+.imgSideRest {
+    padding: 10px;
+
+}
