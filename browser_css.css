@@ -92,7 +92,7 @@ body {
 .img_header_section {
     position: relative;
     height: 185px;
-    padding: 10px;
+    padding: 1em;
     opacity: 0.70;
     border-radius: 40%;
     z-index: 1;
@@ -110,12 +110,14 @@ body {
 
 .btn_primary {
     flex-direction: column;
-    gap: 1px;
-    padding: 18px;
+    gap: 1em;
+    padding: 0.5em;
+    margin: 2em;
     background: rgba(0, 0, 0, 0.371);
     border: solid 1px #ffffff;
-    font-size: 18px;
+    font-size: 0.875rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .btn_primary:hover {
@@ -128,6 +130,7 @@ body {
     margin: 25px;
     justify-content: center;
     z-index: 1;
+    cursor: pointer;
 }
 
 .imgButtonStyle {
@@ -155,7 +158,6 @@ body {
 }
 
 .anchorDrop_section {
-    padding: 15px;
     text-align: center;
 }
 
@@ -164,6 +166,11 @@ body {
     text-decoration: none;
     font-weight: 800;
     font-size: 1rem;
+    margin: 0.5em;
+    padding: 0.5em;
+    gap: 1em;
+    align-items: center;
+    cursor: pointer;
 }
 
 .anchorDrop_sectionStyle:hover {

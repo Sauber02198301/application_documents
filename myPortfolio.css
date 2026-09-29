@@ -24,7 +24,65 @@
     flex-direction: column;
 }
 
+.paraPortfolioStyle {
+    border-top: solid 1px rgba(192, 192, 192, 0.658);
+    border-bottom: solid 1px rgba(192, 192, 192, 0.658);
+}
+
 .portfolioStyle_h3,
 .portfolioStyle_h4 {
     padding: 0.3em;
+}
+
+.photoGalery {
+    flex-direction: column;
+    background-color: #744f4f80;
+}
+
+.collapsibleBtn {
+    align-items: center;
+    justify-content: space-between;
+    background: #2f4f4feb;
+    border: solid 1px #c0c0c0fa;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.galaryBoxCollapsible {
+    flex-direction: row;
+    margin: 1em;
+}
+
+.galaryBoxCollapsible_style {
+    background: none;
+}
+
+.portfolioImg {
+    margin: 0.5em;
+}
+
+.portfolioImgStyle {
+    border: solid 1px rgba(192, 192, 192, 0.639);
+}
+
+.galleryTextBox {
+    flex-direction: column;
+    gap: 5em;
+    margin: 0.5em;
+    padding: 1em;
+}
+
+.galleryTextBox_style {
+    border: solid 1px #c0c0c0;
+}
+
+.gallaryText_h2 {
+    padding: 0.5em;
+    text-decoration: underline;
+}
+
+.gallaryTextSpan {
+    padding: 0.5em;
+    margin: 0.5em;
 }

@@ -155,19 +155,19 @@ const childrenObject = {
 
                         },
                         {
-                            "createElement": "button",
-                            "classList": ["btn_flex", "btn_navStyle"],
-                            "dataset": "x",
+                            "createElement": "a",
+                            "classList": ["flex", "anchorDrop_section", "anchorDrop_sectionStyle"],
+                            "hrefAttr": "#portfolio",
                             "children": [
                                 {
                                     "createElement": "span",
                                     "classList": ["block", "material-symbols-outlined", "iconStyle"],
-                                    "createText": ""
+                                    "createText": "business_center"
                                 },
                                 {
                                     "createElement": "span",
                                     "classList": ["block", "font_standardValue", "btnTextStyle"],
-                                    "createText": "platzhalter"
+                                    "createText": "My Portfolio"
                                 }
                             ]
 
@@ -373,7 +373,8 @@ const mainContent = {
                                                 {
                                                     "createElement": "a",
                                                     "classList": ["flex", "anchor_footerAbout", "anchor_footer_about_style"],
-                                                    "hrefAttr": "",
+                                                    "hrefAttr": "pdf_data/Lebenslauf.pdf",
+                                                    "target": "_blank",
                                                     "children": [
                                                         {
                                                             "createElement": "span",
@@ -385,12 +386,26 @@ const mainContent = {
                                                 {
                                                     "createElement": "a",
                                                     "classList": ["flex", "anchor_footerAbout", "anchor_footer_about_style"],
-                                                    "hrefAttr": "",
+                                                    "hrefAttr": "pdf_data/zertifikate.pdf",
+                                                    "target": "_blank",
                                                     "children": [
                                                         {
                                                             "createElement": "span",
                                                             "classList": ["block", "font_standardValue", "anchorAboutFontStyle"],
                                                             "createText": "Erworbene Zertifikate"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "createElement": "a",
+                                                    "classList": ["flex", "anchor_footerAbout", "anchor_footer_about_style"],
+                                                    "hrefAttr": "pdf_data/IHK_B96_test Kopie.pdf",
+                                                    "target": "_blank",
+                                                    "children": [
+                                                        {
+                                                            "createElement": "span",
+                                                            "classList": ["block", "font_standardValue", "anchorAboutFontStyle"],
+                                                            "createText": "Erworbener Führerschein und dazugehörigen Güterverkehrqualifikation"
                                                         }
                                                     ]
                                                 }
@@ -446,16 +461,89 @@ const mainContent = {
                                                                 }
                                                             ]
                                                         },
-                                                        /*{
+                                                        {
                                                             "createElement": "div",
                                                             "classList": ["flex", "photoGalery", "photoGaleryStyle"],
                                                             "children": [
                                                                 {
-                                                                    "functionsEvet": "createImgInject",
-                                                                    "classList": [""]
-                                                                }
+                                                                    "createElement": "button",
+                                                                    "classList": ["btn_flex", "secondaryBtn", "collapsibleBtn", "collapsibleStyle"],
+                                                                    "children": [
+                                                                        {
+                                                                            "createElement": "span",
+                                                                            "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle"],
+                                                                            "createText": "Beherrschung komplexer Situationen auf engstem Raum"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span",
+                                                                            "classList": ["block", "material-symbols-outlined", "iconAdd"],
+                                                                            "createText": "add"
+                                                                            // minusIcon: remove
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "createElement": "div",
+                                                                    "classList": ["flex", "galaryBoxCollapsible", "galaryBoxCollapsible_style"],
+                                                                    "children": [
+                                                                        {
+                                                                            "functionsEvent": "imgCreaterSection",
+                                                                            "gallaryData": [
+                                                                                {
+                                                                                    "imgClassList": ["block", "portfolioImg", "portfolioImgStyle"],
+                                                                                    "src": "myPortfolio/lkwSection/braunschweig_laderampeSalz.jpeg",
+                                                                                    "alt": "Geparkter LKW mit Anhaenger gepackt an einer Laderampe",
+                                                                                    "classList_div": ["flex", "galleryTextBox", "galleryTextBox_style"],
+                                                                                    "classListText_h": ["block", "font_standardValue", "gallaryText_h2"],
+                                                                                    "title": "Braunschweig millimeter genau eingeparkt",
+                                                                                    "classListTextSpan": ["block", "font_standardValue", "gallaryTextSpan"],
+                                                                                    "desc": "Um das Salzdalumer Klinik im Braunschweig zu beliefern muss man eine s-kurve rückwerts mit Anhänger hinunter fahren. Ich muss nahe mit der Rechten Kante vom LKW an der mauer hinunter fahren."
+                                                                                }
+                                                                            ]
+                                                                        },
+
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "createElement": "button",
+                                                                    "classList": ["btn_flex", "secondaryBtn", "collapsibleBtn", "collapsibleStyle"],      
+                                                                    "children": [
+                                                                        {
+                                                                            "createElement": "span",
+                                                                            "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle"],
+                                                                            "createText": "Beherrschung komplexer Situationen auf engstem Raum"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span",
+                                                                            "classList": ["block", "material-symbols-outlined", "iconAdd"],
+                                                                            "createText": "add"
+                                                                            // minusIcon: remove
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "createElement": "div",
+                                                                    "classList": ["flex", "galaryBoxCollapsible", "galaryBoxCollapsible_style"],
+                                                                    "children": [
+                                                                        {
+                                                                            "functionsEvent": "imgCreaterSection",
+                                                                            "gallaryData": [
+                                                                                {
+                                                                                    "imgClassList": ["block", "portfolioImg", "portfolioImgStyle"],
+                                                                                    "src": "myPortfolio/lkwSection/laderampe_hamm_links.jpeg",
+                                                                                    "alt": "Geparkter LKW mit Anhaenger gepackt an einer Laderampe",
+                                                                                    "classList_div": ["flex", "galleryTextBox", "galleryTextBox_style"],
+                                                                                    "classListText_h": ["block", "font_standardValue", "gallaryText_h2"],
+                                                                                    "title": "Kinder Hamm mm genaues einparken",
+                                                                                    "classListTextSpan": ["block", "font_standardValue", "gallaryTextSpan"],
+                                                                                    "desc": "Hier stehe ich inder minimalen Parkbucht wo ich bis auf der rille soweit rects wenn man vor dem LKW steht kein mm platz ist so das an der Linken seite genug platz ist das das Personal Hochgehen kann vom Kinder krankenhaus Hamm"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
                                                             ]
-                                                        }*/
+                                                        }
                                                     ]
                                                 }
                                             ]
@@ -583,7 +671,7 @@ const mainContent = {
                                 {
                                     "createElement": "a",
                                     "classList": ["flex", "anchor_settings", "anchorStyle"],
-                                    "hrefAttr": "tel:+49 176 30666073",
+                                    //"hrefAttr": "tel:+49 176 30666073",
                                     "children": [
                                         {
                                             "createElement": "span",
@@ -607,8 +695,104 @@ const mainContent = {
     },
 };
 
+const imgContent = [
+    {
+        "createElement": "div",
+        "classList": ["flex", "galaryBoxCollapsible", "galaryBoxCollapsible_style"],
+        "children": [
+            {
+                "functionsEvent": "imgCreaterSection",
+                "gallaryData": [
+                    {
+                        "imgClassList": ["block", "portfolioImg", "portfolioImgStyle"],
+                        "src": "myPortfolio/lkwSection/braunschweig_laderampeSalz.jpeg",
+                        "alt": "Geparkter LKW mit Anhaenger gepackt an einer Laderampe",
+                    },
+                    {
+                        "classList_div": ["flex", "galleryTextBox", "galleryTextBox_style"],
+                        "children": [
+                            {
+                                "classListText_h": ["block", "font_standardValue", "gallaryText_h2"],
+                                "title": "Braunschweig millimeter genau eingeparkt",
+                            },
+                            {
+                                "classList_para": ["flex", "para_gallaryText", "paraGallaryStyle"],
+                                "children": [
+                                    {
+                                        "classListTextSpan": ["block", "font_standardValue", "gallaryTextSpan"],
+                                        "desc": "Um das Salzdalumer Klinik im Braunschweig zu beliefern muss man eine s-kurve rückwerts mit Anhänger hinunter fahren. Ich muss nahe mit der Rechten Kante vom LKW an der mauer hinunter fahren."
+                                    }
+                                ]
+                            }
+                        ]
 
+                    }
+
+                ]
+            }
+        ]
+    },
+    // zweite variante des codes
+    {
+        "createElement": "div",
+        "classList": ["flex", "galaryBoxCollapsible", "galaryBoxCollapsible_style"],
+        "children": [
+            {
+                "functionsEvent": "imgCreaterSection",
+                "classSettings": {
+                    "imgClassList": ["block", "portfolioImg", "portfolioImgStyle"],
+                    "classList_div": ["flex", "galleryTextBox", "galleryTextBox_style"],
+                    "classListText_h": ["block", "font_standardValue", "gallaryText_h2"],
+                    "classList_para": ["flex", "para_gallaryText", "paraGallaryStyle"],
+                    "classListTextSpan": ["block", "font_standardValue", "gallaryTextSpan"],
+                },
+                "gallaryData": [
+                    {
+                        "src": "myPortfolio/lkwSection/braunschweig_laderampeSalz.jpeg",
+                        "alt": "Geparkter LKW mit Anhaenger gepackt an einer Laderampe",
+                    },
+                    {
+                        // ?? Hier ist die frage was mache ich weil ab hier gibt es keinen anhaltspunkt was der pc machen soll.
+                        // ich würde eine schlüssel nummer bauen. 
+                        "classSettings": "classList_div", // das ist der wert der sagt erstelle hier ein div-tag
+                        "children": [
+                            {
+                                // und title signaliesiert auch das es sich um den h hällt 
+                                "title": "Braunschweig millimeter genau eingeparkt",
+                            },
+                            {
+                                "classSettings": "classList_para",
+                                // hier erstelle ein p-tag
+                                "children": [
+                                    {
+                                        // desc ist das schluesselwort
+                                        "desc": "Um das Salzdalumer Klinik im Braunschweig zu beliefern muss man eine s-kurve rückwerts mit Anhänger hinunter fahren. Ich muss nahe mit der Rechten Kante vom LKW an der mauer hinunter fahren."
+                                    }
+                                ]
+                            }
+                        ]
+
+                    }
+                ]
+            }
+        ]
+    }
+];
 /*
+
+
+{
+                    "src": "",
+                    "alt": "",
+                    "title": "",
+                    "desc": ""
+                },
+                {
+                    "src": "",
+                    "alt": "",
+                    "title": "",
+                    "desc": ""
+                },
    {
        // was brauche ich hier das ist ja jetzt der moment wo wir die ganze zeit ideen und diskutiert habe.
        1. auslesen des Objectes "eigenschaft" => functions aufruf??? Der wert beinhaltet das child / parent und desen child 
@@ -621,6 +805,4 @@ const mainContent = {
                "classList": ["flex", "aboutPara", "aboutParaStyle"],
            }
 
-                                           
-   }
 */

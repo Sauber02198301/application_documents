@@ -1,7 +1,7 @@
 const booleanCheckFunction = {
 
     checkIsArray(checkObject) {
-        console.log(checkObject);
+        //console.log(checkObject);
         let check = null;
         if (!Array.isArray(checkObject)) {
             check = false;
@@ -18,7 +18,7 @@ const mainViev = {
     mainViewContainer: document.querySelector('.mainView_section'),
 
     mainViewActiveUI(introText) {
-        console.log(introText);
+        //console.log(introText);
         if (this.mainViewActive) {
             this.mainViewContainer.innerHTML = '';
             this.mainViewActive = null;
@@ -34,6 +34,37 @@ const mainViev = {
 };
 
 const functionsFactory = {
+
+    imgCreaterSection(gallaryData, parentDOM) {
+        console.log(gallaryData, parentDOM);
+        for (const gallaryX of gallaryData) {
+            const { src: srcImg = null, imgClassList = [], alt: altAttribute = '', classList_div = [], classListText_h = '', title = '', classListTextSpan = [], desc = '' } = gallaryX;
+            console.log(srcImg, imgClassList, altAttribute, classList_div, classListText_h, title, desc);
+            const imgHtml = this.createHTMLDocument('img');
+            //console.log(imgHtml);
+            this.addingCSS(imgClassList, imgHtml);
+            this.injectSrc(srcImg, altAttribute, imgHtml);
+            //console.log(imgHtml);
+            this.injectHTML(imgHtml, parentDOM);
+
+            const html_div = this.createHTMLDocument('div');
+            this.addingCSS(classList_div, html_div);
+            
+
+            const h2_html = this.createHTMLDocument('h2');
+            this.addingCSS(classListText_h, h2_html);
+            this.injectcreateText(title, h2_html);
+            this.injectHTML(h2_html, html_div);
+
+            const html_span = this.createHTMLDocument('span');
+            this.addingCSS(classListTextSpan, html_span);
+            this.injectcreateText(desc, html_span);
+            this.injectHTML(html_span, html_div);
+
+            this.injectHTML(html_div, parentDOM);
+        };
+
+    },
 
     createSpanInjectText(createText, classSet, parentDOM) {
         console.log(createText, classSet, parentDOM);
@@ -81,7 +112,7 @@ const functionsFactory = {
 
     injectId(only_id, htmlTag) {
         if (!only_id) { return };
-        console.log(only_id, htmlTag);
+        //console.log(only_id, htmlTag);
         htmlTag.id = only_id;
     },
 
@@ -119,16 +150,23 @@ const functionsFactory = {
         //console.log('that is a array');
         let htmlTag = null;
 
-        for (const { createElement: tag = null, classList: classSet = [], only_id = null, src: img = null, alt: altString = null, hrefAttr = "", target: targetSet = '', dataset: dateBtn = null, functionsEvent = null, createText = [], children = [] } of renderObject) {
-            console.log(tag, classSet, createText, children, functionsEvent);
+        for (const { createElement: tag = null, classList: classSet = [], only_id = null, src: img = null, alt: altString = null, hrefAttr = "", gallaryData = null, target: targetSet = '', dataset: dateBtn = null, functionsEvent = null, createText = [], children = [] } of renderObject) {
+            console.log(tag, classSet, createText, children, functionsEvent, gallaryData);
             htmlTag = this.createHTMLDocument(tag, htmlTag);
-            console.log(htmlTag);
+            //console.log(htmlTag);
             if (typeof this[functionsEvent] === 'function') {
-                htmlTag = this[functionsEvent](createText, classSet, parentDom);
-                return;
+                if (functionsEvent === 'createSpanInjectText') {
+                    htmlTag = this[functionsEvent](createText, classSet, parentDom);
+                    return;
+                } else if (functionsEvent === 'imgCreaterSection') {
+                    //console.log(functionsEvent);
+                    htmlTag = this[functionsEvent](gallaryData, parentDom);
+                    return;
+                };
+
             };
             if (!Array.isArray(classSet)) { return; };
-            console.log(htmlTag);
+            //console.log(htmlTag);
             this.addingCSS(classSet, htmlTag);
             this.injectId(only_id, htmlTag);
             this.injectSrc(img, altString, htmlTag);
@@ -140,7 +178,7 @@ const functionsFactory = {
 
             this.injectHTML(htmlTag, parentDom);
 
-            console.log(htmlTag);
+            //console.log(htmlTag);
         };
 
     },
@@ -157,18 +195,18 @@ const controlUnit = {
     load(functionsKey, propertyValue, parentDOM) {
 
         if (this.loadWebside) {
-            console.log('sie wurde schon mal geladen.')
+            //console.log('sie wurde schon mal geladen.')
             return;
         } else {
-            console.log('erste mal laden');
+            //console.log('erste mal laden');
             let content = null;
             let keyFunction = null;
-            console.log(this.loadWebside, functionsKey, propertyValue, parentDOM);
+            //console.log(this.loadWebside, functionsKey, propertyValue, parentDOM);
             if (Array.isArray(propertyValue)) { propertyValue.forEach((propertyValue) => this.load(functionsKey, propertyValue, parentDOM)); return; };
             this.loadWebside = true;
-            console.log(this.loadWebside);
+            //console.log(this.loadWebside);
             Object.entries(propertyValue).forEach(([keyword, valueProperty]) => {
-                console.log(keyword, valueProperty);
+                //console.log(keyword, valueProperty);
                 if (typeof libraryBook[functionsKey][keyword] !== 'function') { console.log('this is not a function'); return; };
                 if (Array.isArray(valueProperty) && typeof valueProperty !== 'object') { console.error('this is a object'); return; };
                 libraryBook[functionsKey][keyword](valueProperty, parentDOM);
@@ -180,7 +218,7 @@ const controlUnit = {
     assignProperties(UI_control) {
         let parentDOM = null;
         let websideActive = null;
-        console.log(UI_control);
+        //console.log(UI_control);
         Object.entries(UI_control).forEach(([keyword, propertyValue]) => {
 
             switch (keyword) {
@@ -210,9 +248,9 @@ const controlUnit = {
     },
 
     inputCheck(object_c) {
-        console.log(object_c);
+        //console.log(object_c);
         const { UI_control } = object_c;
-        console.log(UI_control);
+        //console.log(UI_control);
         if (Array.isArray(UI_control)) { console.error('controlUnit: zeile: 7'); UI_control.forEach((UI_control) => this.inputCheck(UI_control)); return; };
         if (typeof UI_control !== 'object') { return console.error('this is not a object', 'zeile: 8'); };
 

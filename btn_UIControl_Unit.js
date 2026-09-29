@@ -34,7 +34,7 @@ body_section.addEventListener('click', (t) => {
     };
 
     if (btn_secondaryClick && body_section.contains(btn_secondaryClick)) {
-
+        console.log(btn_secondaryClick);
         switch (btn_secondaryClick.dataset.action) {
             case 'imgBoxSetting':
 
@@ -51,7 +51,17 @@ body_section.addEventListener('click', (t) => {
             default: break;
         };
 
+        if (btn_secondaryClick.classList.contains('collapsibleBtn')) {
+            console.log(btn_secondaryClick);
+            let i;
 
+            for(i = 0; i < btn_secondaryClick.classList.contains('collapsibleBtn').length; i++) {
+
+                console.log(i);
+
+            };
+
+        };
 
     };
 
