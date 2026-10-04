@@ -15,10 +15,19 @@
     border-bottom: solid 1px #c0c0c09e;
 }
 
-.portfolioBox,
 .headerPortfolio,
 .photoPortfolio_section {
     padding: 0.8em;
+    /*margin: 0.8em;*/
+    gap: 0.4em;
+    flex-direction: column;
+}
+
+.portfolioBox {
+    padding: 0 0.8em;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
     /*margin: 0.8em;*/
     gap: 0.4em;
     flex-direction: column;
@@ -49,17 +58,76 @@
     letter-spacing: 0.8px;
 }
 
+.collapsibleBtn:hover {
+    background-color: rgba(0, 0, 0, 0.421);
+}
+
+.parentCollapsBtn {
+    background-color: #00000084;
+    border: solid 1px silver;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.parentCollapsBtn:hover {
+    background-color: rgba(128, 128, 128, 0.576);
+}
+
 .galaryBoxCollapsible {
     flex-direction: row;
-    margin: 1em;
+    margin: 2em;
+    padding: 0 0.5em;
+    max-height: 0;
+    overflow: hidden;
+    transition: height 0.8s ease-in-out;
+    align-items: center;
 }
 
 .galaryBoxCollapsible_style {
+    border: solid 1px #c0c0c0;
     background: none;
+}
+
+.imgContainer {
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5em;
+    margin: 0.6em;
+    margin-left: 1.2em;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    /* Erzwingt das Einrasten auf der X-Achse */
+    scroll-behavior: smooth;
+    /* Sanftes Weiterspringen beim Wischen */
+    -webkit-overflow-scrolling: touch;
+    /* Flüssiges Wischen auf iOS/Safari */
+
+    /* Scrollbalken optional ausblenden für App-Feeling */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.imgContainer::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Edge */
 }
 
 .portfolioImg {
     margin: 0.5em;
+    flex: 0 0 100%;
+    /* Jedes Bild nimmt exakt 100% der Containerbreite ein */
+    width: 100%;
+    height: 420px;
+    /* Deine gewünschte Zielhöhe */
+    object-fit: cover;
+    /* Füllt die Fläche sauber aus */
+    scroll-snap-align: start;
+    /* Rastet immer bündig an der linken Kante ein */
+    scroll-snap-stop: always;
+    /* Verhindert Durchrutschen: Stoppt exakt beim nächsten Bild */
 }
 
 .portfolioImgStyle {
@@ -68,8 +136,8 @@
 
 .galleryTextBox {
     flex-direction: column;
-    gap: 5em;
-    margin: 0.5em;
+    gap: 1em;
+    margin: 1.5em;
     padding: 1em;
 }
 
@@ -80,6 +148,10 @@
 .gallaryText_h2 {
     padding: 0.5em;
     text-decoration: underline;
+}
+
+.galaryParaSection {
+    flex-direction: column;
 }
 
 .gallaryTextSpan {

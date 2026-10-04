@@ -36,10 +36,24 @@ const mainViev = {
 const functionsFactory = {
 
     imgCreaterSection(gallaryData, parentDOM) {
+        if (!gallaryData) { return console.error('imgCreaterSection brake'); }
         console.log(gallaryData, parentDOM);
+        let imgClass = null;
         for (const gallaryX of gallaryData) {
-            const { src: srcImg = null, imgClassList = [], alt: altAttribute = '', classList_div = [], classListText_h = '', title = '', classListTextSpan = [], desc = '' } = gallaryX;
-            console.log(srcImg, imgClassList, altAttribute, classList_div, classListText_h, title, desc);
+            const { classList: classSet = [], imgContent = Array.isArray(imgContent) ? imgContent : [imgContent] } = gallaryX;
+            console.log(classSet, imgContent);
+            
+            for (const imgElement of imgContent) {
+                const { src: srcImg = null, alt: altString = '' } = imgElement;
+                console.log(srcImg, altString);
+                if (!srcImg) { continue };
+                // notiz sich mit continue und dessen verwendung vertraut machen weil Philip Ackermann schreibt es sollte sparsam benutzt werden. 
+                const imgHtml = this.createHTMLDocument('img');
+                this.addingCSS(classSet, imgHtml);
+                this.injectSrc(srcImg, altString, imgHtml);
+                this.injectHTML(imgHtml, parentDOM);
+            }
+            /*console.log(srcImg, imgClassList, altAttribute, classList_div, classListText_h, title, desc);
             const imgHtml = this.createHTMLDocument('img');
             //console.log(imgHtml);
             this.addingCSS(imgClassList, imgHtml);
@@ -49,7 +63,7 @@ const functionsFactory = {
 
             const html_div = this.createHTMLDocument('div');
             this.addingCSS(classList_div, html_div);
-            
+
 
             const h2_html = this.createHTMLDocument('h2');
             this.addingCSS(classListText_h, h2_html);
@@ -61,7 +75,7 @@ const functionsFactory = {
             this.injectcreateText(desc, html_span);
             this.injectHTML(html_span, html_div);
 
-            this.injectHTML(html_div, parentDOM);
+            this.injectHTML(html_div, parentDOM);*/
         };
 
     },
@@ -154,6 +168,7 @@ const functionsFactory = {
             console.log(tag, classSet, createText, children, functionsEvent, gallaryData);
             htmlTag = this.createHTMLDocument(tag, htmlTag);
             //console.log(htmlTag);
+
             if (typeof this[functionsEvent] === 'function') {
                 if (functionsEvent === 'createSpanInjectText') {
                     htmlTag = this[functionsEvent](createText, classSet, parentDom);
@@ -165,7 +180,8 @@ const functionsFactory = {
                 };
 
             };
-            if (!Array.isArray(classSet)) { return; };
+
+            if (!Array.isArray(classSet)) { console.error('this_is_not_array'); };
             //console.log(htmlTag);
             this.addingCSS(classSet, htmlTag);
             this.injectId(only_id, htmlTag);
@@ -173,9 +189,10 @@ const functionsFactory = {
             this.injectDataSet(dateBtn, htmlTag);
             this.injectcreateText(createText, htmlTag);
             this.injectHref(hrefAttr, targetSet, htmlTag);
-            if (!children) { return };
-            this.childrenCheck(children, htmlTag);
 
+            if (!children) { console.error('children_is_not_found'); };
+
+            this.childrenCheck(children, htmlTag);
             this.injectHTML(htmlTag, parentDom);
 
             //console.log(htmlTag);

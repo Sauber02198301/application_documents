@@ -424,6 +424,31 @@ const mainContent = {
                                             "createText": "My Portfolio"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
                                         },
                                         {
+                                            "createElement": "button",
+                                            "classList": ["btn_flex", "secondaryBtn", "parentCollapsBtn", "collapsibleStyle"],
+                                            "dataset": "collapsibleParent",
+                                            "children": [
+                                                {
+                                                    "createElement": "span",
+                                                    "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle"],
+                                                    "createText": "Meine Zeit als LKW-Fahrer: Wie ich mit Herausforderungen umgegangen bin"
+
+                                                    // Mein Text: "Meine Zeite als LKW fahrer wie ich mit mit Herrausforderungen umgegangen bin!",
+                                                    // korigierterText : "Meine Zeit als LKW-Fahrer: Wie ich mit Herausforderungen umgegangen bin",
+                                                    // Ein alternativerText: "Praxiserfahrung LKW: Konzentration und Problemlösung in komplexen Situationen"
+                                                },
+                                                {
+                                                    "createElement": "span",
+                                                    "classList": ["block", "material-symbols-outlined", "iconAdd"],
+                                                    "createText": "remove"
+                                                    // minusIcon: remove
+                                                    // Wenn man remove benutzt im span und ein after:: content: 'remove' ueber diesen legt kann man dann mit den click event 
+                                                    //betaetigt das der after sich mit deg 90 grad dreht oder waren es 45 aber das hatte ich schon vorher einmal mit gemini besprochen 
+                                                    // so kann man das visuell einbauen. 
+                                                }
+                                            ]
+                                        },
+                                        {
                                             "createElement": "div",
                                             "classList": ["flex", "portfolioBox", "portfolioStyle"],
                                             "children": [
@@ -434,12 +459,12 @@ const mainContent = {
                                                         {
                                                             "createElement": "h3",
                                                             "classList": ["block", "font_standardValue", "portfolioStyle_h3"],
-                                                            "createText": "Fokus auf Präzision & Verantwortung",
+                                                            "createText": "Fokus in komplexen Situationen",
                                                         },
                                                         {
                                                             "createElement": "h4",
                                                             "classList": ["block", "font_standardValue", "portfolioStyle_h4"],
-                                                            "createText": "Präzision am Steuer & Logistik",
+                                                            "createText": "Souveräne Fahrzeugbeherrschung auf engstem Raum",
                                                         }
                                                     ]
                                                 },
@@ -463,7 +488,7 @@ const mainContent = {
                                                         },
                                                         {
                                                             "createElement": "div",
-                                                            "classList": ["flex", "photoGalery", "photoGaleryStyle"],
+                                                            "classList": ["flex", "collapsibleBtnSection", "collapsibleBtnSectionStyle"],
                                                             "children": [
                                                                 {
                                                                     "createElement": "button",
@@ -472,7 +497,7 @@ const mainContent = {
                                                                         {
                                                                             "createElement": "span",
                                                                             "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle"],
-                                                                            "createText": "Beherrschung komplexer Situationen auf engstem Raum"
+                                                                            "createText": "Braunschweig: Rückwärts-Rangieren über Gefälle und S-Kurve"
                                                                         },
                                                                         {
                                                                             "createElement": "span",
@@ -487,31 +512,68 @@ const mainContent = {
                                                                     "classList": ["flex", "galaryBoxCollapsible", "galaryBoxCollapsible_style"],
                                                                     "children": [
                                                                         {
-                                                                            "functionsEvent": "imgCreaterSection",
-                                                                            "gallaryData": [
+                                                                            "createElement": "div",
+                                                                            "classList": ["flex", "imgContainer", "imgContainerStyle"],
+                                                                            "children": [
                                                                                 {
-                                                                                    "imgClassList": ["block", "portfolioImg", "portfolioImgStyle"],
-                                                                                    "src": "myPortfolio/lkwSection/braunschweig_laderampeSalz.jpeg",
-                                                                                    "alt": "Geparkter LKW mit Anhaenger gepackt an einer Laderampe",
-                                                                                    "classList_div": ["flex", "galleryTextBox", "galleryTextBox_style"],
-                                                                                    "classListText_h": ["block", "font_standardValue", "gallaryText_h2"],
-                                                                                    "title": "Braunschweig millimeter genau eingeparkt",
-                                                                                    "classListTextSpan": ["block", "font_standardValue", "gallaryTextSpan"],
-                                                                                    "desc": "Um das Salzdalumer Klinik im Braunschweig zu beliefern muss man eine s-kurve rückwerts mit Anhänger hinunter fahren. Ich muss nahe mit der Rechten Kante vom LKW an der mauer hinunter fahren."
+                                                                                    "functionsEvent": "imgCreaterSection",
+                                                                                    "gallaryData": [
+                                                                                        {
+                                                                                            "classList": ["block", "portfolioImg", "portfolioImgStyle"],
+                                                                                            "imgContent": [
+                                                                                                { "src": "myPortfolio/lkwSection/braunschweig_laderampeSalz.jpeg", "alt": "Geparkter LKW mit Anhaenger gepackt an einer Laderampe" },
+                                                                                                { "src": "myPortfolio/lkwSection/laderampe_braunschweig_salz.jpeg", "alt": "Geparkter LKW mit Anhaenger gepackt an einer Laderampe (Gleiche Bild nur in Schwarz / Weiß)" },
+                                                                                                { "src": "myPortfolio/lkwSection/braunschweig.jpeg", "alt": "Geparkter LKW mit Anhaenger vor einen Porsche Haendler" },
+                                                                                                { "src": "myPortfolio/lkwSection/braunschweig_three.jpeg", "alt": "Geparkter LKW mit Anhaenger vordere Ansicht" },
+                                                                                                { "src": "myPortfolio/lkwSection/braunschweig_four.jpeg", "alt": "Geparkter LKW mit Anhaenger nah ansicht" },
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
                                                                                 }
                                                                             ]
                                                                         },
-
+                                                                        {
+                                                                            "createElement": "div",
+                                                                            "classList": ["flex", "galleryTextBox", "galleryTextBox_style"],
+                                                                            "children": [
+                                                                                {
+                                                                                    "createElement": "h2",
+                                                                                    "classList": ["block", "font_standardValue", "gallaryText_h2"],
+                                                                                    "createText": "Braunschweig millimeter genau eingeparkt"
+                                                                                },
+                                                                                {
+                                                                                    "createElement": "p",
+                                                                                    "classList": ["flex", "galaryParaSection", "galaryParaSectionStyle"],
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "functionsEvent": "createSpanInjectText",
+                                                                                            "classList": ["block", "font_standardValue", "gallaryTextSpan"],
+                                                                                            "createText": [
+                                                                                                "Die Belieferung der Salzdalumer Klinik in Braunschweig verzeiht keine Fehler: Mit dem Hängerzug geht es im Gefälle über eine enge S-Kurve nur rückwärts hinunter – Millimeterarbeit dicht an der rechten Mauer, ohne Wendemöglichkeit.",
+                                                                                                "Die ersten Male ging der Puls durch die Decke. Später fuhr ich die Passage nachts im Schlaf, als hätte ich nie etwas anderes gemacht.",
+                                                                                                "Am besten lief es immer ohne Publikum: Wenn mir niemand auf die Finger schaute, saß jedes Manöver beim ersten Versuch wie eine Eins. Unter Beobachtung stieg der Druck – aber in der Ruhe der Nacht, fokussiert auf Spiegel und Maße, blieben selbst die engsten Passagen absolut schadenfrei."
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
                                                                     ]
-                                                                },
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "createElement": "div",
+                                                            "classList": ["flex", "collapsibleBtnSection", "collapsibleBtnSectionStyle"],
+                                                            "children": [
                                                                 {
                                                                     "createElement": "button",
-                                                                    "classList": ["btn_flex", "secondaryBtn", "collapsibleBtn", "collapsibleStyle"],      
+                                                                    "classList": ["btn_flex", "secondaryBtn", "collapsibleBtn", "collapsibleStyle"],
                                                                     "children": [
                                                                         {
                                                                             "createElement": "span",
                                                                             "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle"],
-                                                                            "createText": "Beherrschung komplexer Situationen auf engstem Raum"
+                                                                            "createText": "Leidenschaft für Präzision: Touren von Hamm bis Hannover"
                                                                         },
                                                                         {
                                                                             "createElement": "span",
@@ -526,25 +588,91 @@ const mainContent = {
                                                                     "classList": ["flex", "galaryBoxCollapsible", "galaryBoxCollapsible_style"],
                                                                     "children": [
                                                                         {
-                                                                            "functionsEvent": "imgCreaterSection",
-                                                                            "gallaryData": [
+                                                                            "createElement": "div",
+                                                                            "classList": ["flex", "imgContainer", "imgContainerStyle"],
+                                                                            "children": [
                                                                                 {
-                                                                                    "imgClassList": ["block", "portfolioImg", "portfolioImgStyle"],
-                                                                                    "src": "myPortfolio/lkwSection/laderampe_hamm_links.jpeg",
-                                                                                    "alt": "Geparkter LKW mit Anhaenger gepackt an einer Laderampe",
-                                                                                    "classList_div": ["flex", "galleryTextBox", "galleryTextBox_style"],
-                                                                                    "classListText_h": ["block", "font_standardValue", "gallaryText_h2"],
-                                                                                    "title": "Kinder Hamm mm genaues einparken",
-                                                                                    "classListTextSpan": ["block", "font_standardValue", "gallaryTextSpan"],
-                                                                                    "desc": "Hier stehe ich inder minimalen Parkbucht wo ich bis auf der rille soweit rects wenn man vor dem LKW steht kein mm platz ist so das an der Linken seite genug platz ist das das Personal Hochgehen kann vom Kinder krankenhaus Hamm"
+                                                                                    "functionsEvent": "imgCreaterSection",
+                                                                                    "gallaryData": [
+                                                                                        {
+                                                                                            "classList": ["block", "portfolioImg", "portfolioImgStyle"],
+                                                                                            "imgContent": [
+                                                                                                { "src": "myPortfolio/lkwSection/laderampe_kinder_hamm.jpeg", "alt": "Einparken in Kinder Hamm Rechte Seite" },
+                                                                                                { "src": "myPortfolio/lkwSection/laderampe_hamm_links.jpeg", "alt": "Einparken in Kinder Hamm Linke Seite" },
+                                                                                                { "src": "myPortfolio/lkwSection/hannover_ladeStation_one.jpeg", "alt": "Belieferung eines Altenheim in Hannover" },
+                                                                                                { "src": "myPortfolio/lkwSection/hannover_ladeStation.jpeg", "alt": "Belieferung eines Altenheim in Hannover" },
+
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "createElement": "div",
+                                                                            "classList": ["flex", "galleryTextBox", "galleryTextBox_style"],
+                                                                            "children": [
+                                                                                {
+                                                                                    "createElement": "h2",
+                                                                                    "classList": ["block", "font_standardValue", "gallaryText_h2"],
+                                                                                    "createText": "Leidenschaft für das, was man tut"
+                                                                                },
+                                                                                {
+                                                                                    "createElement": "p",
+                                                                                    "classList": ["flex", "galaryParaSection", "galaryParaSectionStyle"],
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "functionsEvent": "createSpanInjectText",
+                                                                                            "classList": ["block", "font_standardValue", "gallaryTextSpan"],
+                                                                                            "createText": [
+                                                                                                "Ich gelte oft als nüchterner und rationaler Mensch – aber wenn mich eine Sache packt, brenne ich dafür mit jeder Faser.",
+                                                                                                "Das LKW-Fahren fiel mir von der ersten Sekunde an leicht.",
+                                                                                                "Als ich in der Fahrschule den Hängerzug beim allerersten Versuch absolut fehlerfrei rückwärts einparkte, traute mein Fahrlehrer seinen Augen nicht.",
+                                                                                                "Er fragte mich, ob ich das heimlich geübt hätte. Ich verneinte. Er ließ mich die Übung noch einmal fahren, filmte sie mit dem Smartphone – und das Manöver saß wieder auf den Millimeter.",
+                                                                                                "Ich verneinte.",
+                                                                                                "Er ließ mich die Übung noch einmal fahren, filmte sie mit dem Smartphone und das Manöver saß wieder auf den Millimeter.",
+                                                                                                "Es war keine Glückssache, sondern ein instinktives Gespür für Mechanik und Raum.",
+                                                                                                "Ich habe auf der Straße viel gesehen und gemeistert: von der engen Anfahrt an die Kinderklinik in Hamm über die Krankenhäuser in Bielefeld Mitte und an der Rosenhöhe, bis hin zu den anspruchsvollen Touren über Hannover, Celle, Bad Nenndorf, Nienburg und Stolzenau.",
+                                                                                                "Ich liebe Maschinen und Fahrzeuge vom klassischen Porsche 911 Targa über den 944 bis hin zu Meilensteinen wie dem BMW Z1.",
+                                                                                                "Sie sind für mich nicht bloß Fortbewegungsmittel, sondern faszinierende Ingenieurskunst.",
+                                                                                                "Ein komplexes technisches System bis ins letzte Detail zu verstehen, zu beherrschen und sauber zu steuern, ist für mich kein Job, sondern ein Teil meiner Identität.",
+                                                                                                "Genau dieselbe tiefe Begeisterung empfinde ich für Computer und Code: Ein komplexes technisches System bis ins letzte Detail zu verstehen, zu beherrschen und sauber zu steuern, ist für mich kein Job, sondern ein Teil meiner Identität."
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
                                                                                 }
                                                                             ]
                                                                         }
                                                                     ]
-                                                                },
+                                                                }
                                                             ]
                                                         }
                                                     ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "createElement": "button",
+                                            "classList": ["btn_flex", "secondaryBtn", "parentCollapsBtn", "collapsibleStyle"],
+                                            "dataset": "collapsibleParent",
+                                            "children": [
+                                                {
+                                                    "createElement": "span",
+                                                    "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle"],
+                                                    "createText": "Meine Zeit als LKW-Fahrer: Wie ich mit Herausforderungen umgegangen bin"
+
+                                                    // Mein Text: "Meine Zeite als LKW fahrer wie ich mit mit Herrausforderungen umgegangen bin!",
+                                                    // korigierterText : "Meine Zeit als LKW-Fahrer: Wie ich mit Herausforderungen umgegangen bin",
+                                                    // Ein alternativerText: "Praxiserfahrung LKW: Konzentration und Problemlösung in komplexen Situationen"
+                                                },
+                                                {
+                                                    "createElement": "span",
+                                                    "classList": ["block", "material-symbols-outlined", "iconAdd"],
+                                                    "createText": "remove"
+                                                    // minusIcon: remove
+                                                    // Wenn man remove benutzt im span und ein after:: content: 'remove' ueber diesen legt kann man dann mit den click event 
+                                                    //betaetigt das der after sich mit deg 90 grad dreht oder waren es 45 aber das hatte ich schon vorher einmal mit gemini besprochen 
+                                                    // so kann man das visuell einbauen. 
                                                 }
                                             ]
                                         }
@@ -694,6 +822,81 @@ const mainContent = {
         }
     },
 };
+// hier muss ich mir fuer spaeter was ueberlegen wie ich die auszulesende Datei hineinschiebe 
+//ich muss mir eine beta JSON datei erarbeiten wie ich mir die dateien auslese 
+//bei der datei fuer xcode muss ich kein div oder h1 beachten aber auch hier muss ich bedenken wenn ich die rohdaten fuer javaScript nehme 
+//muss ich mir ein system aus denken das javaScript weis was es erstellen soll, wenn ich ehrlich bin koennte ich
+// auch alles im html schreiben und den rest reinschieben ich habe auch die moeglichkeit jede menge html elemente vorzu rendern und sie spaeter 
+// mit kontent zu fuellen. wobei man das prinzip keep at simple halten soll weil dies noch ein diverses problem fuer mich ist 
+
+/*
+
+    [
+                                                                
+                                                                {
+                                                                    "createElement": "div",
+                                                                    "classList": ["flex", "galaryBoxCollapsible", "galaryBoxCollapsible_style"],
+                                                                    "children": [
+                                                                        {
+                                                                            "functionsEvent": "imgCreaterSection",
+                                                                            "gallaryData": [
+                                                                                {
+                                                                                    "imgClassList": ["block", "portfolioImg", "portfolioImgStyle"],
+                                                                                    "src": "myPortfolio/lkwSection/braunschweig_laderampeSalz.jpeg",
+                                                                                    "alt": "Geparkter LKW mit Anhaenger gepackt an einer Laderampe",
+                                                                                    "classList_div": ["flex", "galleryTextBox", "galleryTextBox_style"],
+                                                                                    "classListText_h": ["block", "font_standardValue", "gallaryText_h2"],
+                                                                                    "title": "Braunschweig millimeter genau eingeparkt",
+                                                                                    "classListTextSpan": ["block", "font_standardValue", "gallaryTextSpan"],
+                                                                                    "desc": "Um das Salzdalumer Klinik im Braunschweig zu beliefern muss man eine s-kurve rückwerts mit Anhänger hinunter fahren. Ich muss nahe mit der Rechten Kante vom LKW an der mauer hinunter fahren."
+                                                                                }
+                                                                            ]
+                                                                        },
+
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "createElement": "button",
+                                                                    "classList": ["btn_flex", "secondaryBtn", "collapsibleBtn", "collapsibleStyle"],
+                                                                    "children": [
+                                                                        {
+                                                                            "createElement": "span",
+                                                                            "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle"],
+                                                                            "createText": "Beherrschung komplexer Situationen auf engstem Raum in Hamm"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span",
+                                                                            "classList": ["block", "material-symbols-outlined", "iconAdd"],
+                                                                            "createText": "add"
+                                                                            // minusIcon: remove
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "createElement": "div",
+                                                                    "classList": ["flex", "galaryBoxCollapsible", "galaryBoxCollapsible_style"],
+                                                                    "children": [
+                                                                        {
+                                                                            "functionsEvent": "imgCreaterSection",
+                                                                            "gallaryData": [
+                                                                                {
+                                                                                    "imgClassList": ["block", "portfolioImg", "portfolioImgStyle"],
+                                                                                    "src": "myPortfolio/lkwSection/laderampe_hamm_links.jpeg",
+                                                                                    "alt": "Geparkter LKW mit Anhaenger gepackt an einer Laderampe",
+                                                                                    "classList_div": ["flex", "galleryTextBox", "galleryTextBox_style"],
+                                                                                    "classListText_h": ["block", "font_standardValue", "gallaryText_h2"],
+                                                                                    "title": "Kinder Hamm mm genaues einparken",
+                                                                                    "classListTextSpan": ["block", "font_standardValue", "gallaryTextSpan"],
+                                                                                    "desc": "Hier stehe ich inder minimalen Parkbucht wo ich bis auf der rille soweit rects wenn man vor dem LKW steht kein mm platz ist so das an der Linken seite genug platz ist das das Personal Hochgehen kann vom Kinder krankenhaus Hamm"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                            ]
+
+
+*/
 
 const imgContent = [
     {

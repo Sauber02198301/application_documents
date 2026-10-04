@@ -26,6 +26,10 @@
     margin: 0.6em;
 }
 
+.collapsibleBtnSection {
+    flex-direction: column;
+}
+
 .paraAbout_section,
 .portfolio_para {
     margin: 0.5em;
@@ -56,4 +60,11 @@
 .anchor_footerAbout {
     padding: 0.8em;
     margin: 0.8em;
+    font-size: 20px;
+    text-decoration: none;
+    border: solid 1px #6e5d5d;
+}
+
+.anchor_footerAbout:hover {
+    background: rgba(101, 96, 96, 0.528);
 }
