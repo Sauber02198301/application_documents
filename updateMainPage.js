@@ -137,7 +137,7 @@ const img_columnObject = [
                     { "src": "myPortfolio/rasperryPi_3A/1A72E2E3-C157-4A58-A1F7-D85EC8C31016_1_105_c.png", "alt": "MacBook Pro angel Lid Sensor" },
                     { "src": "myPortfolio/rasperryPi_3A/3C0A2235-1A78-4E6A-AA2B-116099CFEE12_1_105_c.jpeg", "alt": "MacBook Pro angel Lid Sensor" },
                     { "src": "myPortfolio/rasperryPi_3A/7D58CA92-5B8A-405A-BC20-6072ED5CEC58_1_105_c.jpeg", "alt": "MacBook Pro angel Lid Sensor" },
-                    
+
                 ]
             }
         ]
@@ -700,14 +700,20 @@ const mainContent = {
                                                 }
                                             ]
                                         },
+
+                                    ]
+                                },
+                                {
+                                    "createElement": "div",
+                                    "classList": ["flex", "mainContainerPhotoGallary", "mainContainer_PhoGall_style"],
+                                    "children": [
                                         {
-                                            "createElement": "button",
-                                            "classList": ["btn_flex", "secondaryBtn", "parentCollapsBtn", "collapsibleStyle"],
-                                            "dataset": "collapsibleParent",
+                                            "createElement": "header",
+                                            "classList": ["flex", "headerPortfolio", "headerPortfolioStyle"],
                                             "children": [
                                                 {
-                                                    "createElement": "span",
-                                                    "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle"],
+                                                    "createElement": "h1",
+                                                    "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle", "heading_h1_sett"],
                                                     "createText": "Meine Anfänge zum Reparieren"
 
                                                     // Mein Text: "Meine Zeite als LKW fahrer wie ich mit mit Herrausforderungen umgegangen bin!",
@@ -715,36 +721,16 @@ const mainContent = {
                                                     // Ein alternativerText: "Praxiserfahrung LKW: Konzentration und Problemlösung in komplexen Situationen"
                                                 },
                                                 {
-                                                    "createElement": "span",
-                                                    "classList": ["block", "material-symbols-outlined", "iconAdd"],
-                                                    "createText": "remove"
-                                                    // minusIcon: remove
-                                                    // Wenn man remove benutzt im span und ein after:: content: 'remove' ueber diesen legt kann man dann mit den click event 
-                                                    //betaetigt das der after sich mit deg 90 grad dreht oder waren es 45 aber das hatte ich schon vorher einmal mit gemini besprochen 
-                                                    // so kann man das visuell einbauen. 
+                                                    "createElement": "h3",
+                                                    "classList": ["block", "font_standardValue", "portfolioStyle_h3", "header_area_style_h3"],
+                                                    "createText": "Ob MacBooks Pro mit Flexgate, bis zum Akku Tausch vom Microsoft Surface Pro, und diverse andere Geräten",
                                                 }
                                             ]
                                         },
                                         {
                                             "createElement": "div",
-                                            "classList": ["flex", "portfolioBox", "portfolioStyle"],
+                                            "classList": ["flex", "mainChildOne", "mainChildOneStyle"],
                                             "children": [
-                                                {
-                                                    "createElement": "header",
-                                                    "classList": ["flex", "headerPortfolio", "headerPortfolioStyle"],
-                                                    "children": [
-                                                        {
-                                                            "createElement": "h1",
-                                                            "classList": ["block", "font_standardValue", "portfolio_h1_style", "header_area_style"],
-                                                            "createText": "Ich habe angefangen einfach sachen zu Reparieren"
-                                                        },
-                                                        {
-                                                            "createElement": "h3",
-                                                            "classList": ["block", "font_standardValue", "portfolioStyle_h3", "header_area_style_h3"],
-                                                            "createText": "Ob MacBooks Pro mit Flexgate, bis zum Akku Tausch vom Microsoft Surface Pro, und diverse andere Geräte",
-                                                        }
-                                                    ]
-                                                },
                                                 {
                                                     "createElement": "div",
                                                     "classList": ["flex", "photoPortfolio_section", "photoPortfolio_sectionStyle", "repair_elektrik"],
@@ -780,7 +766,8 @@ const mainContent = {
                                                     ]
                                                 }
                                             ]
-                                        }
+                                        },
+
                                     ]
                                 }
                             ]
