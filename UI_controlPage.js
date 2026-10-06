@@ -35,6 +35,27 @@ const mainViev = {
 
 const functionsFactory = {
 
+    creatingIMG_column(contentColumn, parentDom) {
+        console.log(contentColumn, parentDom);
+        if (!contentColumn || !parentDom) { return };
+
+        for (const columnExt of contentColumn) {
+            console.log(columnExt);
+            const { classList: classSet = [], createIMG_list } = columnExt;
+            console.log(classSet, createIMG_list);
+            for (const img_columnObject of createIMG_list) {
+                console.log(img_columnObject);
+                const htmlTag = this.createHTMLDocument('div');
+                this.addingCSS(classSet, htmlTag);
+                console.log(htmlTag);
+                this.imgCreaterSection([img_columnObject], htmlTag);
+                this.injectHTML(htmlTag, parentDom)
+            }
+
+        }
+
+    },
+
     imgCreaterSection(gallaryData, parentDOM) {
         if (!gallaryData) { return console.error('imgCreaterSection brake'); }
         console.log(gallaryData, parentDOM);
@@ -42,7 +63,7 @@ const functionsFactory = {
         for (const gallaryX of gallaryData) {
             const { classList: classSet = [], imgContent = Array.isArray(imgContent) ? imgContent : [imgContent] } = gallaryX;
             console.log(classSet, imgContent);
-            
+
             for (const imgElement of imgContent) {
                 const { src: srcImg = null, alt: altString = '' } = imgElement;
                 console.log(srcImg, altString);
@@ -102,6 +123,7 @@ const functionsFactory = {
     },
 
     injectHref(hrefAttr, targetSet, htmlTag) {
+        if (!htmlTag) { return; };
         htmlTag.href = hrefAttr;
 
         htmlTag.target = targetSet;
@@ -112,7 +134,7 @@ const functionsFactory = {
 
     addingCSS(cssClass, htmlTag) {
         //console.log(cssClass, htmlTag);
-        if (!cssClass) { return; };
+        if (!cssClass || !htmlTag) { return; };
         htmlTag.classList.add(...cssClass);
         //console.log(htmlTag);
     },
@@ -143,7 +165,7 @@ const functionsFactory = {
     },
 
     injectcreateText(createText, htmlTag) {
-        if (!createText) { return };
+        if (!createText || !htmlTag) { return };
         const textNode = document.createTextNode(createText);
         //console.log(textNode);
         htmlTag.appendChild(textNode);
@@ -164,7 +186,7 @@ const functionsFactory = {
         //console.log('that is a array');
         let htmlTag = null;
 
-        for (const { createElement: tag = null, classList: classSet = [], only_id = null, src: img = null, alt: altString = null, hrefAttr = "", gallaryData = null, target: targetSet = '', dataset: dateBtn = null, functionsEvent = null, createText = [], children = [] } of renderObject) {
+        for (const { createElement: tag = null, classList: classSet = [], only_id = null, src: img = null, alt: altString = null, hrefAttr = "", gallaryData = null, target: targetSet = '', dataset: dateBtn = null, functionsEvent = null, contentColumn = null, createText = [], children = [] } of renderObject) {
             console.log(tag, classSet, createText, children, functionsEvent, gallaryData);
             htmlTag = this.createHTMLDocument(tag, htmlTag);
             //console.log(htmlTag);
@@ -177,6 +199,8 @@ const functionsFactory = {
                     //console.log(functionsEvent);
                     htmlTag = this[functionsEvent](gallaryData, parentDom);
                     return;
+                } else if (functionsEvent === 'creatingIMG_column') {
+                    htmlTag = this[functionsEvent](contentColumn, parentDom);
                 };
 
             };

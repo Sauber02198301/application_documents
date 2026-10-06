@@ -15,6 +15,10 @@
     border-bottom: solid 1px #c0c0c09e;
 }
 
+.header_area_style {
+    text-decoration: underline;
+}
+
 .headerPortfolio,
 .photoPortfolio_section {
     padding: 0.8em;
@@ -53,7 +57,7 @@
     justify-content: space-between;
     background: #2f4f4feb;
     border: solid 1px #c0c0c0fa;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 800;
     letter-spacing: 0.8px;
 }
@@ -65,9 +69,9 @@
 .parentCollapsBtn {
     background-color: #00000084;
     border: solid 1px silver;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    font-size: 25px;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -75,7 +79,7 @@
     background-color: rgba(128, 128, 128, 0.576);
 }
 
-.galaryBoxCollapsible {
+.galleryBoxCollapsible {
     flex-direction: row;
     margin: 2em;
     padding: 0 0.5em;
@@ -85,7 +89,7 @@
     align-items: center;
 }
 
-.galaryBoxCollapsible_style {
+.galleryBoxCollapsible_style {
     border: solid 1px #c0c0c0;
     background: none;
 }
@@ -136,6 +140,8 @@
 
 .galleryTextBox {
     flex-direction: column;
+    height: 385px;
+    overflow-y: auto;
     gap: 1em;
     margin: 1.5em;
     padding: 1em;
@@ -145,16 +151,35 @@
     border: solid 1px #c0c0c0;
 }
 
-.gallaryText_h2 {
+.galleryText_h2 {
     padding: 0.5em;
     text-decoration: underline;
 }
 
-.galaryParaSection {
+.header_area_style_h3 {
+    padding: 0.7em;
+    padding-left: 1.2em;
+}
+
+.galleryParaSection {
     flex-direction: column;
 }
 
-.gallaryTextSpan {
-    padding: 0.5em;
+.galleryTextSpan {
+    /*padding: 0.5em;*/
     margin: 0.5em;
+}
+
+.paraPortfolio_text {
+    flex-direction: column;
+    gap: 1.2em;
+    padding: 1em;
+    margin: 1em;
+}
+
+.repair_elektrik {
+    border-top: inset 1px rgb(0, 0, 0);
+    border-bottom: inset 1px rgb(0, 0, 0);
+    padding: 2em;
+    margin: 2em;
 }

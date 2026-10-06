@@ -95,6 +95,55 @@ const aboutName_x = [
     }
 ];
 
+const img_columnObject = [
+    {
+        "classList": ["flex", "img_container_column", "img_container_column_style"],
+        "createIMG_list": [
+            {
+                "classList": ["block", "img_column", "img_columnStyle"],
+                "imgContent": [
+                    { "src": "myPortfolio/pcMeinesSohns/28D5C2A6-F09B-4240-8C12-964F5E36EEA0_4_5005_c.jpeg", "alt": "Ein weisser PC mit LED's" },
+                    { "src": "myPortfolio/pcMeinesSohns/3256CC7A-1CD1-47A2-BA28-42F93748AD07_4_5005_c.jpeg", "alt": "Ein weisser PC mit LED's" },
+                    { "src": "myPortfolio/nintendo_gameBoy/00B93E39-5704-4180-B272-31B45BDB0097_1_105_c.jpeg", "alt": "Umgebauter GameBoy Color mit Shiggy Design" },
+                    { "src": "myPortfolio/nintendo_gameBoy/1E9E3F02-332C-467A-9D83-F24727119BD0_1_201_a.jpeg", "alt": "Vergleich mit einen normalen GamBoy mit keinem IPS-Display" },
+                    { "src": "myPortfolio/nintendo_gameBoy/04A59AEC-6750-48D5-8248-7C34858C64C2_1_105_c.jpeg", "alt": "Vergleich mit einen normalen GamBoy mit keinem IPS-Display" },
+                ]
+            },
+            {
+                "classList": ["block", "img_column", "img_columnStyle"],
+                "imgContent": [
+                    { "src": "myPortfolio/surfacePro/85703A2F-3807-4CCC-91CF-B8B13075525B_1_105_c.jpeg", "alt": "alter mann der pc repariert" },
+                    { "src": "myPortfolio/surfacePro/555AF927-F100-485C-AD77-7EAF1757E80C_1_105_c.jpeg", "alt": "alter mann der pc repariert" },
+                    { "src": "myPortfolio/surfacePro/029ADAD3-F57C-44B2-ABF4-B6E42D13966E_1_105_c.jpeg", "alt": "alter mann der pc repariert" },
+                    { "src": "myPortfolio/surfacePro/04DEA672-C138-404D-BC6B-7F1B9E6E12FB_1_105_c.jpeg", "alt": "alter mann der pc repariert" },
+                    { "src": "myPortfolio/surfacePro/5F214723-44F7-4CE3-B672-E551B671CD37_1_105_c.jpeg", "alt": "alter mann der pc repariert" },
+                ]
+            },
+            {
+                "classList": ["block", "img_column", "img_columnStyle"],
+                "imgContent": [
+                    { "src": "myPortfolio/MacBookPro_lidSensor/IMG_241B724A-273A-4BCD-8A78-FB1894247F7C.jpeg", "alt": "MacBook Pro angel Lid Sensor" },
+                    { "src": "myPortfolio/MacBookPro_lidSensor/IMG_4612.jpeg", "alt": "alter mann der pc repariert" },
+                    //{ "src": "myPortfolio/MacBookPro_lidSensor/00011D7C-8F0C-46F3-87A5-8C0AE522662C_1_105_c.jpeg", "alt": "alter mann der pc repariert" },
+                    { "src": "myPortfolio/MacBookPro_lidSensor/IMG_4600.jpeg", "alt": "alter mann der pc repariert" },
+                    { "src": "myPortfolio/MacBookPro_lidSensor/IMG_4601.jpeg", "alt": "alter mann der pc repariert" },
+                ]
+            },
+            {
+                "classList": ["block", "img_column", "img_columnStyle"],
+                "imgContent": [
+                    { "src": "myPortfolio/rasperryPi_3A/DD359EB0-096C-45EE-A751-4530FDAAC0EB_1_105_c.jpeg", "alt": "MacBook Pro angel Lid Sensor" },
+                    { "src": "myPortfolio/rasperryPi_3A/0707641A-3757-4255-B470-9DA0E411E631_1_105_c.jpeg", "alt": "MacBook Pro angel Lid Sensor" },
+                    { "src": "myPortfolio/rasperryPi_3A/1A72E2E3-C157-4A58-A1F7-D85EC8C31016_1_105_c.png", "alt": "MacBook Pro angel Lid Sensor" },
+                    { "src": "myPortfolio/rasperryPi_3A/3C0A2235-1A78-4E6A-AA2B-116099CFEE12_1_105_c.jpeg", "alt": "MacBook Pro angel Lid Sensor" },
+                    { "src": "myPortfolio/rasperryPi_3A/7D58CA92-5B8A-405A-BC20-6072ED5CEC58_1_105_c.jpeg", "alt": "MacBook Pro angel Lid Sensor" },
+                    
+                ]
+            }
+        ]
+    }
+]
+
 const childrenObject = {
 
     "childsHeaderContainer": [
@@ -453,7 +502,7 @@ const mainContent = {
                                             "classList": ["flex", "portfolioBox", "portfolioStyle"],
                                             "children": [
                                                 {
-                                                    "createElement": "div",
+                                                    "createElement": "header",
                                                     "classList": ["flex", "headerPortfolio", "headerPortfolioStyle"],
                                                     "children": [
                                                         {
@@ -509,7 +558,7 @@ const mainContent = {
                                                                 },
                                                                 {
                                                                     "createElement": "div",
-                                                                    "classList": ["flex", "galaryBoxCollapsible", "galaryBoxCollapsible_style"],
+                                                                    "classList": ["flex", "galleryBoxCollapsible", "galleryBoxCollapsible_style"],
                                                                     "children": [
                                                                         {
                                                                             "createElement": "div",
@@ -538,16 +587,16 @@ const mainContent = {
                                                                             "children": [
                                                                                 {
                                                                                     "createElement": "h2",
-                                                                                    "classList": ["block", "font_standardValue", "gallaryText_h2"],
+                                                                                    "classList": ["block", "font_standardValue", "galleryText_h2"],
                                                                                     "createText": "Braunschweig millimeter genau eingeparkt"
                                                                                 },
                                                                                 {
                                                                                     "createElement": "p",
-                                                                                    "classList": ["flex", "galaryParaSection", "galaryParaSectionStyle"],
+                                                                                    "classList": ["flex", "galleryParaSection", "galleryParaSectionStyle"],
                                                                                     "children": [
                                                                                         {
                                                                                             "functionsEvent": "createSpanInjectText",
-                                                                                            "classList": ["block", "font_standardValue", "gallaryTextSpan"],
+                                                                                            "classList": ["block", "font_standardValue", "galleryTextSpan"],
                                                                                             "createText": [
                                                                                                 "Die Belieferung der Salzdalumer Klinik in Braunschweig verzeiht keine Fehler: Mit dem Hängerzug geht es im Gefälle über eine enge S-Kurve nur rückwärts hinunter – Millimeterarbeit dicht an der rechten Mauer, ohne Wendemöglichkeit.",
                                                                                                 "Die ersten Male ging der Puls durch die Decke. Später fuhr ich die Passage nachts im Schlaf, als hätte ich nie etwas anderes gemacht.",
@@ -585,7 +634,7 @@ const mainContent = {
                                                                 },
                                                                 {
                                                                     "createElement": "div",
-                                                                    "classList": ["flex", "galaryBoxCollapsible", "galaryBoxCollapsible_style"],
+                                                                    "classList": ["flex", "galleryBoxCollapsible", "galleryBoxCollapsible_style"],
                                                                     "children": [
                                                                         {
                                                                             "createElement": "div",
@@ -614,16 +663,16 @@ const mainContent = {
                                                                             "children": [
                                                                                 {
                                                                                     "createElement": "h2",
-                                                                                    "classList": ["block", "font_standardValue", "gallaryText_h2"],
+                                                                                    "classList": ["block", "font_standardValue", "galleryText_h2"],
                                                                                     "createText": "Leidenschaft für das, was man tut"
                                                                                 },
                                                                                 {
                                                                                     "createElement": "p",
-                                                                                    "classList": ["flex", "galaryParaSection", "galaryParaSectionStyle"],
+                                                                                    "classList": ["flex", "galleryParaSection", "galleryParaSectionStyle"],
                                                                                     "children": [
                                                                                         {
                                                                                             "functionsEvent": "createSpanInjectText",
-                                                                                            "classList": ["block", "font_standardValue", "gallaryTextSpan"],
+                                                                                            "classList": ["block", "font_standardValue", "galleryTextSpan"],
                                                                                             "createText": [
                                                                                                 "Ich gelte oft als nüchterner und rationaler Mensch – aber wenn mich eine Sache packt, brenne ich dafür mit jeder Faser.",
                                                                                                 "Das LKW-Fahren fiel mir von der ersten Sekunde an leicht.",
@@ -659,7 +708,7 @@ const mainContent = {
                                                 {
                                                     "createElement": "span",
                                                     "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle"],
-                                                    "createText": "Meine Zeit als LKW-Fahrer: Wie ich mit Herausforderungen umgegangen bin"
+                                                    "createText": "Meine Anfänge zum Reparieren"
 
                                                     // Mein Text: "Meine Zeite als LKW fahrer wie ich mit mit Herrausforderungen umgegangen bin!",
                                                     // korigierterText : "Meine Zeit als LKW-Fahrer: Wie ich mit Herausforderungen umgegangen bin",
@@ -673,6 +722,62 @@ const mainContent = {
                                                     // Wenn man remove benutzt im span und ein after:: content: 'remove' ueber diesen legt kann man dann mit den click event 
                                                     //betaetigt das der after sich mit deg 90 grad dreht oder waren es 45 aber das hatte ich schon vorher einmal mit gemini besprochen 
                                                     // so kann man das visuell einbauen. 
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "createElement": "div",
+                                            "classList": ["flex", "portfolioBox", "portfolioStyle"],
+                                            "children": [
+                                                {
+                                                    "createElement": "header",
+                                                    "classList": ["flex", "headerPortfolio", "headerPortfolioStyle"],
+                                                    "children": [
+                                                        {
+                                                            "createElement": "h1",
+                                                            "classList": ["block", "font_standardValue", "portfolio_h1_style", "header_area_style"],
+                                                            "createText": "Ich habe angefangen einfach sachen zu Reparieren"
+                                                        },
+                                                        {
+                                                            "createElement": "h3",
+                                                            "classList": ["block", "font_standardValue", "portfolioStyle_h3", "header_area_style_h3"],
+                                                            "createText": "Ob MacBooks Pro mit Flexgate, bis zum Akku Tausch vom Microsoft Surface Pro, und diverse andere Geräte",
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "createElement": "div",
+                                                    "classList": ["flex", "photoPortfolio_section", "photoPortfolio_sectionStyle", "repair_elektrik"],
+                                                    "children": [
+                                                        {
+                                                            "createElement": "p",
+                                                            "classList": ["flex", "paraPortfolio_text", "paraPortfoilio_Style"],
+                                                            "children": [
+                                                                {
+                                                                    "functionsEvent": "createSpanInjectText",
+                                                                    "classList": ["block", "font_standardValue", "spanPortfolioStyle"],
+                                                                    "createText": [
+                                                                        "Ich habe wieder angefangen, das zu tun, was ich vor langer Zeit aus den Augen verloren hatte.",
+                                                                        "Genauso gerne wie am Steuer eines LKW sitze ich an Computern und zerlege komplexe Technik: So habe ich unter anderem die Gaming- und Arbeits-PCs meiner Kinder sowie das System meines Schwagers von Grund auf geplant und zusammengebaut.",
+                                                                        "Auch hardwareseitige Reparaturen gehören für mich dazu: An mehreren MacBook Pros habe ich typische Flexgate-Fehler erfolgreich behoben und Akkuschäden instand gesetzt.",
+                                                                        "Bei einem MacBook Pro (16 Zoll) habe ich einen defekten Lid-Sensor (Display-Winkelsensor) diagnostiziert und getauscht, der das Powermanagement im Stand-by gestört und die Lüfter unkontrolliert hochgedreht hatte.",
+                                                                        "Ebenso konnte ich ein iPad retten, das während eines Firmware-Updates eingefroren war und nicht mehr bootete.",
+                                                                        "Da die Standardwiederherstellung über macOS wiederholt abbrach, habe ich den Fehler analysiert, das System über alternative Flashing-Tools (wie 3uTools) im DFU-Modus neu aufgesetzt und das Gerät wieder voll einsatzbereit gemacht."
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "createElement": "div",
+                                                    "classList": ["flex", "img_container_row", "img_container_row_style"],
+                                                    "children": [
+                                                        {
+                                                            "functionsEvent": "creatingIMG_column",
+                                                            "contentColumn": img_columnObject
+                                                        }
+                                                    ]
                                                 }
                                             ]
                                         }

@@ -96,17 +96,26 @@
         padding: 0.1em;
         margin: 0.5em;
         text-align: center;
+        border: none;
     }
-    
+
+    /*Portfolio_container*/
+
     .portfolio_h1_style,
     .headerPortfolio {
         text-align: center;
+        padding: 0.2em;
+        margin: 0.3em;
     }
 
     .portfolio_para {
-        margin: 0.1em;
+        margin: 0.3em;
         padding: 0.4em;
         gap: 0.4em;
+        margin-top: 0.4em;
+        padding-top: 0.8em;
+        padding-bottom: 0.8em;
+
     }
 
     .photoGalery {
@@ -115,25 +124,48 @@
         padding: 0.3em;
     }
 
+    .parentCollapsBtn {
+        font-size: 0.75rem;
+        gap: 2em;
+    }
+
     .collapsibleBtn {
+        font-size: 0.875rem;
         padding: 0.2em;
         margin: 0.2em;
     }
-    
-    .galaryBoxCollapsible {
+
+    .galleryBoxCollapsible {
         flex-direction: column;
         margin: 0.3em;
         padding: 0.3em;
     }
-    
+
     .galleryTextBox {
+        height: 300px;
         padding: 0.3em;
         margin: 0.3em;
         gap: 0.2em;
     }
-    
-    .gallaryText_h2 {
+
+    .galleryText_h2 {
         font-size: 1.2rem;
+    }
+
+    /*Portfolio_img*/
+
+    .imgContainer {
+        flex-direction: row;
+        width: 300px;
+        padding: 0;
+        margin: 0;
+        margin-left: 0;
+    }
+
+    .portfolioImg {
+        height: 220px;
+        flex: 0 0 99%;
+        margin: 0.7em;
     }
 
     .sideBarRight {
