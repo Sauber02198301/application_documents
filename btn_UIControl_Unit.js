@@ -70,7 +70,7 @@ body_section.addEventListener('click', (t) => {
 
             requestAnimationFrame(() => {
                 content.style.maxHeight = null;
-            });
+            },800);
 
         } else {
 

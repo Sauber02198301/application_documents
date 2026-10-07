@@ -24,19 +24,32 @@
     text-decoration: underline;
 }
 
-.headerPortfolio,
-.photoPortfolio_section {
-    padding: 0.8em;
+.header_collapsible {
+    padding: 1em;
+    margin: 1em;
+}
+
+.header_collapsibleStyle {
+    border-bottom: solid 1px rgba(192, 192, 192, 0.736);
+}
+
+.h2CollapsibleFontStyle {
+    text-decoration: underline;
+    padding: 0.4em;
+    margin: 0.4em;
+}
+
+.portfolioBox {
+    padding: 0 0.8em;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
     /*margin: 0.8em;*/
     gap: 0.4em;
     flex-direction: column;
 }
 
-.portfolioBox {
-    padding: 0 0.8em;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.8s ease-in-out;
+.photoPortfolio_section {
+    padding: 0.8em;
     /*margin: 0.8em;*/
     gap: 0.4em;
     flex-direction: column;
@@ -86,11 +99,11 @@
 
 .galleryBoxCollapsible {
     flex-direction: row;
-    margin: 2em;
+    margin: 1em;
     padding: 0 0.5em;
     max-height: 0;
     overflow: hidden;
-    transition: height 0.8s ease-in-out;
+    transition: max-height 0.8s ease-in-out;
     align-items: center;
 }
 
@@ -181,19 +194,4 @@
     gap: 1.2em;
     padding: 1em;
     margin: 1em;
-}
-
-.mainContainerPhotoGallary {
-    flex-direction: column;
-}
-
-.mainChildOne {
-    flex-direction: row;
-}
-
-.repair_elektrik {
-    border-top: inset 1px rgb(0, 0, 0);
-    border-bottom: inset 1px rgb(0, 0, 0);
-    padding: 2em;
-    margin: 2em;
 }

@@ -1,0 +1,38 @@
+.mainContainerPhotoGallery {
+    flex-direction: column;
+    padding: 0.2em;
+    margin: 0.9em;
+}
+
+.mainContainer_PhoGall_style {
+    border-bottom: solid 1px #c0c0c0;
+}
+
+.headergallery {
+    flex-direction: column;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.headerGalleryStyle {
+    border-bottom: solid 1px rgba(192, 192, 192, 0.601);
+}
+
+.mainChildOne {
+    flex-direction: row;
+    gap: 1em;
+    margin: 0.6em;
+    padding: 0.5em;
+}
+
+.galleryTextContainer {
+    flex-direction: column;
+    height: 100%;
+    max-height: 60%;
+}
+
+
+.repair_elektrik {
+    padding: 0.5em;
+    margin: 0.5em;
+}

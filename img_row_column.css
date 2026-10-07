@@ -3,6 +3,7 @@
     justify-content: center;
     justify-self: center;
     height: 35%;
+    max-width: 60%;
     border: solid 2px #000000bf;
     overflow-y: scroll;
     gap: 0.7em;

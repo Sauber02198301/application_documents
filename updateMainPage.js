@@ -222,19 +222,19 @@ const childrenObject = {
 
                         },
                         {
-                            "createElement": "button",
-                            "classList": ["btn_flex", "btn_navStyle"],
-                            "dataset": "x",
+                            "createElement": "a",
+                            "classList": ["flex", "anchorDrop_section", "anchorDrop_sectionStyle"],
+                            "hrefAttr": "#gallery",
                             "children": [
                                 {
                                     "createElement": "span",
                                     "classList": ["block", "material-symbols-outlined", "iconStyle"],
-                                    "createText": ""
+                                    "createText": "gallery_thumbnail"
                                 },
                                 {
                                     "createElement": "span",
                                     "classList": ["block", "font_standardValue", "btnTextStyle"],
-                                    "createText": "platzhalter"
+                                    "createText": "Gallery reparatur"
                                 }
                             ]
 
@@ -473,28 +473,15 @@ const mainContent = {
                                             "createText": "My Portfolio"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
                                         },
                                         {
-                                            "createElement": "button",
-                                            "classList": ["btn_flex", "secondaryBtn", "parentCollapsBtn", "collapsibleStyle"],
-                                            "dataset": "collapsibleParent",
+                                            "createElement": "header",
+                                            "classList": ["flex", "header_collapsible", "header_collapsibleStyle"],
                                             "children": [
                                                 {
-                                                    "createElement": "span",
-                                                    "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle"],
+                                                    "createElement": "h2",
+                                                    "classList": ["block", "font_standardValue", "h2CollapsibleFontStyle"],
                                                     "createText": "Meine Zeit als LKW-Fahrer: Wie ich mit Herausforderungen umgegangen bin"
-
-                                                    // Mein Text: "Meine Zeite als LKW fahrer wie ich mit mit Herrausforderungen umgegangen bin!",
-                                                    // korigierterText : "Meine Zeit als LKW-Fahrer: Wie ich mit Herausforderungen umgegangen bin",
-                                                    // Ein alternativerText: "Praxiserfahrung LKW: Konzentration und Problemlösung in komplexen Situationen"
                                                 },
-                                                {
-                                                    "createElement": "span",
-                                                    "classList": ["block", "material-symbols-outlined", "iconAdd"],
-                                                    "createText": "remove"
-                                                    // minusIcon: remove
-                                                    // Wenn man remove benutzt im span und ein after:: content: 'remove' ueber diesen legt kann man dann mit den click event 
-                                                    //betaetigt das der after sich mit deg 90 grad dreht oder waren es 45 aber das hatte ich schon vorher einmal mit gemini besprochen 
-                                                    // so kann man das visuell einbauen. 
-                                                }
+                                                
                                             ]
                                         },
                                         {
@@ -705,25 +692,22 @@ const mainContent = {
                                 },
                                 {
                                     "createElement": "div",
-                                    "classList": ["flex", "mainContainerPhotoGallary", "mainContainer_PhoGall_style"],
+                                    "classList": ["flex", "mainContainerPhotoGallery", "mainContainer_PhoGall_style"],
+                                    "only_id": "gallery",
                                     "children": [
                                         {
                                             "createElement": "header",
-                                            "classList": ["flex", "headerPortfolio", "headerPortfolioStyle"],
+                                            "classList": ["flex", "headergallery", "headerGalleryStyle"],
                                             "children": [
                                                 {
                                                     "createElement": "h1",
                                                     "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle", "heading_h1_sett"],
-                                                    "createText": "Meine Anfänge zum Reparieren"
-
-                                                    // Mein Text: "Meine Zeite als LKW fahrer wie ich mit mit Herrausforderungen umgegangen bin!",
-                                                    // korigierterText : "Meine Zeit als LKW-Fahrer: Wie ich mit Herausforderungen umgegangen bin",
-                                                    // Ein alternativerText: "Praxiserfahrung LKW: Konzentration und Problemlösung in komplexen Situationen"
+                                                    "createText": "Galerie: Hardware-Instandsetzung"
                                                 },
                                                 {
                                                     "createElement": "h3",
                                                     "classList": ["block", "font_standardValue", "portfolioStyle_h3", "header_area_style_h3"],
-                                                    "createText": "Ob MacBooks Pro mit Flexgate, bis zum Akku Tausch vom Microsoft Surface Pro, und diverse andere Geräten",
+                                                    "createText": "Von MacBook Pros mit Flexgate über Lid-Sensoren bis zum Akkutausch am Surface Pro und individuellen Systembauten",
                                                 }
                                             ]
                                         },
@@ -733,7 +717,7 @@ const mainContent = {
                                             "children": [
                                                 {
                                                     "createElement": "div",
-                                                    "classList": ["flex", "photoPortfolio_section", "photoPortfolio_sectionStyle", "repair_elektrik"],
+                                                    "classList": ["flex", "galleryTextContainer", "galleryTextContainerStyle", "repair_elektrik"],
                                                     "children": [
                                                         {
                                                             "createElement": "p",
@@ -1075,6 +1059,16 @@ const imgContent = [
 ];
 /*
 
+"createText": [
+    "Ich gelte oft als nüchterner und rationaler Mensch – aber wenn mich eine Sache packt, brenne ich dafür mit jeder Faser.",
+    "Das LKW-Fahren fiel mir von der ersten Sekunde an leicht.",
+    "Als ich in der Fahrschule den Hängerzug beim allerersten Versuch absolut fehlerfrei rückwärts einparkte, traute mein Fahrlehrer seinen Augen nicht. Er fragte mich, ob ich das heimlich geübt hätte. Ich verneinte.",
+    "Er ließ mich die Übung noch einmal fahren und filmte sie mit dem Smartphone – das Manöver saß wieder auf den Millimeter genau.",
+    "Es war keine Glückssache, sondern ein instinktives Gespür für Mechanik, Schleppkurven und Raum.",
+    "Ich habe auf der Straße viel gemeistert: von der engen Anfahrt an die Kinderklinik in Hamm über die Krankenhäuser in Bielefeld Mitte und an der Rosenhöhe, bis hin zu anspruchsvollen Touren über Hannover, Celle, Bad Nenndorf, Nienburg und Stolzenau.",
+    "Ich liebe Maschinen und Fahrzeuge – vom klassischen Porsche 911 Targa über den 944 bis hin zu Meilensteinen wie dem BMW Z1. Sie sind für mich pure Ingenieurskunst.",
+    "Genau dieselbe tiefe Begeisterung empfinde ich für Computer und Code: Ein komplexes technisches System bis ins letzte Detail zu verstehen, zu beherrschen und sauber zu steuern, ist für mich kein Job, sondern ein Teil meiner Identität."
+]
 
 {
                     "src": "",
