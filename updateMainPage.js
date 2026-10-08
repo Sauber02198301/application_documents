@@ -439,51 +439,6 @@ const mainContent = {
                                                 }
                                             ]
                                         },
-                                        {
-                                            "createElement": "div",
-                                            "classList": ["flex", "about_boxOne", "footerAnchorList", "about_boxOneStyle"],
-                                            "children": [
-                                                {
-                                                    "createElement": "a",
-                                                    "classList": ["flex", "anchor_footerAbout", "anchor_footer_about_style"],
-                                                    "hrefAttr": "pdf_data/Lebenslauf.pdf",
-                                                    "target": "_blank",
-                                                    "children": [
-                                                        {
-                                                            "createElement": "span",
-                                                            "classList": ["block", "font_standardValue", "anchorAboutFontStyle"],
-                                                            "createText": "Lebenslauf"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "createElement": "a",
-                                                    "classList": ["flex", "anchor_footerAbout", "anchor_footer_about_style"],
-                                                    "hrefAttr": "pdf_data/zertifikate.pdf",
-                                                    "target": "_blank",
-                                                    "children": [
-                                                        {
-                                                            "createElement": "span",
-                                                            "classList": ["block", "font_standardValue", "anchorAboutFontStyle"],
-                                                            "createText": "Erworbene Zertifikate"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "createElement": "a",
-                                                    "classList": ["flex", "anchor_footerAbout", "anchor_footer_about_style"],
-                                                    "hrefAttr": "pdf_data/IHK_B96_test Kopie.pdf",
-                                                    "target": "_blank",
-                                                    "children": [
-                                                        {
-                                                            "createElement": "span",
-                                                            "classList": ["block", "font_standardValue", "anchorAboutFontStyle"],
-                                                            "createText": "Erworbener Führerschein und dazugehörigen Güterverkehrqualifikation"
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
                                     ]
                                 },
                                 {
@@ -835,6 +790,51 @@ const mainContent = {
                     "children": [
                         {
                             "createElement": "div",
+                            "classList": ["flex", "footerIcon_box", "footerIconStyle", "document_guide"],
+                            "children": [
+                                {
+                                    "createElement": "a",
+                                    "classList": ["flex", "anchor_settings", "anchorStyle"],
+                                    "hrefAttr": "pdf_data/Lebenslauf.pdf",
+                                    "target": "_blank",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["block", "material-symbols-outlined", "mailStyle", "anchorHover"],
+                                            "createText": "contact_page"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "createElement": "a",
+                                    "classList": ["flex", "anchor_settings", "anchorStyle"],
+                                    "hrefAttr": "pdf_data/zertifikate.pdf",
+                                    "target": "_blank",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["block", "material-symbols-outlined", "mailStyle", "anchorHover"],
+                                            "createText": "school"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "createElement": "a",
+                                    "classList": ["flex", "anchor_settings", "anchorStyle"],
+                                    "hrefAttr": "pdf_data/IHK_B96_test Kopie.pdf",
+                                    "target": "_blank",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["block", "material-symbols-outlined", "mailStyle", "anchorHover"],
+                                            "createText": "local_shipping"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "createElement": "div",
                             "classList": ["flex", "footerIcon_box", "footerIconStyle"],
                             "children": [
                                 {
@@ -892,7 +892,7 @@ const mainContent = {
                                 {
                                     "createElement": "a",
                                     "classList": ["flex", "anchor_settings", "anchorStyle"],
-                                    //"hrefAttr": "tel:+49 176 30666073",
+                                    "hrefAttr": "tel:+49 176 30666073",
                                     "children": [
                                         {
                                             "createElement": "span",

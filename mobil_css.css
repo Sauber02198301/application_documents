@@ -52,8 +52,7 @@
     }
 
     .mainView_style {
-        grid-area: displaySection;
-        background-color: #0000006f;
+        padding: 0.4em;
     }
 
     .about_section,
@@ -65,6 +64,7 @@
 
     .header_aboutSection {
         height: 55px;
+        padding: 1.3em;
     }
 
     .about_h1_style {
