@@ -11,8 +11,8 @@
     }
 
     .btn_primary {
-        margin: 3.1em;
-        padding: 1.1em;
+        margin: 5.1em;
+        padding: 0;
     }
 
     .secondaryBtn {
@@ -40,10 +40,15 @@
         /* gap: 25px; */
     }
 
+    .openNav {
+        background: #4e3a3a;
+    }
+
     .main_section {
         grid-template-areas: 'displaySection' 'sideBarRight';
         grid-template-rows: 1fr minmax(75px, 90px);
         grid-template-columns: none;
+        z-index: 1;
     }
 
     .mainView_style {
@@ -58,19 +63,35 @@
         flex-direction: column;
     }
 
-    .about_h1_style {
-        padding: 0.8em;
+    .header_aboutSection {
+        height: 55px;
     }
 
-    .about_boxOne,
+    .about_h1_style {
+        padding: 0.8em;
+        margin: 0;
+        font-size: 1.7rem;
+    }
+
+    .about_boxOne {
+        flex-direction: column;
+    }
+
+    .header_aboutOneSection {
+        padding: 0;
+        margin: 0;
+    }
+
     .photoPortfolio_section {
         margin: 0.5em;
         padding: 0.1em;
     }
 
     .paraAbout_section {
-        padding: 0.3em;
-        margin: 0.4em;
+        height: 300px;
+        overflow-y: auto;
+        padding: 0.6em;
+        margin: 0.8em;
         gap: 0.9em;
     }
 

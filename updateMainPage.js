@@ -319,18 +319,30 @@ const mainContent = {
                                     "only_id": "about",
                                     "children": [
                                         {
-                                            "createElement": "h1",
-                                            "classList": ["block", "font_standardValue", "about_h1_style", "h_style_underline"],
-                                            "createText": "About"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
+                                            "createElement": "header",
+                                            "classList": ["flex", "header_aboutSection", "header_aboutSectionStyle"],
+                                            "children": [
+                                                {
+                                                    "createElement": "h1",
+                                                    "classList": ["block", "font_standardValue", "about_h1_style", "h_style_underline"],
+                                                    "createText": "About"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
+                                                }
+                                            ]
                                         },
                                         {
                                             "createElement": "div",
                                             "classList": ["flex", "about_boxOne", "about_boxOneStyle"],
                                             "children": [
                                                 {
-                                                    "createElement": "h2",
-                                                    "classList": ["block", "font_standardValue", "about_h2_style"],
-                                                    "createText": "Wer bin ich!"
+                                                    "createElement": "header",
+                                                    "classList": ["flex", "header_aboutOneSection", "header_aboutOneSectionStyle"],
+                                                    "children": [
+                                                        {
+                                                            "createElement": "h2",
+                                                            "classList": ["block", "font_standardValue", "about_h2_style"],
+                                                            "createText": "Wer bin ich!"
+                                                        }
+                                                    ]
                                                 },
                                                 {
                                                     "createElement": "p",
@@ -359,9 +371,15 @@ const mainContent = {
                                             "classList": ["flex", "about_boxOne", "about_boxOneStyle"],
                                             "children": [
                                                 {
-                                                    "createElement": "h2",
-                                                    "classList": ["block", "font_standardValue", "about_h2_style"],
-                                                    "createText": "Was ist mein Weg & mein Ziel?"
+                                                    "createElement": "header",
+                                                    "classList": ["flex", "header_aboutOneSection", "header_aboutOneSectionStyle"],
+                                                    "children": [
+                                                        {
+                                                            "createElement": "h2",
+                                                            "classList": ["block", "font_standardValue", "about_h2_style"],
+                                                            "createText": "Was ist mein Weg & mein Ziel?"
+                                                        }
+                                                    ]
                                                 },
                                                 {
                                                     "createElement": "p",
@@ -390,9 +408,15 @@ const mainContent = {
                                             "classList": ["flex", "about_boxOne", "lastAboutBoxOne", "about_boxOneStyle"],
                                             "children": [
                                                 {
-                                                    "createElement": "h2",
-                                                    "classList": ["block", "font_standardValue", "about_h2_style"],
-                                                    "createText": "Was brauche ich?"
+                                                    "createElement": "header",
+                                                    "classList": ["flex", "header_aboutOneSection", "header_aboutOneSectionStyle"],
+                                                    "children": [
+                                                        {
+                                                            "createElement": "h2",
+                                                            "classList": ["block", "font_standardValue", "about_h2_style"],
+                                                            "createText": "Was brauche ich?"
+                                                        }
+                                                    ]
                                                 },
                                                 {
                                                     "createElement": "p",
