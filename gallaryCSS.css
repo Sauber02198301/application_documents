@@ -21,14 +21,16 @@
 .mainChildOne {
     flex-direction: row;
     gap: 1em;
+    align-items: flex-start;  /* Dies verhindert das der Text die Gallery nach unten zieht. Frage wie kann ich mir daraus eine faustformel machen wann was sinvoll ist*/
     margin: 0.6em;
     padding: 0.5em;
 }
 
 .galleryTextContainer {
+    flex: 1; /* Nimmt den verfuegbaren Platz neben den bildern ein. Was ist flex genau und was macht es.*/
     flex-direction: column;
-    height: 100%;
-    max-height: 60%;
+    max-height: 520px; /* Gleiche Hoehe wie der Bilder-Container. es wurde eben was wegen vh erklaert das hatte ich noch nicht. ich hatte dvh weil dies ist fuer hoehen d = dynamic vh ist denke ich mal die normale form?!*/
+    overflow-y: auto; /* Hier gilt wenn der text laenger wird scrollt er sauber mit*/
 }
 
 

@@ -2,10 +2,10 @@
     flex-direction: row;
     justify-content: center;
     justify-self: center;
-    height: 35%;
+    height: 520px;                  /* Höhe dürfen nicht in prozent angegeben werden. Das kann verzehrungen verursachen. Dies kann das grössen verhältniss des parents beeinflussen.*/
     max-width: 60%;
     border: solid 2px #000000bf;
-    overflow-y: scroll;
+    overflow-y: auto;       /* bei jeglichen overflow immer 'auto' eintragen statt 'scroll' dies (verhindert Geister-scrollbalken wenn leer)*/
     gap: 0.7em;
     padding: 0.7em;
 }

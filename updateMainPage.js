@@ -481,7 +481,7 @@ const mainContent = {
                                                     "classList": ["block", "font_standardValue", "h2CollapsibleFontStyle"],
                                                     "createText": "Meine Zeit als LKW-Fahrer: Wie ich mit Herausforderungen umgegangen bin"
                                                 },
-                                                
+
                                             ]
                                         },
                                         {
@@ -661,18 +661,11 @@ const mainContent = {
                                                                                             "functionsEvent": "createSpanInjectText",
                                                                                             "classList": ["block", "font_standardValue", "galleryTextSpan"],
                                                                                             "createText": [
-                                                                                                "Ich gelte oft als nüchterner und rationaler Mensch – aber wenn mich eine Sache packt, brenne ich dafür mit jeder Faser.",
-                                                                                                "Das LKW-Fahren fiel mir von der ersten Sekunde an leicht.",
-                                                                                                "Als ich in der Fahrschule den Hängerzug beim allerersten Versuch absolut fehlerfrei rückwärts einparkte, traute mein Fahrlehrer seinen Augen nicht.",
-                                                                                                "Er fragte mich, ob ich das heimlich geübt hätte. Ich verneinte. Er ließ mich die Übung noch einmal fahren, filmte sie mit dem Smartphone – und das Manöver saß wieder auf den Millimeter.",
-                                                                                                "Ich verneinte.",
-                                                                                                "Er ließ mich die Übung noch einmal fahren, filmte sie mit dem Smartphone und das Manöver saß wieder auf den Millimeter.",
-                                                                                                "Es war keine Glückssache, sondern ein instinktives Gespür für Mechanik und Raum.",
-                                                                                                "Ich habe auf der Straße viel gesehen und gemeistert: von der engen Anfahrt an die Kinderklinik in Hamm über die Krankenhäuser in Bielefeld Mitte und an der Rosenhöhe, bis hin zu den anspruchsvollen Touren über Hannover, Celle, Bad Nenndorf, Nienburg und Stolzenau.",
-                                                                                                "Ich liebe Maschinen und Fahrzeuge vom klassischen Porsche 911 Targa über den 944 bis hin zu Meilensteinen wie dem BMW Z1.",
-                                                                                                "Sie sind für mich nicht bloß Fortbewegungsmittel, sondern faszinierende Ingenieurskunst.",
-                                                                                                "Ein komplexes technisches System bis ins letzte Detail zu verstehen, zu beherrschen und sauber zu steuern, ist für mich kein Job, sondern ein Teil meiner Identität.",
-                                                                                                "Genau dieselbe tiefe Begeisterung empfinde ich für Computer und Code: Ein komplexes technisches System bis ins letzte Detail zu verstehen, zu beherrschen und sauber zu steuern, ist für mich kein Job, sondern ein Teil meiner Identität."
+                                                                                                "Ich gelte oft als ruhiger und rationaler Mensch – aber wenn mich eine technische Aufgabe packt, brenne ich dafür mit voller Konzentration.",
+                                                                                                "Natürlich fiel auch mir das schwere Gerät nicht einfach in den Schoß: Zu Beginn habe ich mein Lehrgeld bezahlt, wenn beim Ankoppeln die Deichsel rutschte oder an engen Rampen jeder Zentimeter zählte.",
+                                                                                                "Doch genau diese Momente haben meinen Ehrgeiz geweckt: Aus Fehlern lernen, Abläufe analysieren und die Mechanik verstehen, bis jeder Handgriff sitzt.",
+                                                                                                "Mit der Zeit entwickelte sich daraus absolute Routine und ein verlässliches Raumgefühl – egal ob bei der engen Anfahrt an der Kinderklinik in Hamm, an den Kliniken in Bielefeld oder auf den Routen rund um Hannover, Celle und Nienburg.",
+                                                                                                "Ob tonnenschwerer Hängerzug, die filigrane Mechanik klassischer Fahrzeuge oder Quellcode im Editor: Ein komplexes System zu durchdringen, die Kontrolle zu behalten und saubere Ergebnisse abzuliefern, ist für mich kein bloßer Beruf, sondern mein persönlicher Anspruch."
                                                                                             ]
                                                                                         }
                                                                                     ]
