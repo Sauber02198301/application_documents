@@ -28,7 +28,7 @@
     flex-direction: row;
     align-items: center;
     background: #c0c0c078;
-    border: solid 2px #ffffff87;
+    border: solid 1px #000000;
 }
 
 .about_h1_style {
@@ -37,7 +37,7 @@
     padding-bottom: 1em;
     background: #c0c0c075;
     box-sizing: border-box;
-    border: solid 2px #ffffff70;
+    border: solid 1px #000000;
 }
 
 .about_h2_style {

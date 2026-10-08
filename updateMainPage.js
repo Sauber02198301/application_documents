@@ -447,20 +447,31 @@ const mainContent = {
                                     "only_id": "portfolio",
                                     "children": [
                                         {
-                                            "createElement": "h1",
-                                            "classList": ["block", "font_standardValue", "portfolio_h1_style", "h_style_underline"],
-                                            "createText": "My Portfolio"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
-                                        },
-                                        {
                                             "createElement": "header",
                                             "classList": ["flex", "header_collapsible", "header_collapsibleStyle"],
                                             "children": [
                                                 {
-                                                    "createElement": "h2",
-                                                    "classList": ["block", "font_standardValue", "h2CollapsibleFontStyle"],
-                                                    "createText": "Meine Zeit als LKW-Fahrer: Wie ich mit Herausforderungen umgegangen bin"
+                                                    "createElement": "div",
+                                                    "classList": ["flex", "headingCont", "primaryHeading"],
+                                                    "children": [
+                                                        {
+                                                            "createElement": "h1",
+                                                            "classList": ["block", "font_standardValue", "portfolio_h1_style", "h_style_underline"],
+                                                            "createText": "My Portfolio"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
+                                                        }
+                                                    ]
                                                 },
-
+                                                {
+                                                    "createElement": "div",
+                                                    "classList": ["flex", "headingCont", "secondaryHeading"],
+                                                    "children": [
+                                                        {
+                                                            "createElement": "h2",
+                                                            "classList": ["block", "font_standardValue", "h2CollapsibleFontStyle"],
+                                                            "createText": "Meine Zeit als LKW-Fahrer: Wie ich mit Herausforderungen umgegangen bin"
+                                                        }
+                                                    ]
+                                                },
                                             ]
                                         },
                                         {

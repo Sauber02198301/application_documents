@@ -12,7 +12,8 @@
     padding: 0.3em;
     margin: 0.4em;
     padding-bottom: 0.8em;
-    border-bottom: solid 1px #c0c0c09e;
+    background: #c0c0c075;
+    border: solid 1px #000000;
 }
 
 .heading_h1_sett {
@@ -25,6 +26,7 @@
 }
 
 .header_collapsible {
+    flex-direction: column;
     padding: 1em;
     margin: 1em;
 }
@@ -33,10 +35,22 @@
     border-bottom: solid 1px rgba(192, 192, 192, 0.736);
 }
 
+.headingCont {
+    margin: 0.2em;
+    padding: 0.2em;
+    border-bottom: solid 1px #c0c0c09d;
+}
+
+.headingCont:last-child {
+    border-bottom: none;
+}
+
 .h2CollapsibleFontStyle {
     text-decoration: underline;
     padding: 0.4em;
     margin: 0.4em;
+    background: #c0c0c075;
+    border: solid 1px #000000;
 }
 
 .portfolioBox {

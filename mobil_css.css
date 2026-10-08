@@ -68,6 +68,17 @@
         padding: 0.9em;
     }
 
+    .header_collapsible {
+        flex-direction: column;
+        padding: 0.3em;
+        margin: 0.3em;
+
+    }
+
+    .h2CollapsibleFontStyle {
+        font-size: 0.9rem;
+    }
+
     .about_h1_style {
         padding: 0.4em;
         margin: 0;
@@ -271,7 +282,8 @@
         cursor: pointer;
     }
 
-    .mailStyle, .fa {
+    .mailStyle,
+    .fa {
         font-size: 2rem;
     }
 
