@@ -16,7 +16,8 @@
     }
 
     .secondaryBtn {
-        left: 0;
+        margin: 0;
+        margin-left: 1em;
     }
 
     .header_section {
@@ -63,14 +64,18 @@
     }
 
     .header_aboutSection {
-        height: 55px;
-        padding: 1.3em;
+        height: 6dvh;
+        padding: 0.9em;
     }
 
     .about_h1_style {
-        padding: 0.8em;
+        padding: 0.4em;
         margin: 0;
-        font-size: 1.7rem;
+        font-size: 1.4rem;
+    }
+
+    .about_h2_style {
+        font-size: 1.14rem;
     }
 
     .about_boxOne {
@@ -191,6 +196,7 @@
 
     .sideBarRight {
         grid-area: sideBarRight;
+        gap: 1.1em;
         align-items: center;
         flex-direction: row;
         border-top: solid 2px #2d24246e;
@@ -254,11 +260,19 @@
     }
 
     .footerIcon_box {
-        gap: 20px;
+        gap: 0.7em;
+    }
+
+    .document_guide {
+        padding-right: 1em;
     }
 
     .anchor_settings {
         cursor: pointer;
+    }
+
+    .mailStyle, .fa {
+        font-size: 2rem;
     }
 
 }
