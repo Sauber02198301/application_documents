@@ -287,4 +287,51 @@
         font-size: 2rem;
     }
 
+    .mainChildOne {
+        flex-direction: column;
+        margin: 0;
+        gap: 1.3em;
+        max-width: 80dvw;
+    }
+
+    .repair_elektrik {
+        margin: 0;
+        padding: 0;
+        border-bottom: solid 1px #c0c0c0b0;
+    }
+
+    .paraPortfolio_text {
+        flex-direction: column;
+        gap: 1.2em;
+        max-width: 80dvw;
+        padding: 1em;
+        margin: 1em;
+    }
+
+    .img_container_row {
+        flex-direction: row;
+        justify-content: center;
+        justify-self: center;
+        height: 520px;
+        max-width: 80dvw;
+        border: solid 2px #000000bf;
+        overflow-y: auto;
+        gap: 0.7em;
+        padding: 0.7em;
+    }
+
+    .img_container_column {
+        flex: 20%;
+        max-width: 26%;
+        flex-direction: column;
+        padding: 0 4px;
+        gap: 0.19em;
+    }
+
+    .img_column {
+        margin-top: 0.1em;
+        width: 16dvw;
+        vertical-align: middle;
+    }
+
 }

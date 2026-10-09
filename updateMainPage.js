@@ -103,41 +103,60 @@ const img_columnObject = [
                 "classList": ["block", "img_column", "img_columnStyle"],
                 "imgContent": [
                     { "src": "myPortfolio/pcMeinesSohns/28D5C2A6-F09B-4240-8C12-964F5E36EEA0_4_5005_c.jpeg", "alt": "Ein weisser PC mit LED's" },
-                    { "src": "myPortfolio/pcMeinesSohns/3256CC7A-1CD1-47A2-BA28-42F93748AD07_4_5005_c.jpeg", "alt": "Ein weisser PC mit LED's" },
+                    { "src": "myPortfolio/surfacePro/555AF927-F100-485C-AD77-7EAF1757E80C_1_105_c.jpeg", "alt": "" },
                     { "src": "myPortfolio/nintendo_gameBoy/00B93E39-5704-4180-B272-31B45BDB0097_1_105_c.jpeg", "alt": "Umgebauter GameBoy Color mit Shiggy Design" },
-                    { "src": "myPortfolio/nintendo_gameBoy/1E9E3F02-332C-467A-9D83-F24727119BD0_1_201_a.jpeg", "alt": "Vergleich mit einen normalen GamBoy mit keinem IPS-Display" },
+                    { "src": "myPortfolio/surfacePro/029ADAD3-F57C-44B2-ABF4-B6E42D13966E_1_105_c.jpeg", "alt": "" },
                     { "src": "myPortfolio/nintendo_gameBoy/04A59AEC-6750-48D5-8248-7C34858C64C2_1_105_c.jpeg", "alt": "Vergleich mit einen normalen GamBoy mit keinem IPS-Display" },
+                    { "src": "myPortfolio/nintendoDS_lite/19D13E50-452A-47B9-B86B-B5809CEE3921_1_105_c.jpeg", "alt": "Vergleich mit einen normalen GamBoy mit keinem IPS-Display" },
+                    { "src": "myPortfolio/nintendo_gameBoy/1E9E3F02-332C-467A-9D83-F24727119BD0_1_201_a.jpeg", "alt": "Vergleich mit einen normalen GamBoy mit keinem IPS-Display" },
+                    { "src": "myPortfolio/nintendoDS_lite/ED31DD41-9936-48CB-A78F-4DD2835B6A6D_1_105_c.jpeg", "alt": "Vergleich mit einen normalen GamBoy mit keinem IPS-Display" },
+                    { "src": "myPortfolio/nintendoDS_lite/F9CE79BC-014E-448B-8632-A91EC1843E90_1_105_c.jpeg", "alt": "Vergleich mit einen normalen GamBoy mit keinem IPS-Display" },
+                    { "src": "myPortfolio/nintendoDS_lite/DC1E9514-E2F4-4471-B003-DF62B19323CF_4_5005_c.jpeg", "alt": "Vergleich mit einen normalen GamBoy mit keinem IPS-Display" },
                 ]
             },
             {
                 "classList": ["block", "img_column", "img_columnStyle"],
                 "imgContent": [
-                    { "src": "myPortfolio/surfacePro/85703A2F-3807-4CCC-91CF-B8B13075525B_1_105_c.jpeg", "alt": "alter mann der pc repariert" },
-                    { "src": "myPortfolio/surfacePro/555AF927-F100-485C-AD77-7EAF1757E80C_1_105_c.jpeg", "alt": "alter mann der pc repariert" },
-                    { "src": "myPortfolio/surfacePro/029ADAD3-F57C-44B2-ABF4-B6E42D13966E_1_105_c.jpeg", "alt": "alter mann der pc repariert" },
-                    { "src": "myPortfolio/surfacePro/04DEA672-C138-404D-BC6B-7F1B9E6E12FB_1_105_c.jpeg", "alt": "alter mann der pc repariert" },
-                    { "src": "myPortfolio/surfacePro/5F214723-44F7-4CE3-B672-E551B671CD37_1_105_c.jpeg", "alt": "alter mann der pc repariert" },
-                ]
-            },
-            {
-                "classList": ["block", "img_column", "img_columnStyle"],
-                "imgContent": [
+                    { "src": "myPortfolio/surfacePro/85703A2F-3807-4CCC-91CF-B8B13075525B_1_105_c.jpeg", "alt": "" },
+                    { "src": "myPortfolio/pcMeinesSohns/3256CC7A-1CD1-47A2-BA28-42F93748AD07_4_5005_c.jpeg", "alt": "Ein weisser PC mit LED's" },
                     { "src": "myPortfolio/MacBookPro_lidSensor/IMG_241B724A-273A-4BCD-8A78-FB1894247F7C.jpeg", "alt": "MacBook Pro angel Lid Sensor" },
-                    { "src": "myPortfolio/MacBookPro_lidSensor/IMG_4612.jpeg", "alt": "alter mann der pc repariert" },
-                    //{ "src": "myPortfolio/MacBookPro_lidSensor/00011D7C-8F0C-46F3-87A5-8C0AE522662C_1_105_c.jpeg", "alt": "alter mann der pc repariert" },
-                    { "src": "myPortfolio/MacBookPro_lidSensor/IMG_4600.jpeg", "alt": "alter mann der pc repariert" },
-                    { "src": "myPortfolio/MacBookPro_lidSensor/IMG_4601.jpeg", "alt": "alter mann der pc repariert" },
+                    { "src": "myPortfolio/surfacePro/04DEA672-C138-404D-BC6B-7F1B9E6E12FB_1_105_c.jpeg", "alt": "" },
+                    { "src": "myPortfolio/MacBookPro_lidSensor/4B4E5EC6-8BDF-418C-9AFA-7ADDC2100C75_1_105_c.jpeg", "alt": "" },
+                    { "src": "myPortfolio/rasperryPi_3A/41061BBA-84F8-4169-8B52-687685CB58CC_1_105_c.jpeg", "alt": "" },
+                    { "src": "myPortfolio/surfacePro/5F214723-44F7-4CE3-B672-E551B671CD37_1_105_c.jpeg", "alt": "" },
+                    { "src": "myPortfolio/rasperryPi_3A/A2581D46-9730-4151-A141-F9EF6FDDAEA1_1_105_c.jpeg", "alt": "" },
+                    { "src": "myPortfolio/MacBookPro_lidSensor/IMG_4603.jpeg", "alt": "Hier habe ich das display und den lid sensor entfernt" },
+                    { "src": "myPortfolio/nintendoDS_lite/6F066E0C-4CD8-468F-BAE4-156883801B05_1_105_c.jpeg", "alt": "Hier habe ich das display und den lid sensor entfernt" },
+                ]
+            },
+            {
+                "classList": ["block", "img_column", "img_columnStyle"],
+                "imgContent": [        
+                    { "src": "myPortfolio/MacBookPro_lidSensor/IMG_4612.jpeg", "alt": "" },
+                    { "src": "myPortfolio/nintendoDS_lite/3FDD0BD5-CEB7-4559-8004-1AA9C1BE6DE2_1_105_c.jpeg", "alt": "" },
+                    //{ "src": "myPortfolio/MacBookPro_lidSensor/00011D7C-8F0C-46F3-87A5-8C0AE522662C_1_105_c.jpeg", "alt": "" },
+                    { "src": "myPortfolio/MacBookPro_lidSensor/IMG_4600.jpeg", "alt": "" },
+                    { "src": "myPortfolio/nintendoDS_lite/3FDD13B9-94DD-4DDB-95AD-AC2AD1364829_1_105_c.jpeg", "alt": "" },
+                    { "src": "myPortfolio/MacBookPro_lidSensor/00011D7C-8F0C-46F3-87A5-8C0AE522662C_1_105_c.jpeg", "alt": "" },
+                    { "src": "myPortfolio/MacBookPro_lidSensor/AA080C79-A8E4-47BD-835E-940B26551E29_4_5005_c.jpeg", "alt": "Das ist der kaputte Lid-Sensor" },
+                    { "src": "myPortfolio/MacBookPro_lidSensor/B26A8329-E76E-4D81-8242-018FA337C1F2_1_105_c.jpeg", "alt": "Hier habe ich das display und den lid sensor entfernt" },
+                    { "src": "myPortfolio/MacBookPro_lidSensor/IMG_4601.jpeg", "alt": "" },
+                    { "src": "myPortfolio/rasperryPi_3A/FB9C6CA2-04C2-4077-AC2F-50CA5A8928D6_1_105_c.jpeg", "alt": "" },
                 ]
             },
             {
                 "classList": ["block", "img_column", "img_columnStyle"],
                 "imgContent": [
-                    { "src": "myPortfolio/rasperryPi_3A/DD359EB0-096C-45EE-A751-4530FDAAC0EB_1_105_c.jpeg", "alt": "MacBook Pro angel Lid Sensor" },
-                    { "src": "myPortfolio/rasperryPi_3A/0707641A-3757-4255-B470-9DA0E411E631_1_105_c.jpeg", "alt": "MacBook Pro angel Lid Sensor" },
-                    { "src": "myPortfolio/rasperryPi_3A/1A72E2E3-C157-4A58-A1F7-D85EC8C31016_1_105_c.png", "alt": "MacBook Pro angel Lid Sensor" },
-                    { "src": "myPortfolio/rasperryPi_3A/3C0A2235-1A78-4E6A-AA2B-116099CFEE12_1_105_c.jpeg", "alt": "MacBook Pro angel Lid Sensor" },
-                    { "src": "myPortfolio/rasperryPi_3A/7D58CA92-5B8A-405A-BC20-6072ED5CEC58_1_105_c.jpeg", "alt": "MacBook Pro angel Lid Sensor" },
-
+                    { "src": "myPortfolio/rasperryPi_3A/DD359EB0-096C-45EE-A751-4530FDAAC0EB_1_105_c.jpeg", "alt": "" },
+                    { "src": "myPortfolio/MacBookPro_lidSensor/EE20AB3D-63E9-4994-B15C-BB071BB96DA9_1_105_c.jpeg", "alt": "" },
+                    { "src": "myPortfolio/rasperryPi_3A/0707641A-3757-4255-B470-9DA0E411E631_1_105_c.jpeg", "alt": "" },
+                    { "src": "myPortfolio/MacBookPro_lidSensor/IMG_4589.jpeg", "alt": "" },
+                    { "src": "myPortfolio/rasperryPi_3A/1A72E2E3-C157-4A58-A1F7-D85EC8C31016_1_105_c.png", "alt": "" },
+                    { "src": "myPortfolio/MacBookPro_lidSensor/IMG_4590.jpeg", "alt": "" },
+                    { "src": "myPortfolio/rasperryPi_3A/3C0A2235-1A78-4E6A-AA2B-116099CFEE12_1_105_c.jpeg", "alt": "" },
+                    { "src": "myPortfolio/MacBookPro_lidSensor/IMG_4597.jpeg", "alt": "" },
+                    { "src": "myPortfolio/rasperryPi_3A/7D58CA92-5B8A-405A-BC20-6072ED5CEC58_1_105_c.jpeg", "alt": "" },
+                    { "src": "myPortfolio/nintendoDS_lite/7264321C-705B-47D4-8383-34995E2221E7_1_105_c.jpeg", "alt": "" },
                 ]
             }
         ]
@@ -316,7 +335,7 @@ const mainContent = {
                                             "children": [
                                                 {
                                                     "createElement": "h1",
-                                                    "classList": ["block", "font_standardValue", "about_h1_style", "h_style_underline"],
+                                                    "classList": ["block", "font_standardValue", "about_h1_style"],
                                                     "createText": "Über mich"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
                                                 },
 
@@ -449,7 +468,7 @@ const mainContent = {
                                                     "children": [
                                                         {
                                                             "createElement": "h1",
-                                                            "classList": ["block", "font_standardValue", "portfolio_h1_style", "h_style_underline"],
+                                                            "classList": ["block", "font_standardValue", "portfolio_h1_style"],
                                                             "createText": "Mein Portfolio"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
                                                         }
                                                     ]

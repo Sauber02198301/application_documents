@@ -93,8 +93,8 @@ body {
     position: relative;
     height: 185px;
     padding: 1em;
-    opacity: 0.70;
-    border-radius: 40%;
+    opacity: 0.55;
+    border-radius: 50%;
     z-index: 1;
 }
 
