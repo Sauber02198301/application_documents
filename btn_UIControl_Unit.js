@@ -19,11 +19,19 @@ body_section.addEventListener('click', (t) => {
                 console.log(btn_primaryClick);
                 const dropDown_nav = document.querySelector('.dropDown_nav');
                 const activeDropDown = btn_primaryClick.dataset.action;
+                const mainView = document.querySelector('.main_section');
+                console.log(mainView);
 
                 if (!dropDown_nav.classList.contains(`${activeDropDown}`)) {
                     dropDown_nav.classList.add(activeDropDown);
+                    mainView.style.zIndex = 0;
                 } else {
                     dropDown_nav.classList.remove(activeDropDown);
+                    dropDown_nav.addEventListener('transition', () => {
+                        mainView.style.zIndex = 1;
+                    }, { once: true });
+
+                    
                 };
 
                 break;
@@ -70,7 +78,7 @@ body_section.addEventListener('click', (t) => {
 
             requestAnimationFrame(() => {
                 content.style.maxHeight = null;
-            },800);
+            }, 800);
 
         } else {
 

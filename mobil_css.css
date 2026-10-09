@@ -25,6 +25,7 @@
         flex-direction: row-reverse;
         min-width: 100%;
         background: #00000082;
+        z-index: 1;
     }
 
     .img_header_section {
