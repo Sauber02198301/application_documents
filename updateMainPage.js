@@ -154,7 +154,7 @@ const childrenObject = {
                 {
                     "createElement": "img",
                     "classList": ["block", "img_header_section", "img_headingStyle"],
-                    "src": "imgContent/dennis.png",
+                    "src": "imgContent/dennis.jpg",
                     "alt": "Ein Mann mittlerem Alters"
                 }
             ]
@@ -756,31 +756,31 @@ const mainContent = {
                                         {
                                             "createElement": "img",
                                             "classList": ["block", "imgSideRest", "javaScriptLogo"],
-                                            "src": "logo_code/javaScriptLogo.png",
+                                            "src": "logo_code/javaScriptLogo.jpeg",
                                             "alt": "JavaScript_Logo"
                                         },
                                         {
                                             "createElement": "img",
                                             "classList": ["block", "imgSideRest", "htmlLogo"],
-                                            "src": "logo_code/html5_logo.png",
+                                            "src": "logo_code/html5_logo.jpeg",
                                             "alt": "html_Logo"
                                         },
                                         {
                                             "createElement": "img",
                                             "classList": ["block", "imgSideRest", "cssLogo"],
-                                            "src": "logo_code/css_logo.png",
+                                            "src": "logo_code/css_logo.jpg",
                                             "alt": "css_Logo"
                                         },
                                         {
                                             "createElement": "img",
                                             "classList": ["block", "imgSideRest", "nodejs"],
-                                            "src": "logo_code/node.js_logo.png",
+                                            "src": "logo_code/node.png",
                                             "alt": "nodejs_Logo"
                                         },
                                         {
                                             "createElement": "img",
                                             "classList": ["block", "imgSideRest", "nodejs"],
-                                            "src": "logo_code/python_logo.png",
+                                            "src": "logo_code/python_logo.jpeg",
                                             "alt": "python_Logo"
                                         },
                                     ]
