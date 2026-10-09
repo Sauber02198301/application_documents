@@ -318,7 +318,8 @@ const mainContent = {
                                                     "createElement": "h1",
                                                     "classList": ["block", "font_standardValue", "about_h1_style", "h_style_underline"],
                                                     "createText": "Über mich"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
-                                                }
+                                                },
+
                                             ]
                                         },
                                         {

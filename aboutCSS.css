@@ -23,33 +23,36 @@
 }
 
 .header_aboutOneSection {
+    justify-content: space-between;
     padding: 0.4em;
     margin: 0.4em;
     flex-direction: row;
     align-items: center;
-    background: #c0c0c078;
-    border: solid 1px #000000;
 }
 
 .about_h1_style {
     padding: 0.5em;
     margin: 0.3em;
-    padding-bottom: 1em;
-    background: #c0c0c075;
+    background: #c0c0c052;
     box-sizing: border-box;
     border: solid 1px #000000;
 }
 
 .about_h2_style {
-    padding: 0em;
+    padding: 0.35em;
     margin: 0.6em;
+    border: solid 1px #ffffffb3;
+    background: #c0c0c033;
 }
 
 .paraAbout_section {
+    max-width: 80ch;
+    max-height: 37dvh;
     margin: 1.5em;
     padding: 1.2em;
     padding-bottom: 1.3em;
     flex-direction: column;
+    overflow-y: auto;
     gap: 10px;
 }
 
@@ -66,7 +69,9 @@
 }
 
 .spanAboutStyle {
-    font-size: 1.1rem;
+    font-size: 1.135rem;
+    line-height: 1.4;
+    word-spacing: 0.13rem;
 }
 
 .lastAboutBoxOne {
