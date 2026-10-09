@@ -198,7 +198,7 @@ const childrenObject = {
                                 {
                                     "createElement": "span",
                                     "classList": ["block", "font_standardValue", "btnTextStyle"],
-                                    "createText": "About"
+                                    "createText": "Über mich"
                                 }
                             ]
 
@@ -216,7 +216,7 @@ const childrenObject = {
                                 {
                                     "createElement": "span",
                                     "classList": ["block", "font_standardValue", "btnTextStyle"],
-                                    "createText": "My Portfolio"
+                                    "createText": "Mein Portfolio"
                                 }
                             ]
 
@@ -239,24 +239,6 @@ const childrenObject = {
                             ]
 
                         },
-                        {
-                            "createElement": "button",
-                            "classList": ["btn_flex", "btn_navStyle"],
-                            "dataset": "x",
-                            "children": [
-                                {
-                                    "createElement": "span",
-                                    "classList": ["block", "material-symbols-outlined", "iconStyle"],
-                                    "createText": ""
-                                },
-                                {
-                                    "createElement": "span",
-                                    "classList": ["block", "font_standardValue", "btnTextStyle"],
-                                    "createText": "platzhalter"
-                                }
-                            ]
-
-                        }
                     ]
                 }
             ],
@@ -293,6 +275,13 @@ const mainContent = {
         }
     ]
     
+    {
+        "createElement": "h4",
+        "classList": ["block", "font_standardValue", "portfolioStyle_h4"],
+        "createText": "Souveräne Fahrzeugbeherrschung auf engstem Raum",
+    }
+
+
     */
 
     "UI_control": {
@@ -309,6 +298,9 @@ const mainContent = {
                     "createElement": "main",
                     "classList": ["grid_container", "main_section", "main_sectionStyle"],
                     "children": [
+                        // Das main system muss ich spaeter nochmal ueberarbeiten und entschlanken viele html_tags haben die gleichen settings und so weiter der ganze main bereich
+                        // die childrens koennen sich die gleichen boxen teilen und ich fuege spezifisch nur noch den spezifizierten wert zu der class so kann ich auch meine JSON_html
+                        // datei uebersichtlicher machen.
                         {
                             "createElement": "div",
                             "classList": ["flex", "mainView_section", "mainView_style"],
@@ -325,7 +317,7 @@ const mainContent = {
                                                 {
                                                     "createElement": "h1",
                                                     "classList": ["block", "font_standardValue", "about_h1_style", "h_style_underline"],
-                                                    "createText": "About"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
+                                                    "createText": "Über mich"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
                                                 }
                                             ]
                                         },
@@ -457,18 +449,38 @@ const mainContent = {
                                                         {
                                                             "createElement": "h1",
                                                             "classList": ["block", "font_standardValue", "portfolio_h1_style", "h_style_underline"],
-                                                            "createText": "My Portfolio"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
+                                                            "createText": "Mein Portfolio"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
                                                         }
                                                     ]
-                                                },
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "createElement": "div",
+                                            "classList": ["flex", "headingCont", "secondaryHeading"],
+                                            "children": [
                                                 {
-                                                    "createElement": "div",
-                                                    "classList": ["flex", "headingCont", "secondaryHeading"],
+                                                    "createElement": "h3",
+                                                    "classList": ["block", "font_standardValue", "portfolioStyle_h3"],
+                                                    "createText": "Fokus in komplexen Situationen",
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            "createElement": "div",
+                                            "classList": ["flex", "portfolioChildBox", "portfolioChildStyle"],
+                                            "children": [
+                                                {
+                                                    "createElement": "p",
+                                                    "classList": ["flex", "portfolio_para", "paraPortfolioStyle"],
                                                     "children": [
                                                         {
-                                                            "createElement": "h2",
-                                                            "classList": ["block", "font_standardValue", "h2CollapsibleFontStyle"],
-                                                            "createText": "Meine Zeit als LKW-Fahrer: Wie ich mit Herausforderungen umgegangen bin"
+                                                            "functionsEvent": "createSpanInjectText",
+                                                            "classList": ["block", "font_standardValue", "spanPortfolioStyle"],
+                                                            "createText": [
+                                                                "Ich habe keine Herausforderung gescheut und den LKW selbst durch engste Einfahrten und anspruchsvolle Anlieferungsstellen manövriert.",
+                                                                "Diese Galerie zeigt Einblicke in meine praktische Erfahrung und mein hohes Maß an Konzentration und Präzision im Fahralltag."
+                                                            ]
                                                         }
                                                     ]
                                                 },
@@ -483,14 +495,9 @@ const mainContent = {
                                                     "classList": ["flex", "headerPortfolio", "headerPortfolioStyle"],
                                                     "children": [
                                                         {
-                                                            "createElement": "h3",
-                                                            "classList": ["block", "font_standardValue", "portfolioStyle_h3"],
-                                                            "createText": "Fokus in komplexen Situationen",
-                                                        },
-                                                        {
-                                                            "createElement": "h4",
-                                                            "classList": ["block", "font_standardValue", "portfolioStyle_h4"],
-                                                            "createText": "Souveräne Fahrzeugbeherrschung auf engstem Raum",
+                                                            "createElement": "h2",
+                                                            "classList": ["block", "font_standardValue", "h2CollapsibleFontStyle"],
+                                                            "createText": "Meine Zeit als LKW-Fahrer: Wie ich mit Herausforderungen umgegangen bin"
                                                         }
                                                     ]
                                                 },
@@ -498,20 +505,6 @@ const mainContent = {
                                                     "createElement": "div",
                                                     "classList": ["flex", "photoPortfolio_section", "photoPortfolio_sectionStyle", "lkwSection"],
                                                     "children": [
-                                                        {
-                                                            "createElement": "p",
-                                                            "classList": ["flex", "portfolio_para", "paraPortfolioStyle"],
-                                                            "children": [
-                                                                {
-                                                                    "functionsEvent": "createSpanInjectText",
-                                                                    "classList": ["block", "font_standardValue", "spanPortfolioStyle"],
-                                                                    "createText": [
-                                                                        "Ich habe keine Herausforderung gescheut und den LKW selbst durch engste Einfahrten und anspruchsvolle Anlieferungsstellen manövriert.",
-                                                                        "Diese Galerie zeigt Einblicke in meine praktische Erfahrung und mein hohes Maß an Konzentration und Präzision im Fahralltag."
-                                                                    ]
-                                                                }
-                                                            ]
-                                                        },
                                                         {
                                                             "createElement": "div",
                                                             "classList": ["flex", "collapsibleBtnSection", "collapsibleBtnSectionStyle"],
