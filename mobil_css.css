@@ -1,5 +1,11 @@
 @media screen and (max-width: 768px) {
 
+    html,
+    body {
+        width: 100dvw;
+        height: 100dvh;
+    }
+
     .body_section {
         grid-template-areas:
             'header'
