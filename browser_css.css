@@ -100,7 +100,7 @@ body {
 
 .navigation_section {
     flex-direction: column;
-    gap: 25px;
+    gap: 0.3em;
 }
 
 .btn_flex {

@@ -16,17 +16,8 @@
         grid-template-columns: 1fr;
     }
 
-    .btn_primary {
-        margin: 5.1em;
-        padding: 0;
-    }
-
-    .secondaryBtn {
-        margin: 0;
-        margin-left: 1em;
-    }
-
     .header_section {
+        align-items: normal;
         justify-content: space-between;
         flex-direction: row-reverse;
         min-width: 100%;
@@ -34,18 +25,27 @@
         z-index: 1;
     }
 
+    .navigation_section {
+        padding: 0.2em;
+        margin: 0.2em;
+        flex-direction: column;
+        /* gap: 25px; */
+    }
+
     .img_header_section {
         height: 113px;
         padding: 1.4em;
     }
 
-    .navigation_section {
-        position: relative;
-        top: 7.1em;
-        padding: 0.2em;
-        margin: 0.2em;
-        flex-direction: column;
-        /* gap: 25px; */
+    .btn_primary {
+        padding: 0;
+        width: 80px;
+        gap: 0.5em;
+    }
+
+    .secondaryBtn {
+        margin: 0;
+        margin-left: 1em;
     }
 
     .openNav {
