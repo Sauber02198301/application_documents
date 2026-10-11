@@ -490,13 +490,19 @@ const mainContent = {
                                             "children": [
                                                 {
                                                     "createElement": "p",
-                                                    "classList": ["flex", "portfolio_para", "paraPortfolioStyle","specify_00"],
+                                                    "classList": ["flex", "paraAbout_section", "paraPortfolioStyle","specify_00"],
                                                     "children": [
                                                         {
                                                             "functionsEvent": "createSpanInjectText",
                                                             "classList": ["block", "font_standardValue", "spanPortfolioStyle"],
                                                             "createText": [
+                                                                "Über 20 Jahre im selben Betrieb beweisen: Auf mich war stets Verlass. Aufgaben habe ich immer mit größter Sorgfalt erledigt. Selbst in einem akkordähnlichen Umfeld habe ich stets darauf geachtet, das nötige Tempo zu halten, ohne meinen hohen Anspruch an Qualität jemals zu vernachlässigen.",
+                                                                "Wenn Maschinenausfälle oder Hektik den Ablauf störten, habe ich den Überblick behalten und Prozesse vorausschauend strukturiert. Ob in der Halle oder im Fuhrpark: Ich habe Aufgaben immer so vor- und aufgearbeitet, dass nachfolgende Kollegen nahtlos und fehlerfrei weiterarbeiten konnten – saubere Übergaben und verlässliche Ordnung standen für mich immer an erster Stelle.",
+                                                                "Genau diese Denkweise ist heute mein Antrieb in der IT: Ausprobieren, analysieren, Fehler lokalisieren und optimieren. Ich habe gelernt, dass wahres Können nicht darin besteht, alles auf Anhieb perfekt zu beherrschen, sondern Fehler als Lernprozess zu begreifen. Niemand fällt als Meister vom Himmel – aber wer dranbleibt, analysiert und nicht aufgibt, baut am Ende stabile Lösungen."
+                                                                /* 
+                                                                     
                                                                 
+                                                                */
                                                             ]
                                                         }
                                                     ]

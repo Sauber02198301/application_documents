@@ -71,7 +71,8 @@
     gap: 10px;
 }
 
-.spanAboutStyle {
+.spanAboutStyle,
+.spanPortfolioStyle {
     font-size: 1.135rem;
     line-height: 1.65;
     word-spacing: 0.21rem;
