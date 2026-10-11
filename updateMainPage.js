@@ -496,14 +496,7 @@ const mainContent = {
                                                             "functionsEvent": "createSpanInjectText",
                                                             "classList": ["block", "font_standardValue", "spanPortfolioStyle"],
                                                             "createText": [
-                                                                "Berufstechnisch war ich von 2003 - jetzt, in der selben Firma tätig, und habe hier nicht so viele meilen Steine!",
-                                                                "Was ich vorzeigen kann ist das ich meine Arbeit mit leidenschaft ausgeführt habe ich habe nie die Arbeit an sich bewertet sondern was ich abgeliefert habe.",
-                                                                "Für mich war Qualität immer das wichtigste und ich habe sehr viel wert darauf gelegt wenn ich was gemacht habe auch noch mehrere Wochen noch im Kopf zu bewahren.",
-                                                                "Um hier nicht den Fokus von der IT zu nehmen, trotzdem zu zeigen was meine bedürfnisse sind. Wenn man mir aufgaben gegeben hat oder wie jetzt suche ich mir aufgaben und überlege wie setze ich sie um, verwerfe sie weil ich über das ziel hinaus bin oder das Thema verfehlt habe.",
-                                                                "Nur ich gebe nicht auf sondern überlege neu und setze nochmal an. Das entscheidende ist es gibt nie richtig oder falsch, es wird in der Schule immer so vermittelt, aber was es gibt ich teste was merke hmm das ist nicht gut und mache es neu.",
-                                                                "Die meisten grossen Menschheits errungen Schafften wurden durchs verwerfen und neu machen erzeugt.",
-                                                                "Um Thomas Addison zu zittieren \"ich habe 1000 anläufe gebraucht um die Glühbirne zu entwickeln und weis jetzt 1000 möglichkeiten wie man es nicht macht\", es sind die erfahrungen die uns zu den machen wer wir sind.",
-                                                                "Das Medikament Penicillin wurde auch nur durch ein Fehlschlag entdeckt. Er wollte eigentlich indigoBlau herstellen weil es eine Farbe war die sehr schwer zu färben war. Und weil er die Pilzkulturen konterminiert hatte"
+                                                                
                                                             ]
                                                         }
                                                     ]
