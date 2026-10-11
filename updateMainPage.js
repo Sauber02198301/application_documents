@@ -352,7 +352,7 @@ const mainContent = {
                                                         {
                                                             "createElement": "h2",
                                                             "classList": ["block", "font_standardValue", "about_h2_style"],
-                                                            "createText": "Wer bin ich!"
+                                                            "createText": "Wer bin ich?"
                                                         }
                                                     ]
                                                 },
@@ -366,10 +366,10 @@ const mainContent = {
                                                             "createText": [
                                                                 "Mein Name ist Dennis. Ich bin 41 Jahre alt und durch und durch leidenschaftlicher Technik-Nerd.",
                                                                 "Meine Faszination für Computer begann früh: Erste Berührungspunkte hatte ich am PC meiner Mutter, als man noch DOS-Befehle manuell eintippen musste, um Daten von Disketten zu laden.",
-                                                                "Auch mein Entdeckerdrang war damals schon grenzenlos, inklusive des schmerzhaften Experiments, was passiert, wenn man Wasser in den Modulschacht eines Sega MegaDrive 16 bit gießt (Spoiler: nichts Gutes)!",
+                                                                "Auch mein Entdeckerdrang war damals schon grenzenlos, inklusive des schmerzhaften Experiments, was passiert, wenn man Wasser in den Modulschacht eines Sega MegaDrive 16-Bit gießt (Spoiler: nichts Gutes)!",
                                                                 "Mein Vater hat das damals gerettet: Er hat die Platine trockengelegt und alle Kontakte nachgelötet.",
                                                                 "Genau dieses Tüftler-Gen und den Drang, Dingen auf den Grund zu gehen, habe ich von ihm geerbt.",
-                                                                "Über die Jahre begleitete mich jede Rechner-Generation: vom Compaq Presario mit seiner interaktiven Windows 3.1-Oberfläche und Klassikern wie King’s Quest 7, über Siemens Nixdorf All-in-One-Systeme bis hin zu den ersten Towern mit Intel Celeron und AMD 64.",
+                                                                "Über die Jahre begleitete mich jede Rechner-Generation: vom Compaq Presario mit seiner interaktiven Windows 3.1-Oberfläche und Klassikern wie King’s Quest 7 über Siemens Nixdorf All-in-One-Systeme bis hin zu den ersten Towern mit Intel Celeron und AMD 64.",
                                                                 "Ich kann mich an jedes einzelne Gerät erinnern, weil mich Systeme und ihre Mechanik nie wieder losgelassen haben.",
                                                                 "Vom ersten Rechner bis zum heutigen Code: Systeme zu verstehen, zu warten und selbst zu bauen, ist für mich kein Berufswunsch, sondern eine Lebenseinstellung."
                                                             ]
@@ -402,8 +402,8 @@ const mainContent = {
                                                             "classList": ["block", "font_standardValue", "spanAboutStyle"],
                                                             "createText": [
                                                                 "Mein Lebensweg verlief nicht geradlinig – und genau das ist heute meine größte Stärke. Wenn Standardwege für mich verschlossen schienen oder starre Systeme an Grenzen stießen, habe ich gelernt, eigene kreative Lösungsstrategien zu entwickeln und dranzubleiben.",
-                                                                "Wo andere aufgeben, fängt mein Antrieb erst an: Ich bin ein Stehaufmensch, der Zähne zusammenbeißen und durchziehen kann.",
-                                                                "In der Praxis hat sich früh gezeigt, wo meine Stärken liegen: Besonders dann, wenn unerwartete Probleme oder Chaos auftraten, konnte ich meine Fähigkeit auszuspielen, schnell zu strukturieren, zu koordinieren und Ruhe ins System zu bringen.",
+                                                                "Wo andere aufgeben, fängt mein Antrieb erst an: Ich bin ein Stehaufmensch, der die Zähne zusammenbeißen und durchziehen kann.",
+                                                                "In der Praxis hat sich früh gezeigt, wo meine Stärken liegen: Besonders dann, wenn unerwartete Probleme oder Hektik auftraten, konnte ich meine Fähigkeit ausspielen, schnell zu strukturieren, zu koordinieren und Ruhe ins System zu bringen.",
                                                                 "Verantwortung zu übernehmen und praktische Ergebnisse abzuliefern, war für mich stets oberstes Gebot.",
                                                                 "Nach vielen Jahren im operativen Einsatz habe ich die Weichen neu gestellt und meinen vollen Fokus auf meine wahre Leidenschaft gelegt: die Informationstechnik.",
                                                                 "Mit eiserner Disziplin stehe ich jeden Morgen um 4:00 bis 5:00 Uhr auf und vertiefe mich in Web-Technologien wie JavaScript, HTML/CSS sowie systemnahe Zusammenhänge.",
@@ -440,17 +440,15 @@ const mainContent = {
                                                             "createText": [
                                                                 "Um meine Fähigkeiten optimal einzubringen, schätze ich ein Arbeitsumfeld, das auf Klarheit, Verlässlichkeit und ehrlicher Kommunikation basiert.",
                                                                 "Ich bin kein Mensch für taktische Spiele oder Fassaden – für mich zählen praktische Ergebnisse, handfeste Lösungen und ein respektvoller Austausch auf Augenhöhe.",
-                                                                "Ich funktioniere am besten dort, wo Struktur herrscht und Aufgaben mit klarem Ziel angegangen werden.",
+                                                                "Ich funktioniere am besten dort, wo Struktur herrscht und Aufgaben mit einem klaren Ziel angegangen werden.",
                                                                 "Wenn man mir den Raum gibt, mich tief in analytische Fragestellungen einzuarbeiten, entwickle ich höchste Konzentration und ziehe Projekte mit Ausdauer durch.",
-                                                                "Was ich suche, ist kein bequemer Arbeitsplatz, sondern ein Team und Mentoren, die Engagement,",
-                                                                "Neugier und Macher-Mentalität zu schätzen wissen und mir das Vertrauen schenken,",
-                                                                "durch praktische Mitarbeit und kontinuierliches Lernen gemeinsam messbaren Mehrwert zu schaffen."
+                                                                "Was ich suche, ist kein bequemer Arbeitsplatz, sondern ein Team und Mentoren, die Engagement, Neugier und Macher-Mentalität zu schätzen wissen und mir das Vertrauen schenken, durch praktische Mitarbeit und kontinuierliches Lernen gemeinsam messbaren Mehrwert zu schaffen."
                                                             ]
                                                         }
                                                     ]
                                                 }
                                             ]
-                                        },
+                                        }
                                     ]
                                 },
                                 {
@@ -476,11 +474,11 @@ const mainContent = {
                                             ]
                                         },
                                         {
-                                            "createElement": "div",
-                                            "classList": ["flex", "headingCont", "secondaryHeading"],
+                                            "createElement": "header",
+                                            "classList": ["flex", "headingCont", "secondaryHeading", "heading_00"],
                                             "children": [
                                                 {
-                                                    "createElement": "h3",
+                                                    "createElement": "h2",
                                                     "classList": ["block", "font_standardValue", "portfolioStyle_h3"],
                                                     "createText": "Fokus in komplexen Situationen",
                                                 },
@@ -492,20 +490,50 @@ const mainContent = {
                                             "children": [
                                                 {
                                                     "createElement": "p",
-                                                    "classList": ["flex", "portfolio_para", "paraPortfolioStyle"],
+                                                    "classList": ["flex", "portfolio_para", "paraPortfolioStyle","specify_00"],
                                                     "children": [
                                                         {
                                                             "functionsEvent": "createSpanInjectText",
                                                             "classList": ["block", "font_standardValue", "spanPortfolioStyle"],
                                                             "createText": [
-                                                                "Ich habe keine Herausforderung gescheut und den LKW selbst durch engste Einfahrten und anspruchsvolle Anlieferungsstellen manövriert.",
-                                                                "Diese Galerie zeigt Einblicke in meine praktische Erfahrung und mein hohes Maß an Konzentration und Präzision im Fahralltag."
+                                                                "Berufstechnisch war ich von 2003 - jetzt, in der selben Firma tätig, und habe hier nicht so viele meilen Steine!",
+                                                                "Was ich vorzeigen kann ist das ich meine Arbeit mit leidenschaft ausgeführt habe ich habe nie die Arbeit an sich bewertet sondern was ich abgeliefert habe.",
+                                                                "Für mich war Qualität immer das wichtigste und ich habe sehr viel wert darauf gelegt wenn ich was gemacht habe auch noch mehrere Wochen noch im Kopf zu bewahren.",
+                                                                "Um hier nicht den Fokus von der IT zu nehmen, trotzdem zu zeigen was meine bedürfnisse sind. Wenn man mir aufgaben gegeben hat oder wie jetzt suche ich mir aufgaben und überlege wie setze ich sie um, verwerfe sie weil ich über das ziel hinaus bin oder das Thema verfehlt habe.",
+                                                                "Nur ich gebe nicht auf sondern überlege neu und setze nochmal an. Das entscheidende ist es gibt nie richtig oder falsch, es wird in der Schule immer so vermittelt, aber was es gibt ich teste was merke hmm das ist nicht gut und mache es neu.",
+                                                                "Die meisten grossen Menschheits errungen Schafften wurden durchs verwerfen und neu machen erzeugt.",
+                                                                "Um Thomas Addison zu zittieren \"ich habe 1000 anläufe gebraucht um die Glühbirne zu entwickeln und weis jetzt 1000 möglichkeiten wie man es nicht macht\", es sind die erfahrungen die uns zu den machen wer wir sind.",
+                                                                "Das Medikament Penicillin wurde auch nur durch ein Fehlschlag entdeckt. Er wollte eigentlich indigoBlau herstellen weil es eine Farbe war die sehr schwer zu färben war. Und weil er die Pilzkulturen konterminiert hatte"
                                                             ]
                                                         }
                                                     ]
                                                 },
                                             ]
                                         },
+                                        /*{
+                                            "createElement": "div",
+                                            "classList": ["flex", "portfolioChildBox", "portfolioChildStyle", "specify_01"],
+                                            "children": [
+                                                {
+                                                    "createElement": "header",
+                                                    "classList": ["flex", "headingCont", "secondaryHeading", "heading_01"],
+                                                    "children": [
+                                                        {
+                                                            "createElement": "h3",
+                                                            "classList": ["block", "font_standardValue", "portfolioStyle_h3"],
+                                                            "createText": "1. Einstieg in die Arbeitswelt!"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "createElement": "div",
+                                                    "classList": ["flex", "portfolioChildBox", "portfolioChildStyle", "specifyChild_00"],
+                                                    "functionsEvent": "description_List",
+                                                    "descriptionItems": "workingList"
+                                                }
+                                            ]
+                                        },*/
+                                        
                                         {
                                             "createElement": "div",
                                             "classList": ["flex", "portfolioBox", "portfolioStyle"],

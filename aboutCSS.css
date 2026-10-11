@@ -1,6 +1,6 @@
 .about_section {
-    padding: 0.5em;
-    margin: 0.5em;
+    padding: 0 0.5em;
+    margin: 0.5em 0.5em 0 0.5em;
     padding-top: 0;
     padding-bottom: 0;
     margin-bottom: 0;
@@ -9,6 +9,7 @@
 }
 
 .header_aboutSection {
+    justify-content: center;
     padding: 0.8em;
     margin: 0.3em;
     flex-direction: row;
@@ -17,13 +18,14 @@
 }
 
 .about_boxOne {
+    align-items: center;
     flex-direction: column;
     margin: 0.5em;
     border-bottom: solid 1px rgba(192, 192, 192, 0.567);
 }
 
 .header_aboutOneSection {
-    justify-content: space-between;
+    justify-content: center;
     padding: 0.4em;
     margin: 0.4em;
     flex-direction: row;
@@ -46,18 +48,15 @@
 }
 
 .paraAbout_section {
+    background : #00000078;
+    box-shadow: 5px 5px 5px 0px #ffffff75, inset 4px 4px 15px 0px #ffffff7d, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     max-width: 80ch;
-    max-height: 37dvh;
+    height: auto;
     margin: 1.5em;
-    padding: 1.2em;
-    padding-bottom: 1.3em;
+    padding: 1.2em 1.2em 1.3em 1.2em;
     flex-direction: column;
-    overflow-y: auto;
-    gap: 0.6em;
-}
-
-.paraAbout_section {
-    gap: 0.3em;
+    /*overflow-y: auto;*/
+    gap: 0.4em;
 }
 
 .collapsibleBtnSection {
@@ -66,21 +65,22 @@
 
 .portfolio_para {
     margin: 0.5em;
-    padding: 0.9em;
-    padding-bottom: 1.3em;
+    padding: 0.9em, 0.9em 1.3em 0.9em;
+
     flex-direction: column;
     gap: 10px;
 }
 
 .spanAboutStyle {
     font-size: 1.135rem;
-    line-height: 1.4;
-    word-spacing: 0.13rem;
+    line-height: 1.65;
+    word-spacing: 0.21rem;
+    padding-right: 1em;
 }
 
 .lastAboutBoxOne {
-    padding-bottom: 0em;
-    margin-bottom: 0em;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .footerAnchorList {
