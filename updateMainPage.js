@@ -721,7 +721,7 @@ const mainContent = {
                                                                     "functionsEvent": "createSpanInjectText",
                                                                     "classList": ["block", "font_standardValue", "spanPortfolioStyle"],
                                                                     "createText": [
-                                                                        "Ich habe wieder angefangen, das zu tun, was ich vor langer Zeit aus den Augen verloren hatte.",
+                                                                        "Ich habe wieder angefangen, das zu tun, was ich vor langer Zeit aus den Augen verloren habe.",
                                                                         "Genauso gerne wie am Steuer eines LKW sitze ich an Computern und zerlege komplexe Technik: So habe ich unter anderem die Gaming- und Arbeits-PCs meiner Kinder sowie das System meines Schwagers von Grund auf geplant und zusammengebaut.",
                                                                         "Auch hardwareseitige Reparaturen gehören für mich dazu: An mehreren MacBook Pros habe ich typische Flexgate-Fehler erfolgreich behoben und Akkuschäden instand gesetzt.",
                                                                         "Bei einem MacBook Pro (16 Zoll) habe ich einen defekten Lid-Sensor (Display-Winkelsensor) diagnostiziert und getauscht, der das Powermanagement im Stand-by gestört und die Lüfter unkontrolliert hochgedreht hatte.",
