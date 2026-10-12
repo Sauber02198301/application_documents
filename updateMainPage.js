@@ -828,15 +828,61 @@ const mainContent = {
                                     ]
                                 },
                                 {
-                                    "createElement": "a",
-                                    "classList": ["flex", "anchor_settings", "anchorStyle"],
-                                    "hrefAttr": "pdf_data/keyNoteCertification.pdf",
-                                    "target": "_blank",
+                                    "createElement": "div",
+                                    "classList": ["flex", "parentBox_dropDown", "boxStyle", "document_content"],
                                     "children": [
                                         {
-                                            "createElement": "span",
-                                            "classList": ["block", "material-symbols-outlined", "mailStyle", "anchorHover"],
-                                            "createText": "school"
+                                            "createElement": "button",
+                                            "classList": ["btn_flex", "secondaryBtn", "icon_btn", "icon_btnStyle"],
+                                            "children": [
+                                                {
+                                                    "createElement": "span",
+                                                    "classList": ["block", "material-symbols-outlined", "mailStyle", "anchorHover"],
+                                                    "createText": "school"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "createElement": "div",
+                                            "classList": ["flex", "childBox_dropDown", "boxStyle", "document_content_list"],
+                                            "children": [
+                                                {
+                                                    "createElement": "a",
+                                                    "classList": ["flex", "anchor_settings", "anchorStyle"],
+                                                    "hrefAttr": "pdf_data/keyNoteCertification.pdf",
+                                                    "target": "_blank",
+                                                    "children": [
+                                                        {
+                                                            "createElement": "span",
+                                                            "classList": ["block", "material-symbols-outlined", "mailStyle", "anchorHover"],
+                                                            "createText": "school"
+                                                        },
+                                                        {
+                                                            "createElement": "span",
+                                                            "classList": ["block", "font_standardValue", "mailStyle", "anchorHover"],
+                                                            "createText": "Profil"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "createElement": "a",
+                                                    "classList": ["flex", "anchor_settings", "anchorStyle"],
+                                                    "hrefAttr": "pdf_data/bash_certification.pdf",
+                                                    "target": "_blank",
+                                                    "children": [
+                                                        {
+                                                            "createElement": "span",
+                                                            "classList": ["block", "material-symbols-outlined", "mailStyle", "anchorHover"],
+                                                            "createText": "school"
+                                                        },
+                                                        {
+                                                            "createElement": "span",
+                                                            "classList": ["block", "font_standardValue", "mailStyle", "anchorHover"],
+                                                            "createText": "Profil"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
