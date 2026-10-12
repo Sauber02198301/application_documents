@@ -38,8 +38,6 @@
 .headingCont {
     margin: 0.2em;
     padding: 0.2em;
-    background: #c0c0c075;
-    border: solid 1px #000000;
 }
 
 .headingCont:last-child {

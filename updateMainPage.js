@@ -715,7 +715,7 @@ const mainContent = {
                                                     "children": [
                                                         {
                                                             "createElement": "p",
-                                                            "classList": ["flex", "paraPortfolio_text", "paraPortfoilio_Style", "paraAbout_section"],
+                                                            "classList": ["flex", "paraPortfolio_text", "paraPortfoilio_Style", "paraAbout_section", "scroll_sett"],
                                                             "children": [
                                                                 {
                                                                     "functionsEvent": "createSpanInjectText",
@@ -834,6 +834,7 @@ const mainContent = {
                                         {
                                             "createElement": "button",
                                             "classList": ["btn_flex", "secondaryBtn", "icon_btn", "icon_btnStyle"],
+                                            "dataset": "activeIconBox",
                                             "children": [
                                                 {
                                                     "createElement": "span",
@@ -848,37 +849,37 @@ const mainContent = {
                                             "children": [
                                                 {
                                                     "createElement": "a",
-                                                    "classList": ["flex", "anchor_settings", "anchorStyle"],
+                                                    "classList": ["flex", "anchor_settings", "anchorStyle", "anchorFooterDrop", "anchorDrop"],
                                                     "hrefAttr": "pdf_data/keyNoteCertification.pdf",
                                                     "target": "_blank",
                                                     "children": [
                                                         {
                                                             "createElement": "span",
-                                                            "classList": ["block", "material-symbols-outlined", "mailStyle", "anchorHover"],
+                                                            "classList": ["block", "material-symbols-outlined", "certificationStyle"],
                                                             "createText": "school"
                                                         },
                                                         {
                                                             "createElement": "span",
-                                                            "classList": ["block", "font_standardValue", "mailStyle", "anchorHover"],
-                                                            "createText": "Profil"
+                                                            "classList": ["block", "font_standardValue", "certificationStyle"],
+                                                            "createText": "Business View"
                                                         }
                                                     ]
                                                 },
                                                 {
                                                     "createElement": "a",
-                                                    "classList": ["flex", "anchor_settings", "anchorStyle"],
+                                                    "classList": ["flex", "anchor_settings", "anchorStyle", "anchorFooterDrop", "anchorDrop"],
                                                     "hrefAttr": "pdf_data/bash_certification.pdf",
                                                     "target": "_blank",
                                                     "children": [
                                                         {
                                                             "createElement": "span",
-                                                            "classList": ["block", "material-symbols-outlined", "mailStyle", "anchorHover"],
+                                                            "classList": ["block", "material-symbols-outlined", "certificationStyle"],
                                                             "createText": "school"
                                                         },
                                                         {
                                                             "createElement": "span",
-                                                            "classList": ["block", "font_standardValue", "mailStyle", "anchorHover"],
-                                                            "createText": "Profil"
+                                                            "classList": ["block", "font_standardValue", "certificationStyle"],
+                                                            "createText": "Developer View"
                                                         }
                                                     ]
                                                 }

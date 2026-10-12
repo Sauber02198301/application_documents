@@ -31,7 +31,7 @@ body_section.addEventListener('click', (t) => {
                         mainView.style.zIndex = 1;
                     }, { once: true });
 
-                    
+
                 };
 
                 break;
@@ -56,7 +56,18 @@ body_section.addEventListener('click', (t) => {
                 };
 
                 break;
-
+            case 'activeIconBox':
+                console.log(btn_secondaryClick);
+                const iconDrop = document.querySelector('.document_content_list');
+                
+                if (!iconDrop.classList.contains(`childBox_opacityActive`)) {
+                    iconDrop.classList.add('childBox_opacityActive');
+                } else {
+                    iconDrop.classList.remove('childBox_opacityActive');
+                };
+                console.log(iconDrop);
+                
+                break;
 
             default: break;
         };
