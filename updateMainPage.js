@@ -850,7 +850,7 @@ const mainContent = {
                                                 {
                                                     "createElement": "a",
                                                     "classList": ["flex", "anchor_settings", "anchorStyle", "anchorFooterDrop", "anchorDrop"],
-                                                    "hrefAttr": "pdf_data/keyNoteCertification.pdf",
+                                                    "hrefAttr": "pdf_data/keyNoteCertification_copy.pdf",
                                                     "target": "_blank",
                                                     "children": [
                                                         {
