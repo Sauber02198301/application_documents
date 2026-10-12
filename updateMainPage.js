@@ -131,7 +131,7 @@ const img_columnObject = [
             },
             {
                 "classList": ["block", "img_column", "img_columnStyle"],
-                "imgContent": [        
+                "imgContent": [
                     { "src": "myPortfolio/MacBookPro_lidSensor/IMG_4612.jpeg", "alt": "" },
                     { "src": "myPortfolio/nintendoDS_lite/3FDD0BD5-CEB7-4559-8004-1AA9C1BE6DE2_1_105_c.jpeg", "alt": "" },
                     //{ "src": "myPortfolio/MacBookPro_lidSensor/00011D7C-8F0C-46F3-87A5-8C0AE522662C_1_105_c.jpeg", "alt": "" },
@@ -474,23 +474,23 @@ const mainContent = {
                                             ]
                                         },
                                         {
-                                            "createElement": "header",
-                                            "classList": ["flex", "headingCont", "secondaryHeading", "heading_00"],
+                                            "createElement": "div",
+                                            "classList": ["flex", "portfolioBox", "portfolioChildStyle", "portBox00"],
                                             "children": [
                                                 {
-                                                    "createElement": "h2",
-                                                    "classList": ["block", "font_standardValue", "portfolioStyle_h3"],
-                                                    "createText": "Fokus in komplexen Situationen",
+                                                    "createElement": "header",
+                                                    "classList": ["flex", "headingCont", "secondaryHeading", "heading_00"],
+                                                    "children": [
+                                                        {
+                                                            "createElement": "h2",
+                                                            "classList": ["block", "font_standardValue", "portfolioStyle_h3"],
+                                                            "createText": "Fokus in komplexen Situationen",
+                                                        },
+                                                    ]
                                                 },
-                                            ]
-                                        },
-                                        {
-                                            "createElement": "div",
-                                            "classList": ["flex", "portfolioChildBox", "portfolioChildStyle"],
-                                            "children": [
                                                 {
                                                     "createElement": "p",
-                                                    "classList": ["flex", "paraAbout_section", "paraPortfolioStyle","specify_00"],
+                                                    "classList": ["flex", "paraAbout_section", "paraPortfolioStyle", "specify_00"],
                                                     "children": [
                                                         {
                                                             "functionsEvent": "createSpanInjectText",
@@ -499,43 +499,15 @@ const mainContent = {
                                                                 "Über 20 Jahre im selben Betrieb beweisen: Auf mich war stets Verlass. Aufgaben habe ich immer mit größter Sorgfalt erledigt. Selbst in einem akkordähnlichen Umfeld habe ich stets darauf geachtet, das nötige Tempo zu halten, ohne meinen hohen Anspruch an Qualität jemals zu vernachlässigen.",
                                                                 "Wenn Maschinenausfälle oder Hektik den Ablauf störten, habe ich den Überblick behalten und Prozesse vorausschauend strukturiert. Ob in der Halle oder im Fuhrpark: Ich habe Aufgaben immer so vor- und aufgearbeitet, dass nachfolgende Kollegen nahtlos und fehlerfrei weiterarbeiten konnten – saubere Übergaben und verlässliche Ordnung standen für mich immer an erster Stelle.",
                                                                 "Genau diese Denkweise ist heute mein Antrieb in der IT: Ausprobieren, analysieren, Fehler lokalisieren und optimieren. Ich habe gelernt, dass wahres Können nicht darin besteht, alles auf Anhieb perfekt zu beherrschen, sondern Fehler als Lernprozess zu begreifen. Niemand fällt als Meister vom Himmel – aber wer dranbleibt, analysiert und nicht aufgibt, baut am Ende stabile Lösungen."
-                                                                /* 
-                                                                     
-                                                                
-                                                                */
                                                             ]
                                                         }
                                                     ]
                                                 },
                                             ]
                                         },
-                                        /*{
-                                            "createElement": "div",
-                                            "classList": ["flex", "portfolioChildBox", "portfolioChildStyle", "specify_01"],
-                                            "children": [
-                                                {
-                                                    "createElement": "header",
-                                                    "classList": ["flex", "headingCont", "secondaryHeading", "heading_01"],
-                                                    "children": [
-                                                        {
-                                                            "createElement": "h3",
-                                                            "classList": ["block", "font_standardValue", "portfolioStyle_h3"],
-                                                            "createText": "1. Einstieg in die Arbeitswelt!"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "createElement": "div",
-                                                    "classList": ["flex", "portfolioChildBox", "portfolioChildStyle", "specifyChild_00"],
-                                                    "functionsEvent": "description_List",
-                                                    "descriptionItems": "workingList"
-                                                }
-                                            ]
-                                        },*/
-                                        
                                         {
                                             "createElement": "div",
-                                            "classList": ["flex", "portfolioBox", "portfolioStyle"],
+                                            "classList": ["flex", "portfolioBox", "portfolioStyle", "portBox01"],
                                             "children": [
                                                 {
                                                     "createElement": "header",
@@ -709,8 +681,7 @@ const mainContent = {
                                                     ]
                                                 }
                                             ]
-                                        },
-
+                                        }
                                     ]
                                 },
                                 {
@@ -744,7 +715,7 @@ const mainContent = {
                                                     "children": [
                                                         {
                                                             "createElement": "p",
-                                                            "classList": ["flex", "paraPortfolio_text", "paraPortfoilio_Style"],
+                                                            "classList": ["flex", "paraPortfolio_text", "paraPortfoilio_Style", "paraAbout_section"],
                                                             "children": [
                                                                 {
                                                                     "functionsEvent": "createSpanInjectText",
@@ -872,7 +843,7 @@ const mainContent = {
                                 {
                                     "createElement": "a",
                                     "classList": ["flex", "anchor_settings", "anchorStyle"],
-                                    "hrefAttr": "pdf_data/IHK_B96_test Kopie.pdf",
+                                    "hrefAttr": "pdf_data/certification_lkw.pdf",
                                     "target": "_blank",
                                     "children": [
                                         {
@@ -897,7 +868,7 @@ const mainContent = {
                                         {
                                             "createElement": "span",
                                             "classList": ["block", "fa", "fa-instagram", "anchorHover"],
-                                        },
+                                        }
                                         /*{
                                             "createElement": "span",
                                             "classList": ["block", "font_standardValue", "fa_textStyle"],
@@ -914,7 +885,7 @@ const mainContent = {
                                         {
                                             "createElement": "span",
                                             "classList": ["block", "fa", "fa-github-square", "anchorHover"],
-                                        },
+                                        }
                                         /*{
                                             "createElement": "span",
                                             "classList": ["block", "font_standardValue", "fa_textStyle"],
@@ -931,7 +902,7 @@ const mainContent = {
                                             "createElement": "span",
                                             "classList": ["block", "material-symbols-outlined", "mailStyle", "anchorHover"],
                                             "createText": "mail"
-                                        },
+                                        }
                                         /*{
                                             "createElement": "span",
                                             "classList": ["block", "font_standardValue", "fa_textStyle"],
@@ -948,7 +919,7 @@ const mainContent = {
                                         {
                                             "createElement": "span",
                                             "classList": ["block", "fa", "fa-phone-square", "anchorHover"],
-                                        },
+                                        }
                                         /*{
                                             "createElement": "span",
                                             "classList": ["block", "font_standardValue", "fa_textStyle"],
@@ -966,81 +937,13 @@ const mainContent = {
         }
     },
 };
+
 // hier muss ich mir fuer spaeter was ueberlegen wie ich die auszulesende Datei hineinschiebe 
 //ich muss mir eine beta JSON datei erarbeiten wie ich mir die dateien auslese 
 //bei der datei fuer xcode muss ich kein div oder h1 beachten aber auch hier muss ich bedenken wenn ich die rohdaten fuer javaScript nehme 
 //muss ich mir ein system aus denken das javaScript weis was es erstellen soll, wenn ich ehrlich bin koennte ich
 // auch alles im html schreiben und den rest reinschieben ich habe auch die moeglichkeit jede menge html elemente vorzu rendern und sie spaeter 
 // mit kontent zu fuellen. wobei man das prinzip keep at simple halten soll weil dies noch ein diverses problem fuer mich ist 
-
-/*
-
-    [
-                                                                
-                                                                {
-                                                                    "createElement": "div",
-                                                                    "classList": ["flex", "galaryBoxCollapsible", "galaryBoxCollapsible_style"],
-                                                                    "children": [
-                                                                        {
-                                                                            "functionsEvent": "imgCreaterSection",
-                                                                            "gallaryData": [
-                                                                                {
-                                                                                    "imgClassList": ["block", "portfolioImg", "portfolioImgStyle"],
-                                                                                    "src": "myPortfolio/lkwSection/braunschweig_laderampeSalz.jpeg",
-                                                                                    "alt": "Geparkter LKW mit Anhaenger gepackt an einer Laderampe",
-                                                                                    "classList_div": ["flex", "galleryTextBox", "galleryTextBox_style"],
-                                                                                    "classListText_h": ["block", "font_standardValue", "gallaryText_h2"],
-                                                                                    "title": "Braunschweig millimeter genau eingeparkt",
-                                                                                    "classListTextSpan": ["block", "font_standardValue", "gallaryTextSpan"],
-                                                                                    "desc": "Um das Salzdalumer Klinik im Braunschweig zu beliefern muss man eine s-kurve rückwerts mit Anhänger hinunter fahren. Ich muss nahe mit der Rechten Kante vom LKW an der mauer hinunter fahren."
-                                                                                }
-                                                                            ]
-                                                                        },
-
-                                                                    ]
-                                                                },
-                                                                {
-                                                                    "createElement": "button",
-                                                                    "classList": ["btn_flex", "secondaryBtn", "collapsibleBtn", "collapsibleStyle"],
-                                                                    "children": [
-                                                                        {
-                                                                            "createElement": "span",
-                                                                            "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle"],
-                                                                            "createText": "Beherrschung komplexer Situationen auf engstem Raum in Hamm"
-                                                                        },
-                                                                        {
-                                                                            "createElement": "span",
-                                                                            "classList": ["block", "material-symbols-outlined", "iconAdd"],
-                                                                            "createText": "add"
-                                                                            // minusIcon: remove
-                                                                        }
-                                                                    ]
-                                                                },
-                                                                {
-                                                                    "createElement": "div",
-                                                                    "classList": ["flex", "galaryBoxCollapsible", "galaryBoxCollapsible_style"],
-                                                                    "children": [
-                                                                        {
-                                                                            "functionsEvent": "imgCreaterSection",
-                                                                            "gallaryData": [
-                                                                                {
-                                                                                    "imgClassList": ["block", "portfolioImg", "portfolioImgStyle"],
-                                                                                    "src": "myPortfolio/lkwSection/laderampe_hamm_links.jpeg",
-                                                                                    "alt": "Geparkter LKW mit Anhaenger gepackt an einer Laderampe",
-                                                                                    "classList_div": ["flex", "galleryTextBox", "galleryTextBox_style"],
-                                                                                    "classListText_h": ["block", "font_standardValue", "gallaryText_h2"],
-                                                                                    "title": "Kinder Hamm mm genaues einparken",
-                                                                                    "classListTextSpan": ["block", "font_standardValue", "gallaryTextSpan"],
-                                                                                    "desc": "Hier stehe ich inder minimalen Parkbucht wo ich bis auf der rille soweit rects wenn man vor dem LKW steht kein mm platz ist so das an der Linken seite genug platz ist das das Personal Hochgehen kann vom Kinder krankenhaus Hamm"
-                                                                                }
-                                                                            ]
-                                                                        }
-                                                                    ]
-                                                                },
-                                                            ]
-
-
-*/
 
 const imgContent = [
     {
@@ -1125,6 +1028,9 @@ const imgContent = [
         ]
     }
 ];
+
+
+
 /*
 
 "createText": [
@@ -1163,3 +1069,96 @@ const imgContent = [
            }
 
 */
+
+/*
+
+    [
+                                                                
+                                                                {
+                                                                    "createElement": "div",
+                                                                    "classList": ["flex", "galaryBoxCollapsible", "galaryBoxCollapsible_style"],
+                                                                    "children": [
+                                                                        {
+                                                                            "functionsEvent": "imgCreaterSection",
+                                                                            "gallaryData": [
+                                                                                {
+                                                                                    "imgClassList": ["block", "portfolioImg", "portfolioImgStyle"],
+                                                                                    "src": "myPortfolio/lkwSection/braunschweig_laderampeSalz.jpeg",
+                                                                                    "alt": "Geparkter LKW mit Anhaenger gepackt an einer Laderampe",
+                                                                                    "classList_div": ["flex", "galleryTextBox", "galleryTextBox_style"],
+                                                                                    "classListText_h": ["block", "font_standardValue", "gallaryText_h2"],
+                                                                                    "title": "Braunschweig millimeter genau eingeparkt",
+                                                                                    "classListTextSpan": ["block", "font_standardValue", "gallaryTextSpan"],
+                                                                                    "desc": "Um das Salzdalumer Klinik im Braunschweig zu beliefern muss man eine s-kurve rückwerts mit Anhänger hinunter fahren. Ich muss nahe mit der Rechten Kante vom LKW an der mauer hinunter fahren."
+                                                                                }
+                                                                            ]
+                                                                        },
+
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "createElement": "button",
+                                                                    "classList": ["btn_flex", "secondaryBtn", "collapsibleBtn", "collapsibleStyle"],
+                                                                    "children": [
+                                                                        {
+                                                                            "createElement": "span",
+                                                                            "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle"],
+                                                                            "createText": "Beherrschung komplexer Situationen auf engstem Raum in Hamm"
+                                                                        },
+                                                                        {
+                                                                            "createElement": "span",
+                                                                            "classList": ["block", "material-symbols-outlined", "iconAdd"],
+                                                                            "createText": "add"
+                                                                            // minusIcon: remove
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "createElement": "div",
+                                                                    "classList": ["flex", "galaryBoxCollapsible", "galaryBoxCollapsible_style"],
+                                                                    "children": [
+                                                                        {
+                                                                            "functionsEvent": "imgCreaterSection",
+                                                                            "gallaryData": [
+                                                                                {
+                                                                                    "imgClassList": ["block", "portfolioImg", "portfolioImgStyle"],
+                                                                                    "src": "myPortfolio/lkwSection/laderampe_hamm_links.jpeg",
+                                                                                    "alt": "Geparkter LKW mit Anhaenger gepackt an einer Laderampe",
+                                                                                    "classList_div": ["flex", "galleryTextBox", "galleryTextBox_style"],
+                                                                                    "classListText_h": ["block", "font_standardValue", "gallaryText_h2"],
+                                                                                    "title": "Kinder Hamm mm genaues einparken",
+                                                                                    "classListTextSpan": ["block", "font_standardValue", "gallaryTextSpan"],
+                                                                                    "desc": "Hier stehe ich inder minimalen Parkbucht wo ich bis auf der rille soweit rects wenn man vor dem LKW steht kein mm platz ist so das an der Linken seite genug platz ist das das Personal Hochgehen kann vom Kinder krankenhaus Hamm"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                            ]
+
+
+*/
+
+/*{
+                                            "createElement": "div",
+                                            "classList": ["flex", "portfolioChildBox", "portfolioChildStyle", "specify_01"],
+                                            "children": [
+                                                {
+                                                    "createElement": "header",
+                                                    "classList": ["flex", "headingCont", "secondaryHeading", "heading_01"],
+                                                    "children": [
+                                                        {
+                                                            "createElement": "h3",
+                                                            "classList": ["block", "font_standardValue", "portfolioStyle_h3"],
+                                                            "createText": "1. Einstieg in die Arbeitswelt!"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "createElement": "div",
+                                                    "classList": ["flex", "portfolioChildBox", "portfolioChildStyle", "specifyChild_00"],
+                                                    "functionsEvent": "description_List",
+                                                    "descriptionItems": "workingList"
+                                                }
+                                            ]
+                                        },*/

@@ -3,8 +3,10 @@
     justify-content: center;
     justify-self: center;
     height: 520px;                  /* Höhe dürfen nicht in prozent angegeben werden. Das kann verzehrungen verursachen. Dies kann das grössen verhältniss des parents beeinflussen.*/
-    max-width: 60%;
+    max-width: 53%;
+    border-radius: 1%;
     border: solid 2px #000000bf;
+    box-shadow: 5px 5px 5px 0px #ffffff75, inset 4px 4px 15px 0px #000000ad, 5px 5px 15px 5px rgb(0 0 0 / 0%);
     overflow-y: auto;       /* bei jeglichen overflow immer 'auto' eintragen statt 'scroll' dies (verhindert Geister-scrollbalken wenn leer)*/
     gap: 0.7em;
     padding: 0.7em;

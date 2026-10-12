@@ -4,7 +4,7 @@
     padding-top: 0.5em;
     margin-top: 0.1em;
     flex-direction: column;
-    gap: 0.6em;
+    gap: 2.6em;
     border-bottom: solid 1px #c0c0c0c4;
 }
 
@@ -38,6 +38,8 @@
 .headingCont {
     margin: 0.2em;
     padding: 0.2em;
+    background: #c0c0c075;
+    border: solid 1px #000000;
 }
 
 .headingCont:last-child {
@@ -59,6 +61,14 @@
     /*margin: 0.8em;*/
     gap: 0.4em;
     flex-direction: column;
+}
+
+.portBox00 {
+    align-items: center;
+}
+
+.headerPortfolio {
+    justify-content: center;
 }
 
 .photoPortfolio_section {
