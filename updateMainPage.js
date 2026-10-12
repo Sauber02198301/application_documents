@@ -695,7 +695,7 @@ const mainContent = {
                                             "children": [
                                                 {
                                                     "createElement": "h1",
-                                                    "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle", "heading_h1_sett"],
+                                                    "classList": ["block", "font_standardValue", "spanCollapsibleFontStyle", "heading_h1_gallery"],
                                                     "createText": "Galerie: Hardware-Instandsetzung"
                                                 },
                                                 {
