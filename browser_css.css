@@ -1,5 +1,248 @@
-* {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.grid_container {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+.block {
+    display: block;
+}
+
+.style_side {
+    background: rgba(0, 0, 0, 0.419);
+}
+
+.body_section {
+    grid-template-areas:
+        'header main'
+        'header main'
+        'header footer'
+    ;
+    grid-template-columns: 165px 1fr;
+    grid-template-rows: 1fr 80px;
+}
+
+.header_section {
+    position: sticky;
+    align-items: center;
+    grid-area: header;
+    width: 100%;
+    max-width: 165px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header_sectionStyle {
+    background-color: rgb(0, 0, 0);
+}
+
+.img_header_section {
+    position: relative;
+    height: 185px;
+    padding: 1em;
+    opacity: 0.55;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.navigation_section {
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.btn_flex {
+    display: flex;
+    border: none;
+}
+
+.btn_primary {
+    flex-direction: column;
+    gap: 1em;
+    padding: 0.5em;
+    margin: 2em;
+    cursor: pointer;
+}
+
+.btn_primary:hover {
+    background: #ffffff;
+    transition: color 2.1s ease-in-out;
+}
+
+.btn_navStyle {
+    background: rgba(0, 0, 0, 0.371);
+    border: solid 1px #ffffff;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.secondaryBtn {
+    padding: 10px;
+    margin: 25px;
+    justify-content: center;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.imgButtonStyle {
+    background: rgba(0, 0, 0, 0.371);
+    border: solid 1px #ffffff;
+}
+
+.imgButtonStyle:hover {
+    background: rgba(255, 245, 245, 0.559);
+}
+
+.iconPlay {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.dropDown_nav {
+    position: relative;
+    top: -450px;
+    opacity: 0;
+    z-index: 0;
+    flex-direction: column;
+    gap: 15px;
+    transition: opacity, 1.5s ease-in-out;
+}
+
+.anchorDrop_section {
+    text-align: center;
+}
+
+.anchorDrop_sectionStyle {
+    border: solid 1px #ffffff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    margin: 0.5em;
+    padding: 0.5em;
+    gap: 1em;
+    align-items: center;
+    cursor: pointer;
+}
+
+.anchorDrop_sectionStyle:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.openNav {
+    top: 0;
+    opacity: 1;
+    z-index: 1;
+    transition: opacity, 1.5s ease-in-out;
+}
+
+.main_section {
+    grid-template-areas: 'displaySection sideBarRight';
+    grid-template-columns: 1fr 142px;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.mainView_style {
+    grid-area: displaySection;
+    padding: 0.3em;
+    flex-direction: column;
+    background-color: #0000006f;
+    overflow-y: auto;
+}
+
+.footer_section {
+    background: #0000009e;
+    justify-content: end;
+    align-items: center;
+}
+
+.parentBox_dropDown {
+    flex-direction: column;
+}
+
+.footerIcon_box {
+    gap: 0.5em;
+    margin: 1em;
+}
+
+.document_guide {
+    flex-direction: row;
+    align-items: center;
+    border-right: solid 1px #c0c0c0;
+    padding-right: 1.3em;
+}
+
+.icon_btn {
+    position: relative;
+    background: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.childBox_dropDown {
+    flex-direction: column;
+    gap: 1em;
+    position: absolute;
+    top: 82.4%;
+    right: 2.9%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+    white-space: nowrap;
+    background: #000000a8;
+    padding: 0.5em;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity, 1.4s ease-in-out;
+}
+
+.childBox_opacityActive {
+    opacity: 1;
+    z-index: 2;
+    transition: opacity, 1.4s ease-in-out;
+}
+
+.certificationStyle {
+    font-size: 2rem;
+}
+
+.anchor_settings {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 0 1em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.anchorFooterDrop {
+    justify-content: space-between;
+}
+
+.anchorHover:hover,
+.anchor_settings:hover {
+    color: #2166af;
+}
