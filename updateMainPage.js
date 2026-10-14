@@ -466,7 +466,7 @@ const mainContent = {
                                                     "children": [
                                                         {
                                                             "createElement": "h1",
-                                                            "classList": ["block", "font_standardValue", "about_h1_style"],
+                                                            "classList": ["block", "font_standardValue", "portfolio_h1_style"],
                                                             "createText": "Mein Portfolio"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
                                                         }
                                                     ]
@@ -572,7 +572,7 @@ const mainContent = {
                                                                         },
                                                                         {
                                                                             "createElement": "div",
-                                                                            "classList": ["flex", "galleryTextBox", "galleryTextBox_style"],
+                                                                            "classList": ["flex", "galleryTextBox", "paraAbout_section"],
                                                                             "children": [
                                                                                 {
                                                                                     "createElement": "h2",
@@ -648,7 +648,7 @@ const mainContent = {
                                                                         },
                                                                         {
                                                                             "createElement": "div",
-                                                                            "classList": ["flex", "galleryTextBox", "galleryTextBox_style"],
+                                                                            "classList": ["flex", "galleryTextBox", "paraAbout_section"],
                                                                             "children": [
                                                                                 {
                                                                                     "createElement": "h2",
