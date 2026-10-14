@@ -28,9 +28,9 @@ body_section.addEventListener('click', (t) => {
                 } else {
                     dropDown_nav.classList.remove(activeDropDown);
                     dropDown_nav.addEventListener('transition', () => {
-                        mainView.style.zIndex = 1;
+                        
                     }, { once: true });
-
+                    mainView.style.zIndex = 1;
 
                 };
 

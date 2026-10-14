@@ -331,7 +331,7 @@ const mainContent = {
                                     "children": [
                                         {
                                             "createElement": "header",
-                                            "classList": ["flex", "header_aboutSection", "header_aboutSectionStyle"],
+                                            "classList": ["flex", "header_aboutSection", "main_sectionHeader_childStyle"],
                                             "children": [
                                                 {
                                                     "createElement": "h1",
@@ -343,7 +343,7 @@ const mainContent = {
                                         },
                                         {
                                             "createElement": "div",
-                                            "classList": ["flex", "about_boxOne", "about_boxOneStyle"],
+                                            "classList": ["flex", "about_boxOne", "mainView_child_style"],
                                             "children": [
                                                 {
                                                     "createElement": "header",
@@ -462,11 +462,11 @@ const mainContent = {
                                             "children": [
                                                 {
                                                     "createElement": "div",
-                                                    "classList": ["flex", "headingCont", "primaryHeading"],
+                                                    "classList": ["flex", "headingCont", "main_sectionHeader_childStyle"],
                                                     "children": [
                                                         {
                                                             "createElement": "h1",
-                                                            "classList": ["block", "font_standardValue", "portfolio_h1_style"],
+                                                            "classList": ["block", "font_standardValue", "about_h1_style"],
                                                             "createText": "Mein Portfolio"   // oder lieber mit deutsch schreiben , alternativ später einen switch auf deutsch oder englisch einrichten
                                                         }
                                                     ]
@@ -750,50 +750,50 @@ const mainContent = {
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "createElement": "div",
-                            "classList": ["flex", "sideBarRight", "sideBarRightStyle"],
-                            "children": [
-                                {
-                                    "createElement": "div",
-                                    "classList": ["flex", "imgBox"],
-                                    "children": [
-                                        {
-                                            "createElement": "img",
-                                            "classList": ["block", "imgSideRest", "javaScriptLogo"],
-                                            "src": "logo_code/javaScriptLogo.jpeg",
-                                            "alt": "JavaScript_Logo"
-                                        },
-                                        {
-                                            "createElement": "img",
-                                            "classList": ["block", "imgSideRest", "htmlLogo"],
-                                            "src": "logo_code/html5_logo.jpeg",
-                                            "alt": "html_Logo"
-                                        },
-                                        {
-                                            "createElement": "img",
-                                            "classList": ["block", "imgSideRest", "cssLogo"],
-                                            "src": "logo_code/css_logo.jpg",
-                                            "alt": "css_Logo"
-                                        },
-                                        {
-                                            "createElement": "img",
-                                            "classList": ["block", "imgSideRest", "nodejs"],
-                                            "src": "logo_code/node.png",
-                                            "alt": "nodejs_Logo"
-                                        },
-                                        {
-                                            "createElement": "img",
-                                            "classList": ["block", "imgSideRest", "nodejs"],
-                                            "src": "logo_code/python_logo.jpeg",
-                                            "alt": "python_Logo"
-                                        },
-                                    ]
-                                }
-                            ]
                         }
                     ],
+                },
+                {
+                    "createElement": "div",
+                    "classList": ["flex", "sideBarRight", "sideBarRightStyle"],
+                    "children": [
+                        {
+                            "createElement": "div",
+                            "classList": ["flex", "imgBox"],
+                            "children": [
+                                {
+                                    "createElement": "img",
+                                    "classList": ["block", "imgSideRest", "javaScriptLogo"],
+                                    "src": "logo_code/javaScriptLogo.jpeg",
+                                    "alt": "JavaScript_Logo"
+                                },
+                                {
+                                    "createElement": "img",
+                                    "classList": ["block", "imgSideRest", "htmlLogo"],
+                                    "src": "logo_code/html5_logo.jpeg",
+                                    "alt": "html_Logo"
+                                },
+                                {
+                                    "createElement": "img",
+                                    "classList": ["block", "imgSideRest", "cssLogo"],
+                                    "src": "logo_code/css_logo.jpg",
+                                    "alt": "css_Logo"
+                                },
+                                {
+                                    "createElement": "img",
+                                    "classList": ["block", "imgSideRest", "nodejs"],
+                                    "src": "logo_code/node.png",
+                                    "alt": "nodejs_Logo"
+                                },
+                                {
+                                    "createElement": "img",
+                                    "classList": ["block", "imgSideRest", "nodejs"],
+                                    "src": "logo_code/python_logo.jpeg",
+                                    "alt": "python_Logo"
+                                },
+                            ]
+                        }
+                    ]
                 },
                 {
                     "createElement": "footer",
@@ -818,7 +818,7 @@ const mainContent = {
                                 },
                                 {
                                     "createElement": "div",
-                                    "classList": ["flex", "parentBox_dropDown", "boxStyle", "document_content"],
+                                    "classList": ["inline", "parentBox_dropDown", "boxStyle", "document_content"],
                                     "children": [
                                         {
                                             "createElement": "button",
@@ -950,7 +950,7 @@ const mainContent = {
                                 {
                                     "createElement": "a",
                                     "classList": ["flex", "anchor_settings", "anchorStyle"],
-                                    "hrefAttr": "tel:+49 176 30666073",
+                                    //"hrefAttr": "tel:+49 176 30666073",
                                     "children": [
                                         {
                                             "createElement": "span",
@@ -969,7 +969,7 @@ const mainContent = {
 
                     ],
                 }
-                
+
             ]
         }
     },

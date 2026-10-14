@@ -12,9 +12,10 @@
         grid-template-areas:
             'header'
             'main'
+            'sideBarRight'
             'footer'
         ;
-        grid-template-rows: 140px 1fr auto;
+        grid-template-rows: 140px 1fr 90px auto;
         grid-template-columns: 1fr;
     }
 
@@ -23,7 +24,6 @@
         justify-content: space-between;
         flex-direction: row-reverse;
         min-width: 100%;
-        background: #00000082;
         z-index: 1;
     }
 
@@ -53,8 +53,8 @@
     }
 
     .main_section {
-        grid-template-areas: 'displaySection' 'sideBarRight';
-        grid-template-rows: 1fr minmax(75px, 90px);
+        grid-template-areas: 'displaySection';
+        grid-template-rows: 1fr;
         grid-template-columns: none;
         z-index: 1;
     }
@@ -283,7 +283,7 @@
     }
 
     .document_guide {
-        padding-right: 1em;
+        padding: 1em;
     }
 
     .anchor_settings {
@@ -300,7 +300,6 @@
         flex-direction: column;
         margin: 0;
         gap: 1.3em;
-        max-width: 80dvw;
     }
 
     .repair_elektrik {
@@ -322,7 +321,7 @@
         justify-content: center;
         justify-self: center;
         height: 520px;
-        max-width: 80dvw;
+        max-width: 90dvw;
         border: solid 2px #000000bf;
         overflow-y: auto;
         gap: 0.7em;
@@ -345,8 +344,8 @@
 
     .childBox_dropDown {
         gap: 0.3em;
-        left: 32.6%;
-        top: 83.5%;
+        left: 117px;
+        bottom: 52px;
         border: solid 1px white;
     }
     

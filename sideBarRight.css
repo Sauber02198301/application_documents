@@ -1,10 +1,10 @@
 .sideBarRight {
-    background: #000305b2;
+    background: #000000c9;
     position: relative;
     justify-content: center;
     grid-area: sideBarRight;
     flex-direction: column;
-
+    z-index: 1;
 }
 
 .imgBox {
