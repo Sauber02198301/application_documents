@@ -11,8 +11,6 @@
 .portfolio_h1_style {
     padding: 0.5em;
     margin: 0.4em;
-    background: #c0c0c075;
-    border: solid 1px #000000;
 }
 
 .heading_h1_sett {
@@ -31,9 +29,6 @@
     margin: 1em;
 }
 
-.header_collapsibleStyle {
-    border-bottom: solid 1px rgba(192, 192, 192, 0.736);
-}
 
 .headingCont {
     margin: 0.2em;

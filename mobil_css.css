@@ -10,7 +10,7 @@
 
     .body_section {
         grid-template-areas:
-            'header'
+            'header_mobil'
             'main'
             'sideBarRight'
             'footer'
@@ -20,11 +20,14 @@
     }
 
     .header_section {
-        align-items: normal;
-        justify-content: space-between;
-        flex-direction: row-reverse;
+        grid-area: header_mobil;
         min-width: 100%;
         z-index: 1;
+    }
+
+    .navigatinParent {
+        flex-direction: row-reverse;
+        justify-content: space-between;
     }
 
     .navigation_section {

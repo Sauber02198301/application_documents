@@ -16,7 +16,6 @@ html {
     background-size: cover;*/
 }
 
-
 body {
     width: 100%;
     min-height: 100vh;
@@ -85,18 +84,15 @@ body {
         'header main sideBarRight'
         'footer footer footer'
     ;
-    grid-template-columns: 165px 1fr minmax(100px, 130px);
+    grid-template-columns: 270px 1fr 170px;
     grid-template-rows: 1fr 80px;
 }
 
+
 .header_section {
-    position: sticky;
-    align-items: center;
     grid-area: header;
     width: 100%;
-    max-width: 165px;
     flex-direction: column;
-    gap: 10px;
 }
 
 .header_sectionStyle {
@@ -105,12 +101,15 @@ body {
 
 }
 
-.img_section {
-    z-index: 2;
+.navigatinParent {
+    flex-direction: column;
+    position: sticky;
+    top: 0;
 }
 
-.header_sectionStyle {
-    border-right: none;
+.img_section {
+    justify-content: center;
+    z-index: 2;
 }
 
 .img_sectionStyle {
@@ -236,6 +235,7 @@ body {
 }
 
 .main_section {
+    grid-area: main;
     grid-template-areas: 'displaySection';
     grid-template-columns: 1fr;
     overflow-y: auto;
@@ -255,9 +255,10 @@ body {
     border-top-right-radius: 10px;
 }
 
-.mainView_style {
+.mainView_section {
     grid-area: displaySection;
     padding: 0.3em;
+    gap: 1.4em;
     flex-direction: column;
     overflow-y: auto;
 }
@@ -271,6 +272,7 @@ body {
 }
 
 .footer_section {
+    grid-area: footer;
     background: #0000009e;
     justify-content: end;
     align-items: center;

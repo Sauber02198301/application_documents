@@ -168,99 +168,105 @@ const childrenObject = {
     "childsHeaderContainer": [
         {
             "createElement": "div",
-            "classList": ["flex", "img_section", "img_sectionStyle"],
+            "classList": ["flex", "navigatinParent", "navigatinParentStyle"],
             "children": [
-                {
-                    "createElement": "img",
-                    "classList": ["block", "img_header_section", "img_headingStyle"],
-                    "src": "imgContent/dennis.jpg",
-                    "alt": "Ein Mann mittlerem Alters"
-                }
-            ]
-        },
-        {
-            "createElement": "nav",
-            "classList": ["flex", "navigation_section", "navigation_sectionStyle"],
-            "children": [
-                {
-                    "createElement": "button",
-                    "classList": ["btn_flex", "btn_primary", "btn_navStyle"],
-                    "dataset": "openNav",
-                    "children": [
-                        {
-                            "createElement": "span",
-                            "classList": ["block", "material-symbols-outlined", "iconStyle"],
-                            "createText": "menu"
-                        },
-                        {
-                            "createElement": "span",
-                            "classList": ["block", "font_standardValue", "btnTextStyle"],
-                            "createText": "Menu"
-                        }
-                    ]
-
-                },
                 {
                     "createElement": "div",
-                    "classList": ["flex", "dropDown_nav", "dropDown_navStyle"],
+                    "classList": ["flex", "img_section", "img_sectionStyle"],
                     "children": [
                         {
-                            "createElement": "a",
-                            "classList": ["flex", "anchorDrop_section", "anchorDrop_sectionStyle"],
-                            "hrefAttr": "#about",
-                            "children": [
-                                {
-                                    "createElement": "span",
-                                    "classList": ["block", "material-symbols-outlined", "iconStyle"],
-                                    "createText": "article_person"
-                                },
-                                {
-                                    "createElement": "span",
-                                    "classList": ["block", "font_standardValue", "btnTextStyle"],
-                                    "createText": "Über mich"
-                                }
-                            ]
-
-                        },
-                        {
-                            "createElement": "a",
-                            "classList": ["flex", "anchorDrop_section", "anchorDrop_sectionStyle"],
-                            "hrefAttr": "#portfolio",
-                            "children": [
-                                {
-                                    "createElement": "span",
-                                    "classList": ["block", "material-symbols-outlined", "iconStyle"],
-                                    "createText": "business_center"
-                                },
-                                {
-                                    "createElement": "span",
-                                    "classList": ["block", "font_standardValue", "btnTextStyle"],
-                                    "createText": "Mein Portfolio"
-                                }
-                            ]
-
-                        },
-                        {
-                            "createElement": "a",
-                            "classList": ["flex", "anchorDrop_section", "anchorDrop_sectionStyle"],
-                            "hrefAttr": "#gallery",
-                            "children": [
-                                {
-                                    "createElement": "span",
-                                    "classList": ["block", "material-symbols-outlined", "iconStyle"],
-                                    "createText": "gallery_thumbnail"
-                                },
-                                {
-                                    "createElement": "span",
-                                    "classList": ["block", "font_standardValue", "btnTextStyle"],
-                                    "createText": "Gallery reparatur"
-                                }
-                            ]
-
-                        },
+                            "createElement": "img",
+                            "classList": ["block", "img_header_section", "img_headingStyle"],
+                            "src": "imgContent/dennis.jpg",
+                            "alt": "Ein Mann mittlerem Alters"
+                        }
                     ]
+                },
+                {
+                    "createElement": "nav",
+                    "classList": ["flex", "navigation_section", "navigation_sectionStyle"],
+                    "children": [
+                        {
+                            "createElement": "button",
+                            "classList": ["btn_flex", "btn_primary", "btn_navStyle"],
+                            "dataset": "openNav",
+                            "children": [
+                                {
+                                    "createElement": "span",
+                                    "classList": ["block", "material-symbols-outlined", "iconStyle"],
+                                    "createText": "menu"
+                                },
+                                {
+                                    "createElement": "span",
+                                    "classList": ["block", "font_standardValue", "btnTextStyle"],
+                                    "createText": "Menu"
+                                }
+                            ]
+
+                        },
+                        {
+                            "createElement": "div",
+                            "classList": ["flex", "dropDown_nav", "dropDown_navStyle"],
+                            "children": [
+                                {
+                                    "createElement": "a",
+                                    "classList": ["flex", "anchorDrop_section", "anchorDrop_sectionStyle"],
+                                    "hrefAttr": "#about",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["block", "material-symbols-outlined", "iconStyle"],
+                                            "createText": "article_person"
+                                        },
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["block", "font_standardValue", "btnTextStyle"],
+                                            "createText": "Über mich"
+                                        }
+                                    ]
+
+                                },
+                                {
+                                    "createElement": "a",
+                                    "classList": ["flex", "anchorDrop_section", "anchorDrop_sectionStyle"],
+                                    "hrefAttr": "#portfolio",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["block", "material-symbols-outlined", "iconStyle"],
+                                            "createText": "business_center"
+                                        },
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["block", "font_standardValue", "btnTextStyle"],
+                                            "createText": "Mein Portfolio"
+                                        }
+                                    ]
+
+                                },
+                                {
+                                    "createElement": "a",
+                                    "classList": ["flex", "anchorDrop_section", "anchorDrop_sectionStyle"],
+                                    "hrefAttr": "#gallery",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["block", "material-symbols-outlined", "iconStyle"],
+                                            "createText": "gallery_thumbnail"
+                                        },
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["block", "font_standardValue", "btnTextStyle"],
+                                            "createText": "Gallery reparatur"
+                                        }
+                                    ]
+
+                                },
+                            ]
+                        }
+                    ],
                 }
-            ],
+            ]
         }
     ]
 
@@ -327,6 +333,10 @@ const mainContent = {
         "websideActive": "load",
         "functionsFactory": {
             "renderDOM": [
+                /*{
+                    "createElemnet": "div",
+                    "classList": ["flex", "emptyLeft_container", "emptyStyle"]  
+                },*/
                 {
                     "createElement": "header",
                     "classList": ["flex", "header_section", "header_sectionStyle"],
@@ -399,7 +409,7 @@ const mainContent = {
                                         },
                                         {
                                             "createElement": "div",
-                                            "classList": ["flex", "about_boxOne", "about_boxOneStyle"],
+                                            "classList": ["flex", "about_boxOne", "mainView_child_style"],
                                             "children": [
                                                 {
                                                     "createElement": "header",
@@ -436,7 +446,7 @@ const mainContent = {
                                         },
                                         {
                                             "createElement": "div",
-                                            "classList": ["flex", "about_boxOne", "lastAboutBoxOne", "about_boxOneStyle"],
+                                            "classList": ["flex", "about_boxOne", "lastAboutBoxOne", "mainView_child_style"],
                                             "children": [
                                                 {
                                                     "createElement": "header",
