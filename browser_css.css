@@ -162,6 +162,7 @@ body {
     font-weight: bold;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    z-index: 2;
 }
 
 .secondaryBtn {
@@ -248,9 +249,10 @@ body {
 .main_sectionHeader_childStyle {
     background-color: #473c3c;
     box-shadow: 5px 5px 5px 0px #000000, -6px -3px 9px 0px #ffffff8f, -6px -3px 9px 0px #ffffff8f, -2px 1px 20px 4px #ffffffc2, inset 4px 4px 15px 0px #000000, inset -11px -11px 32px 10px rgb(0 0 0 / 52%), inset -2px -3px 20px 1px #ffffffb5;
-
-    border-top-left-radius: 74px;
+    border-top-left-radius: 75px;
     border-bottom-right-radius: 75px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .mainView_style {
@@ -264,6 +266,8 @@ body {
     box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset -11px -11px 32px 10px rgba(0, 0, 0, 0);
     border-top-right-radius: 75px;
     border-bottom-left-radius: 75px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .footer_section {
