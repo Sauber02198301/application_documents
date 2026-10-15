@@ -243,6 +243,7 @@ body {
 .main_sectionHeader_childStyle {
     background-color: #473c3c;
     box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset -11px -11px 32px 10px rgba(0, 0, 0, 0);
+    border-left: solid 1px #ffffff;
     border-top-left-radius: 74px;
     border-bottom-right-radius: 75px;
 }

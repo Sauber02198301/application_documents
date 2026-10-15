@@ -31,6 +31,12 @@
     align-items: center;
 }
 
+.about_h1_style::before {
+    content: '-';
+    padding-left: 0.5em;
+    padding-right: 0.3em;
+}
+
 .about_h1_style {
     padding: 0.5em;
     margin: 0.3em;
