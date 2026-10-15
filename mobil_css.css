@@ -35,11 +35,17 @@
 
     .img_header_section {
         height: 113px;
-        padding: 1.4em;
+        padding: 0;
+    }
+
+    .img_sectionStyle {
+        background-color: #253035;
+        border-left: solid 1px #000000;
     }
 
     .btn_primary {
         padding: 0;
+        margin: 1em;
         width: 80px;
         gap: 0.5em;
     }
@@ -50,6 +56,9 @@
 
     .openNav {
         background: #4e3a3a;
+        border: solid 1px #0000008f;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 38px;
     }
 
     .main_section {
@@ -68,6 +77,11 @@
         padding: 0.2em;
         margin: 0.3em;
         flex-direction: column;
+    }
+
+    .main_sectionHeader_childStyle {
+        border-top-left-radius: 56px;
+        border-bottom-right-radius: 56px;
     }
 
     .header_aboutSection {
@@ -100,6 +114,10 @@
         flex-direction: column;
     }
 
+    .mainView_child_style {
+        border-bottom-left-radius: 30px;
+    }
+
     .header_aboutOneSection {
         padding: 0;
         margin: 0;
@@ -111,7 +129,6 @@
     }
 
     .paraAbout_section {
-        height: 450px;
         overflow-y: auto;
         padding: 0.6em;
         margin: 0.8em;
@@ -348,7 +365,7 @@
         bottom: 52px;
         border: solid 1px white;
     }
-    
+
     .certificationStyle {
         font-size: 1.3rem;
     }
