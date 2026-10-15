@@ -303,6 +303,25 @@ const mainContent = {
 
     */
 
+    /*
+        Ich muss mir echt angewoehnen nur einmal eine classList zu vergeben. 
+        Um eine wiederholung zum schreiben zu verhindern als mit libraray keys arbeiten oder weil in json darf dies eigentlich nicht stehn aber hier mache ich das mal so 
+        und ich hoffe ich liege damit richtig. 
+
+        JSON_example 
+        [
+            {
+                "htmlKey": "header", 
+                // sollte ich jetzt mit swift arbeiten sage ich vorher steht da htmlKey kannst du es getrost
+                //  uebersprinegn wobei ich garn icht weis mit was swift arbeitet ich glaucbe hier werden weder css eigenschaften verwendet
+                // ich meine die arbeiten nur mit style und schrift muss ich mal schauen wie sie es verpackebn ich habe zwr das buch habe mich wegen meines leern 
+                // handicaps erstmal auf swift konzentriert. 
+            }
+        ]
+    
+    
+    */
+
     "UI_control": {
         "parentDOM": ".body_section",
         "websideActive": "load",

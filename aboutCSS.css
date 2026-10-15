@@ -17,14 +17,12 @@
 }
 
 .about_boxOne {
-    align-items: center;
     flex-direction: column;
     margin: 0.5em;
     border-bottom: solid 1px #624d4d;
 }
 
 .header_aboutOneSection {
-    justify-content: center;
     padding: 0.4em;
     margin: 0.4em;
     flex-direction: row;
@@ -46,15 +44,20 @@
 }
 
 .about_h2_style {
-    padding: 0.35em;
+    padding: 0.7em;
     margin: 0.6em;
     border: solid 1px #000000b3;
+    box-shadow: 5px 5px 5px 0px #000000, 7px 5px 11px 3px #ffffff8f, -6px -3px 9px 0px #ffffff8f, -2px 1px 20px 4px #ffffffc2, inset 4px 4px 15px 0px #000000, inset -11px -11px 32px 10px rgb(0 0 0 / 52%), inset -2px -3px 20px 1px #ffffffb5;
     background: #25121266;
-    border-radius: 4px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .paraAbout_section {
-    background : #00000078;
+    align-self: center;
+    background: #00000078;
     border-radius: 10px;
     box-shadow: 5px 5px 5px 0px #00000080, inset 4px 4px 15px 0px #00000096, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     max-width: 80ch;

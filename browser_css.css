@@ -206,8 +206,8 @@ body {
     box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset -11px -11px 32px 10px rgba(0, 0, 0, 0);
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    border-left: solid 1px white;
-    border-right: solid 1px white;
+    border-left: solid 1px #ffffff;
+    border-right: solid 1px #ffffff;
     font-size: 0.875rem;
     text-decoration: none;
     font-weight: 800;
