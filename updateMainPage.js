@@ -194,12 +194,12 @@ const childrenObject = {
                                 {
                                     "createElement": "span",
                                     "classList": ["block", "material-symbols-outlined", "iconStyle"],
-                                    "createText": "menu"
+                                    "createText": "menu_book"
                                 },
                                 {
                                     "createElement": "span",
                                     "classList": ["block", "font_standardValue", "btnTextStyle"],
-                                    "createText": "Menu"
+                                    "createText": "Inhaltsverzeichnis"
                                 }
                             ]
 
