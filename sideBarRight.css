@@ -27,44 +27,6 @@
     animation-direction: alternate;
 }
 
-@keyframes slideAnimation {
-    0% {
-        top: 0%;
-    }
-
-    25% {
-        top: 25%;
-    }
-
-    50% {
-        top: 50%;
-    }
-
-    75% {
-        top: 75%;
-    }
-
-    100% {
-        top: 100%;
-    }
-
-    75% {
-        top: 75%;
-    }
-
-    50% {
-        top: 50%;
-    }
-
-    25% {
-        top: 25%;
-    }
-
-    0% {
-        top: 0%;
-    }
-}
-
 .imgSideRest {
     padding: 10px;
     height: 100%;

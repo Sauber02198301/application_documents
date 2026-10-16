@@ -96,7 +96,7 @@ body {
 }
 
 .header_sectionStyle {
-    background-color: #000000c9;
+    background-color: #2c3338;
     border-right: solid 1px #000000;
 
 }
@@ -119,11 +119,14 @@ body {
 
 .img_header_section {
     position: relative;
-    box-shadow: 2px 2px 9px 0px #c0c0c0;
+    box-shadow: 5px 5px 5px 0px #000000, 3px 2px 7px 0px #e0e0e0, -6px -3px 9px 0px #ffffff8f, -6px -3px 9px 0px #ffffff8f, -2px 1px 20px 4px #ffffffc2, inset 4px 4px 15px 0px #000000, inset -11px -11px 32px 10px rgb(0 0 0 / 52%), inset -2px -3px 20px 1px #ffffffb5;
     height: 155px;
     margin: 1em 1.2em;
     opacity: 1;
-    border-radius: 50%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 25px;
     z-index: 1;
 }
 
@@ -272,10 +275,18 @@ body {
 }
 
 .footer_section {
+    position: sticky;
+    bottom: 0;
     grid-area: footer;
     background: #0000009e;
     justify-content: end;
     align-items: center;
+    z-index: 2;
+}
+
+.footer_sectionStyle {
+    background: #2c3338;
+    border-top: solid 1px #000000;
 }
 
 .parentBox_dropDown {
