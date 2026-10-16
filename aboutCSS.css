@@ -5,12 +5,11 @@
     padding-bottom: 0;
     margin-bottom: 0;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.2em;
 }
 
 .header_aboutSection {
     justify-content: flex-start;
-    padding: 0.8em;
     margin: 0.3em;
     flex-direction: row;
     align-items: center;
@@ -23,8 +22,8 @@
 }
 
 .header_aboutOneSection {
-    padding: 0.4em;
-    margin: 0.4em;
+    padding: 0.4em 0.4em 0;
+    margin: 0.4em 0.4em 0;
     flex-direction: row;
     align-items: center;
 }
@@ -43,6 +42,12 @@
     font-size: 2.5em;
 }
 
+.about_h2_style::before {
+    content: '-';
+    padding-left: 0.5em;
+    padding-right: 0.3em;
+}
+
 .about_h2_style {
     padding: 0.7em;
     margin: 0.6em;
@@ -59,11 +64,12 @@
     align-self: center;
     background: #00000078;
     border-radius: 10px;
+    border-bottom-left-radius: 50px;
     box-shadow: 5px 5px 5px 0px #00000080, inset 4px 4px 15px 0px #00000096, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     max-width: 125ch;
     height: auto;
     margin: 1.5em;
-    padding: 1.9em 1.9em 2em 1.9em;
+    padding: 0.9em 0.9em 1em 1.9em;
     flex-direction: column;
     /*overflow-y: auto;*/
     gap: 0.4em;

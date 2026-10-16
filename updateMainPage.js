@@ -333,10 +333,6 @@ const mainContent = {
         "websideActive": "load",
         "functionsFactory": {
             "renderDOM": [
-                /*{
-                    "createElemnet": "div",
-                    "classList": ["flex", "emptyLeft_container", "emptyStyle"]  
-                },*/
                 {
                     "createElement": "header",
                     "classList": ["flex", "header_section", "header_sectionStyle"],
