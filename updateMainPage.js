@@ -787,10 +787,22 @@ const mainContent = {
                             "classList": ["flex", "imgBox"],
                             "children": [
                                 {
-                                    "createElement": "img",
-                                    "classList": ["block", "imgSideRest", "javaScriptLogo"],
-                                    "src": "logo_code/javaScriptLogo.jpeg",
-                                    "alt": "JavaScript_Logo"
+                                    "createElement": "a",
+                                    "classList": ["flex", "anchorDrop_section", "anchorDrop_sectionStyle", "app_zero"],
+                                    "hrefAttr": "bdi_II/index.html",
+                                    "target": "_blank",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["block", "material-symbols-outlined", "iconStyle"],
+                                            "createText": "psychology"
+                                        },
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["block", "font_standardValue", "btnTextStyle"],
+                                            "createText": "BDI-II Test"
+                                        }
+                                    ]
                                 },
                                 {
                                     "createElement": "img",

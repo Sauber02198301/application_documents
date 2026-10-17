@@ -82,7 +82,6 @@
 .portfolio_para {
     margin: 0.5em;
     padding: 0.9em, 0.9em 1.3em 0.9em;
-
     flex-direction: column;
     gap: 10px;
 }
