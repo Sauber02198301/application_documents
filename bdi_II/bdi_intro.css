@@ -4,7 +4,7 @@
 }
 
 .bdiBoxStyle {
-    background-image: linear-gradient(327deg, #2c3654d9, #00b7f3b5, #5f64a0a8, #2c3654d9);
+    background-image: linear-gradient(327deg, #ffffffd9, #5ad6ffb5, #828cffa8, #ffffffd9);
     min-width: 80%;
-    min-height: 80%;
+    min-height: 100%;
 }
