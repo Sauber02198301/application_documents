@@ -58,7 +58,8 @@ const bdiLibrary = {
         "displayView": ["flex_directin_column", "display_section", "display_sectionStyle"],
         "mainChild_class": ["flex_directin_column", "main_childSection", "mainChildStyle"],
         "bdi_Box": ["flex_directin_column", "bdiBoxStyle"], // boxStyle darf nur styling elemente besitzen die andere auch haben spezifische immer separieren
-        "paragraph_bdi_intro": ["flex_directin_column", "bdiBoxParaStyle"]
+        "paragraph_bdi_intro": ["flex_directin_column", "bdiBoxParaStyle"],
+        "btn_primary": ["flex_directin_column", "btn_primar_bdi", "btn_primaryStyle"]
     },
 
     // klass text_elemente

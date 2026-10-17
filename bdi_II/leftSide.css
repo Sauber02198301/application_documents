@@ -1,0 +1,31 @@
+.naviList {
+    position: sticky;
+    top: 0;
+    padding: 0.7em;
+}
+
+.btn_primar_bdi {
+    border: none;
+    gap: 0.15em;
+    background-image: linear-gradient(10deg,#ffffff, #91d1f8, #f5fcff);
+}
+
+.startBtn {
+    border-radius: 50px;
+    padding-bottom: 0.45em;
+    padding-top: 0.45em;
+    box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
+    font-size: 1.05rem;
+}
+
+.startBtn:hover {
+    scale: 1.05;
+}
+
+.startBtn:active {
+    scale: 0.95;
+}
+
+.start_style {
+    letter-spacing: 1px;
+}

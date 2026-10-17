@@ -6,15 +6,17 @@
 
 .bdiBoxStyle {
     background-image: linear-gradient(327deg, #ffffffd9, #5ad6ffb5, #828cffa8, #ffffffd9);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     margin: 1em;
     min-width: 80%;
     min-height: 100%;
+    border-radius: 10px;
 }
 
 .article_box {
-    margin: 1em;
-    padding: 1em;
-    gap: 1.7em;
+    margin: 0.9em;
+    padding: 0.3em;
+    gap: 0.4em;
     border-bottom: solid 1px #00000036;
 }
 

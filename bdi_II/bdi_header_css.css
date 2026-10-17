@@ -21,6 +21,7 @@
     text-shadow: 0px 1px 0px #000000, 0px -1px 0px #000000, -1px 0px 0px #000000, 1px 0px 0px #000000;
     color: rgb(245, 240, 235);
     padding-right: 0.3em;
+    word-spacing: 0.335em;
 }
 
 .psychiatry_h1_style::before {
