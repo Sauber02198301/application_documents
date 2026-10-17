@@ -267,6 +267,38 @@ const bdiLibrary = {
         }
     ],
 
+    "navigationList": [
+        {
+            "createElement": "nav",
+            "classList": "bdi_Box",
+            "addClassList": ["naviList", "naviStyle"],
+            "children": "btnList"
+        }
+    ],
+
+    "btnList": [
+        {
+            "createElement": "button",
+            "classList": "btn_primary",
+            "addClassList": ["startBtn", "startBtn_style"],
+            "dataset": "start_BDI",
+            "children": [
+                {
+                    "createElement": "span",
+                    "classList": "class_iconSet",
+                    "addClassList": ["icon_start", "start_style"],
+                    "createText": "cognition",
+                },
+                {
+                    "createElement": "span",
+                    "classList": "font_bdiSet_value",
+                    "addClassList": ["text_start", "start_style"],
+                    "createText": "Start BDI-II Test",
+                }
+            ]
+        }
+    ]
+
 };
 
 const bdi_intro = [
@@ -278,7 +310,7 @@ const bdi_intro = [
     {
         "createElement": "div",
         "classList": "leftSide_center_bdi",
-
+        "children": "navigationList"
     },
     {
         "createElement": "main",
