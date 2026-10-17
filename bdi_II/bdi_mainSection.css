@@ -79,7 +79,7 @@ body {
     position: sticky;
     top: 0;
     border-bottom: solid 1px #f0a3a345;
-    background-image: linear-gradient(22deg, transparent, #514141ab);
+    background-image: linear-gradient(22deg, #2be7ec, #007dff);
     z-index: 1;
 }
 
@@ -100,5 +100,5 @@ body {
     position: sticky;
     bottom: 0;
     border-top: solid 1px #0000005c;
-    background-image: linear-gradient(200deg, transparent, #514141ab);
+    background-image: linear-gradient(187deg, #ffffff, #4f6c9c);
 }
