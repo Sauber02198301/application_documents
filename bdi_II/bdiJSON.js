@@ -233,8 +233,36 @@ const bdiLibrary = {
                     "classList": "paragraph_bdi_intro",
                     "addClassList": ["article_p_zero"],
                     "createText": "Ich verstecke meine frühen Entwürfe nicht, denn genau an diesem Kontrast sieht man meine Entwicklung am besten: Wie aus endlosen, starr verschachtelten Abfragen Schritt für Schritt ein durchdachtes System mit klaren Bauplänen und strikter Trennung von Daten (bdiJSON.js) und Logik (renderringBDI_II_function.js) entstanden ist."
-
                 }
+                /*
+                    Ich hatte was anderes im kopf aber egal, ich schreibe mir das mal auf gerade
+                    ich wollte eigentlich eine function bauen die das content ueber geben bekommt!
+
+                    function_article(content, parentDom) {
+                        console.log(content, parentDom);
+                        if (!content || !parentDom) { return; };
+                        // hier kommt noch ein for of hin wenn diese mehrere elemente hat als nur einen
+                        const {classList: classElement = null, addClassList = null, children = *Ich habe mal gesehen wie man das children element weiter extrarieren kann wenn das kann*} = content
+
+                        const articleObject = {
+                            "createElement": "article",
+                            "classList": `${classElement}`,
+                            "addClassList": `${addClassList}`,
+                            "children": [
+                                {
+                                    "createElement": "article",
+                                    "classList": `${classElement}`,
+                                    "addClassList": `${addClassList}`,
+                                    "createText": ``${createText},
+                                    u.s.w
+                                }
+                            ]
+                        }
+
+                    }
+
+                */
+
             ]
         }
     ],
