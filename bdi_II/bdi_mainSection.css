@@ -76,6 +76,8 @@ body {
 
 .bdi_header_section_intro {
     grid-area: header;
+    position: sticky;
+    top: 0;
     border-bottom: solid 1px #f0a3a345;
     background-image: linear-gradient(22deg, transparent, #514141ab);
     z-index: 1;
@@ -95,6 +97,8 @@ body {
 
 .bdi_footer_section {
     grid-area: footer;
+    position: sticky;
+    bottom: 0;
     border-top: solid 1px #0000005c;
     background-image: linear-gradient(200deg, transparent, #514141ab);
 }

@@ -67,6 +67,16 @@ const renderingFunction_object = {
     createTextFunction(textContent, html_element) {
         console.log(textContent, html_element);
         if (!textContent) { return };
+        if (Array.isArray(textContent)) {
+            console.log(textContent);
+            for (const extr_text of textContent) {
+                console.log(extr_text);
+                const textNode = document.createTextNode(textContent);
+                html_element.appendChild(textNode);
+                continue;
+            }
+            return
+        }
         const textNode = document.createTextNode(textContent);
         html_element.appendChild(textNode);
 
