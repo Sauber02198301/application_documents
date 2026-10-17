@@ -31,6 +31,7 @@
 
     .bdi_leftSide {
         grid-area: leftSide;
+        flex-direction: row;
         border-right: none;
         border-bottom: solid 1px #000000;
     }
@@ -41,6 +42,7 @@
 
     .bdi_rightSide {
         grid-area: rightSide;
+        flex-direction: row;
         border-left: none;
         border-top: solid 1px #000000;
     }

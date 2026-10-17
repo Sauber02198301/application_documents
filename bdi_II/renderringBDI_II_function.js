@@ -21,6 +21,15 @@ const renderingFunction_object = {
 
     },
 
+    destructChild_contentFunction(children, parentDom) {
+        console.log(children, parentDom);
+        if (!children || !parentDom) { return };
+        const childObject = bdiLibrary[children] || children;
+        console.log(childObject);
+        this.rendering_functionSystem(childObject, parentDom);
+        return;
+
+    },
 
     createHTML_element_func(htmlTag) {
         if (!htmlTag) { return };
@@ -30,14 +39,19 @@ const renderingFunction_object = {
         return html_element;
     },
 
-    addClass_func(html_element, classSet) {
-        //console.log(html_element, classSet);
+    addClass_func(html_element, classSet, addClassList) {
+        console.log(html_element, classSet, addClassList);
         if (!classSet) { return };
         html_element.classList = '';
         //console.log(html_element, classSet);
-        const class_array = bdiLibrary.classList_main[classSet];
+        const class_array = bdiLibrary.classList_main[classSet] || bdiLibrary.classList_header[classSet] || bdiLibrary.classListText_icon[classSet] || bdiLibrary.classList_mainChildren[classSet] || null;
         console.log(class_array);
+        if (!class_array) { return; }
         html_element.classList.add(...class_array);
+        if (!addClassList) { return };
+        const add = bdiLibrary.classListText_icon[addClassList] || addClassList || null;
+        if (!add) { return };
+        html_element.classList.add(...add);
         console.log(html_element);
 
     },
@@ -50,12 +64,20 @@ const renderingFunction_object = {
 
     },
 
+    createTextFunction(textContent, html_element) {
+        console.log(textContent, html_element);
+        if (!textContent) { return };
+        const textNode = document.createTextNode(textContent);
+        html_element.appendChild(textNode);
+
+    },
+
     rendering_functionSystem(htmlObject, parentBody) {
         console.log(htmlObject, parentBody);
         if (!parentBody || !htmlObject) { return };
         if (!Array.isArray(htmlObject)) {
 
-            renderingFunction_object(Array(htmlObject), parentBody);
+            this.rendering_functionSystem(Array(htmlObject), parentBody);
             return;
         }
 
@@ -66,13 +88,16 @@ const renderingFunction_object = {
 
         for (const extObject of htmlObject) {
             //console.log(extObject);
-            const { createElement: htmlTag, classList: classSet } = extObject;
+            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, children = null, createText: textContent = null } = extObject;
 
-            //console.log(htmlTag, classSet);
+            console.log(children, addClassList);
             const html_element = this.createHTML_element_func(htmlTag);
-            this.addClass_func(html_element, classSet);
+            this.addClass_func(html_element, classSet, addClassList);
             console.log(html_element);
+            this.createTextFunction(textContent, html_element);
             this.appendFunct(html_element, parentBody);
+
+            this.destructChild_contentFunction(children, html_element);
 
         };
 

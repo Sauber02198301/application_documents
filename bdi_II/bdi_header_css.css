@@ -1,0 +1,45 @@
+.headerChild {
+    align-items: center;
+    justify-content: center;
+}
+
+/* spezischewerte*/
+
+.logosetHeading {
+    padding-left: 2em;
+    gap: 1.5em;
+    z-index: 2;
+    background-image: linear-gradient(93deg, #3792af, #ffffff78);
+    border: solid 1px #008b8b;
+    border-radius: 6px;
+    margin: 1.7em;
+}
+
+.psychiatry_h1_style {
+    font-family: 'Belanosima', sans-serif;
+    font-size: 2.8rem;
+    text-shadow: 0px 1px 0px #000000, 0px -1px 0px #000000, -1px 0px 0px #000000, 1px 0px 0px #000000;
+    color: rgb(245, 240, 235);
+    padding-right: 0.3em;
+}
+
+.psychiatry_h1_style::before {
+    content: '-';
+    padding-left: 0.2em;
+    padding-right: 0.3em;
+}
+
+.psy_iconStyle {
+    position: relative;
+    font-size: 4rem;
+    padding: 0.13em;
+}
+
+.psy_iconStyle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: solid 2px #ffffff;
+    transform: rotate(45deg);
+    pointer-events: none;
+}

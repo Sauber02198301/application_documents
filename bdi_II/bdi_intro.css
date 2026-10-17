@@ -1,0 +1,10 @@
+.display_section {
+    justify-content: center;
+    height: 100%;
+}
+
+.bdiBoxStyle {
+    background-image: linear-gradient(327deg, #2c3654d9, #00b7f3b5, #5f64a0a8, #2c3654d9);
+    min-width: 80%;
+    min-height: 80%;
+}
