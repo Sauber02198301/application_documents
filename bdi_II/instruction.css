@@ -17,6 +17,8 @@
 
 .instruction_article {
     gap: 1em;
+    justify-content: space-evenly;
+    width: 90ch;
 }
 
 .instruction_footer {
