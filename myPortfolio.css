@@ -6,6 +6,11 @@
     flex-direction: column;
     gap: 2.6em;
     border-bottom: solid 1px #c0c0c0c4;
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset -11px -11px 32px 10px rgba(0, 0, 0, 0);
+    border-top-right-radius: 75px;
+    border-bottom-left-radius: 75px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .portfolio_h1_style {
