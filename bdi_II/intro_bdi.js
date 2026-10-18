@@ -3,12 +3,12 @@
 const instruction_sheet = [
     {
         "createElement": "div",
-        "classList": "bdi_Box_ins",
+        "classList": "bdi_Box_ins_column",
         "addClassList": ["instruction", "instructionStyle"],
         "children": [
             {
                 "createElement": "header",
-                "classList": "header_section_ins",
+                "classList": "bdi_Box_ins_column",
                 "addClassList": ["instruction_header", "instruction_headerStyle"],
                 "children": [
                     {
@@ -27,28 +27,51 @@ const instruction_sheet = [
             },
             {
                 "createElement": "main",
-                "classList": "main_section_ins",
+                "classList": "bdi_Box_ins_column",
                 "addClassList": ["instruction_main", "instruction_main"],
                 "children": [
                     {
                         "createElement": "article",
-                        "classList": "article_section_ins",
+                        "classList": "bdi_Box_ins_column",
                         "addClassList": ["instruction_article", "instruction_articleStyle"],
                         "children": [
                             // wenn das Programm lauft kann ich ja screenShots anfertigen wie das system genutzt wird 
                             {
-                                "content": {
-                                    "createText": [
-                                        "Dieser Fragebogen besteht aus 21 Gruppen von Aussagen. Bitte lies jede Gruppe sorgfältig durch und wähle die Aussage aus, die am besten beschreibt, wie du dich in den letzten zwei Wochen – einschließlich heute – gefühlt hast.",
-                                        "So funktioniert die Steuerung ohne Weiter-Button: Beim ersten Klick auf einen Auswahlpunkt (Radio-Button) wird deine Antwort markiert. Mit einem zweiten Klick auf denselben Punkt bestätigst du deine Wahl und springst automatisch zur nächsten Frage.",
-                                        "Du kannst den Durchlauf jederzeit über den Button ‚Abbrechen / Schließen‘ beenden und kehrst dann direkt zur Projekt-Übersicht zurück."
-                                    ],
-                                    "classList": "para_text_ins",
-                                    "addClassList": ["instruction_para", "instruction_paraStyle"],
-                                },
-                                "functionsCall": "create_textPara_funct"
+                                "createElement": "p",
+                                "classList": "para_text_ins",
+                                "addClassList": ["instruction_para", "instruction_paraStyle"],
+                                "createText": [
+                                    "Dieser Fragebogen besteht aus 21 Gruppen von Aussagen. Bitte lies jede Gruppe sorgfältig durch und wähle die Aussage aus, die am besten beschreibt, wie du dich in den letzten zwei Wochen – einschließlich heute – gefühlt hast.",
+                                    "So funktioniert die Steuerung ohne Weiter-Button: Beim ersten Klick auf einen Auswahlpunkt (Radio-Button) wird deine Antwort markiert. Mit einem zweiten Klick auf denselben Punkt bestätigst du deine Wahl und springst automatisch zur nächsten Frage.",
+                                    "Du kannst den Durchlauf jederzeit über den Button ‚Abbrechen / Schließen‘ beenden und kehrst dann direkt zur Projekt-Übersicht zurück."
+                                ]
                             }
                         ]
+                    }
+                ]
+            },
+            {
+                "createElement": "footer",
+                "classList": "bdi_Box_ins_row",
+                "addClassList": ["instruction_footer", "instruction_footerStyle"],
+                "children": [
+                    {
+                        "createElement": "div",
+                        "classList": "bdi_Box_ins_row",
+                        "addClassList": ["instruction_div", "instruction_divZero"],
+
+                    },
+                    {
+                        "createElement": "div",
+                        "classList": "bdi_Box_ins_row",
+                        "addClassList": ["instruction_div", "instruction_divOne"],
+
+                    },
+                    {
+                        "createElement": "div",
+                        "classList": "div_section_ins",
+                        "addClassList": ["instruction_div", "instruction_divTwo"],
+
                     }
                 ]
             }

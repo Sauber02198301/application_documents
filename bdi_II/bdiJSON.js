@@ -32,8 +32,13 @@
 
 const bdiLibrary = {
 
-    // introText
-
+    "classListInstr": {
+        "bdi_Box_ins_column": ["flex_directin_column", "inst_container"],
+        "bdi_Box_ins_row": ["flex_directin_row", "inst_container"],
+        "text_font_h1": ["font_standardValue", "bdi_intruction_h1"],
+        "text_font_h2": ["font_standardValue", "bdi_instuction_h2"],
+        "para_text_ins": ["font_standardValue", "p_standartText"]
+    },
 
     //body klassen
 

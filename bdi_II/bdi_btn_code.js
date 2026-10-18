@@ -8,12 +8,23 @@ bdi_bodyDOM.addEventListener('click', (t) => {
 
     const click_bdi_prime = t.target.closest(`.${btn_primeKey}`);
 
-    if (click_bdi_prime && bdi_bodyDOM.closest(click_bdi_prime)) {
+    if (click_bdi_prime && bdi_bodyDOM.contains(click_bdi_prime)) {
 
-        switch(click_bdi_prime.datset.action) {
+        switch (click_bdi_prime.dataset.action) {
             case 'start_BDI':
                 console.log(click_bdi_prime);
-            break;
+                let booleanActive = renderingFunction_object.bdi_active_object.active;
+                console.log(booleanActive);
+                if (!booleanActive) {
+                    const parentDom = document.querySelector('.display_section');
+                    const metaObject = instruction_sheet;
+                    console.log(parentDom, metaObject);
+                    renderingFunction_object.function_activeBDI(true, metaObject, parentDom);
+                    return;
+                };
+
+
+                break;
 
             default: break;
         }

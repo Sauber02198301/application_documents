@@ -1,0 +1,24 @@
+.inst_container {
+    padding: 0.3em;
+    margin: 0.3em;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.instruction_header {
+    max-height: 15%;
+    max-width: 95%;
+    margin: 0.5em;
+    gap: 0.7em;
+    border-bottom: solid 1px #0000006e;
+}
+
+.instruction_article {
+    gap: 1em;
+}
+
+.instruction_footer {
+    max-height: 10%;
+}
