@@ -15,7 +15,7 @@
             'footer'
         ;
         grid-template-columns: 1fr;
-        grid-template-rows: 150px 70px 1fr 70px 70px;
+        grid-template-rows: 150px 90px 1fr 70px 70px;
     }
 
     .bdi_body_section_intro {
@@ -29,15 +29,66 @@
         border-bottom: solid 1px #000000;
     }
 
+    .psychiatry_h1_style {
+        font-size: 2.4rem;
+    }
+
     .bdi_leftSide {
         grid-area: leftSide;
-        flex-direction: row;
+        justify-content: center;
+        flex-direction: column;
         border-right: none;
         border-bottom: solid 1px #000000;
     }
 
     .bdi_mainSection {
         grid-area: main;
+    }
+
+    .display_section {
+        margin: 1em;
+        padding: 0.15em;
+    }
+
+    .startBtn {
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+        padding: 1em;
+    }
+
+    .article_box {
+        margin: 0.3em;
+        padding: 0.3em;
+        gap: 0.4em;
+    }
+
+    .header_article {
+        gap: 1em;
+    }
+
+    .bdi_intro_h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .bdi_fontStyle_p {
+        padding: 0.4em;
+        font-size: 1.225rem;
+        text-align: center;
+    }
+
+    .instruction_heading_h1 {
+        font-size: 2rem;
+    }
+
+    .instruction_heading_h2 {
+        font-size: 1.4rem;
+        padding-bottom: 0.45em;
+    }
+
+    .instruction_para {
+        text-align: center;
     }
 
     .bdi_rightSide {

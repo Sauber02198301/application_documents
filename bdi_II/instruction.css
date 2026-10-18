@@ -3,24 +3,60 @@
     margin: 0.3em;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
 }
 
 .instruction_header {
-    max-height: 15%;
-    max-width: 95%;
     margin: 0.5em;
     gap: 0.7em;
     border-bottom: solid 1px #0000006e;
 }
 
+.instruction_heading_h1 {
+    letter-spacing: 1px;
+    font-size: 2.7rem;
+    text-decoration: underline;
+}
+
+.instruction_heading_h2 {
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
 .instruction_article {
     gap: 1em;
     justify-content: space-evenly;
-    width: 90ch;
+}
+
+.instruction_para {
+    letter-spacing: 1px;
+    line-height: 1.3;
+    word-spacing: 1px;
+    font-size: 1.275rem;
+    border-bottom: solid 1px black;
+    padding-bottom: 1em;
+}
+
+.instruction_para:last-child {
+    border-bottom: none;
 }
 
 .instruction_footer {
     max-height: 10%;
+    align-items: center;
+}
+
+.instruction_div {
+    justify-content: flex-start;
+}
+
+.btn_secondary_ins {
+    border: none;
+}
+
+.btn_secondary_insStyle {
+    border-radius: 50px;
+    padding-bottom: 0.45em;
+    padding-top: 0.45em;
+    box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    font-size: 1.05rem;
 }

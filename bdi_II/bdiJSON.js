@@ -37,7 +37,10 @@ const bdiLibrary = {
         "bdi_Box_ins_row": ["flex_directin_row", "inst_container"],
         "text_font_h1": ["font_standardValue", "bdi_intruction_h1"],
         "text_font_h2": ["font_standardValue", "bdi_instuction_h2"],
-        "para_text_ins": ["font_standardValue", "p_standartText"]
+        "para_text_ins": ["font_standardValue", "p_standartText"],
+        "spanText": ["font_standardValue", "btn_text_style"],
+        "spanIcon": ["material-symbols-outlined", "btn_text_style"],
+        "inst_secondary_btn": ["flex_directin_column", "btn_secondary_ins", "btn_secondary_insStyle"]
     },
 
     //body klassen

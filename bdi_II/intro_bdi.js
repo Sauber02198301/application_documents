@@ -59,19 +59,85 @@ const instruction_sheet = [
                         "createElement": "div",
                         "classList": "bdi_Box_ins_row",
                         "addClassList": ["instruction_div", "instruction_divZero"],
-
+                        "children": [
+                            {
+                                "createElement": "button",
+                                "classList": "inst_secondary_btn",
+                                "addClassList": ["btn_zero"],
+                                "dataset": "testStart",
+                                "children": [
+                                    {
+                                        "createElement": "span",
+                                        "classList":"",
+                                        "addClassList": [],
+                                        "createText": ""
+                                    },
+                                    {
+                                        "createElement": "span",
+                                        "classList":"",
+                                        "addClassList": [],
+                                        "createText": "start"
+                                    }
+                                ]
+                            },
+                            
+                        ]
                     },
                     {
                         "createElement": "div",
                         "classList": "bdi_Box_ins_row",
                         "addClassList": ["instruction_div", "instruction_divOne"],
-
+                        "children": [
+                            {
+                                "createElement": "button",
+                                "classList": "inst_secondary_btn",
+                                "addClassList": ["btn_one"],
+                                "dataset": "stepBack",
+                                "children": [
+                                    {
+                                        "createElement": "span",
+                                        "classList":"",
+                                        "addClassList": [],
+                                        "createText": ""
+                                    },
+                                    {
+                                        "createElement": "span",
+                                        "classList":"",
+                                        "addClassList": [],
+                                        "createText": "Zurück"
+                                    }
+                                ]
+                            },
+                            
+                        ]
                     },
                     {
                         "createElement": "div",
-                        "classList": "div_section_ins",
+                        "classList": "bdi_Box_ins_row",
                         "addClassList": ["instruction_div", "instruction_divTwo"],
-
+                        "children": [
+                            {
+                                "createElement": "button",
+                                "classList": "inst_secondary_btn",
+                                "addClassList": ["btn_two"],
+                                "dataset": "close",
+                                "children": [
+                                    {
+                                        "createElement": "span",
+                                        "classList":"",
+                                        "addClassList": [],
+                                        "createText": ""
+                                    },
+                                    {
+                                        "createElement": "span",
+                                        "classList":"",
+                                        "addClassList": [],
+                                        "createText": "Schließen / Abbrechen"
+                                    }
+                                ]
+                            },
+                            
+                        ]
                     }
                 ]
             }

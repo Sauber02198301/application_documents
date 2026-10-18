@@ -7,7 +7,7 @@ const renderingFunction_object = {
 
     },
 
-    removeChildFunction (parentDom) {
+    removeChildFunction(parentDom) {
         console.log(parentDom);
         if (parentDom.innerHTML.trim() !== '') {
             console.log('dom ist voll');
@@ -26,7 +26,7 @@ const renderingFunction_object = {
             this.bdi_active_object.active = activeBoolean;
             console.log(activeBoolean, metaObject, parentDom);
             this.removeChildFunction(parentDom);
-            this.rendering_functionSystem(metaObject,parentDom);
+            this.rendering_functionSystem(metaObject, parentDom);
 
         } else if (activeBoolean === this.bdi_active_object.active) {
             this.bdi_active_object.active = false;
@@ -88,19 +88,27 @@ const renderingFunction_object = {
     createTextFunction(textContent, html_element, parentBody) {
         //console.log(textContent, html_element);
         if (!textContent) { return };
-        if (Array.isArray(textContent)) {
+        if (!Array.isArray(textContent)) {
+            const textNode = document.createTextNode(textContent);
+            html_element.appendChild(textNode);
+            return;
+        } else {
             //console.log(textContent);
-            for (const extr_text of textContent) {
+            textContent.forEach((textContent, index) => {
                 const copy_html_element = html_element.cloneNode(false);
-                //console.log(extr_text);
-                const textNode = document.createTextNode(extr_text);
+                console.log(textContent, index);
+                const textNode = document.createTextNode(textContent);
                 copy_html_element.appendChild(textNode);
-                this.appendFunct(copy_html_element,parentBody);
-            };
-            return
-        }
-        const textNode = document.createTextNode(textContent);
-        html_element.appendChild(textNode);
+                this.appendFunct(copy_html_element, parentBody);
+                /*
+                    ist mir eben gar nicht aufgefallen ich habe ein p tag zu viel statt 3 habe ich 4
+                    meine vermutung das liegt an der rendering weil da ist ja noch eine function die wieder in das dom schiebt damit kommt der 4 
+                    1. baue ich mir jetzt zwei unterschiedliche functionen?  
+                */
+            });
+
+            return;
+        };
 
     },
 
@@ -125,8 +133,9 @@ const renderingFunction_object = {
             //console.log(html_element);
             this.createData_instruction(html_element, dataTyp);
             this.createTextFunction(textContent, html_element, parentBody);
+            if (Array.isArray(textContent)) { continue }
             this.appendFunct(html_element, parentBody);
-
+            
             this.destructChild_contentFunction(children, html_element);
 
         };
