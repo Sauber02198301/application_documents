@@ -77,7 +77,7 @@ const instruction_sheet = [
                                         "createElement": "span",
                                         "classList":"spanIcon",
                                         "addClassList": ["btn_icon_start"],
-                                        "createText": "start"
+                                        "createText": "Start"
                                     }
                                 ]
                             },
