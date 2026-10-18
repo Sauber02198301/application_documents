@@ -39,6 +39,13 @@ const renderingFunction_object = {
         return html_element;
     },
 
+    createData_instruction(html_element, dataTyp) {
+        console.log(html_element, dataTyp);
+        if (!html_element || !dataTyp) { return };
+
+        html_element.dataset.action = dataTyp;
+    },
+
     addClass_func(html_element, classSet, addClassList) {
         console.log(html_element, classSet, addClassList);
         if (!classSet) { return };
@@ -98,12 +105,13 @@ const renderingFunction_object = {
 
         for (const extObject of htmlObject) {
             //console.log(extObject);
-            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, children = null, createText: textContent = null } = extObject;
+            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, children = null, dataset: dataTyp = null, createText: textContent = null } = extObject;
 
             console.log(children, addClassList);
             const html_element = this.createHTML_element_func(htmlTag);
             this.addClass_func(html_element, classSet, addClassList);
             console.log(html_element);
+            this.createData_instruction(html_element, dataTyp);
             this.createTextFunction(textContent, html_element);
             this.appendFunct(html_element, parentBody);
 
