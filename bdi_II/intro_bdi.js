@@ -43,7 +43,8 @@ const instruction_sheet = [
                                 "createText": [
                                     "Dieser Fragebogen besteht aus 21 Gruppen von Aussagen. Bitte lies jede Gruppe sorgfältig durch und wähle die Aussage aus, die am besten beschreibt, wie du dich in den letzten zwei Wochen – einschließlich heute – gefühlt hast.",
                                     "So funktioniert die Steuerung ohne Weiter-Button: Beim ersten Klick auf einen Auswahlpunkt (Radio-Button) wird deine Antwort markiert. Mit einem zweiten Klick auf denselben Punkt bestätigst du deine Wahl und springst automatisch zur nächsten Frage.",
-                                    "Du kannst den Durchlauf jederzeit über den Button ‚Abbrechen / Schließen‘ beenden und kehrst dann direkt zur Projekt-Übersicht zurück."
+                                    "Du kannst den Durchlauf jederzeit über den Button ‚Abbrechen / Schließen‘ beenden und kehrst dann direkt zur Projekt-Übersicht zurück.",
+                                    "Dieser Fragebogen hilft dir dabei, deine aktuelle Stimmung besser einzuschätzen. Bitte beantworte alle Fragen ehrlich und beziehe dich dabei auf dein Befinden in den letzten zwei Wochen. Wichtig: Dieser Test dient lediglich als grober Richtwert und ist nicht zur Selbstdiagnose geeignet. Er ersetzt keinen Besuch bei einem Arzt oder Psychotherapeuten. Solltest du dich in einer Krise befinden, suche dir bitte umgehend professionelle Hilfe."
                                 ]
                             }
                         ]
@@ -68,14 +69,14 @@ const instruction_sheet = [
                                 "children": [
                                     {
                                         "createElement": "span",
-                                        "classList":"",
-                                        "addClassList": [],
-                                        "createText": ""
+                                        "classList":"spanText",
+                                        "addClassList": ["textStart"],
+                                        "createText": "start"
                                     },
                                     {
                                         "createElement": "span",
-                                        "classList":"",
-                                        "addClassList": [],
+                                        "classList":"spanIcon",
+                                        "addClassList": ["btn_icon_start"],
                                         "createText": "start"
                                     }
                                 ]
@@ -96,15 +97,15 @@ const instruction_sheet = [
                                 "children": [
                                     {
                                         "createElement": "span",
-                                        "classList":"",
-                                        "addClassList": [],
-                                        "createText": ""
+                                        "classList":"spanText",
+                                        "addClassList": ["text_back"],
+                                        "createText": "Zurück"
                                     },
                                     {
                                         "createElement": "span",
-                                        "classList":"",
-                                        "addClassList": [],
-                                        "createText": "Zurück"
+                                        "classList":"spanIcon",
+                                        "addClassList": ["back"],
+                                        "createText": "arrow_back"
                                     }
                                 ]
                             },
@@ -124,15 +125,15 @@ const instruction_sheet = [
                                 "children": [
                                     {
                                         "createElement": "span",
-                                        "classList":"",
-                                        "addClassList": [],
-                                        "createText": ""
+                                        "classList":"spanText",
+                                        "addClassList": ["close"],
+                                        "createText": "Schließen / Abbrechen"
                                     },
                                     {
                                         "createElement": "span",
-                                        "classList":"",
-                                        "addClassList": [],
-                                        "createText": "Schließen / Abbrechen"
+                                        "classList":"spanIcon",
+                                        "addClassList": ["closeText"],
+                                        "createText": "cancel"
                                     }
                                 ]
                             },

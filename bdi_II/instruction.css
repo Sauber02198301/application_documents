@@ -1,14 +1,19 @@
 .inst_container {
     padding: 0.3em;
     margin: 0.3em;
-    justify-content: center;
-    align-items: center;
+}
+
+.instruction {
+    gap: 4em;
 }
 
 .instruction_header {
     margin: 0.5em;
     gap: 0.7em;
     border-bottom: solid 1px #0000006e;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.5em;
 }
 
 .instruction_heading_h1 {
@@ -43,6 +48,7 @@
 .instruction_footer {
     max-height: 10%;
     align-items: center;
+    justify-content: space-around;
 }
 
 .instruction_div {
@@ -55,6 +61,9 @@
 
 .btn_secondary_insStyle {
     border-radius: 50px;
+    gap: 1em;
+    padding: 1em;
+    align-items: center;
     padding-bottom: 0.45em;
     padding-top: 0.45em;
     box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0, 0, 0, 0);

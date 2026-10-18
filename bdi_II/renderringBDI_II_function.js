@@ -29,8 +29,10 @@ const renderingFunction_object = {
             this.rendering_functionSystem(metaObject, parentDom);
 
         } else if (activeBoolean === this.bdi_active_object.active) {
-            this.bdi_active_object.active = false;
-
+            this.bdi_active_object.active = activeBoolean;
+            
+            this.removeChildFunction(parentDom);
+            this.rendering_functionSystem(metaObject, parentDom);
         };
 
     },
