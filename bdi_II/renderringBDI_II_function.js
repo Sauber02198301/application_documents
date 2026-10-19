@@ -4,7 +4,7 @@ const renderingFunction_object = {
 
     bdi_active_object: {
         active: false,
-
+        test_active: false,
     },
 
     removeChildFunction(parentDom) {
@@ -34,6 +34,23 @@ const renderingFunction_object = {
             this.removeChildFunction(parentDom);
             this.rendering_functionSystem(metaObject, parentDom);
         };
+
+    },
+
+    function_activeBDI_test (activeBoolean , bdi_question, bdi_object_prop, display_bdi) {
+
+        let boolean_bdi_active = this.bdi_active_object.active;
+        let boolean_activeBDI_test = this.bdi_active_object.test_active;
+        console.log(boolean_bdi_active, boolean_activeBDI_test);
+        console.log(activeBoolean, bdi_question, bdi_object_prop, display_bdi);
+        if (activeBoolean !== this.bdi_active_object.test_active && this.bdi_active_object.active) {
+            this.bdi_active_object.test_active = activeBoolean;
+
+        } else if (activeBoolean === this.bdi_active_object.test_active && !this.bdi_active_object.active) {
+            this.bdi_active_object.test_active = activeBoolean;
+
+        }
+
 
     },
 

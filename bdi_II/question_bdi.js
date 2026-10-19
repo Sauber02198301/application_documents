@@ -68,8 +68,10 @@ const question_bdi = [
         "createElement": "form",
         "classList": "questionForm",
         "addClassList": ["questinMain_radio"],
+        "content": bdi_question[0].answer,
         "children": [
             // hier muss ich mit einer for loop arbeiten das ich children immer nach der anzahl von answer reproduziere
+            //Ich ueberlege gerade ob es nicht sogar besser hier zwei ebenen zu bauen! Das sehe ich gleich wenn ich die function dafuer baue. 
             {
                 "createElement": "input",
                 "classList": "questionInput",

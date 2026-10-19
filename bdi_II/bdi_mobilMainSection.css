@@ -90,6 +90,10 @@
     .instruction_para {
         text-align: center;
     }
+    
+    .instruction_footer {
+        flex-direction: column;
+    }
 
     .bdi_rightSide {
         grid-area: rightSide;

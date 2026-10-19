@@ -32,7 +32,7 @@ bdi_bodyDOM.addEventListener('click', (t) => {
     };
 
     if (click_ins_secondary && bdi_bodyDOM.contains(click_ins_secondary)) {
-
+        
         switch (click_ins_secondary.dataset.action) {
 
             case 'close':
@@ -40,12 +40,21 @@ bdi_bodyDOM.addEventListener('click', (t) => {
                 let booleanActive = renderingFunction_object.bdi_active_object.active;
                 if (booleanActive) {
                     console.log(click_ins_secondary);
-                    const parentDom = document.querySelector('.display_section');
                     const metaObject = bdiLibrary.article_bdi;
-
+                    const parentDom = document.querySelector('.display_section');
                     renderingFunction_object.function_activeBDI(false, metaObject, parentDom);
                 }
+                break
+            case 'testStart':
 
+                    if (renderingFunction_object.bdi_active_object.active && !renderingFunction_object.bdi_active_object.test_active) {
+                        console.log(click_ins_secondary);
+                        const displayBDI_test = document.querySelector('.display_bdi_section');
+                        const questionBDI = bdi_question;
+                        const questionObject = question_bdi
+                        console.log(displayBDI_test, questionBDI, questionObject);
+                        renderingFunction_object.function_activeBDI_test(true, questionBDI, questionObject, displayBDI_test);
+                    };
 
                 break;
             default: break;
