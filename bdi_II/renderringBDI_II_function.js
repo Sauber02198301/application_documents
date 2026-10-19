@@ -19,10 +19,37 @@ const renderingFunction_object = {
 
     },
 
-    unpackage_bdiFunction (bdi_question, bdi_object_prop, setup, answer_content, display_bdi) {
-        console.log(bdi_question, bdi_object_prop, setup,answer_content, display_bdi);
+    lableCreateFunction(content, answer, parentDom) {
+        console.log(answer, content, parentDom);
+        const formDom = document.querySelector(parentDom);
+        const arrayList = [];
+        console.log(formDom);
+        if (!Array.isArray(content)) { Array(content) };
+        content.forEach((content, a_index) => {
+            console.log(content, a_index);
+            const { createText: text = null, points = null } = content;
+            const copy_answer = structuredClone(answer);
+
+            copy_answer.children[0].value = String(points);
+            copy_answer.children[1].createText = text;
+            copy_answer.children[2].createText = `${points} Punkte`;
+            // ich glaube das input muss in einen label oder ich brauche noch das for dafuer weil es lassen sich alle anklicken das hatte ich schonmal das weis ich. Ich meine das lag am for kann auch an der reihen folge liegen. 
+
+            arrayList.push(copy_answer);
+
+        });
+        console.log(arrayList);
+        this.rendering_functionSystem(arrayList, formDom);
+    },
+
+    unpackage_bdiFunction(bdi_question, bdi_object_prop, answer_content, setup, display_bdi) {
+        console.log(bdi_question, bdi_object_prop, answer_content, setup, display_bdi);
+
+        const { content, answer, parentDom } = answer_content;
+        console.log(content, answer);
 
         this.rendering_functionSystem(bdi_object_prop, display_bdi);
+        this.lableCreateFunction(content, answer, parentDom);
     },
 
     function_activeBDI(activeBoolean, metaObject, parentDom) {
@@ -42,7 +69,7 @@ const renderingFunction_object = {
 
     },
 
-    function_activeBDI_test (activeBoolean , bdi_question, bdi_object_prop, setup, answer_content, display_bdi) {
+    function_activeBDI_test(activeBoolean, bdi_question, bdi_object_prop, answer_content, setup, display_bdi) {
 
         let boolean_bdi_active = this.bdi_active_object.active;
         let boolean_activeBDI_test = this.bdi_active_object.test_active;
@@ -51,7 +78,7 @@ const renderingFunction_object = {
         if (activeBoolean !== this.bdi_active_object.test_active && this.bdi_active_object.active) {
             this.bdi_active_object.test_active = activeBoolean;
             this.removeChildFunction(display_bdi);
-            this.unpackage_bdiFunction(bdi_question, bdi_object_prop, setup, answer_content, display_bdi);
+            this.unpackage_bdiFunction(bdi_question, bdi_object_prop, answer_content, setup, display_bdi);
 
         } else if (activeBoolean === this.bdi_active_object.test_active && !this.bdi_active_object.active) {
             this.bdi_active_object.test_active = activeBoolean;
@@ -77,6 +104,23 @@ const renderingFunction_object = {
         //console.log(html_element);
 
         return html_element;
+    },
+
+    toInsertValue(valueNumber, html_element) {
+        if (!valueNumber) { return };
+        console.log(valueNumber, html_element);
+        html_element.value = Number(valueNumber);
+    },
+
+    toInsert_type(typeSet, html_element) {
+        if (!typeSet) { return };
+        console.log(typeSet, html_element);
+        html_element.type = typeSet
+    },
+
+    toInsert_name(nameInput, html_element) {
+        if (!nameInput) { return };
+        html_element.name = nameInput
     },
 
     createData_instruction(html_element, dataTyp) {
@@ -151,17 +195,20 @@ const renderingFunction_object = {
         */
         for (const extObject of htmlObject) {
             //console.log(extObject);
-            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, children = null, dataset: dataTyp = null, createText: textContent = null } = extObject;
+            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, children = null, dataset: dataTyp = null, type = null, name: nameInput = null, value: valueNumber = null, createText: textContent = null } = extObject;
 
             //console.log(children, addClassList);
             const html_element = this.createHTML_element_func(htmlTag);
             this.addClass_func(html_element, classSet, addClassList);
             //console.log(html_element);
             this.createData_instruction(html_element, dataTyp);
+            this.toInsertValue(valueNumber, html_element);
+            this.toInsert_type(type, html_element);
+            this.toInsert_name(nameInput, html_element);
             this.createTextFunction(textContent, html_element, parentBody);
             if (Array.isArray(textContent)) { continue }
             this.appendFunct(html_element, parentBody);
-            
+
             this.destructChild_contentFunction(children, html_element);
 
         };

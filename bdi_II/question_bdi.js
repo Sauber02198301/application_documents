@@ -143,7 +143,7 @@ const question_bdi = [
 ];
 
 const answer_bdiQuest = {
-    // document.querySelector('.form_container')
+    "parentDom": ".form_container",
     "content": bdi_question[bdi_setup.indexBDI].answer,
     "answer": {
         "createElement": "label",
@@ -155,11 +155,18 @@ const answer_bdiQuest = {
                 "classList": "questionInput",
                 "addClassList": ["questinMain_radio"],
                 "type": "radio",
+                "name": "answer",
                 "value": "",
             },
             {
                 "createElement": "span",
-                "classList": "",
+                "classList": "questionText",
+                "addClassList": ["answer_inputSpan"],
+                "createText": ""
+            },
+            {
+                "createElement": "span",
+                "classList": "questionText",
                 "addClassList": ["answer_inputSpan"],
                 "createText": ""
             }

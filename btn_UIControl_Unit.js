@@ -85,7 +85,7 @@ body_section.addEventListener('click', (t) => {
 
 
         if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-            content.style.maxHeight = content.scrollHeight = 'px';
+            content.style.maxHeight = content.scrollHeight + 'px';
 
             requestAnimationFrame(() => {
                 content.style.maxHeight = null;

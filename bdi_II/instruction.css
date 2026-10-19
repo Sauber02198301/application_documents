@@ -46,9 +46,11 @@
 }
 
 .instruction_footer {
-    max-height: 10%;
+    padding: 0.5em;
+    margin: 1em;
     align-items: center;
     justify-content: space-around;
+    border-top: solid 1px #00000099;
 }
 
 .instruction_div {

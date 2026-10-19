@@ -3,4 +3,26 @@
     padding: 0.5em;
     gap: 1em;
     text-align: center;
+    border-bottom: solid 1px #00000099;
+}
+
+.form_container {
+    padding: 0.5em;
+    margin: 1em;
+    gap: 4em;
+    height: 280px;
+}
+
+.label_container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answer_inputSpan {
+    font-size: 1.223rem;
+}
+
+.input_bdi {
+    width: 25px;
+    height: 20px;
 }
