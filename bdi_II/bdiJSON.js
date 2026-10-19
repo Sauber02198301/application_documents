@@ -34,6 +34,8 @@ const bdiLibrary = {
 
     "classListInstr": {
         "bdi_master_container": ["flex_directin_column", "display_bdi_section"],
+        "questionHeader": ["flex_directin_column", "heading_bdi_test"],
+        "questionForm": ["flex_directin_column", "form_container"],
         "bdi_Box_ins_column": ["flex_directin_column", "inst_container"],
         "bdi_Box_ins_row": ["flex_directin_row", "inst_container"],
         "text_font_h1": ["font_standardValue", "bdi_intruction_h1"],

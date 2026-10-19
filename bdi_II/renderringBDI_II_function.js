@@ -19,6 +19,12 @@ const renderingFunction_object = {
 
     },
 
+    unpackage_bdiFunction (bdi_question, bdi_object_prop, setup, answer_content, display_bdi) {
+        console.log(bdi_question, bdi_object_prop, setup,answer_content, display_bdi);
+
+        this.rendering_functionSystem(bdi_object_prop, display_bdi);
+    },
+
     function_activeBDI(activeBoolean, metaObject, parentDom) {
         // activeBoolean = fals || true, metaObject = das zu bearbeitende object, parentDom = das zu loschende dom & gleichzeitg das ziel;
         //console.log(activeBoolean, metaObject, parentDom);
@@ -30,14 +36,13 @@ const renderingFunction_object = {
 
         } else if (activeBoolean === this.bdi_active_object.active) {
             this.bdi_active_object.active = activeBoolean;
-            
             this.removeChildFunction(parentDom);
             this.rendering_functionSystem(metaObject, parentDom);
         };
 
     },
 
-    function_activeBDI_test (activeBoolean , bdi_question, bdi_object_prop, display_bdi) {
+    function_activeBDI_test (activeBoolean , bdi_question, bdi_object_prop, setup, answer_content, display_bdi) {
 
         let boolean_bdi_active = this.bdi_active_object.active;
         let boolean_activeBDI_test = this.bdi_active_object.test_active;
@@ -45,6 +50,8 @@ const renderingFunction_object = {
         console.log(activeBoolean, bdi_question, bdi_object_prop, display_bdi);
         if (activeBoolean !== this.bdi_active_object.test_active && this.bdi_active_object.active) {
             this.bdi_active_object.test_active = activeBoolean;
+            this.removeChildFunction(display_bdi);
+            this.unpackage_bdiFunction(bdi_question, bdi_object_prop, setup, answer_content, display_bdi);
 
         } else if (activeBoolean === this.bdi_active_object.test_active && !this.bdi_active_object.active) {
             this.bdi_active_object.test_active = activeBoolean;

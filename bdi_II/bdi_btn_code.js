@@ -42,6 +42,7 @@ bdi_bodyDOM.addEventListener('click', (t) => {
                     console.log(click_ins_secondary);
                     const metaObject = bdiLibrary.article_bdi;
                     const parentDom = document.querySelector('.display_section');
+                    renderingFunction_object.bdi_active_object.test_active = false;
                     renderingFunction_object.function_activeBDI(false, metaObject, parentDom);
                 }
                 break
@@ -52,8 +53,10 @@ bdi_bodyDOM.addEventListener('click', (t) => {
                         const displayBDI_test = document.querySelector('.display_bdi_section');
                         const questionBDI = bdi_question;
                         const questionObject = question_bdi
+                        const setup = {...bdi_setup};
+                        const answerContent = answer_bdiQuest;
                         console.log(displayBDI_test, questionBDI, questionObject);
-                        renderingFunction_object.function_activeBDI_test(true, questionBDI, questionObject, displayBDI_test);
+                        renderingFunction_object.function_activeBDI_test(true, questionBDI, questionObject ,answer_bdiQuest, setup, displayBDI_test);
                     };
 
                 break;
