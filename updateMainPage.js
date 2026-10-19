@@ -597,7 +597,7 @@ const mainContent = {
                                                                         },
                                                                         {
                                                                             "createElement": "div",
-                                                                            "classList": ["flex", "galleryTextBox", "paraAbout_section"],
+                                                                            "classList": ["flex", "galleryTextBox", "galleryTestStyle"],
                                                                             "children": [
                                                                                 {
                                                                                     "createElement": "h2",

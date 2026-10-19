@@ -5,12 +5,7 @@
     margin-top: 0.1em;
     flex-direction: column;
     gap: 2.6em;
-    border-bottom: solid 1px #c0c0c0c4;
-    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset -11px -11px 32px 10px rgba(0, 0, 0, 0);
-    border-top-right-radius: 75px;
-    border-bottom-left-radius: 75px;
-    border-bottom-right-radius: 10px;
-    border-top-left-radius: 10px;
+
 }
 
 .portfolio_h1_style {
@@ -29,9 +24,8 @@
 
 .header_collapsible {
     flex-direction: column;
-    align-items: center;
-    padding: 1em;
-    margin: 1em;
+    padding: 0.4em;
+    margin: 0.4em;
 }
 
 
@@ -46,10 +40,9 @@
 
 .h2CollapsibleFontStyle {
     text-decoration: underline;
-    padding: 0.4em;
-    margin: 0.4em;
-    background: #c0c0c075;
-    border: solid 1px #000000;
+    padding: 0.7em;
+    margin: 0.6em;
+    font-size: 1.175rem;
 }
 
 .portfolioBox {
@@ -62,11 +55,32 @@
 }
 
 .portBox00 {
-    align-items: center;
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset -11px -11px 32px 10px rgba(0, 0, 0, 0);
+    border-top-right-radius: 75px;
+    border-bottom-left-radius: 75px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.portBox01 {
+    border-bottom: solid 1px #c0c0c0c4;
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset -11px -11px 32px 10px rgba(0, 0, 0, 0);
+    border-top-right-radius: 75px;
+    border-bottom-left-radius: 75px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 1.5em;
 }
 
 .headerPortfolio {
     justify-content: center;
+    box-shadow: 5px 5px 5px 0px #000000, 7px 5px 11px 3px #ffffff8f, -6px -3px 9px 0px #ffffff8f, -2px 1px 20px 4px #ffffffc2, inset 4px 4px 15px 0px #000000, inset -11px -11px 32px 10px rgb(0 0 0 / 52%), inset -2px -3px 20px 1px #ffffffb5;
+    background: #25121266;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin: 0.4em;
 }
 
 .photoPortfolio_section {
@@ -94,10 +108,21 @@
     font-size: 1rem;
     font-weight: 800;
     letter-spacing: 0.8px;
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset -11px -11px 32px 10px rgba(0, 0, 0, 0);
+    font-size: 0.875rem;
+    font-weight: bold;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
 }
 
 .collapsibleBtn:hover {
     background-color: rgba(0, 0, 0, 0.421);
+    scale: 1.02;
+}
+
+.collapsibleBtn:active {
+    scale: 0.98;
 }
 
 .parentCollapsBtn {
@@ -124,8 +149,11 @@
 }
 
 .galleryBoxCollapsible_style {
-    border: solid 1px #c0c0c0;
+    border: solid 1px #000000;
     background: none;
+    border-radius: 10px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 5px 5px 5px 0px #00000080, inset 4px 4px 15px 0px #00000096, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .imgContainer {
@@ -158,7 +186,7 @@
     flex: 0 0 100%;
     /* Jedes Bild nimmt exakt 100% der Containerbreite ein */
     width: 100%;
-    height: 420px;
+    height: 340px;
     /* Deine gewünschte Zielhöhe */
     object-fit: cover;
     /* Füllt die Fläche sauber aus */
@@ -169,7 +197,10 @@
 }
 
 .portfolioImgStyle {
-    border: solid 1px rgba(192, 192, 192, 0.639);
+    border: solid 1px rgb(0 0 0 / 64%);
+    border-radius: 10px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 5px 5px 5px 0px #00000080, inset 4px 4px 15px 0px #00000096, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .galleryTextBox {
@@ -181,13 +212,17 @@
     padding: 1em;
 }
 
-.galleryTextBox_style {
-    border: solid 1px #c0c0c0;
+.galleryTestStyle {
+    background: #00000078;
+    border-radius: 10px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 5px 5px 5px 0px #00000080, inset 4px 4px 15px 0px #00000096, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .galleryText_h2 {
     padding: 0.5em;
     text-decoration: underline;
+    font-size: 1rem;
 }
 
 .header_area_style_h3 {
@@ -199,6 +234,13 @@
 .galleryParaSection {
     flex-direction: column;
 }
+
+/*.galleryParaSectionStyle {
+    background: #00000078;
+    border-radius: 10px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 5px 5px 5px 0px #00000080, inset 4px 4px 15px 0px #00000096, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}*/
 
 .galleryTextSpan {
     /*padding: 0.5em;*/
