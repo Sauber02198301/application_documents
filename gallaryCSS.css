@@ -15,39 +15,42 @@
 }
 
 .headerGalleryStyle {
-    border-bottom: solid 1px rgba(192, 192, 192, 0.601);
+    background-color: #473c3c;
+    box-shadow: 5px 5px 5px 0px #000000, -6px -3px 9px 0px #ffffff8f, -6px -3px 9px 0px #ffffff8f, -2px 1px 20px 4px #ffffffc2, inset 4px 4px 15px 0px #000000, inset -11px -11px 32px 10px rgb(0 0 0 / 52%), inset -2px -3px 20px 1px #ffffffb5;
+    border-top-left-radius: 75px;
+    border-bottom-right-radius: 75px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .heading_h1_gallery {
-    background: #c0c0c075;
-    border: solid 1px #000000;
-    align-self: center;
+    text-align: center;
 }
 
-.mainChildOne {
-    flex-direction: row;
-    gap: 1em;
-    align-items: flex-start;
-    /* Dies verhindert das der Text die Gallery nach unten zieht. Frage wie kann ich mir daraus eine faustformel machen wann was sinvoll ist*/
-    margin: 0.6em;
-    padding: 0.5em;
-}
+    .mainChildOne {
+        flex-direction: row;
+        gap: 1em;
+        align-items: flex-start;
+        /* Dies verhindert das der Text die Gallery nach unten zieht. Frage wie kann ich mir daraus eine faustformel machen wann was sinvoll ist*/
+        margin: 0.6em;
+        padding: 0.5em;
+    }
 
-.galleryTextContainer {
-    flex: 1;
-    /* Nimmt den verfuegbaren Platz neben den bildern ein. Was ist flex genau und was macht es.*/
-    flex-direction: column;
-    max-height: 550px;
-    /* Gleiche Hoehe wie der Bilder-Container. es wurde eben was wegen vh erklaert das hatte ich noch nicht. ich hatte dvh weil dies ist fuer hoehen d = dynamic vh ist denke ich mal die normale form?!*/
-}
+    .galleryTextContainer {
+        flex: 1;
+        /* Nimmt den verfuegbaren Platz neben den bildern ein. Was ist flex genau und was macht es.*/
+        flex-direction: column;
+        max-height: 550px;
+        /* Gleiche Hoehe wie der Bilder-Container. es wurde eben was wegen vh erklaert das hatte ich noch nicht. ich hatte dvh weil dies ist fuer hoehen d = dynamic vh ist denke ich mal die normale form?!*/
+    }
 
-.scroll_sett {
-    overflow-y: auto;
-    padding: 1.5em;
-    margin: 0.1em;
-}
+    .scroll_sett {
+        overflow-y: auto;
+        padding: 1.5em;
+        margin: 0.1em;
+    }
 
-.repair_elektrik {
-    padding: 0;
-    margin: 0;
-}
+    .repair_elektrik {
+        padding: 0;
+        margin: 0;
+    }

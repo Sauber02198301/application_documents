@@ -28,7 +28,6 @@
     margin: 0.4em;
 }
 
-
 .headingCont {
     margin: 0.2em;
     padding: 0.2em;
@@ -36,6 +35,17 @@
 
 .headingCont:last-child {
     border-bottom: none;
+}
+
+.heading_00 {
+    box-shadow: 5px 5px 5px 0px #000000, 7px 5px 11px 3px #ffffff8f, -6px -3px 9px 0px #ffffff8f, -2px 1px 20px 4px #ffffffc2, inset 4px 4px 15px 0px #000000, inset -11px -11px 32px 10px rgb(0 0 0 / 52%), inset -2px -3px 20px 1px #ffffffb5;
+    background: #25121266;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin: 0.8em;
+    padding: 0.6em;
 }
 
 .h2CollapsibleFontStyle {
@@ -60,6 +70,7 @@
     border-bottom-left-radius: 75px;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
+    padding: 1em;
 }
 
 .portBox01 {
@@ -229,6 +240,8 @@
     margin-top: 0.8em;
     padding: 0.7em;
     padding-left: 1.2em;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .galleryParaSection {
