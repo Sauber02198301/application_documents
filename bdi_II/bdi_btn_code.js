@@ -55,10 +55,8 @@ bdi_bodyDOM.addEventListener('click', (t) => {
                 if (renderingFunction_object.bdi_active_object.active && !renderingFunction_object.bdi_active_object.test_active) {
                     console.log(click_ins_secondary);
                     const displayBDI_test = document.querySelector('.display_bdi_section');
-                    
                     const questionBDI = bdi_question;
                     const questionObject = question_bdi
-
                     const answerContent = answer_bdiQuest;
                     console.log(displayBDI_test, questionBDI, questionObject);
                     renderingFunction_object.function_activeBDI_test(true, questionBDI, questionObject, answer_bdiQuest, displayBDI_test);

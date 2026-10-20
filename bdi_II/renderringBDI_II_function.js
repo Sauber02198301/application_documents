@@ -43,8 +43,8 @@ const renderingFunction_object = {
         this.rendering_functionSystem(arrayList, formDom);
     },
 
-    unpackage_bdiFunction(bdi_question, bdi_object_prop, answer_content, setup, display_bdi) {
-        console.log(bdi_question, bdi_object_prop, answer_content, setup, display_bdi);
+    unpackage_bdiFunction(bdi_question, bdi_object_prop, answer_content, display_bdi) {
+        console.log(bdi_question, bdi_object_prop, answer_content, display_bdi);
 
         const { content, answer, parentDom } = answer_content;
         console.log(content, answer);
@@ -70,7 +70,7 @@ const renderingFunction_object = {
 
     },
 
-    function_activeBDI_test(activeBoolean, bdi_question, bdi_object_prop, answer_content, setup, display_bdi) {
+    function_activeBDI_test(activeBoolean, bdi_question, bdi_object_prop, answer_content, display_bdi) {
 
         let boolean_bdi_active = this.bdi_active_object.active;
         let boolean_activeBDI_test = this.bdi_active_object.test_active;
@@ -79,7 +79,7 @@ const renderingFunction_object = {
         if (activeBoolean !== this.bdi_active_object.test_active && this.bdi_active_object.active) {
             this.bdi_active_object.test_active = activeBoolean;
             this.removeChildFunction(display_bdi);
-            this.unpackage_bdiFunction(bdi_question, bdi_object_prop, answer_content, setup, display_bdi);
+            this.unpackage_bdiFunction(bdi_question, bdi_object_prop, answer_content, display_bdi);
 
         } else if (activeBoolean === this.bdi_active_object.test_active && !this.bdi_active_object.active) {
             this.bdi_active_object.test_active = activeBoolean;

@@ -1,6 +1,16 @@
 // controll ui_function
 const bdi_UI_controll_setup = {
 
+
+    clickForward_function(forward) {
+
+        const formDisplay = document.querySelector('.form_container');
+        renderingFunction_object.removeChildFunction(formDisplay);
+        
+        
+
+    },
+
     bufferPoints_function(btn_points) {
         // Legende: bufferPoints => voruebergehnder behaelter, points => permanenter behaelter & btn_points => die akuellen Punkte
         // legend: bufferPoint => nonPermanent_container, points => is a permanent container & btn_poins is the currentPoinst
@@ -8,14 +18,14 @@ const bdi_UI_controll_setup = {
             bdi_setup.bufferPoints = btn_points;
             console.log(bdi_setup.bufferPoints);
             bdi_setup.indexBDI++;
+            console.log(bdi_setup);
         } else {
-            bdi_setup.points += Number(bufferPoints);
+            bdi_setup.points += Number(bdi_setup.bufferPoints);
             bdi_setup.bufferPoints = null;
         }
 
 
     },
-
 
     clickEvent_contol(btn_information) {
 
