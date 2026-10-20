@@ -7,7 +7,7 @@ const bdi_UI_controll_setup = {
         if (bdi_setup.bufferPoints === null) {
             bdi_setup.bufferPoints = btn_points;
         } else {
-            bdi_setup.points += bufferPoints;
+            bdi_setup.points += Number(bufferPoints);
             bdi_setup.bufferPoints = null;
         }
 
@@ -34,7 +34,7 @@ const bdi_UI_controll_setup = {
         } else if (btn_click_i === buffer_clickEvent && inputValue !== btn_information.id) {
             console.log('btnInformation ist not equal');
             inputValue = null;
-            btn_click_i = 0;
+            btn_click_i = 1;
         };  
 
     },
