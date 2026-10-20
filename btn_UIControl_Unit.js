@@ -59,11 +59,15 @@ body_section.addEventListener('click', (t) => {
             case 'activeIconBox':
                 console.log(btn_secondaryClick);
                 const iconDrop = document.querySelector('.document_content_list');
+                const sideBar = document.querySelector('.sideBarRight');
                 
                 if (!iconDrop.classList.contains(`childBox_opacityActive`)) {
                     iconDrop.classList.add('childBox_opacityActive');
+                    console.log()
+                    
                 } else {
                     iconDrop.classList.remove('childBox_opacityActive');
+                    
                 };
                 console.log(iconDrop);
                 
@@ -71,8 +75,6 @@ body_section.addEventListener('click', (t) => {
 
             default: break;
         };
-
-
 
         console.log(btn_secondaryClick.classList.length);
         let content = btn_secondaryClick.nextElementSibling;

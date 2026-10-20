@@ -115,7 +115,7 @@
     }
 
     .about_h2_style {
-        font-size: 1.14rem;
+        font-size: 1.11rem;
     }
 
     .about_boxOne {
@@ -141,10 +141,12 @@
         padding: 0.6em;
         margin: 0.8em;
         gap: 0.9em;
+        text-align: center;
     }
 
     .spanAboutStyle {
         font-size: 1rem;
+        margin: 0.15em;
     }
 
     .lastAboutBoxOne {
@@ -158,6 +160,10 @@
         padding-top: 0em;
         margin-top: 0em;
         gap: 0.3em;
+    }
+
+    .portBox01 {
+        margin: 0.5em;
     }
 
     .anchor_footerAbout {
@@ -207,7 +213,6 @@
     .galleryBoxCollapsible {
         flex-direction: column;
         margin: 0.3em;
-        padding: 0.3em;
     }
 
     .galleryTextBox {
@@ -237,6 +242,20 @@
         margin: 0.7em;
     }
 
+    .headergallery {
+        padding: 1.2em;
+        margin: 0;
+    }
+
+    .heading_h1_gallery {
+        font-size: 1.1rem;
+        padding: 0.27em;
+    }
+
+    .header_area_style_h3 {
+        font-size: 0.95rem;
+    }
+
     .sideBarRight {
         grid-area: sideBarRight;
         gap: 1.1em;
@@ -249,9 +268,18 @@
     .imgBox {
         position: relative;
         width: 100%;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
         flex-direction: row;
         overflow-x: auto;
+        z-index: 1;
+    }
+
+
+    .app_zero {
+        margin-top: 0;
+        width: 170px;
+        height: 50px;
     }
 
     .imgSideRest {

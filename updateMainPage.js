@@ -803,31 +803,7 @@ const mainContent = {
                                             "createText": "BDI-II Test"
                                         }
                                     ]
-                                },
-                                {
-                                    "createElement": "img",
-                                    "classList": ["block", "imgSideRest", "htmlLogo"],
-                                    "src": "logo_code/html5_logo.jpeg",
-                                    "alt": "html_Logo"
-                                },
-                                {
-                                    "createElement": "img",
-                                    "classList": ["block", "imgSideRest", "cssLogo"],
-                                    "src": "logo_code/css_logo.jpg",
-                                    "alt": "css_Logo"
-                                },
-                                {
-                                    "createElement": "img",
-                                    "classList": ["block", "imgSideRest", "nodejs"],
-                                    "src": "logo_code/node.png",
-                                    "alt": "nodejs_Logo"
-                                },
-                                {
-                                    "createElement": "img",
-                                    "classList": ["block", "imgSideRest", "nodejs"],
-                                    "src": "logo_code/python_logo.jpeg",
-                                    "alt": "python_Logo"
-                                },
+                                }
                             ]
                         }
                     ]
