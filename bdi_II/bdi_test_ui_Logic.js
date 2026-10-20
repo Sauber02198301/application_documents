@@ -6,6 +6,8 @@ const bdi_UI_controll_setup = {
         // legend: bufferPoint => nonPermanent_container, points => is a permanent container & btn_poins is the currentPoinst
         if (bdi_setup.bufferPoints === null) {
             bdi_setup.bufferPoints = btn_points;
+            console.log(bdi_setup.bufferPoints);
+            bdi_setup.indexBDI++;
         } else {
             bdi_setup.points += Number(bufferPoints);
             bdi_setup.bufferPoints = null;
@@ -30,11 +32,12 @@ const bdi_UI_controll_setup = {
         } else if (bdi_setup.btn_click_i === bdi_setup.buffer_clickEvent && bdi_setup.inputValue === btn_information.id) {
             console.log(bdi_setup.btn_click_i, bdi_setup.buffer_clickEvent, 'is it equal go to the next step & inputValue is equel btn_information.id'); 
             console.log(bdi_setup.btn_click_i, bdi_setup.buffer_clickEvent, 'es geht weiter '); 
+            
             this.bufferPoints_function(btn_information.value); 
-        } else if (btn_click_i === buffer_clickEvent && inputValue !== btn_information.id) {
+        } else if (bdi_setup.btn_click_i === bdi_setup.buffer_clickEvent && bdi_setup.inputValue !== btn_information.id) {
             console.log('btnInformation ist not equal');
-            inputValue = null;
-            btn_click_i = 1;
+            bdi_setup.inputValue = btn_information.id;
+            bdi_setup.btn_click_i = 1;
         };  
 
     },
