@@ -31,6 +31,7 @@ const renderingFunction_object = {
             const copy_answer = structuredClone(answer);
 
             copy_answer.children[0].value = String(points);
+            copy_answer.children[0].id = String(a_index);
             copy_answer.children[1].createText = text;
             copy_answer.children[2].createText = `${points} Punkte`;
             // ich glaube das input muss in einen label oder ich brauche noch das for dafuer weil es lassen sich alle anklicken das hatte ich schonmal das weis ich. Ich meine das lag am for kann auch an der reihen folge liegen. 
@@ -107,7 +108,7 @@ const renderingFunction_object = {
     },
 
     toInsertValue(valueNumber, html_element) {
-        if (!valueNumber) { return };
+        if (valueNumber === null || valueNumber === undefined || valueNumber === "") { return };
         console.log(valueNumber, html_element);
         html_element.value = Number(valueNumber);
     },
@@ -145,6 +146,12 @@ const renderingFunction_object = {
         html_element.classList.add(...add);
         //console.log(html_element);
 
+    },
+
+    idInsertFunction(idName, html_element) {
+        if (!idName) { return };
+
+        html_element.id = idName;
     },
 
     appendFunct(html_element, parentDom) {
@@ -195,7 +202,7 @@ const renderingFunction_object = {
         */
         for (const extObject of htmlObject) {
             //console.log(extObject);
-            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, children = null, dataset: dataTyp = null, type = null, name: nameInput = null, value: valueNumber = null, createText: textContent = null } = extObject;
+            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, id: idName = null, children = null, dataset: dataTyp = null, type = null, name: nameInput = null, value: valueNumber = null, createText: textContent = null } = extObject;
 
             //console.log(children, addClassList);
             const html_element = this.createHTML_element_func(htmlTag);
@@ -204,6 +211,7 @@ const renderingFunction_object = {
             this.createData_instruction(html_element, dataTyp);
             this.toInsertValue(valueNumber, html_element);
             this.toInsert_type(type, html_element);
+            this.idInsertFunction(idName, html_element);
             this.toInsert_name(nameInput, html_element);
             this.createTextFunction(textContent, html_element, parentBody);
             if (Array.isArray(textContent)) { continue }

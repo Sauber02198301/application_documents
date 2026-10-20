@@ -49,6 +49,12 @@ const bdi_setup = {
     "indexBDI": 0,
     "questionLength": bdi_question.length,
 
+    "btn_click_i": 0,
+    "buffer_clickEvent": 1,
+    "inputValue": null,
+
+
+    "bufferPoints": null,
     "points": 0,
 
 };
