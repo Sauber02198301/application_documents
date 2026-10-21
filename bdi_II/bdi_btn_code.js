@@ -55,11 +55,8 @@ bdi_bodyDOM.addEventListener('click', (t) => {
                 if (bdi_UI_controll_setup.bdi_active_object.active && !bdi_UI_controll_setup.bdi_active_object.test_active) {
                     console.log(click_ins_secondary);
                     const displayBDI_test = document.querySelector('.display_bdi_section');
-                    // answer_bdiQuest is the second half side, in this is the label settings
-                    const questionBDI = bdi_question;
-                    const questionObject = question_bdi;
-                    const answerContent = answer_bdiQuest;
-                    console.log(displayBDI_test, questionBDI, questionObject);
+                    // answer_bdiQuest is the second half side, in this is the label settings 
+                    console.log(displayBDI_test);
                     //renderingFunction_object.bdi_active_object.test_active = true;
                     bdi_UI_controll_setup.bdi_UIStart_function(true, 'activeTest');
                     //renderingFunction_object.function_activeBDI_test(true, questionBDI, questionObject, answer_bdiQuest, displayBDI_test);
@@ -75,15 +72,12 @@ bdi_bodyDOM.addEventListener('click', (t) => {
     if (clickInput_bdi && bdi_bodyDOM.contains(clickInput_bdi)) {
         console.log(clickInput_bdi);
 
-        console.log(bdi_setup.indexBDI, bdi_setup.questionLength, bdi_setup.btn_click_i, bdi_setup.buffer_clickEvent, bdi_setup.bufferPoints, bdi_setup.points);
-
         // ueberprueffen ob bdi_index < (kleiner als bdi_length ist) questionLength
-        if (bdi_setup.indexBDI < bdi_setup.questionLength) {
+        if (bdi_UI_controll_setup.bdi_setup.indexBDI < bdi_UI_controll_setup.bdi_setup.questionLength) {
             // sende an meiner const bdi_UI_controll_setup an die function clickEvent_contol()
             bdi_UI_controll_setup.clickEvent_contol(clickInput_bdi);
-        } else if (bdi_setup.indexBDI === bdi_setup.questionLength) {
+        } else if (bdi_UI_controll_setup.bdi_setup.indexBDI === bdi_UI_controll_setup.bdi_setup.questionLength) {
             // wenn gleich erfuelle diese bedingungen. 
-
 
         };
 

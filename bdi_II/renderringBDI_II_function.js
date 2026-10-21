@@ -14,41 +14,7 @@ const renderingFunction_object = {
 
     },
 
-    lableCreateFunction(content, answer, parentDom) {
-        console.log(answer, content, parentDom);
-        const formDom = document.querySelector(parentDom);
-        const arrayList = [];
-        console.log(formDom);
-        if (!Array.isArray(content)) { Array(content) };
-        content.forEach((content, a_index) => {
-            console.log(content, a_index);
-            const { createText: text = null, points = null } = content;
-            const copy_answer = structuredClone(answer);
-
-            copy_answer.children[0].value = String(points);
-            copy_answer.children[0].id = String(a_index);
-            copy_answer.children[1].createText = text;
-            copy_answer.children[2].createText = `${points} Punkte`;
-            // ich glaube das input muss in einen label oder ich brauche noch das for dafuer weil es lassen sich alle anklicken das hatte ich schonmal das weis ich. Ich meine das lag am for kann auch an der reihen folge liegen. 
-
-            arrayList.push(copy_answer);
-
-        });
-        console.log(arrayList);
-        this.rendering_functionSystem(arrayList, formDom);
-    },
-
-    unpackage_bdiFunction(bdi_question, bdi_object_prop, answer_content, display_bdi) {
-        console.log(bdi_question, bdi_object_prop, answer_content, display_bdi);
-
-        const { content, answer, parentDom } = answer_content;
-        console.log(content, answer);
-
-        this.rendering_functionSystem(bdi_object_prop, display_bdi);
-        this.lableCreateFunction(content, answer, parentDom);
-    },
-
-    function_activeBDI(activeBoolean, metaObject, parentDom) {
+/*    function_activeBDI(activeBoolean, metaObject, parentDom) {
         // activeBoolean = fals || true, metaObject = das zu bearbeitende object, parentDom = das zu loschende dom & gleichzeitg das ziel;
         //console.log(activeBoolean, metaObject, parentDom);
         if (activeBoolean !== this.bdi_active_object.active) {
@@ -83,7 +49,7 @@ const renderingFunction_object = {
 
 
     },
-
+*/
     destructChild_contentFunction(children, parentDom) {
         //console.log(children, parentDom);
         if (!children || !parentDom) { return };

@@ -44,7 +44,7 @@ const bdi_question = [
     }
 ];
 
-const bdi_setup = {
+/*const bdi_setup = {
 
     "indexBDI": 0,
     "questionLength": bdi_question.length,
@@ -59,7 +59,7 @@ const bdi_setup = {
     "bufferPoints": null,
     "points": 0,
 
-};
+};*/
 
 const bdi_answer = {
     "evaluation": {
@@ -120,71 +120,12 @@ const arrayAnswer = [];
 // question_bdi is the first half side from the bdi Test, is it the form part
 const question_bdi = [
 
-    {
-        "createElement": "header",
-        "classList": "questionHeader",
-        "addClassList": ["bdi_question_h2"],
-        "children": [
-            {
-                "createElement": "h2",
-                "classList": "text_font_h2",
-                "addClassList": ["bdi_question_h2"],
-                "createText": bdi_question[bdi_setup.indexBDI].questionTitle + ` ${bdi_setup.indexBDI + 1}`
-                // ich kann den index dafuer nutzen um den takt vorzugeben i ersetzt 0 
-            },
-            {
-                "createElement": "h3",
-                "classList": "text_font_h3",
-                "addClassList": ["bdi_question_h3"],
-                "createText": bdi_question[bdi_setup.indexBDI].question
-                // so wie hier i ersetzt 0 
-            }
-        ]
-    },
-    {
-        "createElement": "form",
-        "classList": "questionForm",
-        "addClassList": ["questinMain_radio"],
-        "children": arrayAnswer
-        // hier muss ich mit einer for loop arbeiten das ich children immer nach der anzahl von answer reproduziere
-        //Ich ueberlege gerade ob es nicht sogar besser hier zwei ebenen zu bauen! Das sehe ich gleich wenn ich die function dafuer baue. 
-
-    }
+    
+    
 ];
 
 // answer_bdiQuest is the second half side, in this is the label settings
 
-const answer_bdiQuest = {
-    "parentDom": ".form_container",
-    "content": bdi_question[bdi_setup.indexBDI].answer,
-    "answer": {
-        "createElement": "label",
-        "classList": "questionLabel",
-        "addClassList": ["questinMain_label"],
-        "children": [
-            {
-                "createElement": "input",
-                "classList": "questionInput",
-                "addClassList": ["questinMain_radio"],
-                "type": "radio",
-                "name": "answer",
-                "value": "",
-            },
-            {
-                "createElement": "span",
-                "classList": "questionText",
-                "addClassList": ["answer_inputSpan"],
-                "createText": ""
-            },
-            {
-                "createElement": "span",
-                "classList": "questionText",
-                "addClassList": ["answer_inputSpan"],
-                "createText": ""
-            }
-        ]
-    }
-};
 
 /*
 
