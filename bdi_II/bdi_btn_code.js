@@ -19,13 +19,13 @@ bdi_bodyDOM.addEventListener('click', (t) => {
         switch (click_bdi_prime.dataset.action) {
             case 'start_BDI':
                 console.log(click_bdi_prime);
-                let booleanActive = renderingFunction_object.bdi_active_object.active;
+                let booleanActive = bdi_UI_controll_setup.bdi_active_object.active;
                 console.log(booleanActive);
                 if (!booleanActive) {
                     const parentDom = document.querySelector('.display_section');
                     const metaObject = instruction_sheet;
                     console.log(parentDom, metaObject);
-                    renderingFunction_object.function_activeBDI(true, metaObject, parentDom);
+                    bdi_UI_controll_setup.function_activeBDI(true, metaObject, parentDom);
                     return;
                 };
 
@@ -52,7 +52,7 @@ bdi_bodyDOM.addEventListener('click', (t) => {
                 break
             case 'testStart':
 
-                if (renderingFunction_object.bdi_active_object.active && !renderingFunction_object.bdi_active_object.test_active) {
+                if (bdi_UI_controll_setup.bdi_active_object.active && !bdi_UI_controll_setup.bdi_active_object.test_active) {
                     console.log(click_ins_secondary);
                     const displayBDI_test = document.querySelector('.display_bdi_section');
                     // answer_bdiQuest is the second half side, in this is the label settings

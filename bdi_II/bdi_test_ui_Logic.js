@@ -1,7 +1,14 @@
 // controll ui_function
 const bdi_UI_controll_setup = {
 
-    bdi_setup_resret: {
+
+    bdi_active_object: {
+        active: false,
+        test_active: false,
+    },
+
+
+    /*bdi_setup: {
 
         "indexBDI": 0,
         "questionLength": bdi_question.length,
@@ -16,14 +23,24 @@ const bdi_UI_controll_setup = {
         "bufferPoints": null,
         "points": 0,
 
+    },*/
+
+    function_activeBDI(activeBoolean, metaObject, parentDom) {
+        // activeBoolean = fals || true, metaObject = das zu bearbeitende object, parentDom = das zu loschende dom & gleichzeitg das ziel;
+        //console.log(activeBoolean, metaObject, parentDom);
+        if (activeBoolean !== this.bdi_active_object.active) {
+            this.bdi_active_object.active = activeBoolean;
+            console.log(activeBoolean, metaObject, parentDom);
+            renderingFunction_object.removeChildFunction(parentDom);
+            renderingFunction_object.rendering_functionSystem(metaObject, parentDom);
+
+        } else if (activeBoolean === this.bdi_active_object.active) {
+            this.bdi_active_object.active = activeBoolean;
+            renderingFunction_object.removeChildFunction(parentDom);
+            renderingFunction_object.rendering_functionSystem(metaObject, parentDom);
+        };
     },
 
-    /*    
-        bdi_active_object: {
-            active: false,
-            test_active: false,
-        },
-    */
     clickForward_function(forward) {
 
         const formDisplay = document.querySelector('.form_container');
@@ -32,6 +49,8 @@ const bdi_UI_controll_setup = {
 
 
     },
+
+
 
     bufferPoints_function(btn_points) {
         // Legende: bufferPoints => voruebergehnder behaelter, points => permanenter behaelter & btn_points => die akuellen Punkte
@@ -97,14 +116,14 @@ const bdi_UI_controll_setup = {
         switch (toOperate) {
 
             case 'startBDI':
-                
+
                 console.log(toOperate, bdi_setup.indexBDI);
-                
+
                 renderingFunction_object.rendering_functionSystem(structuredClone(questionBDI_form), displayStartBDI);
 
 
                 break;
-            
+
             default: break;
         };
     },
@@ -127,9 +146,9 @@ const bdi_UI_controll_setup = {
         const questionBDI_label = answer_bdiQuest;
         console.log(displayStartBDI, metaData_questionBDI, questionBDI_form, questionBDI_label);
 
-        if (boolean_BDI !== renderingFunction_object.bdi_active_object.test_active && renderingFunction_object.bdi_active_object.active && codeWord === 'activeTest') {
+        if (boolean_BDI !== this.bdi_active_object.test_active && this.bdi_active_object.active && codeWord === 'activeTest') {
             console.log(displayStartBDI, metaData_questionBDI, questionBDI_form, questionBDI_label);
-            renderingFunction_object.bdi_active_object.test_active = boolean_BDI;
+            this.bdi_active_object.test_active = boolean_BDI;
             console.log(boolean_BDI, renderingFunction_object.bdi_active_object, codeWord);
             renderingFunction_object.removeChildFunction(displayStartBDI);
             this.bdi_unpackageFunction("startBDI", metaData_questionBDI, questionBDI_form, questionBDI_label, displayStartBDI);

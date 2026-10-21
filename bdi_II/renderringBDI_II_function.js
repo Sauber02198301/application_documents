@@ -2,11 +2,6 @@
 
 const renderingFunction_object = {
 
-    bdi_active_object: {
-        active: false,
-        test_active: false,
-    },
-
     removeChildFunction(parentDom) {
         console.log(parentDom);
         if (parentDom.innerHTML.trim() !== '') {
