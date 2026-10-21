@@ -71,7 +71,7 @@ const renderingFunction_object = {
     },
 
     function_activeBDI_test(activeBoolean, bdi_question, bdi_object_prop, answer_content, display_bdi) {
-
+        console.log(activeBoolean, bdi_question, bdi_object_prop, answer_content, display_bdi);
         let boolean_bdi_active = this.bdi_active_object.active;
         let boolean_activeBDI_test = this.bdi_active_object.test_active;
         console.log(boolean_bdi_active, boolean_activeBDI_test);
@@ -149,7 +149,7 @@ const renderingFunction_object = {
     },
 
     idInsertFunction(idName, html_element) {
-        if (!idName) { return };
+        if (idName === null || idName === undefined || idName === '') { return };
 
         html_element.id = idName;
     },

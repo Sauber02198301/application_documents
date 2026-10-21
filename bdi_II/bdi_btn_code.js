@@ -55,11 +55,14 @@ bdi_bodyDOM.addEventListener('click', (t) => {
                 if (renderingFunction_object.bdi_active_object.active && !renderingFunction_object.bdi_active_object.test_active) {
                     console.log(click_ins_secondary);
                     const displayBDI_test = document.querySelector('.display_bdi_section');
+                    // answer_bdiQuest is the second half side, in this is the label settings
                     const questionBDI = bdi_question;
-                    const questionObject = question_bdi
+                    const questionObject = question_bdi;
                     const answerContent = answer_bdiQuest;
                     console.log(displayBDI_test, questionBDI, questionObject);
-                    renderingFunction_object.function_activeBDI_test(true, questionBDI, questionObject, answer_bdiQuest, displayBDI_test);
+                    //renderingFunction_object.bdi_active_object.test_active = true;
+                    bdi_UI_controll_setup.bdi_UIStart_function(true, 'activeTest');
+                    //renderingFunction_object.function_activeBDI_test(true, questionBDI, questionObject, answer_bdiQuest, displayBDI_test);
                 };
 
                 break;

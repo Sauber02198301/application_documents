@@ -1,4 +1,4 @@
-
+// BDI_question Library
 
 
 const bdi_question = [
@@ -116,6 +116,8 @@ const bdi_answer = {
 
 const arrayAnswer = [];
 
+
+// question_bdi is the first half side from the bdi Test, is it the form part
 const question_bdi = [
 
     {
@@ -149,6 +151,8 @@ const question_bdi = [
 
     }
 ];
+
+// answer_bdiQuest is the second half side, in this is the label settings
 
 const answer_bdiQuest = {
     "parentDom": ".form_container",
