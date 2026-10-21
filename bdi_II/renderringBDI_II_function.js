@@ -1,4 +1,4 @@
-
+// BDI UI_renderingFunction
 
 const renderingFunction_object = {
 
@@ -227,4 +227,4 @@ const renderingFunction_object = {
 
 const bdiBody = document.querySelector('.bdi_body_section');
 
-renderingFunction_object.rendering_functionSystem(bdi_intro, bdiBody)
+renderingFunction_object.rendering_functionSystem(bdi_intro, bdiBody);

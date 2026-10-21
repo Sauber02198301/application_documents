@@ -18,12 +18,12 @@ const bdi_UI_controll_setup = {
 
     },
 
-/*    
-    bdi_active_object: {
-        active: false,
-        test_active: false,
-    },
-*/
+    /*    
+        bdi_active_object: {
+            active: false,
+            test_active: false,
+        },
+    */
     clickForward_function(forward) {
 
         const formDisplay = document.querySelector('.form_container');
@@ -76,10 +76,37 @@ const bdi_UI_controll_setup = {
 
     },
 
-    bdi_unpackageFunction(metaData_questionBDI) {
-        console.log(metaData_questionBDI);
+    /*
+    
+        am besten nochmal die ganze BDI_function umgestallten die functionen die im herzen der render engine sind hier 
+        ansiedeln und aus dieser datei werden sie nur noch an die rendering_systemFunction übergeben.
+        Die question_bdi objecte werde ich in eine function bauen so kann ich immer den richtigen index verarbeiten 
+        weil wenn ich den indexBDI auf 1 setze passiert nichts. 
+    
+    */
+
+    toInsert_formFunction() {
 
 
+
+    },
+
+    bdi_unpackageFunction(toOperate, metaData_questionBDI, questionBDI_form, questionBDI_label, displayStartBDI) {
+        console.log(toOperate, metaData_questionBDI, questionBDI_form, questionBDI_label, displayStartBDI);
+        const { content, answer, parentDom } = questionBDI_label;
+        switch (toOperate) {
+
+            case 'startBDI':
+                
+                console.log(toOperate, bdi_setup.indexBDI);
+                
+                renderingFunction_object.rendering_functionSystem(structuredClone(questionBDI_form), displayStartBDI);
+
+
+                break;
+            
+            default: break;
+        };
     },
 
     bdi_UIStart_function(boolean_BDI, codeWord) {
@@ -102,11 +129,15 @@ const bdi_UI_controll_setup = {
 
         if (boolean_BDI !== renderingFunction_object.bdi_active_object.test_active && renderingFunction_object.bdi_active_object.active && codeWord === 'activeTest') {
             console.log(displayStartBDI, metaData_questionBDI, questionBDI_form, questionBDI_label);
+            renderingFunction_object.bdi_active_object.test_active = boolean_BDI;
             console.log(boolean_BDI, renderingFunction_object.bdi_active_object, codeWord);
             renderingFunction_object.removeChildFunction(displayStartBDI);
-            this.bdi_unpackageFunction(metaData_questionBDI, )
-            console.log('wenn du mich siehst ist was schiefgelaufen beim aktivieren XD')
-        } else if (boolean_BDI === renderingFunction_object.bdi_active_object.test_active && !renderingFunction_object.bdi_active_object.active && codeWord === 'close');
+            this.bdi_unpackageFunction("startBDI", metaData_questionBDI, questionBDI_form, questionBDI_label, displayStartBDI);
+
+
+        } else if (boolean_BDI === renderingFunction_object.bdi_active_object.test_active && !renderingFunction_object.bdi_active_object.active && codeWord === 'close') {
+            console.log('wenn du mich siehst ist was schiefgelaufen beim aktivieren XD');
+        };
 
     }
 
