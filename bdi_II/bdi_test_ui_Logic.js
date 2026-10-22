@@ -24,18 +24,21 @@ const bdi_UI_controll_setup = {
 
     copy_bdi_setup: null,
 
-    input_initiation_function(questionBDI_label) {
-        console.log(questionBDI_label);
-        
-    },
+    //schrit 4.1 label & input 2/2
+    input_initiation_function(content, parentDOM) {
 
-    initiation_label_function() {
-        if (!this.bdi_active_object.activeForm) { return console.error("sorry_im_failed"); };
+        if (!this.bdi_active_object.activeForm) { return; };
+        console.log(content, parentDOM);
+        if (!Array.isArray(content)) { Array(content) };
 
-        const questionBDI_label = {
-            "parentDom": ".form_container",
-            "content": bdi_question[this.copy_bdi_setup.indexBDI].answer,
-            "answer": {
+        const arrayList_awser = [];
+
+        content.forEach((content, i) => {
+            console.log(content, i);
+
+            const { createText: text = "", points } = content;
+
+            const questionBDI_label = {
                 "createElement": "label",
                 "classList": "questionLabel",
                 "addClassList": ["questinMain_label"],
@@ -46,27 +49,41 @@ const bdi_UI_controll_setup = {
                         "addClassList": ["questinMain_radio"],
                         "type": "radio",
                         "name": "answer",
-                        "value": "",
+                        "id": String(i),
+                        "value": String(points),
                     },
                     {
                         "createElement": "span",
                         "classList": "questionText",
                         "addClassList": ["answer_inputSpan"],
-                        "createText": ""
+                        "createText": text
                     },
                     {
                         "createElement": "span",
                         "classList": "questionText",
                         "addClassList": ["answer_inputSpan"],
-                        "createText": ""
+                        "createText": `${String(points)} Punkte`
                     }
                 ]
-            }
-        };
-        console.log(questionBDI_label);
-        this.input_initiation_function(questionBDI_label);
+            };
+            arrayList_awser.push(structuredClone(questionBDI_label));
+        });
+        console.log(arrayList_awser);
+        renderingFunction_object.rendering_functionSystem(arrayList_awser, parentDOM);
     },
 
+    // Schritt 4 initialiesierung label & input 1/2
+    initiation_label_function() {
+        if (!this.bdi_active_object.activeForm) { return console.error("sorry_im_failed"); };
+        const content = bdi_question[this.copy_bdi_setup.indexBDI].answer;
+        const display_bdi_form = document.querySelector('.form_container');
+
+        console.log(content, display_bdi_form, 'hey hier sind tick, trick & track');
+
+        this.input_initiation_function(content, display_bdi_form);
+    },
+
+    // Schritt drei Header und form werden initialisiert
     function_first_initiation(parentDOM) {
         if (this.copy_bdi_setup === null || this.copy_bdi_setup === undefined || this.copy_bdi_setup === '') { return };
         console.log(parentDOM);
@@ -103,9 +120,9 @@ const bdi_UI_controll_setup = {
         ];
         renderingFunction_object.rendering_functionSystem(mainBDI_container, parentDOM);
         this.bdi_active_object.activeForm = true;
-        this.initiation_label_function();
     },
 
+    //Schritt 2 aktiviert den Test
     function_activeBDI(metaObject, parentDom_key) {
         console.log(metaObject, parentDom_key);
         const parentDOM = document.querySelector(parentDom_key);
@@ -115,6 +132,7 @@ const bdi_UI_controll_setup = {
             renderingFunction_object.removeChildFunction(parentDOM);
             this.bdi_active_object.active = false;
             this.bdi_active_object.test_active = false;
+            this.bdi_active_object.activeForm = false;
             this.copy_bdi_setup = null
             renderingFunction_object.rendering_functionSystem(metaObject, parentDOM);
         } else {
@@ -126,6 +144,7 @@ const bdi_UI_controll_setup = {
         };
     },
 
+    //Schritt 1 aktivierung des Testes
     function_activeBDI_test(parentDom_key, controlKey) {
         console.log(parentDom_key, this.copy_bdi_setup);
         const parentDOM = document.querySelector(parentDom_key);
@@ -135,10 +154,64 @@ const bdi_UI_controll_setup = {
             renderingFunction_object.removeChildFunction(parentDOM)
             this.function_first_initiation(parentDOM);
             console.log('first Avenger', parentDOM);
+            if (this.bdi_active_object.activeForm) {
+                console.log('hey major Tom voellig losgeloest');
+                this.initiation_label_function('.form_container');
+            }
         } else if (this.bdi_active_object.test_active && this.bdi_active_object.test_active) {
             console.log('ironMan, this is only lable', parentDOM);
         }
 
-    }
+    },
+
+    storagePoints(inputValue) {
+        console.log(inputValue);
+        if (this.copy_bdi_setup.bufferPoints === null) {
+            this.copy_bdi_setup.bufferPoints = inputValue;
+            console.log(this.copy_bdi_setup.bufferPoints);
+        } else {
+            this.copy_bdi_setup.points = this.copy_bdi_setup.bufferPoints;
+            this.copy_bdi_setup.bufferPoints = inputValue;
+            console.log(this.copy_bdi_setup.bufferPoints, this.copy_bdi_setup.points);
+        };
+
+    },
+
+    // skip funftion ++
+    forward_function() {
+        this.copy_bdi_setup.indexBDI++;
+    },
+
+    // hier soll man ein schritt zuruck gehen das die zwischen gespeicherten Punkte 
+    oneStepBack_function() {
+
+    },
+
+    UI_click_input(input) {
+
+        if (this.bdi_setup.btn_click_i <= this.bdi_setup.buffer_clickEvent) {
+            this.bdi_setup.btn_click_i++;
+            console.log(input, 'Squall Lionheart');
+            if (this.bdi_setup.inputValue === null) {
+                console.log('trift auf KingdomHearts');
+                this.bdi_setup.inputValue = input.id;
+            } else if (this.bdi_setup.inputValue !== input.id) {
+                this.bdi_setup.btn_click_i = 0;
+                this.bdi_setup.inputValue = input.id;
+                console.log(this.bdi_setup.btn_click_i, this.bdi_setup.inputValue);
+            } else {
+                console.log('hier ist es gleich');
+                this.bdi_setup.btn_click_i = 0;
+                this.bdi_setup.inputValue = null;
+                if (this.copy_bdi_setup.bufferPoints === null) {
+                    this.forward_function();
+                    this.storagePoints(input.value);
+                };
+            };
+
+
+        };
+
+    },
 
 };

@@ -82,7 +82,7 @@ bdi_bodyDOM.addEventListener('click', (t) => {
 
     if (clickInput_bdi && bdi_bodyDOM.contains(clickInput_bdi)) {
         console.log(clickInput_bdi);
-
+        bdi_UI_controll_setup.UI_click_input(clickInput_bdi);
         // ueberprueffen ob bdi_index < (kleiner als bdi_length ist) questionLength
         /*if (bdi_UI_controll_setup.bdi_setup.indexBDI < bdi_UI_controll_setup.bdi_setup.questionLength) {
             // sende an meiner const bdi_UI_controll_setup an die function clickEvent_contol()
