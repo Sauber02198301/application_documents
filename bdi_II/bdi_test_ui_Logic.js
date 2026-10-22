@@ -77,7 +77,7 @@ const bdi_UI_controll_setup = {
         if (!this.bdi_active_object.activeForm) { return console.error("sorry_im_failed"); };
         const content = bdi_question[this.copy_bdi_setup.indexBDI].answer;
         const display_bdi_form = document.querySelector('.form_container');
-
+        renderingFunction_object.removeChildFunction(display_bdi_form);
         console.log(content, display_bdi_form, 'hey hier sind tick, trick & track');
 
         this.input_initiation_function(content, display_bdi_form);
@@ -164,6 +164,7 @@ const bdi_UI_controll_setup = {
 
     },
 
+    // storage Engine diese soll nur speichern
     storagePoints(inputValue) {
         console.log(inputValue);
         if (this.copy_bdi_setup.bufferPoints === null) {
@@ -180,6 +181,7 @@ const bdi_UI_controll_setup = {
     // skip funftion ++
     forward_function() {
         this.copy_bdi_setup.indexBDI++;
+        this.function_first_initiation();
     },
 
     // hier soll man ein schritt zuruck gehen das die zwischen gespeicherten Punkte 
@@ -204,8 +206,8 @@ const bdi_UI_controll_setup = {
                 this.bdi_setup.btn_click_i = 0;
                 this.bdi_setup.inputValue = null;
                 if (this.copy_bdi_setup.bufferPoints === null) {
-                    this.forward_function();
                     this.storagePoints(input.value);
+                    this.forward_function();
                 };
             };
 
