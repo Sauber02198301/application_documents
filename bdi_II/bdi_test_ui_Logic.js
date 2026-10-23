@@ -5,7 +5,8 @@ const bdi_UI_controll_setup = {
     bdi_active_object: {
         active: false,
         test_active: false,
-        activeForm: false
+        activeForm: false,
+        skipBack: true
     },
 
 
@@ -77,7 +78,7 @@ const bdi_UI_controll_setup = {
         if (!this.bdi_active_object.activeForm) { return console.error("sorry_im_failed"); };
         const content = bdi_question[this.copy_bdi_setup.indexBDI].answer;
         const display_bdi_form = document.querySelector('.form_container');
-        renderingFunction_object.removeChildFunction(display_bdi_form);
+        //renderingFunction_object.removeChildFunction(display_bdi_form);
         console.log(content, display_bdi_form, 'hey hier sind tick, trick & track');
 
         this.input_initiation_function(content, display_bdi_form);
@@ -119,7 +120,10 @@ const bdi_UI_controll_setup = {
             }
         ];
         renderingFunction_object.rendering_functionSystem(mainBDI_container, parentDOM);
-        this.bdi_active_object.activeForm = true;
+        if (!this.bdi_active_object.activeForm) {
+            this.bdi_active_object.activeForm = true;
+        }
+
     },
 
     //Schritt 2 aktiviert den Test
@@ -158,7 +162,7 @@ const bdi_UI_controll_setup = {
                 console.log('hey major Tom voellig losgeloest');
                 this.initiation_label_function('.form_container');
             }
-        } else if (this.bdi_active_object.test_active && this.bdi_active_object.test_active) {
+        } else if (this.bdi_active_object.active && this.bdi_active_object.test_active) {
             console.log('ironMan, this is only lable', parentDOM);
         }
 
@@ -167,52 +171,81 @@ const bdi_UI_controll_setup = {
     // storage Engine diese soll nur speichern
     storagePoints(inputValue) {
         console.log(inputValue);
+        // stepOne das ertsemal Punkte entgegen nehmen
+
         if (this.copy_bdi_setup.bufferPoints === null) {
             this.copy_bdi_setup.bufferPoints = inputValue;
-            console.log(this.copy_bdi_setup.bufferPoints);
+            console.log(this.copy_bdi_setup.bufferPoints, 'puffer storage');
         } else {
-            this.copy_bdi_setup.points = this.copy_bdi_setup.bufferPoints;
+            this.copy_bdi_setup.points += this.copy_bdi_setup.bufferPoints;
             this.copy_bdi_setup.bufferPoints = inputValue;
-            console.log(this.copy_bdi_setup.bufferPoints, this.copy_bdi_setup.points);
-        };
-
+            console.log(this.copy_bdi_setup.points, 'aktuelle Punkte');
+            console.log(this.copy_bdi_setup.bufferPoints, 'puffer storage');
+        }
+        this.forward_function();
     },
 
-    // skip funftion ++
+    // skip funftion ++ hier schalte ich den index hoch und er verteilt nur 
     forward_function() {
-        this.copy_bdi_setup.indexBDI++;
-        this.function_first_initiation();
+        // Es fühlt sich noch zu gross an ich sollte es kleiner denken. Oder mehr aufteilen in kleine
+        // mini Funktionen
+        const parentDom = document.querySelector('.display_bdi');
+        if (this.copy_bdi_setup.indexBDI < this.copy_bdi_setup.questionLength) {
+            console.log('fragen');
+            if (this.copy_bdi_setup.indexBDI === this.copy_bdi_setup.questionLength - 1) {
+                this.copy_bdi_setup.indexBDI++;
+                console.log('letzte frage, hier geht es dann zum Auswerten.');
+                
+                this.copy_bdi_setup.points += this.copy_bdi_setup.bufferPoints;
+                this.copy_bdi_setup.bufferPoints = null;
+                console.log(this.copy_bdi_setup.points, this.copy_bdi_setup.indexBDI);
+
+            } else {
+                
+                console.log('normale_fragen');
+                this.copy_bdi_setup.indexBDI++;
+                console.log(this.copy_bdi_setup.indexBDI);
+                if (this.copy_bdi_setup.indexBDI === this.copy_bdi_setup.questionLength - 2) { console.log('vorletzte Frage'); this.bdi_active_object.skipBack = false; }
+                renderingFunction_object.removeChildFunction(parentDom);
+                this.function_first_initiation(parentDom);
+                this.initiation_label_function();
+            };
+        };
     },
 
     // hier soll man ein schritt zuruck gehen das die zwischen gespeicherten Punkte 
     oneStepBack_function() {
-
+        if (this.bdi_active_object.skipBack) {
+            console.log('hier darf noch immer ein schritt zurück gegangen werden');
+        } else {
+            console.log('computer sagt nein');
+        }
     },
 
     UI_click_input(input) {
+        // das UI_click_system läuft nicht rund ich denke es muss eine ueberlapung geben auch das aufrufen 
+        //der einzelnen funktionen sind irgendie, am anfang laueft es gut so nach den zweiten zug ist der rytmus 
+        // komisch am besten baue ich dies nochmal.  
+        console.log(input);
+        if (this.copy_bdi_setup.inputValue === null) {
+            this.copy_bdi_setup.inputValue = input.id;
+            console.log(this.copy_bdi_setup.inputValue);
+            return;
+        }
 
-        if (this.bdi_setup.btn_click_i <= this.bdi_setup.buffer_clickEvent) {
-            this.bdi_setup.btn_click_i++;
-            console.log(input, 'Squall Lionheart');
-            if (this.bdi_setup.inputValue === null) {
-                console.log('trift auf KingdomHearts');
-                this.bdi_setup.inputValue = input.id;
-            } else if (this.bdi_setup.inputValue !== input.id) {
-                this.bdi_setup.btn_click_i = 0;
-                this.bdi_setup.inputValue = input.id;
-                console.log(this.bdi_setup.btn_click_i, this.bdi_setup.inputValue);
+        if (this.copy_bdi_setup.inputValue !== input.id) {
+            console.log('not equal');
+            this.copy_bdi_setup.inputValue = input.id;
+        } else {
+            console.log('skip_forward');
+            if (this.copy_bdi_setup.indexBDI >= this.copy_bdi_setup.questionLength) {
+                return console.log('btn_is_locked', this.copy_bdi_setup.points, this.copy_bdi_setup.bufferPoints);
             } else {
-                console.log('hier ist es gleich');
-                this.bdi_setup.btn_click_i = 0;
-                this.bdi_setup.inputValue = null;
-                if (this.copy_bdi_setup.bufferPoints === null) {
-                    this.storagePoints(input.value);
-                    this.forward_function();
-                };
-            };
+                this.copy_bdi_setup.inputValue = null;
+                this.storagePoints(Number(input.value));
+            }
 
-
-        };
+        }
 
     },
 

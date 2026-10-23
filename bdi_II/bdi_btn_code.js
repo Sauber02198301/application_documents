@@ -58,7 +58,7 @@ bdi_bodyDOM.addEventListener('click', (t) => {
                 if (booleanActive && !booleanActiveTest) {
                     console.log('aktiviere den t-800');
                     const parentDOM = '.display_bdi';
-                    if (bdi_UI_controll_setup.copy_bdi_setup === null || bdi_UI_controll_setup.copy_bdi_setup === undefined || bdi_UI_controll_setup === '') { bdi_UI_controll_setup.copy_bdi_setup = structuredClone(bdi_UI_controll_setup.bdi_setup); }
+                    if (bdi_UI_controll_setup.copy_bdi_setup === null || bdi_UI_controll_setup.copy_bdi_setup === undefined || bdi_UI_controll_setup.copy_bdi_setup === '') { bdi_UI_controll_setup.copy_bdi_setup = structuredClone(bdi_UI_controll_setup.bdi_setup); }
 
                     bdi_UI_controll_setup.function_activeBDI_test(parentDOM);
                 }
@@ -82,7 +82,11 @@ bdi_bodyDOM.addEventListener('click', (t) => {
 
     if (clickInput_bdi && bdi_bodyDOM.contains(clickInput_bdi)) {
         console.log(clickInput_bdi);
+
         bdi_UI_controll_setup.UI_click_input(clickInput_bdi);
+
+
+
         // ueberprueffen ob bdi_index < (kleiner als bdi_length ist) questionLength
         /*if (bdi_UI_controll_setup.bdi_setup.indexBDI < bdi_UI_controll_setup.bdi_setup.questionLength) {
             // sende an meiner const bdi_UI_controll_setup an die function clickEvent_contol()
