@@ -97,6 +97,7 @@ const bdi_UI_controll_setup = {
         if (this.bdi_active_object.criticalFlag_suizid) {
             const { title, main_text, action_text, contacts } = critical_evaluationLogic;
             console.log(title, main_text, action_text, contacts);
+
             const emergancy = {
                 'createElement': 'div',
                 'classList': 'evaluationClass',
@@ -107,12 +108,96 @@ const bdi_UI_controll_setup = {
                         'classList': 'cryticalFlagHeader',
                         'addClassList': ['suzid_warning'],
                         'children': [
-                            
+                            {
+                                'createElement': 'h1',
+                                'classList': 'cryticalFlag_h1',
+                                'addClassList': ['warning_red'],
+                                'createText': title
+                            }
+                        ]
+                    },
+                    {
+                        'createElement': 'main',
+                        'classList': 'cryticalFlagMain',
+                        'addClassList': ['warningMain'],
+                        'children': [
+                            {
+                                'createElement': 'p',
+                                'classList': 'cryticalFlag_p',
+                                'addClassList': ['textZero'],
+                                'createText': main_text,
+                            },
+                            {
+                                'createElement': 'p',
+                                'classList': 'cryticalFlag_p',
+                                'addClassList': ['textOne'],
+                                'createText': action_text,
+                            }
                         ]
                     }
                 ]
-            }
+            };
+            arrayList.push(structuredClone(emergancy));
+            let emergancySide = null;
+            if (!Array.isArray(contacts)) { Array(contacts) };
 
+            contacts.forEach((contacts) => {
+                const { webName = '', webside = null, numberList = '', info = '' } = contacts;
+
+                emergancySide = {
+                    'createElement': 'div',
+                    'classList': 'cryticalFlagDiv',
+                    'addClassList': ['warning_container_a'],
+                    'children': [
+                        {
+                            'createElement': 'a',
+                            'classList': 'cryticalFlag_a',
+                            'addClassList': ['anchorOne'],
+                            'hrefAttr': webside,
+                            'target': '_blank',
+                            'children': [
+                                {
+                                    'createElement': 'span',
+                                    'classList': 'cryticalFlag_span',
+                                    'addClassList': ['textSeelsorge'],
+                                    'createText': webName,
+                                }
+                            ],
+                        },
+                        {
+                            'createElement': 'a',
+                            'classList': 'cryticalFlag_a',
+                            'addClassList': ['anchortwo'],
+                            'hrefAttr': numberList,
+                            'target': '_blank',
+                            'children': [
+                                {
+                                    'createElement': 'span',
+                                    'classList': 'cryticalFlag_span',
+                                    'addClassList': ['textSeelsorge'],
+                                    'createText': numberList,
+                                },
+                                {
+                                    'createElement': 'span',
+                                    'classList': 'cryticalFlag_span',
+                                    'addClassList': ['textSeelsorge'],
+                                    'createText': info,
+                                },
+
+                            ],
+                        },
+                        {
+                            'createElement': 'p',
+                            'classList': 'cryticalFlag_p',
+                            'addClassList': ['textOne'],
+                            'createText': webName + numberList + info,
+                            
+                        }
+                    ]
+                };
+                
+            });
+            arrayList.push(structuredClone(emergancySide));
 
         } else {
 

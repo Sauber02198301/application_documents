@@ -275,14 +275,14 @@ const bdi_answer = {
         "action_text": "Wir raten Ihnen dringend, sich sofort Unterstützung zu suchen. Sie müssen da nicht alleine durch.",
         "contacts": [
             {
-                "name": "Telefonseelsorge (24h erreichbar)",
+                "webName": "Telefonseelsorge (24h erreichbar)",
                 "webside": "https://www.telefonseelsorge.de/",
-                "number": "0800 111 0 111",
+                "numberList": "0800 111 0 111",
                 "info": "Kostenlos und anonym."
             },
             {
-                "name": "Notruf",
-                "number": "112",
+                "webName": "Notruf",
+                "numberList": "112",
                 "info": "Bei akuter Gefahr."
             }
         ]
