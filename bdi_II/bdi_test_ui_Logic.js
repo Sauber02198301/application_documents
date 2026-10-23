@@ -6,7 +6,7 @@ const bdi_UI_controll_setup = {
         active: false,
         test_active: false,
         activeForm: false,
-        skipBack: true
+        skipBack: false
     },
 
 
@@ -24,6 +24,29 @@ const bdi_UI_controll_setup = {
     },
 
     copy_bdi_setup: null,
+
+    bdi_displaySection_UI(keyWord) {
+
+        const parentDom = document.querySelector('.display_bdi');
+        switch (keyWord) {
+            case 'skipForward':
+                renderingFunction_object.removeChildFunction(parentDom);
+                this.function_first_initiation(parentDom);
+                this.initiation_label_function();
+                break;
+
+            case 'skipBack':
+                renderingFunction_object.removeChildFunction(parentDom);
+                this.function_first_initiation(parentDom);
+                this.initiation_label_function();
+
+                break;
+            default: break;
+        };
+
+
+
+    },
 
     //schrit 4.1 label & input 2/2
     input_initiation_function(content, parentDOM) {
@@ -137,6 +160,7 @@ const bdi_UI_controll_setup = {
             this.bdi_active_object.active = false;
             this.bdi_active_object.test_active = false;
             this.bdi_active_object.activeForm = false;
+            this.bdi_active_object.skipBack = false;
             this.copy_bdi_setup = null
             renderingFunction_object.rendering_functionSystem(metaObject, parentDOM);
         } else {
@@ -191,24 +215,28 @@ const bdi_UI_controll_setup = {
         // mini Funktionen
         const parentDom = document.querySelector('.display_bdi');
         if (this.copy_bdi_setup.indexBDI < this.copy_bdi_setup.questionLength) {
+            //if (this.copy_bdi_setup.indexBDI >= 1 && this.copy_bdi_setup.indexBDI <= this.copy_bdi_setup.questionLength - 1) { this.bdi_active_object.skipBack = true; console.log(this.bdi_active_object.skipBack); };
             console.log('fragen');
             if (this.copy_bdi_setup.indexBDI === this.copy_bdi_setup.questionLength - 1) {
                 this.copy_bdi_setup.indexBDI++;
                 console.log('letzte frage, hier geht es dann zum Auswerten.');
-                
+
                 this.copy_bdi_setup.points += this.copy_bdi_setup.bufferPoints;
                 this.copy_bdi_setup.bufferPoints = null;
                 console.log(this.copy_bdi_setup.points, this.copy_bdi_setup.indexBDI);
 
             } else {
-                
+
                 console.log('normale_fragen');
                 this.copy_bdi_setup.indexBDI++;
                 console.log(this.copy_bdi_setup.indexBDI);
-                if (this.copy_bdi_setup.indexBDI === this.copy_bdi_setup.questionLength - 2) { console.log('vorletzte Frage'); this.bdi_active_object.skipBack = false; }
-                renderingFunction_object.removeChildFunction(parentDom);
-                this.function_first_initiation(parentDom);
-                this.initiation_label_function();
+                if (this.copy_bdi_setup.indexBDI === this.copy_bdi_setup.questionLength - 2) {
+                    console.log('vorletzte Frage');
+                    this.bdi_active_object.skipBack = false;
+                };
+
+                this.bdi_displaySection_UI('skipForward');
+
             };
         };
     },
@@ -217,9 +245,15 @@ const bdi_UI_controll_setup = {
     oneStepBack_function() {
         if (this.bdi_active_object.skipBack) {
             console.log('hier darf noch immer ein schritt zurück gegangen werden');
+            this.copy_bdi_setup.indexBDI--;
+            this.copy_bdi_setup.bufferPoints = null;
+            this.bdi_active_object.skipBack = false;
+            this.copy_bdi_setup.inputValue = null
+            this.bdi_displaySection_UI('skipBack');
+
         } else {
             console.log('computer sagt nein');
-        }
+        };
     },
 
     UI_click_input(input) {
@@ -242,6 +276,7 @@ const bdi_UI_controll_setup = {
                 return console.log('btn_is_locked', this.copy_bdi_setup.points, this.copy_bdi_setup.bufferPoints);
             } else {
                 this.copy_bdi_setup.inputValue = null;
+
                 this.storagePoints(Number(input.value));
             }
 

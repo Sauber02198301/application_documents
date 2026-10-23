@@ -74,8 +74,16 @@ bdi_bodyDOM.addEventListener('click', (t) => {
                 };
                 */
                 break;
-            default: break;
+            case 'stepBack':
+                console.log(click_ins_secondary);
+                if (bdi_UI_controll_setup.copy_bdi_setup.indexBDI <= 0 || bdi_UI_controll_setup.copy_bdi_setup === bdi_UI_controll_setup.copy_bdi_setup.questionLength - 1) {
+                    console.log('dies darf nur zweimal erscheinen');
+                } else {
+                    bdi_UI_controll_setup.oneStepBack_function();
+                };
 
+                break;
+            default: break;
         };
 
     };
