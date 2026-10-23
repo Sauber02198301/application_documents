@@ -1,6 +1,6 @@
 .heading_bdi_test {
-    margin: 1em;
-    padding: 0.5em;
+    margin: 1.5em;
+    padding: 1.5em;
     gap: 1em;
     text-align: center;
     border-bottom: solid 1px #00000099;
@@ -25,4 +25,19 @@
 .input_bdi {
     width: 25px;
     height: 20px;
+}
+
+.evaluation_container {
+    height: 100%;
+    width: 90ch;
+    margin: 1em;
+    padding: 1em;
+    justify-content: flex-start;
+    align-self: center;
+}
+
+.evaluationText {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    word-spacing: 0.3rem;
 }

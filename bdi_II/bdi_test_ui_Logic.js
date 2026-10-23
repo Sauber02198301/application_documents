@@ -6,7 +6,8 @@ const bdi_UI_controll_setup = {
         active: false,
         test_active: false,
         activeForm: false,
-        skipBack: false
+        skipBack: false,
+        criticalFlag_suizid: false
     },
 
 
@@ -25,7 +26,10 @@ const bdi_UI_controll_setup = {
 
     copy_bdi_setup: null,
 
-    bdi_displaySection_UI(keyWord) {
+    // das evaluationSystem ist das auswertung system der Punkte sie soll das mit den hinterlegeten werten abgleichen. 
+
+
+    bdi_displaySection_UI(keyWord, metaObject) {
 
         const parentDom = document.querySelector('.display_bdi');
         switch (keyWord) {
@@ -41,11 +45,80 @@ const bdi_UI_controll_setup = {
                 this.initiation_label_function();
 
                 break;
+            case 'evaluation':
+                console.log(metaObject);
+                if (!metaObject) { return };
+                renderingFunction_object.removeChildFunction(parentDom);
+                renderingFunction_object.rendering_functionSystem(metaObject, parentDom);
+                break;
             default: break;
         };
+    },
+
+    evaluationSystem() {
+        const evalutionLogic = bdi_answer.evaluation;
+        const critical_evaluationLogic = bdi_answer.suicide_dark_thoughts;
+
+        const arrayList = [];
+
+        if (!Array.isArray(evalutionLogic)) { Array(evalutionLogic) };
+        evalutionLogic.forEach((evalutionLogic) => {
+            console.log(evalutionLogic);
+            const { min_points, max_points, createText: text } = evalutionLogic;
+            console.log(min_points, min_points, text);
+            if (min_points <= this.copy_bdi_setup.points && max_points >= this.copy_bdi_setup.points) {
+                console.log('ich bins die' + this.copy_bdi_setup.points + 'Points');
+                const evaluationText = {
+                    'createElement': 'div',
+                    'classList': 'evaluationClass',
+                    'addClassList': ['evaluationValueCSS'],
+                    'children': [
+                        {
+                            'createElement': 'p',
+                            'classList': 'evaluation_pText',
+                            'addClassList': ['clueText'],
+                            'createText': text
+                        },
+                        {
+                            'createElement': 'p',
+                            'classList': 'evaluation_pText',
+                            'addClassList': ['clueText'],
+                            'createText': `Sie haben einen BDI-Punktewert von ${this.copy_bdi_setup.points}`
+                        }
+                    ]
+                };
+
+                arrayList.push(structuredClone(evaluationText));
+                return;
+            };
+
+        });
+
+        if (this.bdi_active_object.criticalFlag_suizid) {
+            const { title, main_text, action_text, contacts } = critical_evaluationLogic;
+            console.log(title, main_text, action_text, contacts);
+            const emergancy = {
+                'createElement': 'div',
+                'classList': 'evaluationClass',
+                'addClassList': ['emergancy_cryticalFlag'],
+                'children': [
+                    {
+                        'createElement': 'header',
+                        'classList': 'cryticalFlagHeader',
+                        'addClassList': ['suzid_warning'],
+                        'children': [
+                            
+                        ]
+                    }
+                ]
+            }
 
 
+        } else {
 
+        };
+        console.log(evalutionLogic);
+        this.bdi_displaySection_UI('evaluation', arrayList);
     },
 
     //schrit 4.1 label & input 2/2
@@ -60,7 +133,7 @@ const bdi_UI_controll_setup = {
         content.forEach((content, i) => {
             console.log(content, i);
 
-            const { createText: text = "", points } = content;
+            const { createText: text = "", points, dataset: data = null } = content;
 
             const questionBDI_label = {
                 "createElement": "label",
@@ -73,6 +146,7 @@ const bdi_UI_controll_setup = {
                         "addClassList": ["questinMain_radio"],
                         "type": "radio",
                         "name": "answer",
+                        "dataset": data || '',
                         "id": String(i),
                         "value": String(points),
                     },
@@ -224,7 +298,7 @@ const bdi_UI_controll_setup = {
                 this.copy_bdi_setup.points += this.copy_bdi_setup.bufferPoints;
                 this.copy_bdi_setup.bufferPoints = null;
                 console.log(this.copy_bdi_setup.points, this.copy_bdi_setup.indexBDI);
-
+                this.evaluationSystem()
             } else {
 
                 console.log('normale_fragen');
@@ -276,12 +350,12 @@ const bdi_UI_controll_setup = {
                 return console.log('btn_is_locked', this.copy_bdi_setup.points, this.copy_bdi_setup.bufferPoints);
             } else {
                 this.copy_bdi_setup.inputValue = null;
-
+                if (input.dataset.action) { this.bdi_active_object.criticalFlag_suizid = true };
                 this.storagePoints(Number(input.value));
             }
 
         }
 
-    },
+    }
 
 };

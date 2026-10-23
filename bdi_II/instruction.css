@@ -4,7 +4,8 @@
 }
 
 .instruction {
-    gap: 4em;
+    gap: 1em;
+    height: 100%;
 }
 
 .instruction_header {

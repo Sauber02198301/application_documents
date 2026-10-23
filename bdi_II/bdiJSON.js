@@ -33,6 +33,8 @@
 const bdiLibrary = {
 
     "classListInstr": {
+        "evaluationClass": ["flex_directin_column", "evaluation_container"],
+        "evaluation_pText": ["font_standardValue", "evaluationText"],
         "bdi_master_container": ["flex_directin_column", "display_bdi_section"],
         "questionHeader": ["flex_directin_column", "heading_bdi_test"],
         "questionForm": ["flex_directin_column", "form_container"],
