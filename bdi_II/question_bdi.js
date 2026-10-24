@@ -273,19 +273,17 @@ const bdi_answer = {
         "title": "Wichtiger Hinweis!",
         "main_text": "Ihre Antwort auf die Frage zu Suizidgedanken hat das System alarmiert. Bitte nehmen Sie diese Gefühle ernst.",
         "action_text": "Wir raten Ihnen dringend, sich sofort Unterstützung zu suchen. Sie müssen da nicht alleine durch.",
-        "contacts": [
-            {
-                "webName": "Telefonseelsorge (24h erreichbar)",
-                "webside": "https://www.telefonseelsorge.de/",
-                "numberList": "0800 111 0 111",
-                "info": "Kostenlos und anonym."
-            },
-            {
-                "webName": "Notruf",
-                "numberList": "112",
-                "info": "Bei akuter Gefahr."
-            }
-        ]
+        "seelsorgeCall": {
+            "webName": "Die Telefonseelsorge ist (24h erreichbar) unter der Nummer",
+            "webside": "https://www.telefonseelsorge.de/",
+            "numberList": "tel: +49 800 111 0 111",
+            "info": "Kostenlos und anonym."
+        },
+        "emergencyCall": {
+            "webName": "Notruf",
+            "numberList": "112",
+            "info": "Bei akuter Gefahr."
+        }
     },
 }
 

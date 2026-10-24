@@ -9,13 +9,23 @@
 .form_container {
     padding: 0.5em;
     margin: 1em;
-    gap: 4em;
-    height: 280px;
+    justify-content: space-evenly;
+    /* gap: 4em; */
+    height: 100%;
 }
 
 .label_container {
     justify-content: space-between;
     align-items: center;
+    padding: 0.8em;
+    border-radius: 10px;
+}
+
+.label_container:hover {
+    background-color: #00000081;
+    color: #ffffff;
+    text-decoration: underline;
+
 }
 
 .answer_inputSpan {
@@ -28,16 +38,53 @@
 }
 
 .evaluation_container {
-    height: 100%;
     width: 90ch;
-    margin: 1em;
-    padding: 1em;
+    margin: 0.5em;
+    padding: 0.5em;
     justify-content: flex-start;
     align-self: center;
+}
+
+.emergancy_cryticalFlag {
+    gap: 1em;
+    background-color: #0000003b;
+    border-radius: 10px;
+    border: solid 2px #00000054;
 }
 
 .evaluationText {
     font-size: 1.1rem;
     line-height: 1.7rem;
     word-spacing: 0.3rem;
+    padding: 0.5em;
+    margin: 0.2em;
+}
+
+.cryticalFlag_container {
+    gap: 0.4em;
+}
+
+.suicide_warning {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.cryticalMain_section {
+    gap: 0.9em;
+    margin: 0.3em;
+    padding: 0.6em;
+    border-top: solid 1px #000000;
+}
+
+.cryticalText {
+    font-size: 1.115rem;
+    line-height: 1.65;
+    word-break: auto-phrase;
+    word-spacing: 0.2em;
+}
+
+.a_content_cryticalFlag {
+    gap: 0.7em;
 }

@@ -74,16 +74,29 @@ const bdi_UI_controll_setup = {
                     'addClassList': ['evaluationValueCSS'],
                     'children': [
                         {
-                            'createElement': 'p',
-                            'classList': 'evaluation_pText',
-                            'addClassList': ['clueText'],
-                            'createText': text
+                            'createElement': 'header',
+                            'classList': 'cryticalFlagHeader',
+                            'addClassList': ['headerTest'],
+                            'children': [
+                                {
+                                    'createElement': 'h2',
+                                    'classList': 'text_font_h2',
+                                    'addClassList': ['evaluation_h2'],
+                                    'createText': 'Auswertung des Test'
+                                }
+                            ]
                         },
                         {
                             'createElement': 'p',
                             'classList': 'evaluation_pText',
                             'addClassList': ['clueText'],
-                            'createText': `Sie haben einen BDI-Punktewert von ${this.copy_bdi_setup.points}`
+                            'createText': `Sie haben einen BDI-Punktewert von ${this.copy_bdi_setup.points} erreicht.`
+                        },
+                        {
+                            'createElement': 'p',
+                            'classList': 'evaluation_pText',
+                            'addClassList': ['clueText'],
+                            'createText': text
                         }
                     ]
                 };
@@ -95,8 +108,10 @@ const bdi_UI_controll_setup = {
         });
 
         if (this.bdi_active_object.criticalFlag_suizid) {
-            const { title, main_text, action_text, contacts } = critical_evaluationLogic;
-            console.log(title, main_text, action_text, contacts);
+            const { title, main_text, action_text, seelsorgeCall, emergencyCall } = critical_evaluationLogic;
+            console.log(title, main_text, action_text, seelsorgeCall, emergencyCall);
+
+            const { webName = null, webside = null, numberList = null, info = null } = seelsorgeCall;
 
             const emergancy = {
                 'createElement': 'div',
@@ -106,7 +121,7 @@ const bdi_UI_controll_setup = {
                     {
                         'createElement': 'header',
                         'classList': 'cryticalFlagHeader',
-                        'addClassList': ['suzid_warning'],
+                        'addClassList': ['suicide_warning'],
                         'children': [
                             {
                                 'createElement': 'h1',
@@ -122,82 +137,88 @@ const bdi_UI_controll_setup = {
                         'addClassList': ['warningMain'],
                         'children': [
                             {
-                                'createElement': 'p',
-                                'classList': 'cryticalFlag_p',
-                                'addClassList': ['textZero'],
-                                'createText': main_text,
+                                'createElement': 'div',
+                                'classList': 'cryticalFlagDiv',
+                                'addClassList': ['warning_container_suicide'],
+                                'children': [
+                                    {
+                                        'createElement': 'p',
+                                        'classList': 'cryticalFlag_p',
+                                        'addClassList': ['textZero'],
+                                        'createText': main_text,
+                                    },
+                                    {
+                                        'createElement': 'p',
+                                        'classList': 'cryticalFlag_p',
+                                        'addClassList': ['textOne'],
+                                        'createText': action_text,
+                                    }
+                                ]
                             },
                             {
-                                'createElement': 'p',
-                                'classList': 'cryticalFlag_p',
-                                'addClassList': ['textOne'],
-                                'createText': action_text,
+                                'createElement': 'div',
+                                'classList': 'cryticalFlagDiv',
+                                'addClassList': ['warning_container_suicide'],
+                                'children': [
+                                    {
+                                        'createElement': 'article',
+                                        'classList': 'cryticalFlag_article',
+                                        'addClassList': ['article_seelsorge'],
+                                        'children': [
+                                            {
+                                                'createElement': 'p',
+                                                'classList': 'cryticalFlag_p',
+                                                'addClassList': ['textThree'],
+                                                'createText': webName,
+                                                'children': [
+                                                    {
+                                                        'createElement': 'a',
+                                                        'classList': 'crytical_a_class',
+                                                        'addClassList': ['suicidePhone'],
+                                                        //'hrefAttr': numberList,
+                                                        'children': [
+                                                            {
+                                                                'createElement': 'span',
+                                                                'classList': 'span_iconList',
+                                                                'addClassList': ['cryticalFlag_icon'],
+                                                                'createText': 'call'
+                                                            },
+                                                            {
+                                                                'createElement': 'span',
+                                                                'classList': 'span_textList',
+                                                                'addClassList': ['cryticalFlag_icon'],
+                                                                'createText': numberList
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        'createElement': 'a',
+                                                        'classList': 'crytical_a_class',
+                                                        'addClassList': ['suicidePhone_webside'],
+                                                        'hrefAttr': webside,
+                                                        'target': '_blank',
+                                                        'children': [
+                                                            {
+                                                                'createElement': 'span',
+                                                                'classList': 'span_textList',
+                                                                'addClassList': ['cryticalFlag_icon'],
+                                                                'createText': `oder der Webseite ${webside}`
+                                                            }
+                                                        ]
+                                                    }
+
+
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     }
                 ]
             };
             arrayList.push(structuredClone(emergancy));
-            let emergancySide = null;
-            if (!Array.isArray(contacts)) { Array(contacts) };
-
-            contacts.forEach((contacts) => {
-                const { webName = '', webside = null, numberList = '', info = '' } = contacts;
-
-                emergancySide = {
-                    'createElement': 'div',
-                    'classList': 'cryticalFlagDiv',
-                    'addClassList': ['warning_container_a'],
-                    'children': [
-                        {
-                            'createElement': 'a',
-                            'classList': 'cryticalFlag_a',
-                            'addClassList': ['anchorOne'],
-                            'hrefAttr': webside,
-                            'target': '_blank',
-                            'children': [
-                                {
-                                    'createElement': 'span',
-                                    'classList': 'cryticalFlag_span',
-                                    'addClassList': ['textSeelsorge'],
-                                    'createText': webName,
-                                }
-                            ],
-                        },
-                        {
-                            'createElement': 'a',
-                            'classList': 'cryticalFlag_a',
-                            'addClassList': ['anchortwo'],
-                            'hrefAttr': numberList,
-                            'target': '_blank',
-                            'children': [
-                                {
-                                    'createElement': 'span',
-                                    'classList': 'cryticalFlag_span',
-                                    'addClassList': ['textSeelsorge'],
-                                    'createText': numberList,
-                                },
-                                {
-                                    'createElement': 'span',
-                                    'classList': 'cryticalFlag_span',
-                                    'addClassList': ['textSeelsorge'],
-                                    'createText': info,
-                                },
-
-                            ],
-                        },
-                        {
-                            'createElement': 'p',
-                            'classList': 'cryticalFlag_p',
-                            'addClassList': ['textOne'],
-                            'createText': webName + numberList + info,
-                            
-                        }
-                    ]
-                };
-                
-            });
-            arrayList.push(structuredClone(emergancySide));
 
         } else {
 

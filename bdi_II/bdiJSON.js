@@ -33,6 +33,14 @@
 const bdiLibrary = {
 
     "classListInstr": {
+        "cryticalFlagHeader": ["flex_directin_column", "cryticalFlag_container"],
+        "cryticalFlag_h1": ["font_standardValue", "h1_warningText_suicide"],
+        "cryticalFlagMain": ["flex_directin_column", "cryticalMain_section"],
+        "cryticalFlag_p": ["font_standardValue", "cryticalText"],
+        "cryticalFlagDiv": ["flex_directin_column", "cryticalChild_container"],
+        "crytical_a_class": ["flex_directin_row", "a_content_cryticalFlag"],
+        "cryticalFlag_article": ["flex_directin_column", "article_cryticalFlag"],
+        "span_iconList": ["material-symbols-outlined", "cryticalText"],
         "evaluationClass": ["flex_directin_column", "evaluation_container"],
         "evaluation_pText": ["font_standardValue", "evaluationText"],
         "bdi_master_container": ["flex_directin_column", "display_bdi_section"],

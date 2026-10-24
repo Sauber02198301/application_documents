@@ -14,42 +14,42 @@ const renderingFunction_object = {
 
     },
 
-/*    function_activeBDI(activeBoolean, metaObject, parentDom) {
-        // activeBoolean = fals || true, metaObject = das zu bearbeitende object, parentDom = das zu loschende dom & gleichzeitg das ziel;
-        //console.log(activeBoolean, metaObject, parentDom);
-        if (activeBoolean !== this.bdi_active_object.active) {
-            this.bdi_active_object.active = activeBoolean;
-            console.log(activeBoolean, metaObject, parentDom);
-            this.removeChildFunction(parentDom);
-            this.rendering_functionSystem(metaObject, parentDom);
-
-        } else if (activeBoolean === this.bdi_active_object.active) {
-            this.bdi_active_object.active = activeBoolean;
-            this.removeChildFunction(parentDom);
-            this.rendering_functionSystem(metaObject, parentDom);
-        };
-
-    },
-
-    function_activeBDI_test(activeBoolean, bdi_question, bdi_object_prop, answer_content, display_bdi) {
-        console.log(activeBoolean, bdi_question, bdi_object_prop, answer_content, display_bdi);
-        let boolean_bdi_active = this.bdi_active_object.active;
-        let boolean_activeBDI_test = this.bdi_active_object.test_active;
-        console.log(boolean_bdi_active, boolean_activeBDI_test);
-        console.log(activeBoolean, bdi_question, bdi_object_prop, display_bdi);
-        if (activeBoolean !== this.bdi_active_object.test_active && this.bdi_active_object.active) {
-            this.bdi_active_object.test_active = activeBoolean;
-            this.removeChildFunction(display_bdi);
-            this.unpackage_bdiFunction(bdi_question, bdi_object_prop, answer_content, display_bdi);
-
-        } else if (activeBoolean === this.bdi_active_object.test_active && !this.bdi_active_object.active) {
-            this.bdi_active_object.test_active = activeBoolean;
-
-        }
-
-
-    },
-*/
+    /*    function_activeBDI(activeBoolean, metaObject, parentDom) {
+            // activeBoolean = fals || true, metaObject = das zu bearbeitende object, parentDom = das zu loschende dom & gleichzeitg das ziel;
+            //console.log(activeBoolean, metaObject, parentDom);
+            if (activeBoolean !== this.bdi_active_object.active) {
+                this.bdi_active_object.active = activeBoolean;
+                console.log(activeBoolean, metaObject, parentDom);
+                this.removeChildFunction(parentDom);
+                this.rendering_functionSystem(metaObject, parentDom);
+    
+            } else if (activeBoolean === this.bdi_active_object.active) {
+                this.bdi_active_object.active = activeBoolean;
+                this.removeChildFunction(parentDom);
+                this.rendering_functionSystem(metaObject, parentDom);
+            };
+    
+        },
+    
+        function_activeBDI_test(activeBoolean, bdi_question, bdi_object_prop, answer_content, display_bdi) {
+            console.log(activeBoolean, bdi_question, bdi_object_prop, answer_content, display_bdi);
+            let boolean_bdi_active = this.bdi_active_object.active;
+            let boolean_activeBDI_test = this.bdi_active_object.test_active;
+            console.log(boolean_bdi_active, boolean_activeBDI_test);
+            console.log(activeBoolean, bdi_question, bdi_object_prop, display_bdi);
+            if (activeBoolean !== this.bdi_active_object.test_active && this.bdi_active_object.active) {
+                this.bdi_active_object.test_active = activeBoolean;
+                this.removeChildFunction(display_bdi);
+                this.unpackage_bdiFunction(bdi_question, bdi_object_prop, answer_content, display_bdi);
+    
+            } else if (activeBoolean === this.bdi_active_object.test_active && !this.bdi_active_object.active) {
+                this.bdi_active_object.test_active = activeBoolean;
+    
+            }
+    
+    
+        },
+    */
     destructChild_contentFunction(children, parentDom) {
         //console.log(children, parentDom);
         if (!children || !parentDom) { return };
@@ -109,6 +109,15 @@ const renderingFunction_object = {
 
     },
 
+    hrefInsertFunction(hrefAttr, targetSet, html_element) {
+        if (!hrefAttr || !html_element) { return };
+
+        html_element.href = hrefAttr;
+
+        html_element.target = targetSet;
+        if (targetSet === '_blank') { html_element.rel = "noopener noreferrer"; };
+    },
+
     idInsertFunction(idName, html_element) {
         if (idName === null || idName === undefined || idName === '') { return };
 
@@ -163,7 +172,7 @@ const renderingFunction_object = {
         */
         for (const extObject of htmlObject) {
             //console.log(extObject);
-            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, id: idName = null, children = null, dataset: dataTyp = null, type = null, name: nameInput = null, value: valueNumber = null, createText: textContent = null } = extObject;
+            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, hrefAttr = null, target: targetSet = null, id: idName = null, children = null, dataset: dataTyp = null, type = null, name: nameInput = null, value: valueNumber = null, createText: textContent = null } = extObject;
 
             //console.log(children, addClassList);
             const html_element = this.createHTML_element_func(htmlTag);
@@ -171,6 +180,7 @@ const renderingFunction_object = {
             //console.log(html_element);
             this.createData_instruction(html_element, dataTyp);
             this.toInsertValue(valueNumber, html_element);
+            this.hrefInsertFunction(hrefAttr, targetSet, html_element);
             this.toInsert_type(type, html_element);
             this.idInsertFunction(idName, html_element);
             this.toInsert_name(nameInput, html_element);
