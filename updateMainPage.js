@@ -803,6 +803,24 @@ const mainContent = {
                                             "createText": "BDI-II Test"
                                         }
                                     ]
+                                },
+                                {
+                                    "createElement": "a",
+                                    "classList": ["flex", "anchorDrop_section", "anchorDrop_sectionStyle", "app_zero"],
+                                    "hrefAttr": "gambleGame/index.html",
+                                    "target": "_blank",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["block", "material-symbols-outlined", "iconStyle"],
+                                            "createText": "stadia_controller"
+                                        },
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["block", "font_standardValue", "btnTextStyle"],
+                                            "createText": "Game"
+                                        }
+                                    ]
                                 }
                             ]
                         }
@@ -882,6 +900,24 @@ const mainContent = {
                                                             "createElement": "span",
                                                             "classList": ["block", "font_standardValue", "certificationStyle"],
                                                             "createText": "Developer View"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "createElement": "a",
+                                                    "classList": ["flex", "anchor_settings", "anchorStyle", "anchorFooterDrop", "anchorDrop"],
+                                                    "hrefAttr": "pdf_data/bdi_II_Buch.pdf",
+                                                    "target": "_blank",
+                                                    "children": [
+                                                        {
+                                                            "createElement": "span",
+                                                            "classList": ["block", "material-symbols-outlined", "certificationStyle"],
+                                                            "createText": "school"
+                                                        },
+                                                        {
+                                                            "createElement": "span",
+                                                            "classList": ["block", "font_standardValue", "certificationStyle"],
+                                                            "createText": "BDI-II Dokument"
                                                         }
                                                     ]
                                                 }
