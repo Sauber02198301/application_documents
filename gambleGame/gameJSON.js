@@ -8,7 +8,13 @@ const bodyGame = [
                 "createElement": "h1",
                 "classList": ["display_block", "default_fontProp", "h1_headerStyle"],
                 "addClassList": ["control_h1_body"],
-                "createText": ""
+                "createText": "Casino Games"
+            },
+            {
+                "createElement": "span",
+                "classList": ["display_block", "material-symbols-outlined", "font_family_game"],
+                "addClassList": ["headerIcon"],
+                "createText": "casino",
             }
         ]
     },
@@ -27,7 +33,7 @@ const bodyGame = [
     },
     {
         "createElement": "main",
-        "classList": "",
+        "classList": ["grid_property", "main_section", main_sectionStyle],
         "addClassList": "",
         "children": [
             {

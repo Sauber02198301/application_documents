@@ -1,0 +1,21 @@
+@media screen and (max-width: 768px) {
+    html, 
+    body {
+        width: 100dvw;
+        min-height: 100dvh;
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        background-image: linear-gradient(36deg, rgba(6, 6, 98, 0.5), rgba(93, 96, 245, 0.675), rgba(220, 12, 220, 0.806),rgba(6, 6, 98, 0.5));
+    }
+    
+    .body_section {
+        grid-template-areas: 
+            'header'
+            'main'
+            'footer'
+        ;
+        grid-template-columns: 1fr;
+    }
+
+
+}
