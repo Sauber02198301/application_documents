@@ -3,58 +3,20 @@
 const renderingFunction_object = {
 
     removeChildFunction(parentDom) {
-        console.log(parentDom);
+
         if (parentDom.innerHTML.trim() !== '') {
-            console.log('dom ist voll');
+
             parentDom.innerHTML = '';
             return;
         } else {
-            console.log('dom ist leer');
+
         };
 
     },
 
-    /*    function_activeBDI(activeBoolean, metaObject, parentDom) {
-            // activeBoolean = fals || true, metaObject = das zu bearbeitende object, parentDom = das zu loschende dom & gleichzeitg das ziel;
-            //console.log(activeBoolean, metaObject, parentDom);
-            if (activeBoolean !== this.bdi_active_object.active) {
-                this.bdi_active_object.active = activeBoolean;
-                console.log(activeBoolean, metaObject, parentDom);
-                this.removeChildFunction(parentDom);
-                this.rendering_functionSystem(metaObject, parentDom);
-    
-            } else if (activeBoolean === this.bdi_active_object.active) {
-                this.bdi_active_object.active = activeBoolean;
-                this.removeChildFunction(parentDom);
-                this.rendering_functionSystem(metaObject, parentDom);
-            };
-    
-        },
-    
-        function_activeBDI_test(activeBoolean, bdi_question, bdi_object_prop, answer_content, display_bdi) {
-            console.log(activeBoolean, bdi_question, bdi_object_prop, answer_content, display_bdi);
-            let boolean_bdi_active = this.bdi_active_object.active;
-            let boolean_activeBDI_test = this.bdi_active_object.test_active;
-            console.log(boolean_bdi_active, boolean_activeBDI_test);
-            console.log(activeBoolean, bdi_question, bdi_object_prop, display_bdi);
-            if (activeBoolean !== this.bdi_active_object.test_active && this.bdi_active_object.active) {
-                this.bdi_active_object.test_active = activeBoolean;
-                this.removeChildFunction(display_bdi);
-                this.unpackage_bdiFunction(bdi_question, bdi_object_prop, answer_content, display_bdi);
-    
-            } else if (activeBoolean === this.bdi_active_object.test_active && !this.bdi_active_object.active) {
-                this.bdi_active_object.test_active = activeBoolean;
-    
-            }
-    
-    
-        },
-    */
     destructChild_contentFunction(children, parentDom) {
-        //console.log(children, parentDom);
         if (!children || !parentDom) { return };
         const childObject = bdiLibrary[children] || children;
-        //console.log(childObject);
         this.rendering_functionSystem(childObject, parentDom);
         return;
 
@@ -63,8 +25,6 @@ const renderingFunction_object = {
     createHTML_element_func(htmlTag) {
         if (!htmlTag) { return };
         const html_element = document.createElement(htmlTag);
-        //console.log(html_element);
-
         return html_element;
     },
 
@@ -86,54 +46,44 @@ const renderingFunction_object = {
     },
 
     createData_instruction(html_element, dataTyp) {
-        //console.log(html_element, dataTyp);
         if (!html_element || !dataTyp) { return };
 
         html_element.dataset.action = dataTyp;
     },
 
     addClass_func(html_element, classSet, addClassList) {
-        //console.log(html_element, classSet, addClassList);
         if (!classSet) { return };
         html_element.classList = '';
-        //console.log(html_element, classSet);
+
         const class_array = bdiLibrary.classList_main[classSet] || bdiLibrary.classList_header[classSet] || bdiLibrary.classListText_icon[classSet] || bdiLibrary.classList_mainChildren[classSet] || bdiLibrary.classListInstr[classSet] || null;
-        //console.log(class_array);
+
         if (!class_array) { return; }
         html_element.classList.add(...class_array);
         if (!addClassList) { return };
         const add = bdiLibrary.classListText_icon[addClassList] || addClassList || null;
         if (!add) { return };
         html_element.classList.add(...add);
-        //console.log(html_element);
-
     },
 
     hrefInsertFunction(hrefAttr, targetSet, html_element) {
         if (!hrefAttr || !html_element) { return };
-
         html_element.href = hrefAttr;
-
         html_element.target = targetSet;
         if (targetSet === '_blank') { html_element.rel = "noopener noreferrer"; };
     },
 
     idInsertFunction(idName, html_element) {
         if (idName === null || idName === undefined || idName === '') { return };
-
         html_element.id = idName;
     },
 
     appendFunct(html_element, parentDom) {
-        //console.log(html_element, parentDom);
         if (!html_element || !parentDom) { return };
-
         parentDom.appendChild(html_element);
-
     },
 
     createTextFunction(textContent, html_element, parentBody) {
-        //console.log(textContent, html_element);
+
         if (!textContent) { return };
         if (!Array.isArray(textContent)) {
             const textNode = document.createTextNode(textContent);
@@ -143,7 +93,7 @@ const renderingFunction_object = {
             //console.log(textContent);
             textContent.forEach((textContent, index) => {
                 const copy_html_element = html_element.cloneNode(false);
-                console.log(textContent, index);
+
                 const textNode = document.createTextNode(textContent);
                 copy_html_element.appendChild(textNode);
                 this.appendFunct(copy_html_element, parentBody);
@@ -171,13 +121,13 @@ const renderingFunction_object = {
             extObject = extration the object from htmlObject
         */
         for (const extObject of htmlObject) {
-            //console.log(extObject);
+
             const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, hrefAttr = null, target: targetSet = null, id: idName = null, children = null, dataset: dataTyp = null, type = null, name: nameInput = null, value: valueNumber = null, createText: textContent = null } = extObject;
 
-            //console.log(children, addClassList);
+
             const html_element = this.createHTML_element_func(htmlTag);
             this.addClass_func(html_element, classSet, addClassList);
-            //console.log(html_element);
+
             this.createData_instruction(html_element, dataTyp);
             this.toInsertValue(valueNumber, html_element);
             this.hrefInsertFunction(hrefAttr, targetSet, html_element);

@@ -88,7 +88,6 @@ const instruction_sheet = [
                                     }
                                 ]
                             },
-
                         ]
                     },
                     {
