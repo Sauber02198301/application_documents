@@ -63,11 +63,12 @@ body_section.addEventListener('click', (t) => {
                 
                 if (!iconDrop.classList.contains(`childBox_opacityActive`)) {
                     iconDrop.classList.add('childBox_opacityActive');
+                    sideBar.style.zIndex = 0;
                     console.log()
                     
                 } else {
                     iconDrop.classList.remove('childBox_opacityActive');
-                    
+                    sideBar.style.zIndex = '';
                 };
                 console.log(iconDrop);
                 

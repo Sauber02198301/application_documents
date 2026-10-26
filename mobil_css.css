@@ -263,6 +263,7 @@
         flex-direction: row;
         border-top: solid 2px #2d24246e;
         overflow: hidden;
+        z-index: 3;
     }
 
     .imgBox {
@@ -275,6 +276,9 @@
         z-index: 1;
     }
 
+    .parentBox_dropDown {
+        z-index: 0;
+    }
 
     .app_zero {
         margin-top: 0;
@@ -375,6 +379,7 @@
         left: 117px;
         bottom: 52px;
         border: solid 1px white;
+        z-index: 0;
     }
 
     .certificationStyle {
