@@ -22,18 +22,26 @@ const control_UI_engine = {
     add_classSetting(htmlDOM, classSet, addClassList) {
         //legende htmlDom = htmlTag; classSet ein Array mit classNames; addClassList = zusatzName;
         console.log(htmlDOM, classSet, addClassList);
-        if (!Array.isArray(classSet) && typeof classSet === 'string') {
+        /*if (!Array.isArray(classSet) && typeof classSet === 'string') {
             const toConvertClassSet = libraryList[classSet] || null;
             if (!toConvertClassSet) { return };
             if (!Array.isArray(toConvertClassSet)) { Array(toConvertClassSet); };
             htmlDOM.classList.add(...toConvertClassSet);
             if (!addClassList || !Array.isArray(addClassList)) { return; };
             htmlDOM.classList.add(...addClassList);
-        };
+        };*/
 
         htmlDOM.classList.add(...classSet);
         if (!addClassList || !Array.isArray(addClassList)) { return; };
         htmlDOM.classList.add(...addClassList);
+
+    },
+
+    addDatasetProperty(dataKey, htmlDOM) {
+        if (!dataKey || !htmlDOM) { return };
+        console.log(dataKey, htmlDOM);
+
+        htmlDOM.dataset.action = dataKey;
 
     },
 
@@ -50,10 +58,11 @@ const control_UI_engine = {
         console.log(metaHTML_object, parentDom);
 
         metaHTML_object.forEach((metaHTML_object) => {
-            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, children = null, createText: text = null } = metaHTML_object;
+            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, dataset: dataKey = null, id_name = null, children = null, createText: text = null } = metaHTML_object;
 
             const htmlDOM = this.generate_a_htmlTag(htmlTag);
             this.add_classSetting(htmlDOM, classSet, addClassList);
+            this.addDatasetProperty(dataKey, htmlDOM);
             console.log(htmlDOM);
             this.createText_function(htmlDOM, text);
             this.appendChild_function(parentDom, htmlDOM);

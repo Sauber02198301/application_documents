@@ -1,5 +1,5 @@
 *,
-* :after,
+*::after,
 *::before {
     padding: 0;
     margin: 0;
@@ -72,4 +72,108 @@ body {
 
 .btn_login {
     gap: 0.5rem;
+}
+
+.body_section {
+    grid-template-areas:
+        'header header header header'
+        'nav main main main'
+        'nav main main main'
+        'nav main main main'
+        'footer footer footer footer'
+    ;
+    grid-template-columns: 160px 1fr auto 100px;
+    grid-template-rows: 150px 1fr 1fr auto 50px;
+}
+
+.header_gameBody {
+    grid-area: header;
+    justify-content: space-between;
+    padding: 0.5em 1.2em;
+}
+
+.header_style {
+    background-image: linear-gradient(13deg, #1a0a84fd, #6967c9, #253bab72, #5f0079cc, #811d9066);
+    border-bottom: solid 1px #00000054;
+}
+
+.headingBox {
+    gap: 1em;
+    margin: 0.5em;
+    justify-content: center;
+}
+
+.h1_headerStyle {
+    font-size: 4.120rem;
+}
+
+.headerTextStyle {
+    font-size: 1.655rem;
+}
+
+.logoHeader {
+    font-size: 2.090rem
+}
+
+.nav_gameList {
+    grid-area: nav;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.5em;
+}
+
+.nav_style {
+    background-image: linear-gradient(100deg, #007d89c7, #88d8de7d, #12599281, #f5f5f549, #f5f5f518);
+    border-right: solid 1px #00000088;
+}
+
+.main_section {
+    grid-area: main;
+    grid-template-areas:
+            'headingGame headingGame headingGame headingGame'
+            'leftSideGame mainGame mainGame rightSideGame'
+            'leftSideGame mainGame mainGame rightSideGame'
+            'leftSideGame mainGame mainGame rightSideGame'
+            'leftSideGame mainGame mainGame rightSideGame'
+            'leftSideGame mainGame mainGame rightSideGame'
+            'leftSideGame mainGame mainGame rightSideGame'
+            'footerGame footerGame footerGame footerGame'
+        ;
+}
+
+.gamingHeader {
+    grid-area: headingGame;
+}
+
+.gamingHeaderStyle {
+    background-image: linear-gradient(15deg, #c0c0c0, #138781, #7b98ac);
+}
+
+.displayZone {
+    height: 100%;
+}
+
+.headingGameTxt {
+    margin: 1em;
+}
+
+.footer_section {
+    grid-area: footer;
+    justify-content: end;
+    padding: 0.5em;
+    gap: 1.5em;
+}
+
+.btnTextBox {
+    justify-content: center;
+    align-items: center;
+}
+.btn_login:active {
+    scale: 0.9;
+}
+
+.footer_style {
+    background-image: linear-gradient(40deg, #06c8de, #c0c0c0, #9a8989, #9a8989, #2d8083, #23898d, #c0c0c08c, #06c8de);
+    border-top: solid 1px #000000b2;
 }
