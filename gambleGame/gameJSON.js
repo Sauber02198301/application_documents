@@ -236,7 +236,7 @@ const bodyGame = [
                                     },
                                     {
                                         "createElement": "h3",
-                                        "classList": ["display_block", "font_family_game","headingGameTxt"],
+                                        "classList": ["display_block", "font_family_game", "headingGameTxt"],
                                         "addClassList": ["smallNumber"],
                                         "id_name": "cent",
                                         "createText": "00"
@@ -249,19 +249,26 @@ const bodyGame = [
                                     }
                                 ]
                             },
-                            /*{
+                            {
                                 "createElement": "div",
                                 "classList": ["flex_row", "displayScoreZone"],
-                                "addClassList": ["scoreZoneTxt"],
+                                "addClassList": ["freeGameScore"],
                                 "children": [
                                     {
                                         "createElement": "h3",
-                                        "classList": ["display_block", "font_family_game"],
-                                        "addClassList": ["headingGameTxt"],
-                                        "createText": "Euro"
+                                        "classList": ["display_block", "font_family_game", "headingGameTxt"],
+                                        "addClassList": ["textFreeGame"],
+                                        "createText": "Freispiel:"
+                                    },
+                                    {
+                                        "createElement": "h3",
+                                        "classList": ["display_block", "font_family_game", "headingGameTxt"],
+                                        "addClassList": ["freeGame_score"],
+                                        "id_name": "freeGame",
+                                        "createText": "0"
                                     }
                                 ]
-                            }*/
+                            }
                         ]
                     }
                 ]

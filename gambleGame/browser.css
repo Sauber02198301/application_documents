@@ -152,10 +152,7 @@ body {
 
 .displayZone {
     height: 100%;
-}
-
-.headingGameTxt {
-    margin: 1em;
+    justify-content: space-between;
 }
 
 .footer_section {

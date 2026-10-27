@@ -87,10 +87,31 @@
         padding-bottom: 0.45em;
     }
 
-    .instruction_para {
-        text-align: center;
+    .instruction_article {
+        width: 40ch;
     }
-    
+
+    .instruction_para {
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .form_container {
+        padding: 0;
+        margin: 0;
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+    .input_bdi {
+        width: 10px;
+        height: 10px;
+    }
+
+    .answer_inputSpan {
+        font-size: 0.85rem;
+    }
+
     .instruction_footer {
         flex-direction: column;
     }

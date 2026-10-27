@@ -136,9 +136,17 @@
 
     }
 
-
     .euroText {
         margin-left: 0.2em;
+    }
+
+    .freeGameScore {
+        background-color: #00000087;
+        margin: 0.225em 1em;
+        padding: 0.5em;
+        gap: 0.6em;
+        justify-content: center;
+        align-items: center;
     }
 
     .footer_section {
