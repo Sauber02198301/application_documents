@@ -223,13 +223,33 @@ const bodyGame = [
                                 "children": [
                                     {
                                         "createElement": "h3",
-                                        "classList": ["display_block", "font_family_game"],
-                                        "addClassList": ["headingGameTxt"],
-                                        "createText": "10.00"
+                                        "classList": ["display_block", "font_family_game", "headingGameTxt"],
+                                        "addClassList": ["bigNumber"],
+                                        "id_name": "euro",
+                                        "createText": "10"
+                                    },
+                                    {
+                                        "createElement": "h3",
+                                        "classList": ["display_block", "font_family_game", "headingGameTxt"],
+                                        "addClassList": ["pointFont"],
+                                        "createText": "."
+                                    },
+                                    {
+                                        "createElement": "h3",
+                                        "classList": ["display_block", "font_family_game","headingGameTxt"],
+                                        "addClassList": ["smallNumber"],
+                                        "id_name": "cent",
+                                        "createText": "00"
+                                    },
+                                    {
+                                        "createElement": "h3",
+                                        "classList": ["display_block", "font_family_game", "headingGameTxt"],
+                                        "addClassList": ["euroText"],
+                                        "createText": "Euro"
                                     }
                                 ]
                             },
-                            {
+                            /*{
                                 "createElement": "div",
                                 "classList": ["flex_row", "displayScoreZone"],
                                 "addClassList": ["scoreZoneTxt"],
@@ -241,7 +261,7 @@ const bodyGame = [
                                         "createText": "Euro"
                                     }
                                 ]
-                            }
+                            }*/
                         ]
                     }
                 ]

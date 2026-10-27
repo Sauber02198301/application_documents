@@ -101,7 +101,7 @@
 
     .gamingHeader {
         grid-area: headingGame;
-        padding: 0.5em;
+        padding: 0.2em;
     }
 
     .gamingHeaderStyle {
@@ -109,13 +109,36 @@
     }
 
     .displayZone {
-        padding: 0.4em;
+        padding: 0;
     }
 
     .gameHeading {
         justify-content: center;
         align-items: center;
         border-bottom: solid 1px #00000063;
+    }
+
+    .headingGameTxt {
+        margin: 0;
+    }
+
+    .score {
+        width: 100%;
+    }
+
+    .scoreZone {
+        justify-content: center;
+        align-items: center;
+        gap: 0.27em;
+        background-color: #00000087;
+        margin: 0.225em 1em;
+        padding: 0.5em;
+
+    }
+
+
+    .euroText {
+        margin-left: 0.2em;
     }
 
     .footer_section {
