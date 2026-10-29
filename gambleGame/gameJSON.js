@@ -224,6 +224,13 @@ const bodyGame = [
                                     {
                                         "createElement": "h3",
                                         "classList": ["display_block", "font_family_game", "headingGameTxt"],
+                                        "addClassList": ["paymentText"],
+                                        "id_name": "euro",
+                                        "createText": "Guthaben:"
+                                    },
+                                    {
+                                        "createElement": "h3",
+                                        "classList": ["display_block", "font_family_game", "headingGameTxt"],
                                         "addClassList": ["bigNumber"],
                                         "id_name": "euro",
                                         "createText": "10"
@@ -271,6 +278,52 @@ const bodyGame = [
                             }
                         ]
                     }
+                ]
+            },
+            {
+                "createElement": "main",
+                "classList": ["flex_row", "display_flex_gambling", "display_flexStyle"],
+                "addClassList": ["main_displey_gambling"],
+                "children": [
+                    // überlegung ob ich ein canvas hierfür benutze so kann ich einen 9 : 3 display bauen 9 hoch 3 breit
+                    // so kann man auch eine art dreier system bauen. Oben mitte unten über diagonal, horizontal
+                    {
+                        "createElement": "div",
+                        "classList": ["flex_column","emptyBox", "emptyBox_style"],
+                        "addClassList": ["boxLeft"]
+                    },
+                    {
+                        "createElement": "div",
+                        "classList": ["flex_column","valueDispley", "valueDisplay"],
+                        "addClassList": ["displayZero"],
+                        "id_name": "displayId_zero",
+                        "children": [],
+                    },
+                    {
+                        "createElement": "div",
+                        "classList": ["flex_column","valueDispley", "valueDisplay"],
+                        "addClassList": ["displayOne"],
+                        "id_name": "displayId_one",
+                        "children": [],
+                    },
+                    {
+                        "createElement": "div",
+                        "classList": ["flex_column","valueDispley", "valueDisplay"],
+                        "addClassList": ["displayTwo"],
+                        "id_name": "displayId_two",
+                        "children": [],
+                    },
+                    {
+                        "createElement": "div",
+                        "classList": ["flex_column","emptyBox", "emptyBox_style"],
+                        "addClassList": ["boxRight"]
+                    },
+                    // mit vier display einheiten arbeiten oder nur mit drei?! Genauso welche spiellogik baue ich auf ein.
+                    // Hier habe ich keine ahnung ich hatte mal multi multi von merkur als Automat hier kann man ja die art spiel 
+                    //prinzip kopieren nur ich weis nicht wie es rechtlich aus sieht an sich ist das prinzip einfsch drei gleiche 
+                    //sowie eine bestimmte Kombo können dir Punkte bescheren man könnte auch das poker prinzip kopieren mit FullHouse
+                    // straight flash Royal flash, paar, double paar, dies wäre einfach und simple umzusetzten ich muss nur die karten 
+                    // dafur einfugen. 32 karten jeweils 5 displays oder 4 und eine karte gibt man vor, per zufall  
                 ]
             }
         ]

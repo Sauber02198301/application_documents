@@ -5,6 +5,42 @@ const parentBody = document.querySelector('.body_section');
 
 const control_UI_engine = {
 
+    //btnFactory function hier gebe ich eine liste von object arrays hinein.
+    // Was brauche ich zum das es funktioniert?!
+    /*
+        Als erstes brauche ich einen Taktgeber mit den zuverarbeitetnden propertyValues 
+        ich brauche ja nicht alles doppelt schreiben nur dataset, id und createText!
+        die classList kann ich duplizieren sowie addClassList wobei die kann auch oben stehen weil es immer eine 
+        art einzige class sein kann.
+
+        Example: 
+        btnlistArray:{ 
+            "classList": ["one",  "two", "three"], 
+            "addClassList": ["specifyKey"],
+            btnList: [
+                { 
+                    "dataset": "x",
+                    "id_name": "y"
+                },
+            ],
+            "childrenContent": [
+                {"classList": ["a", "b", "c"], "addClassList": ["specify"], "text": "Muster Text" },
+                {"classList": ["a", "b", "c"], "addClassList": ["specify"], "text": "Muster Text" },
+                // mit shift + option immer wieder duplizieren und nur den Text ändern ich hoffe das ist das kiss prinzip
+                Warum habe ich gerade ein lied von kiss im kopf?!
+            ]
+
+
+        }
+    */
+
+    btn_createrFunction(btnObject) {
+        // arbeie ich hier mit return oder sende ich die erstellte object mit den parentDom wieder einfach zurück?!
+        console.log(btnObject)
+        
+
+    },
+
     appendChild_function(parentDom, htmlDOM) {
 
         parentDom.appendChild(htmlDOM);
@@ -83,6 +119,8 @@ const control_UI_engine = {
 
         this.renderingEngine_UI(bodyGame, parentBody);
     }
+
+
 
 };
 

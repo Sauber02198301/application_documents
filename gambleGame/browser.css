@@ -131,19 +131,21 @@ body {
 .main_section {
     grid-area: main;
     grid-template-areas:
-            'headingGame headingGame headingGame headingGame'
-            'leftSideGame mainGame mainGame rightSideGame'
-            'leftSideGame mainGame mainGame rightSideGame'
-            'leftSideGame mainGame mainGame rightSideGame'
-            'leftSideGame mainGame mainGame rightSideGame'
-            'leftSideGame mainGame mainGame rightSideGame'
-            'leftSideGame mainGame mainGame rightSideGame'
-            'footerGame footerGame footerGame footerGame'
-        ;
+        'headingGame headingGame headingGame headingGame'
+        'leftSideGame mainGame mainGame rightSideGame'
+        'leftSideGame mainGame mainGame rightSideGame'
+        'leftSideGame mainGame mainGame rightSideGame'
+        'leftSideGame mainGame mainGame rightSideGame'
+        'leftSideGame mainGame mainGame rightSideGame'
+        'leftSideGame mainGame mainGame rightSideGame'
+        'footerGame footerGame footerGame footerGame'
+    ;
+    grid-template-columns: 140px 1fr 1fr 140px;
 }
 
 .gamingHeader {
     grid-area: headingGame;
+
 }
 
 .gamingHeaderStyle {
@@ -152,7 +154,26 @@ body {
 
 .displayZone {
     height: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 1em;
+}
+
+.scoreZone {
+    background-color: #0000087c;
+    padding: 0.7em;
+    gap: 4px;
+}
+
+.freeGameScore {
+    background-color: #0000087c;
+    padding: 0.7em;
+    gap: 4px;
+}
+
+.display_flex_gambling {
+    grid-area: mainGame;
+    background-color: #0000006b;
 }
 
 .footer_section {
@@ -166,6 +187,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .btn_login:active {
     scale: 0.9;
 }

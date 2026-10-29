@@ -89,13 +89,13 @@
             'headingGame headingGame headingGame headingGame'
             'leftSideGame mainGame mainGame rightSideGame'
             'leftSideGame mainGame mainGame rightSideGame'
-            'leftSideGame mainGame mainGame rightSideGame'
-            'leftSideGame mainGame mainGame rightSideGame'
-            'leftSideGame mainGame mainGame rightSideGame'
-            'leftSideGame mainGame mainGame rightSideGame'
+            'leftSideGame tutorial tutorial rightSideGame'
+            'leftSideGame tutorial tutorial rightSideGame'
+            'leftSideGame tutorial tutorial rightSideGame'
+            'leftSideGame tutorial tutorial rightSideGame'
             'footerGame footerGame footerGame footerGame'
         ;
-        grid-template-columns: 100px 1fr 1fr 100px;
+        grid-template-columns: 50px 1fr 1fr 50px;
         grid-template-rows: 140px auto auto auto auto auto auto 75px;
     }
 
@@ -131,7 +131,7 @@
         align-items: center;
         gap: 0.27em;
         background-color: #00000087;
-        margin: 0.225em 1em;
+        margin: 0.225em 0.345em;
         padding: 0.5em;
 
     }
@@ -142,7 +142,7 @@
 
     .freeGameScore {
         background-color: #00000087;
-        margin: 0.225em 1em;
+        margin: 0.225em 0.3em;
         padding: 0.5em;
         gap: 0.6em;
         justify-content: center;
