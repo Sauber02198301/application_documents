@@ -153,15 +153,13 @@ const bodyGame = [
                             }
                         ]
                     }
-
                 ]
             }
-
         ]
-    },
+    },  //header_parent
     {
         "createElement": "nav",
-        "classList": ["flex_column", "nav_gameList", "nav_style"],
+        "classList": ["flex_row", "nav_gameList", "nav_style"],
         "addClassList": ["control_nav_body"],
         "children": [
             // hier baue ich eine automatische btn_createrFabrik so brauche ich nicht immer btn oder span schreiben
@@ -182,12 +180,12 @@ const bodyGame = [
                         "createElement": "span",
                         "classList": ["display_block", "font_family_game"],
                         "addClassList": ["gaming_instruction"],
-                        "createText": "Spielanleitung",
+                        "createText": "musterIcon",
                     }
                 ]
             }
         ]
-    },
+    },  //nav_parent 
     {
         "createElement": "main",
         "classList": ["grid", "grid_property", "main_section", "main_sectionStyle"],
@@ -196,7 +194,7 @@ const bodyGame = [
             {
                 "createElement": "header",
                 "classList": ["flex_column", "gamingHeader", "gamingHeaderStyle"],
-                "addClassList": ["score_dispalyArea"],
+                "addClassList": ["score_displayArea"],
                 "children": [
                     {
                         "createElement": "div",
@@ -281,6 +279,12 @@ const bodyGame = [
                 ]
             },
             {
+                "createElement": "div",
+                "classList": ["flex_row", "leftSide_poker", "leftSide_pokerStyle"],
+                "addClassList": ["pictureContainer"],
+                "content": "gamblingPoker_leftSide"
+            },
+            {
                 "createElement": "main",
                 "classList": ["flex_row", "display_flex_gambling", "display_flexStyle"],
                 "addClassList": ["main_displey_gambling"],
@@ -289,33 +293,33 @@ const bodyGame = [
                     // so kann man auch eine art dreier system bauen. Oben mitte unten über diagonal, horizontal
                     {
                         "createElement": "div",
-                        "classList": ["flex_column","emptyBox", "emptyBox_style"],
+                        "classList": ["flex_column", "emptyBox", "emptyBox_style"],
                         "addClassList": ["boxLeft"]
                     },
                     {
                         "createElement": "div",
-                        "classList": ["flex_column","valueDispley", "valueDisplay"],
+                        "classList": ["flex_column", "valueDispley", "valueDisplay"],
                         "addClassList": ["displayZero"],
                         "id_name": "displayId_zero",
                         "children": [],
                     },
                     {
                         "createElement": "div",
-                        "classList": ["flex_column","valueDispley", "valueDisplay"],
+                        "classList": ["flex_column", "valueDispley", "valueDisplay"],
                         "addClassList": ["displayOne"],
                         "id_name": "displayId_one",
                         "children": [],
                     },
                     {
                         "createElement": "div",
-                        "classList": ["flex_column","valueDispley", "valueDisplay"],
+                        "classList": ["flex_column", "valueDispley", "valueDisplay"],
                         "addClassList": ["displayTwo"],
                         "id_name": "displayId_two",
                         "children": [],
                     },
                     {
                         "createElement": "div",
-                        "classList": ["flex_column","emptyBox", "emptyBox_style"],
+                        "classList": ["flex_column", "emptyBox", "emptyBox_style"],
                         "addClassList": ["boxRight"]
                     },
                     // mit vier display einheiten arbeiten oder nur mit drei?! Genauso welche spiellogik baue ich auf ein.
@@ -327,7 +331,7 @@ const bodyGame = [
                 ]
             }
         ]
-    },
+    },  //main_parent 
     {
         "createElement": "footer",
         "classList": ["flex_row", "footer_section", "footer_style"],
@@ -373,7 +377,7 @@ const bodyGame = [
             }
         ]
 
-    }
+    }   //footer_parent
 ];
 
 

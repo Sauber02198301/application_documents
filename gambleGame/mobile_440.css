@@ -1,0 +1,27 @@
+@media screen and (max-width: 956px) {
+    .body_section {
+        grid-template-areas:
+            'heaader header'
+            'nav main'
+            'nav footer'
+        ;
+        grid-template-rows: 80px 1fr 50px;
+    }
+
+    .headingBox {
+        gap: 0.3em;
+        margin: 0.5em;
+        justify-content: center;
+    }
+
+    .h1_headerStyle {
+        font-size: 2rem;
+    }
+
+    .header_gameBody {
+        grid-area: header;
+        justify-content: space-between;
+        padding: 0.5em 0.5em;
+    }
+
+}

@@ -12,18 +12,19 @@
     .body_section {
         grid-template-areas:
             'header header'
-            'nav main'
-            'nav footer'
+            'nav nav'
+            'main main'
+            'footer footer'
         ;
-        grid-template-columns: 100px 1fr;
-        grid-template-rows: 100px 1fr 60px;
+        grid-template-columns: 100px 1fr ;
+        grid-template-rows: 100px 70px 1fr 60px;
     }
 
     .header_gameBody {
         justify-content: space-between;
         align-items: center;
         grid-area: header;
-        padding: 0.9em;
+        padding: 0.3em;
         gap: 0.6em;
     }
 
@@ -52,19 +53,14 @@
     .nav_gameList {
         grid-area: nav;
         align-items: center;
-        width: 100px;
+        width: 100%;
         height: 100%;
-        padding: 1em;
+        padding: 0.5em;
     }
 
     .nav_style {
         background-image: linear-gradient(100deg, #007d89c7, #88d8de7d, #12599281, #f5f5f549, #f5f5f518);
         border-right: solid 1px #00000088;
-    }
-
-    .gameList {
-        width: 80px;
-        height: 80px;
     }
 
     .gameList:hover {
@@ -76,7 +72,7 @@
     }
 
     .iconNav {
-        font-size: 4rem;
+        font-size: 2.8rem;
     }
 
     .gaming_instruction {
@@ -84,12 +80,13 @@
     }
 
     .main_section {
+        border-top: 1px solid #000000;
         grid-area: main;
         grid-template-areas:
             'headingGame headingGame headingGame headingGame'
             'leftSideGame mainGame mainGame rightSideGame'
             'leftSideGame mainGame mainGame rightSideGame'
-            'leftSideGame tutorial tutorial rightSideGame'
+            'leftSideGame mainGame mainGame rightSideGame'
             'leftSideGame tutorial tutorial rightSideGame'
             'leftSideGame tutorial tutorial rightSideGame'
             'leftSideGame tutorial tutorial rightSideGame'

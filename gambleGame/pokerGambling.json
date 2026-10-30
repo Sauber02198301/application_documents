@@ -1,0 +1,19 @@
+{
+    "gamblingPoker_leftFile": [
+        {
+            "web_properties": {
+                "html_tag": "div",
+                "classList": ["", "", ""],
+                "addClassList": [""]
+            },
+            "imgList": [
+                {"img_data": "", "alt": ""},
+                {"img_data": "", "alt": ""},
+                {"img_data": "", "alt": ""},
+                {"img_data": "", "alt": ""},
+                {"img_data": "", "alt": ""},
+                {"img_data": "", "alt": ""}
+            ]
+        }
+    ]
+}

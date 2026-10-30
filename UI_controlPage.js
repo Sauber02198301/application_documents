@@ -22,14 +22,11 @@ const mainViev = {
         if (this.mainViewActive) {
             this.mainViewContainer.innerHTML = '';
             this.mainViewActive = null;
-
         } else {
             this.mainViewActive = introText;
             functionsFactory.renderDOM(introText, this.mainViewContainer);
         };
-
     },
-
 
 };
 
@@ -50,10 +47,8 @@ const functionsFactory = {
                 console.log(htmlTag);
                 this.imgCreaterSection([img_columnObject], htmlTag);
                 this.injectHTML(htmlTag, parentDom)
-            }
-
-        }
-
+            };
+        };
     },
 
     imgCreaterSection(gallaryData, parentDOM) {
@@ -73,7 +68,8 @@ const functionsFactory = {
                 this.addingCSS(classSet, imgHtml);
                 this.injectSrc(srcImg, altString, imgHtml);
                 this.injectHTML(imgHtml, parentDOM);
-            }
+            };
+
             /*console.log(srcImg, imgClassList, altAttribute, classList_div, classListText_h, title, desc);
             const imgHtml = this.createHTMLDocument('img');
             //console.log(imgHtml);
@@ -84,7 +80,6 @@ const functionsFactory = {
 
             const html_div = this.createHTMLDocument('div');
             this.addingCSS(classList_div, html_div);
-
 
             const h2_html = this.createHTMLDocument('h2');
             this.addingCSS(classListText_h, h2_html);
@@ -98,7 +93,6 @@ const functionsFactory = {
 
             this.injectHTML(html_div, parentDOM);*/
         };
-
     },
 
     createSpanInjectText(createText, classSet, parentDOM) {
@@ -110,7 +104,7 @@ const functionsFactory = {
             this.addingCSS(classSet, htmlTag);
             this.injectcreateText(textElement, htmlTag);
             this.injectHTML(htmlTag, parentDOM);
-        }
+        };
     },
 
     childrenCheck(children, htmlTag) {
@@ -129,7 +123,7 @@ const functionsFactory = {
         htmlTag.target = targetSet;
         if (targetSet === '_blank') {
             htmlTag.rel = "noopener noreferrer";
-        }
+        };
     },
 
     addingCSS(cssClass, htmlTag) {
@@ -155,7 +149,6 @@ const functionsFactory = {
     injectDataSet(dataBtn, htmlTag) {
         if (!dataBtn) { return };
         htmlTag.dataset.action = dataBtn;
-
     },
 
     injectHTML(childHTML, parentHTML) {
