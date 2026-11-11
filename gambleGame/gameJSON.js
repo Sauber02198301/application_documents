@@ -308,34 +308,108 @@ const bodyGame = [
                     // so kann man auch eine art dreier system bauen. Oben mitte unten über diagonal, horizontal
                     {
                         "createElement": "div",
-                        "classList": ["flex_column", "emptyBox", "emptyBox_style"],
-                        "addClassList": ["boxLeft"]
+                        "classList": ["flex_column", "valueDisplay", "emptyBox_style"],
+                        "addClassList": ["boxLeft"],
+                        "children": [
+                            {
+                                "createElement": "div",
+                                "classList": ["flex_column", "cardContainer", "cardBox_style"],
+                                "addClassList": ["cardBox_zero"],
+                                "children": [
+                                    {
+                                        "createElement": "span",
+                                        "classList": ["flex_column", "noto-sans-symbols-2-regular"],
+                                        "addClassList": ["gamingCard"],
+                                        "createText": "🂮"
+                                    }
+                                ]
+                            }
+
+                        ]
                     },
                     {
                         "createElement": "div",
-                        "classList": ["flex_column", "valueDispley", "valueDisplay"],
+                        "classList": ["flex_column", "valueDisplay"],
                         "addClassList": ["displayZero"],
                         "id_name": "displayId_zero",
-                        "children": [],
+                        "children": [
+                            {
+                                "createElement": "div",
+                                "classList": ["flex_column", "cardContainer", "cardBox_style"],
+                                "addClassList": ["cardBox_zero"],
+                                "children": [
+                                    {
+                                        "createElement": "span",
+                                        "classList": ["flex_column", "noto-sans-symbols-2-regular"],
+                                        "addClassList": ["gamingCard"],
+                                        "createText": "🂭"
+                                    }
+                                ]
+                            }
+
+                        ]
                     },
                     {
                         "createElement": "div",
-                        "classList": ["flex_column", "valueDispley", "valueDisplay"],
+                        "classList": ["flex_column", "valueDisplay"],
                         "addClassList": ["displayOne"],
                         "id_name": "displayId_one",
-                        "children": [],
+                        "children": [
+                            {
+                                "createElement": "div",
+                                "classList": ["flex_column", "cardContainer", "cardBox_style"],
+                                "addClassList": ["cardBox_one"],
+                                "children": [
+                                    {
+                                        "createElement": "span",
+                                        "classList": ["flex_column", "noto-sans-symbols-2-regular"],
+                                        "addClassList": ["gamingCard"],
+                                        "createText": "🃑"
+                                    }
+                                ]
+                            }
+                        ],
                     },
                     {
                         "createElement": "div",
-                        "classList": ["flex_column", "valueDispley", "valueDisplay"],
+                        "classList": ["flex_column", "valueDisplay"],
                         "addClassList": ["displayTwo"],
                         "id_name": "displayId_two",
-                        "children": [],
+                        "children": [
+                            {
+                                "createElement": "div",
+                                "classList": ["flex_column", "cardContainer", "cardBox_style"],
+                                "addClassList": ["cardBox_one"],
+                                "children": [
+                                    {
+                                        "createElement": "span",
+                                        "classList": ["flex_column", "noto-sans-symbols-2-regular"],
+                                        "addClassList": ["gamingCard"],
+                                        "createText": "🂵"
+                                    }
+                                ]
+                            }
+                        ],
                     },
                     {
                         "createElement": "div",
-                        "classList": ["flex_column", "emptyBox", "emptyBox_style"],
-                        "addClassList": ["boxRight"]
+                        "classList": ["flex_column", "valueDisplay"],
+                        "addClassList": ["boxRight"],
+                        "children": [
+                            {
+                                "createElement": "div",
+                                "classList": ["flex_column", "cardContainer", "cardBox_style"],
+                                "addClassList": ["cardBox_one"],
+                                "children": [
+                                    {
+                                        "createElement": "span",
+                                        "classList": ["flex_column", "noto-sans-symbols-2-regular"],
+                                        "addClassList": ["gamingCard"],
+                                        "createText": "🃓"
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     // mit vier display einheiten arbeiten oder nur mit drei?! Genauso welche spiellogik baue ich auf ein.
                     // Hier habe ich keine ahnung ich hatte mal multi multi von merkur als Automat hier kann man ja die art spiel 
@@ -421,6 +495,17 @@ const bodyGame = [
 
     }   //footer_parent
 ];
+
+
+const cardSet = {
+
+    "slotZero": [
+        {
+            "card": "🂮",
+        }
+    ]
+
+};
 
 
 /*

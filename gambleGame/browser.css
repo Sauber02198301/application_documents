@@ -196,6 +196,11 @@ body {
 .display_flex_gambling {
     grid-area: mainGame;
     background-color: #000000c4;
+    justify-content: space-between;
+}
+
+.valueDisplay {
+    background-color: #ffffff;
 }
 
 .footerGame {
