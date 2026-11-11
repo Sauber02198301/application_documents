@@ -282,7 +282,22 @@ const bodyGame = [
                 "createElement": "div",
                 "classList": ["flex_row", "leftSide_poker", "leftSide_pokerStyle"],
                 "addClassList": ["pictureContainer"],
-                "content": "gamblingPoker_leftSide"
+                "children": [
+                    {
+                        "createElement": "div",
+                        "classList": ["flex_row", "imgParentLeft", "img_parentStyle"],
+                        "addClassList": ["parentLeftSide"],
+                        "id_set": "parentLeft",
+                        "children": [
+                            {
+                                "createElement": "img",
+                                "classList": ["display_block", "imgLeft", "imgLeftStyle"],
+                                "addClassList": ["leftImg"],
+                                "srcObject": "game_img/Gemini_Generated_Image_7doioh7doioh7doi Kopie.jpeg",
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "createElement": "main",
@@ -329,6 +344,33 @@ const bodyGame = [
                     // straight flash Royal flash, paar, double paar, dies wäre einfach und simple umzusetzten ich muss nur die karten 
                     // dafur einfugen. 32 karten jeweils 5 displays oder 4 und eine karte gibt man vor, per zufall  
                 ]
+            },
+            {
+                "createElement": "div",
+                "classList": ["flex_row", "rightSide_poker", "rightSide_pokerStyle"],
+                "addClassList": ["pictureContainer"],
+                "children": [
+                    {
+                        "createElement": "div",
+                        "classList": ["flex_row", "imgParentRight", "img_parentStyle"],
+                        "addClassList": ["parentRightSide"],
+                        "id_set": "parentRight",
+                        "children": [
+                            {
+                                "createElement": "img",
+                                "classList": ["display_block", "imgRight", "imgRightStyle"],
+                                "addClassList": ["rightImg"],
+                                "srcObject": "game_img/rightSide.jpeg",
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "createElement": "footer",
+                "classList": ["flex_row", "footerGame", "footerGameStyle"],
+                "addClassList": ["controlFooterGame"],
+                "id_set": "id_footerGame"
             }
         ]
     },  //main_parent 

@@ -85,10 +85,6 @@
         grid-template-areas:
             'headingGame headingGame headingGame headingGame'
             'leftSideGame mainGame mainGame rightSideGame'
-            'leftSideGame mainGame mainGame rightSideGame'
-            'leftSideGame mainGame mainGame rightSideGame'
-            'leftSideGame tutorial tutorial rightSideGame'
-            'leftSideGame tutorial tutorial rightSideGame'
             'leftSideGame tutorial tutorial rightSideGame'
             'footerGame footerGame footerGame footerGame'
         ;

@@ -37,13 +37,20 @@ const control_UI_engine = {
     btn_createrFunction(btnObject) {
         // arbeie ich hier mit return oder sende ich die erstellte object mit den parentDom wieder einfach zurück?!
         console.log(btnObject)
-        
+
 
     },
 
     appendChild_function(parentDom, htmlDOM) {
 
         parentDom.appendChild(htmlDOM);
+
+    },
+
+    add_srcFunction(srcObject, htmlDOM) {
+        console.log(srcObject, htmlDOM);
+        if (!srcObject) { return };
+        htmlDOM.src = srcObject;
 
     },
 
@@ -94,12 +101,13 @@ const control_UI_engine = {
         console.log(metaHTML_object, parentDom);
 
         metaHTML_object.forEach((metaHTML_object) => {
-            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, dataset: dataKey = null, id_name = null, children = null, createText: text = null } = metaHTML_object;
+            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, dataset: dataKey = null, id_name = null, children = null, srcObject = null, createText: text = null } = metaHTML_object;
 
             const htmlDOM = this.generate_a_htmlTag(htmlTag);
             this.add_classSetting(htmlDOM, classSet, addClassList);
             this.addDatasetProperty(dataKey, htmlDOM);
             console.log(htmlDOM);
+            this.add_srcFunction(srcObject, htmlDOM);
             this.createText_function(htmlDOM, text);
             this.appendChild_function(parentDom, htmlDOM);
             if (!children) { return };
