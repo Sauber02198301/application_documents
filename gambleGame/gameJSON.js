@@ -308,7 +308,7 @@ const bodyGame = [
                     // so kann man auch eine art dreier system bauen. Oben mitte unten über diagonal, horizontal
                     {
                         "createElement": "div",
-                        "classList": ["flex_column", "valueDisplay", "emptyBox_style"],
+                        "classList": ["flex_column", "valueDisplay"],
                         "addClassList": ["boxLeft"],
                         "children": [
                             {
@@ -317,10 +317,10 @@ const bodyGame = [
                                 "addClassList": ["cardBox_zero"],
                                 "children": [
                                     {
-                                        "createElement": "span",
-                                        "classList": ["flex_column", "noto-sans-symbols-2-regular"],
+                                        "createElement": "img",
+                                        "classList": ["flex_column", "card_img", "card_imgSettings"],
                                         "addClassList": ["gamingCard"],
-                                        "createText": "🂮"
+                                        "srcObject": "game_img/poker_pic/takeToo.png"
                                     }
                                 ]
                             }
@@ -339,10 +339,10 @@ const bodyGame = [
                                 "addClassList": ["cardBox_zero"],
                                 "children": [
                                     {
-                                        "createElement": "span",
-                                        "classList": ["flex_column", "noto-sans-symbols-2-regular"],
+                                        "createElement": "img",
+                                        "classList": ["flex_column", "card_img", "card_imgSettings"],
                                         "addClassList": ["gamingCard"],
-                                        "createText": "🂭"
+                                        "srcObject": "game_img/poker_heart/herz_dame.png"
                                     }
                                 ]
                             }
