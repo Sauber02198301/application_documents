@@ -361,10 +361,10 @@ const bodyGame = [
                                 "addClassList": ["cardBox_one"],
                                 "children": [
                                     {
-                                        "createElement": "span",
-                                        "classList": ["flex_column", "noto-sans-symbols-2-regular"],
+                                        "createElement": "img",
+                                        "classList": ["flex_column", "card_img", "card_imgSettings"],
                                         "addClassList": ["gamingCard"],
-                                        "createText": "🃑"
+                                        "srcObject": "game_img/poker_pic/pick_dame_final.png"
                                     }
                                 ]
                             }
@@ -382,16 +382,16 @@ const bodyGame = [
                                 "addClassList": ["cardBox_one"],
                                 "children": [
                                     {
-                                        "createElement": "span",
-                                        "classList": ["flex_column", "noto-sans-symbols-2-regular"],
+                                        "createElement": "img",
+                                        "classList": ["flex_column", "card_img", "card_imgSettings"],
                                         "addClassList": ["gamingCard"],
-                                        "createText": "🂵"
+                                        "srcObject": "game_img/poker_pic/jack_pik.png"
                                     }
                                 ]
                             }
                         ],
                     },
-                    {
+                    /*{
                         "createElement": "div",
                         "classList": ["flex_column", "valueDisplay"],
                         "addClassList": ["boxRight"],
@@ -410,7 +410,7 @@ const bodyGame = [
                                 ]
                             }
                         ]
-                    },
+                    },*/
                     // mit vier display einheiten arbeiten oder nur mit drei?! Genauso welche spiellogik baue ich auf ein.
                     // Hier habe ich keine ahnung ich hatte mal multi multi von merkur als Automat hier kann man ja die art spiel 
                     //prinzip kopieren nur ich weis nicht wie es rechtlich aus sieht an sich ist das prinzip einfsch drei gleiche 

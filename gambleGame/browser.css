@@ -205,7 +205,7 @@ body {
     background-color: #ffffff;
     padding: 0.7em;
     border: solid 2px #000000;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .cardContainer {
@@ -215,7 +215,7 @@ body {
 
 .card_img {
     height: 100%;
-    width: 300px;
+    width: 250px;
     border: solid 2px #000000;
     border-radius: 15px;
 }

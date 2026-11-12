@@ -16,7 +16,7 @@
             'main main'
             'footer footer'
         ;
-        grid-template-columns: 100px 1fr ;
+        grid-template-columns: 100px 1fr;
         grid-template-rows: 100px 70px 1fr 60px;
     }
 
@@ -83,13 +83,13 @@
         border-top: 1px solid #000000;
         grid-area: main;
         grid-template-areas:
-            'headingGame headingGame headingGame headingGame'
-            'leftSideGame mainGame mainGame rightSideGame'
-            'leftSideGame tutorial tutorial rightSideGame'
-            'footerGame footerGame footerGame footerGame'
+            'headingGame headingGame headingGame'
+            'leftSideGame mainGame rightSideGame'
+            'leftSideGame tutorial rightSideGame'
+            'footerGame footerGame footerGame'
         ;
-        grid-template-columns: 50px 1fr 1fr 50px;
-        grid-template-rows: 140px auto auto auto auto auto auto 75px;
+        grid-template-columns: 50px 1fr 50px;
+        grid-template-rows: 140px auto auto 75px;
     }
 
     .gamingHeader {
