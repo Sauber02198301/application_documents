@@ -1,4 +1,4 @@
-const gambleMashine = {
+const gambleMachine = {
     "gameGambleMachine": true,
 
     "gambleFramework": [
@@ -98,4 +98,159 @@ const gambleMashine = {
             ]
         }
     ]
+};
+
+const pokerSet = {
+
+    "rollerZero": [
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text": "",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        }
+    ],
+    "rollerOne": [
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text": "",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        }
+    ],
+    "rollerTwo": [
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text": "",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        }
+    ],
+    "rollerThree": [
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text": "",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        }
+    ],
+    "rollerFour": [
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text": "",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        },
+        {
+            "srcObject": "",
+            "id_code": "",
+            "alt_text":"",
+            "classList": [""],
+            "addClassList": [""]
+        }
+    ]
+
 };
