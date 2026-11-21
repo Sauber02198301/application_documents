@@ -83,75 +83,40 @@
         border-top: 1px solid #000000;
         grid-area: main;
         grid-template-areas:
-            'headingGame headingGame headingGame'
-            'leftSideGame mainGame rightSideGame'
-            'leftSideGame tutorial rightSideGame'
-            'footerGame footerGame footerGame'
+            'headingMobil headingMobil headingMobil'
+            'leftSideMobil displayArea rightSideMobil'
+            'footerMobil footerMobil footerMobil'
         ;
-        grid-template-columns: 50px 1fr 50px;
-        grid-template-rows: 140px auto auto 75px;
+        grid-template-columns: 10px 1fr 10px;
+        grid-template-rows: 40px 1fr 40px;
     }
 
-    .gamingHeader {
-        grid-area: headingGame;
-        padding: 0.2em;
+    .mobilMainHeader {
+        grid-area: headingMobil;
     }
 
-    .gamingHeaderStyle {
-        background-image: linear-gradient(15deg, #c0c0c0, #fcc0c0a7, #a9a9a9d9);
+    .mobilLeftSide {
+        grid-area: leftSideMobil;
     }
 
-    .displayZone {
-        padding: 0;
+    .mobilMainRightSide {
+        grid-area: rightSideMobil;
     }
 
-    .gameHeading {
-        justify-content: center;
-        align-items: center;
-        border-bottom: solid 1px #00000063;
-    }
-
-    .headingGameTxt {
-        margin: 0;
-    }
-
-    .score {
-        width: 100%;
-    }
-
-    .scoreZone {
-        justify-content: center;
-        align-items: center;
-        gap: 0.27em;
-        background-color: #00000087;
-        margin: 0.225em 0.345em;
-        padding: 0.5em;
-
-    }
-
-    .euroText {
-        margin-left: 0.2em;
-    }
-
-    .freeGameScore {
-        background-color: #00000087;
-        margin: 0.225em 0.3em;
-        padding: 0.5em;
-        gap: 0.6em;
-        justify-content: center;
-        align-items: center;
+    .mobilMainFooter {
+        grid-area: footerMobil;
     }
 
     .footer_section {
         grid-area: footer;
     }
 
-    .btn_login:active {
-        scale: 0.9;
-    }
-
     .footer_style {
         background-image: linear-gradient(40deg, #c0c0c0, #c0c0c092, #c0c0c08c, #c0c0c02f);
         border-top: solid 1px #000000b2;
+    }
+
+    .btn_login:active {
+        scale: 0.9;
     }
 }

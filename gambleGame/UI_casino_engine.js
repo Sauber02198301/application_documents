@@ -1,7 +1,10 @@
 
 const parentBody = document.querySelector('.body_section');
 
-
+const libraryList = {
+    "UI_DISPLAY_area": UI_DISPLAY_area,
+    "creatorTextArea": creatorTextArea,
+};
 
 const control_UI_engine = {
 
@@ -36,26 +39,26 @@ const control_UI_engine = {
 
     btn_createrFunction(btnObject) {
         // arbeie ich hier mit return oder sende ich die erstellte object mit den parentDom wieder einfach zurück?!
-        console.log(btnObject)
+        //console.log(btnObject)
 
 
     },
 
     appendChild_function(parentDom, htmlDOM) {
-
+        if (!parentDom || !htmlDOM) { return }
         parentDom.appendChild(htmlDOM);
 
     },
 
     add_srcFunction(srcObject, htmlDOM) {
-        console.log(srcObject, htmlDOM);
+        //console.log(srcObject, htmlDOM);
         if (!srcObject) { return };
         htmlDOM.src = srcObject;
 
     },
 
     createText_function(htmlDOM, text) {
-        console.log(htmlDOM, text);
+        //console.log(htmlDOM, text);
         if (!text) { return };
         const txt = document.createTextNode(text);
         htmlDOM.appendChild(txt);
@@ -63,8 +66,9 @@ const control_UI_engine = {
     },
 
     add_classSetting(htmlDOM, classSet, addClassList) {
+        if (!classSet) { return }
         //legende htmlDom = htmlTag; classSet ein Array mit classNames; addClassList = zusatzName;
-        console.log(htmlDOM, classSet, addClassList);
+        //console.log(htmlDOM, classSet, addClassList);
         /*if (!Array.isArray(classSet) && typeof classSet === 'string') {
             const toConvertClassSet = libraryList[classSet] || null;
             if (!toConvertClassSet) { return };
@@ -80,16 +84,24 @@ const control_UI_engine = {
 
     },
 
+    createID_function(id_code, htmlDOM) {
+        //console.log(id_code, htmlDOM);
+        if (!id_code) { return };
+        htmlDOM.id = id_code;
+        //console.log(htmlDOM);
+        return;
+    },
+
     addDatasetProperty(dataKey, htmlDOM) {
         if (!dataKey || !htmlDOM) { return };
-        console.log(dataKey, htmlDOM);
+        //console.log(dataKey, htmlDOM);
 
         htmlDOM.dataset.action = dataKey;
 
     },
 
     generate_a_htmlTag(htmlTag) {
-        console.log(htmlTag);
+        //console.log(htmlTag);
         if (!htmlTag) { return; }
         const htmlDOM = document.createElement(htmlTag);
         if (htmlDOM) { htmlDOM.classList = ''; };
@@ -101,27 +113,41 @@ const control_UI_engine = {
         console.log(metaHTML_object, parentDom);
 
         metaHTML_object.forEach((metaHTML_object) => {
-            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, dataset: dataKey = null, id_name = null, children = null, srcObject = null, createText: text = null } = metaHTML_object;
+            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, id_code = null, dataset: dataKey = null, id_name = null, children = null, srcObject = null, createText: text = null, UI_DisplayActive = null, functionName = null, functionEvent = null } = metaHTML_object;
+
+            let copyChildren = structuredClone(children);
+            if (functionName && functionEvent) {
+                console.log(UI_DisplayActive, functionName, functionEvent);
+                if (typeof libraryList[functionName][functionEvent] === 'function') {
+                    console.log(copyChildren);
+                    copyChildren = libraryList[functionName][functionEvent](UI_DisplayActive, functionName);
+                    
+                };
+            };
 
             const htmlDOM = this.generate_a_htmlTag(htmlTag);
             this.add_classSetting(htmlDOM, classSet, addClassList);
+            this.createID_function(id_code, htmlDOM);
             this.addDatasetProperty(dataKey, htmlDOM);
-            console.log(htmlDOM);
+            //console.log(htmlDOM);
             this.add_srcFunction(srcObject, htmlDOM);
             this.createText_function(htmlDOM, text);
             this.appendChild_function(parentDom, htmlDOM);
-            if (!children) { return };
-            console.log(children);
-            if (!Array.isArray(children)) { Array(children); };
-            this.renderingEngine_UI(children, htmlDOM);
 
-        })
+
+
+            if (!copyChildren) { return };
+            //console.log(children);
+            if (!Array.isArray(copyChildren)) { Array(copyChildren); };
+            this.renderingEngine_UI(copyChildren, htmlDOM);
+
+        });
 
     },
 
     controlEngine(bodyGame, parentBody) {
         // sie soll sicher gehen das es immer ein Array ist und wenn es ein Object ist soll sie es in ein array umwandelen
-        console.log(bodyGame, parentBody);
+        //console.log(bodyGame, parentBody);
 
         if (!Array.isArray(bodyGame) && typeof bodyGame === 'object') { Array(bodyGame); };
 

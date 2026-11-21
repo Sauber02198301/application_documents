@@ -132,101 +132,37 @@ body {
     border-top: solid 1px #0000008e;
     grid-area: main;
     grid-template-areas:
-        'headingGame headingGame headingGame'
-        'leftSideGame mainGame rightSideGame'
-        'leftSideGame footerGame rightSideGame'
+        'headingSection headingSection headingSection'
+        'leftSideSection displayArea rightSideSection'
+        'footerSection footerSection footerSection'
     ;
-    grid-template-columns: 140px 1fr 140px;
-    grid-template-rows: 80px 1fr 100px;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 20px 1fr 20px;
 }
 
-.gamingHeader {
-    grid-area: headingGame;
-    /*justify-content: center;*/
+.browserMainHeader {
+    grid-area: headingSection;
 }
 
-.gamingHeaderStyle {
-    background-image: linear-gradient(15deg, #c0c0c0, #138781, #7b98ac);
+.browserLeftSide {
+    grid-area: leftSideSection;
 }
 
-.displayZone {
-    /*justify-content: space-evenly;*/
-    align-items: center;
-    /*padding: 0 1em;*/
+.displaySection {
+    grid-area: displayArea;
+    grid-template-rows: 100px 1fr 75px;
 }
 
-.gameHeading {
-    justify-content: flex-start;
+.browserRightSide {
+    grid-area: rightSideSection;
 }
 
-.headingGameTxt {
-    padding-left: 0.5em;
+.introBrowserFooter {
+    justify-content: space-around;
 }
 
-.score {
-    justify-content: space-evenly;
-    background-color: #0000007a;
-    height: 100%;
-}
-
-.scoreZone {
-    background-color: #0000087c;
-    padding: 0.7em;
-}
-
-.freeGameScore {
-    background-color: #0000087c;
-    padding: 0.7em;
-    gap: 4px;
-}
-
-.leftSide_poker {
-    grid-area: leftSideGame;
-}
-
-.imgLeft,
-.imgRight {
-    width: 140px;
-}
-
-.rightSide_poker {
-    grid-area: rightSideGame;
-}
-
-.display_flex_gambling {
-    grid-area: mainGame;
-    background-color: #000000c4;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-}
-
-.valueDisplay {
-    background-color: #ffffff;
-    padding: 0.7em;
-    border: solid 2px #000000;
-    border-radius: 20px;
-}
-
-.cardContainer {
-    align-self: center;
-    justify-self: center;
-}
-
-.card_img {
-    height: 100%;
-    width: 250px;
-    border: solid 2px #000000;
-    border-radius: 15px;
-}
-
-.footerGame {
-    grid-area: footerGame;
-}
-
-.footerGameStyle {
-    background-image: url(game_img/footerTakeToo.jpeg);
-    background-size: cover;
+.browserMainFooter {
+    grid-area: footerSection;
 }
 
 .footer_section {

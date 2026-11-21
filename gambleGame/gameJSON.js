@@ -193,6 +193,144 @@ const bodyGame = [
         "children": [
             {
                 "createElement": "header",
+                "classList": ["flex_row", "mainHeader", "browserMainHeader"],
+                "addClassList": "mobilMainHeader",
+                "id_code": "headerMain"
+            },
+            {
+                "createElement": "div",
+                "classList": ["flex_row", "leftSide", "browserLeftSide"],
+                "addClassList": "mobilLeftSide",
+                "id_code": "leftSideMain"
+            },
+            {
+                "createElement": "div",
+                "classList": ["grid", "displaySection", "outputStyle"],
+                "id_code": "displayMain",
+                "UI_DisplayActive": { "UI_control": "displayActive", "active": true, "children": "introContent"},
+                "functionName": "UI_DISPLAY_area",
+                "functionEvent": "UI_controlDisplay"
+            },
+            {
+                "createElement": "div",
+                "classList": ["flex_row", "rightSide", "browserRightSide"],
+                "addClassList": "mobilMainRightSide",
+                "id_code": "rightSideMain"
+            },
+            {
+                "createElement": "footer",
+                "classList": ["flex_row", "mainFooter", "browserMainFooter"],
+                "addClassList": "mobilMainFooter",
+                "id_code": "footerMain"
+            }
+
+        ]
+    },  //main_parent 
+    {
+        "createElement": "footer",
+        "classList": ["flex_row", "footer_section", "footer_style"],
+        "addClassList": ["footer_appControl"],
+        "children": [
+            {
+                "createElement": "div",
+                "classList": ["flex_row", "btnTextBox", "textBoxStyle"],
+                "addClassList": ["kontakt_section"],
+                "children": [
+                    {
+                        "createElement": "span",
+                        "classList": ["display_block", "font_family_game", "footerText"],
+                        "addClassList": ["contactTextStyle"],
+                        "createText": "Kontakt"
+                    },
+                    {
+                        "createElement": "span",
+                        "classList": ["display_block", "material-symbols-outlined", "footerText"],
+                        "addClassList": ["contactTextStyle"],
+                        "createText": "contacts_product"
+                    }
+                ]
+            },
+            {
+                "createElement": "div",
+                "classList": ["flex_row", "btnTextBox", "textBoxStyle"],
+                "addClassList": ["kontakt_section"],
+                "children": [
+                    {
+                        "createElement": "span",
+                        "classList": ["display_block", "font_family_game", "footerText"],
+                        "addClassList": ["contactTextStyle"],
+                        "createText": "Impressum"
+                    },
+                    {
+                        "createElement": "span",
+                        "classList": ["display_block", "material-symbols-outlined", "footerText"],
+                        "addClassList": ["contactTextStyle"],
+                        "createText": "format_paragraph"
+                    }
+                ]
+            }
+        ]
+
+    }   //footer_parent
+];
+
+
+const cardSet = {
+
+    "slotZero": [
+        {
+            "card": "🂮",
+        }
+    ]
+
+};
+
+
+/*
+
+    span_content, h1 or other else text propertys from HTML5: 
+        {
+            "createElement": "",
+            "classList": ["display_block", "font_family_game"],
+            "addClassList": [""],
+            "createText": ""
+        }
+        this ist the object for icon's it give from google or fa fastyle icon's
+        google: "material-symbols-outlined", 
+        fa_icon: "fa...keyword..." or "fa" and the keyword is initiation with textCreater
+
+    ;
+    div_content, header, main this is a universal Object for create a htmlDom object:
+        {
+            "createElement": "",
+            "classList": [""],
+            "addClassList": [""],
+            "children": []
+        }
+    ;
+
+
+    gedanken zur meiner btnFabrik
+
+        functionEvent: "btnCreateFactory"
+
+        objectProperty: {
+                            //btnProperty's
+                            "classList": [""]    //hier konnte man auch einen anderen property Name benutzen
+                            "addClassList": [""]    //nur so waren alle gleich dies wurde die lesbarkeit foerdern 
+                            "dataset": "valueName"        
+                            "textChildren": {
+                                                "createText"["0", "1", .....u.s.w],    //takt geber und classList & addClassList sollen nur immer gecolont werden. 
+                                                "classList": [""],
+                                                "addClassList": [""],
+                                           
+                                            }   
+                        }
+
+
+                        "children": [
+            {
+                "createElement": "header",
                 "classList": ["flex_column", "gamingHeader", "gamingHeaderStyle"],
                 "addClassList": ["score_displayArea"],
                 "children": [
@@ -391,7 +529,7 @@ const bodyGame = [
                             }
                         ],
                     },
-                    /*{
+                    {
                         "createElement": "div",
                         "classList": ["flex_column", "valueDisplay"],
                         "addClassList": ["boxRight"],
@@ -410,7 +548,7 @@ const bodyGame = [
                                 ]
                             }
                         ]
-                    },*/
+                    },
                     // mit vier display einheiten arbeiten oder nur mit drei?! Genauso welche spiellogik baue ich auf ein.
                     // Hier habe ich keine ahnung ich hatte mal multi multi von merkur als Automat hier kann man ja die art spiel 
                     //prinzip kopieren nur ich weis nicht wie es rechtlich aus sieht an sich ist das prinzip einfsch drei gleiche 
@@ -447,106 +585,5 @@ const bodyGame = [
                 "id_set": "id_footerGame"
             }
         ]
-    },  //main_parent 
-    {
-        "createElement": "footer",
-        "classList": ["flex_row", "footer_section", "footer_style"],
-        "addClassList": ["footer_appControl"],
-        "children": [
-            {
-                "createElement": "div",
-                "classList": ["flex_row", "btnTextBox", "textBoxStyle"],
-                "addClassList": ["kontakt_section"],
-                "children": [
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "font_family_game", "footerText"],
-                        "addClassList": ["contactTextStyle"],
-                        "createText": "Kontakt"
-                    },
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "material-symbols-outlined", "footerText"],
-                        "addClassList": ["contactTextStyle"],
-                        "createText": "contacts_product"
-                    }
-                ]
-            },
-            {
-                "createElement": "div",
-                "classList": ["flex_row", "btnTextBox", "textBoxStyle"],
-                "addClassList": ["kontakt_section"],
-                "children": [
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "font_family_game", "footerText"],
-                        "addClassList": ["contactTextStyle"],
-                        "createText": "Impressum"
-                    },
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "material-symbols-outlined", "footerText"],
-                        "addClassList": ["contactTextStyle"],
-                        "createText": "format_paragraph"
-                    }
-                ]
-            }
-        ]
-
-    }   //footer_parent
-];
-
-
-const cardSet = {
-
-    "slotZero": [
-        {
-            "card": "🂮",
-        }
-    ]
-
-};
-
-
-/*
-
-    span_content, h1 or other else text propertys from HTML5: 
-        {
-            "createElement": "",
-            "classList": ["display_block", "font_family_game"],
-            "addClassList": [""],
-            "createText": ""
-        }
-        this ist the object for icon's it give from google or fa fastyle icon's
-        google: "material-symbols-outlined", 
-        fa_icon: "fa...keyword..." or "fa" and the keyword is initiation with textCreater
-
-    ;
-    div_content, header, main this is a universal Object for create a htmlDom object:
-        {
-            "createElement": "",
-            "classList": [""],
-            "addClassList": [""],
-            "children": []
-        }
-    ;
-
-
-    gedanken zur meiner btnFabrik
-
-        functionEvent: "btnCreateFactory"
-
-        objectProperty: {
-                            //btnProperty's
-                            "classList": [""]    //hier konnte man auch einen anderen property Name benutzen
-                            "addClassList": [""]    //nur so waren alle gleich dies wurde die lesbarkeit foerdern 
-                            "dataset": "valueName"        
-                            "textChildren": {
-                                                "createText"["0", "1", .....u.s.w],    //takt geber und classList & addClassList sollen nur immer gecolont werden. 
-                                                "classList": [""],
-                                                "addClassList": [""],
-                                           
-                                            }   
-                        }
 
 */
