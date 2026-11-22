@@ -1,14 +1,23 @@
 
-
 const UI_DISPLAY_area = {
 
+    displayContentActive: {
+        introSideActive: true,
+        pokerGameActive: true,
+        testOne: false,
+        testTwo: true
+    },
+
+    displayMain: null,
     displayActive: false,
 
-    UI_controlDisplay(metaObject, objectName) {
+    UI_controlDisplay(metaObject, objectName, htmlDOM) {
 
         const { UI_control, active, children } = metaObject;
-
+        console.log(UI_control, active, children, htmlDOM);
+        if (!this.displayMain) { this.displayMain = htmlDOM };
         if (!libraryUI[objectName][UI_control]) {
+            console.log(UI_control, active, children);
             libraryUI[objectName][UI_control] = active;
             // ist dies true entweder gleich ein object zum auswerten mitgeben oder spater ueberpruefen ob der displayDom active ist.
             if (!children) {
@@ -24,8 +33,40 @@ const UI_DISPLAY_area = {
             //hier muss ich den dom loeschen lassen. Wenn ein neues Object dafuer geladen werden soll wieder an die render function senden.
         };
         console.log(UI_control, active, libraryUI[objectName][UI_control], libraryUI[children], htmlDOM);
+    },
 
+    deleteFunction(domContainer, childObject) {
 
+        if (!domContainer) { return };
+
+        const displayDom = domContainer;
+
+        if (displayDom.innerHTML.trim() !== '') {
+            displayDom.innerHTML = '';
+            if (!childObject) { return };
+
+        } else {
+
+        };
+    },
+
+    initialisierungsFunction(keyCode, valueCode) {
+
+        Object.entries(this.displayContentActive).forEach(([contentKey, contentValue]) => {
+            console.log(contentKey, contentValue);
+            if (contentKey !== keyCode) {
+                if (contentValue === valueCode) {
+                    this.displayContentActive[contentKey] = false;
+                    //this.deleteFunction(this.displayMain);
+                };
+            } else {
+                if (!contentValue && valueCode) {
+                    this.displayContentActive[keyCode] = valueCode;
+                };
+            };
+            console.log(this.displayContentActive);
+
+        });
     },
 
 };
@@ -35,26 +76,34 @@ const creatorTextArea = {
     copyCounterObject: null,
     objectCopy: null,
 
+
     checkLibraryFunction(object4Search) {
-        console.log(object4Search);
         object4Search.introText = libraryUI[object4Search.introText];
-        console.log(object4Search);
     },
-    
-    controlIntroArea(content) {
-        console.log(content);
-        if (!content) { return};
+
+    controlIntroArea(content, name, booleanValue) {
+        console.log(content, booleanValue);
+        if (!content) { return };
+
+        const { introSideActive } = booleanValue;
+
+        if (!introSideActive) {
+            return;
+        } else {
+            Object.entries(booleanValue).forEach(([KeyCode, valueCode]) => UI_DISPLAY_area.initialisierungsFunction(KeyCode, valueCode));
+        };
+
+        if (!UI_DISPLAY_area.displayContentActive.introSideActive) { return }
+
         this.checkLibraryFunction(content);
         if (this.objectCopy === null) { this.objectCopy = structuredClone(content) }
 
         const { introText, indexActive, counterObject, displayID } = this.objectCopy;
-        console.log(introText);
 
         if (!indexActive) {
             this.copyCounterObject = null;
         } else {
             this.copyCounterObject = structuredClone(counterObject);
-            console.log(this.copyCounterObject, introText.length);
             this.copyCounterObject.intro_length = introText.length;
             this.copyCounterObject.displayIDCopy = displayID;
             this.counterFunction();
@@ -63,7 +112,7 @@ const creatorTextArea = {
     },
 
     counterFunction() {
-        console.log(this.copyCounterObject.t_Index);
+        if (!this.copyCounterObject.displayIDCopy) { return };
         const { displayHeader, displayArticle, display_dotBox } = this.copyCounterObject.displayIDCopy;
         const { headerContent: headerElement, textArea } = this.objectCopy.introText[this.copyCounterObject.t_Index];
         this.copyCounterObject.contentText = structuredClone(textArea);
@@ -77,18 +126,15 @@ const creatorTextArea = {
         } else {
             this.dotActiveFunction();
         };
-        
     },
 
-    
+
 
     dotActiveFunction() {
-        let dotBtn = document.querySelectorAll('.dotBtn')[this.copyCounterObject.t_Index];
-        console.log(dotBtn);    
-        if (!this.dotBtnActive) { 
+        const dotBtn = document.querySelectorAll('.dotBtn')[this.copyCounterObject.t_Index];
+        if (!this.copyCounterObject.dotBtnActive) {
             dotBtn.classList.add('dotBtnActive');
             this.copyCounterObject.dotBtnActive = dotBtn;
-
         } else {
             this.copyCounterObject.dotBtnActive.classList.remove('dotBtnActive');
             dotBtn.classList.add('dotBtnActive');
@@ -99,10 +145,10 @@ const creatorTextArea = {
     textAreaCreator(displayArticle) {
 
         const { textArea, classList, addClassList } = this.copyCounterObject.contentText;
-        console.log(classList, addClassList, textArea);
+
         if (this.copyCounterObject.articleTag === null) {
             this.copyCounterObject.articleTag = document.querySelector(`#${displayArticle}`);
-        }
+        };
 
         const pTag = {
             "createElement": "p",
@@ -111,7 +157,7 @@ const creatorTextArea = {
             "createText": null,
         };
 
-        if (this.copyCounterObject.articleTag.innerHTML.trim() !== '') { this.copyCounterObject.articleTag.innerHTML = ''; }
+        if (this.copyCounterObject.articleTag.innerHTML.trim() !== '') { this.copyCounterObject.articleTag.innerHTML = ''; };
 
         textArea.forEach((textArea, i) => {
             const copy_p_tag = structuredClone(pTag);
@@ -127,10 +173,8 @@ const creatorTextArea = {
         if (this.copyCounterObject.headerDisplay === null) { this.copyCounterObject.headerDisplay = document.getElementById(displayHeader); }
 
         if (!this.copyCounterObject.headerDisplay.innerText.trim() !== '') {
-            console.log('this htmlTag is empty');
             this.copyCounterObject.headerDisplay.innerText = headerText;
         } else {
-            console.log('this htmlTag is full');
             this.copyCounterObject.headerDisplay.innerText = '';
             this.copyCounterObject.headerDisplay.innerText = headerText;
         };
@@ -150,7 +194,6 @@ const creatorTextArea = {
         };
 
         for (let i = 0; i < this.copyCounterObject.intro_length; ++i) {
-            console.log(i);
             dot_btn.id_code = String(i);
             const copyDot = structuredClone(dot_btn);
             control_UI_engine.renderingEngine_UI([copyDot], this.copyCounterObject.dotTag);

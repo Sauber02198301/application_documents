@@ -113,21 +113,24 @@ const control_UI_engine = {
         console.log(metaHTML_object, parentDom);
 
         metaHTML_object.forEach((metaHTML_object) => {
-            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, id_code = null, dataset: dataKey = null, id_name = null, children = null, srcObject = null, createText: text = null, UI_DisplayActive = null, functionName = null, functionEvent = null } = metaHTML_object;
+            const { createElement: htmlTag = null, classList: classSet = null, addClassList = null, id_code = null, booleanValue = null, dataset: dataKey = null, id_name = null, children = null, srcObject = null, createText: text = null, UI_DisplayActive = null, functionName = null, functionEvent = null } = metaHTML_object;
 
             let copyChildren = structuredClone(children);
-            if (functionName && functionEvent) {
-                console.log(UI_DisplayActive, functionName, functionEvent);
-                if (typeof libraryList[functionName][functionEvent] === 'function') {
-                    console.log(copyChildren);
-                    copyChildren = libraryList[functionName][functionEvent](UI_DisplayActive, functionName);
-                    
-                };
-            };
+
 
             const htmlDOM = this.generate_a_htmlTag(htmlTag);
             this.add_classSetting(htmlDOM, classSet, addClassList);
             this.createID_function(id_code, htmlDOM);
+
+            if (functionName && functionEvent) {
+                console.log(UI_DisplayActive, functionName, functionEvent);
+                if (typeof libraryList[functionName][functionEvent] === 'function') {
+                    console.log(copyChildren);
+                    copyChildren = libraryList[functionName][functionEvent](UI_DisplayActive, functionName, booleanValue ?? htmlDOM);
+
+                };
+            };
+
             this.addDatasetProperty(dataKey, htmlDOM);
             //console.log(htmlDOM);
             this.add_srcFunction(srcObject, htmlDOM);

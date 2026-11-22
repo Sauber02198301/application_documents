@@ -146,13 +146,14 @@ const introContent = [
                 "contentText": null,
                 "displayIDCopy": null,
                 "dotActive": false,
-                dotBtnActive: null,
+                "dotBtnActive": null,
                 "headerContent": null,
                 "headerDisplay": null,
                 "articleTag": null,
                 "dotTag": null
             }
         },
+        "booleanValue": { "introSideActive": true },
         "functionName": "creatorTextArea",
         "functionEvent": "controlIntroArea"
     }
