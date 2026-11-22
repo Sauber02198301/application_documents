@@ -171,16 +171,16 @@ const bodyGame = [
                 "dataset": "active_dropDown",
                 "children": [
                     {
-                        "createElement": "span",
-                        "classList": ["display_block", "material-symbols-outlined"],
+                        "createElement": "img",
+                        "classList": ["display_block", "pokerChip_navIMG"],
                         "addClassList": ["iconNav"],
-                        "createText": "poker_chip",
+                        "srcObject": "game_img/pokerChip.png",
                     },
                     {
                         "createElement": "span",
                         "classList": ["display_block", "font_family_game"],
                         "addClassList": ["gaming_instruction"],
-                        "createText": "musterIcon",
+                        "createText": "Poker Automat",
                     }
                 ]
             }
@@ -274,16 +274,6 @@ const bodyGame = [
     }   //footer_parent
 ];
 
-
-const cardSet = {
-
-    "slotZero": [
-        {
-            "card": "🂮",
-        }
-    ]
-
-};
 
 
 /*

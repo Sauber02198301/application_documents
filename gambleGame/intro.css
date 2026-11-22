@@ -27,3 +27,28 @@
     line-height: 1.85;
     letter-spacing: 0.125em;
 }
+
+.dotBox_setting {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+}
+
+.dotBtn {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background-color: #add8e6;
+}
+
+.dotBtn:hover {
+    scale: 1.24;
+    background-color: rgb(97, 97, 255);
+}
+
+.dotBtnActive {
+    background-color: rgb(97, 97, 255);
+    scale: 1.18;
+}
