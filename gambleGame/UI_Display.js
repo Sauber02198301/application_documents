@@ -41,12 +41,9 @@ const UI_DISPLAY_area = {
 
         const displayDom = domContainer;
 
-        if (displayDom.innerHTML.trim() !== '') {
+        if (displayDom.innerHTML.trim() === '') {
+            console.log('container ist voll');
             displayDom.innerHTML = '';
-            if (!childObject) { return };
-
-        } else {
-
         };
     },
 
@@ -57,7 +54,7 @@ const UI_DISPLAY_area = {
             if (contentKey !== keyCode) {
                 if (contentValue === valueCode) {
                     this.displayContentActive[contentKey] = false;
-                    //this.deleteFunction(this.displayMain);
+                    this.deleteFunction(this.displayMain);
                 };
             } else {
                 if (!contentValue && valueCode) {
