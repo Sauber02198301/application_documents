@@ -1,579 +1,425 @@
-// Das gefällt mir noch nicht so ich werde die knöpfe im Main bereich platzieren wo auch der Gamble hineinkommt
-//so kann ich auch das Spiel separat auf rufe sowie andere Spiele wie CodeBraeker implementieren. 
-//Sowie spiel Logik vom design trennen. 
-/*"children": [
+
+
+const pokerData = [
     {
-        "createElement": "div",
-        "classList": ["flex_row"],
-        "addClassList": ["div_zero"],
-        "children": [
-            {
-                "createElement": "button",
-                "classList": ["flex_row", "btn", "btn_secondary", "btn_style"],
-                "addClassList": ["btn_login"],
-                "dataset": "login",
-                "children": [
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "material-symbols-outlined"],
-                        "addClassList": ["login_textStyle"],
-                        "createText": "play_arrow"
-                    },
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "font_family_game"],
-                        "addClassList": ["login_textStyle"],
-                        "createText": "Start"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "createElement": "div",
-        "classList": ["flex_column"],
-        "addClassList": ["div_one"],
-        "children": [
-            {
-                "createElement": "button",
-                "classList": ["flex_row", "btn", "btn_secondary", "btn_style"],
-                "addClassList": ["btn_login"],
-                "dataset": "add",
-                "children": [
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "material-symbols-outlined"],
-                        "addClassList": ["login_textStyle"],
-                        "createText": "add"
-                    },
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "font_family_game"],
-                        "addClassList": ["login_textStyle"],
-                        "createText": "Euro"
-                    }
-                ]
-            },
-            {
-                "createElement": "button",
-                "classList": ["flex_row", "btn", "btn_secondary", "btn_style"],
-                "addClassList": ["btn_login"],
-                "dataset": "remove",
-                "children": [
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "material-symbols-outlined"],
-                        "addClassList": ["login_textStyle"],
-                        "createText": "remove"
-                    },
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "font_family_game"],
-                        "addClassList": ["login_textStyle"],
-                        "createText": "Euro"
-                    }
-                ]
-            }
-        ]
+        "UI_DisplayActive": {
+            "UI_control": "pokerGameActive",
+            "active": true,
+            "children": [
+                {
+                    "createElement": "header",
+                    "classList": ["flex_row", "pokerIntroHeader", "pokerIntroHeaderBrowser"],
+                    "addClassList": ["pokerIntroMobil"],
+                    "id_code": "pokerIntroHeader",
+                    "children": [
+                        {
+                            "createElement": "h2",
+                            "classList": ["flex_row", "default_fontProp", "font_family_game"],
+                            "addClassList": ["pokerIntroHeading_h2"],
+                            "id_code": "pokerHeading_ID"
+                        }
+                    ]
+                },
+                {
+                    "createElement": "article",
+                    "classList": ["flex_column", "articlePokerIntro", "articlePokerBrowser"],
+                    "addClassList": ["articlePokerMobil"],
+                    "id_code": "pokerIntroArticle"
+                },
+                {
+                    "createElement": "footer",
+                    "classList": ["flex_row", "pokerIntroFooter", "introPokerBrowserFooter"],
+                    "addClassList": ["introPokerMobilFooter"],
+                    "id_code": "introPokerFooter",
+                    "children": [
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_row", "btnBoxPoker", "boxBrowserStyle"],
+                            "addClassList": ["btnBoxMobilStyle"],
+                            "children": [
+                                {
+                                    "createElement": "button",
+                                    "classList": ["flex_row", "btn", "btnSecondary", "btnSecondStyle"],
+                                    "addClassList": ["btn_sub"],
+                                    "id_code": "poker_btn_sub",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["flex_row", "btnTextStyle", "material-symbols-outlined"],
+                                            "addClassList": ["textZeroBtn"],
+                                            "createText": "skip_previous"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_row", "dotBox_setting", "boxStyle"],
+                            "addClassList": ["dotBox"]
+                        },
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_row", "btnBox", "boxStyle"],
+                            "addClassList": ["btnBoxOne"],
+                            "children": [
+                                {
+                                    "createElement": "button",
+                                    "classList": ["flex_row", "btn", "btnSecondary", "btnSecondStyle"],
+                                    "addClassList": ["btn_Add"],
+                                    "id_code": "btnAdd",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["flex_row", "btnTextStyle", "material-symbols-outlined"],
+                                            "addClassList": ["textZeroBtn"],
+                                            "createText": "skip_next"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
     }
-]*/
 
-/*
-    An sich kann ich dann das Spielprinzip nach und nach dann erweitern der main bereich bleibt clean,
-    die einzelnen games werden dann ueber eine controlUI abgerufen und so das nur eins aktive sein kann.
-    An sich kann ich dann Spiele wie CodeBraker, Snake, einen GambleMachine
-*/
-
-
-const bodyGame = [
-    {
-        "createElement": "header",
-        "classList": ["flex_row", "header_gameBody", "header_style"],
-        "addClassList": ["controlHeader_section_body"],
-        "children": [
-            {
-                "createElement": "div",
-                "classList": ["flex_column", "headingBox", "headingBox_style"],
-                "addClassList": ["div_h_zero"],
-                "children": [
-                    {
-                        "createElement": "h1",
-                        "classList": ["display_block", "default_fontProp", "font_family_game"],
-                        "addClassList": ["h1_headerStyle"],
-                        "createText": "Casino Games"
-                    },
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "font_family_game"],
-                        "addClassList": ["headerTextStyle"],
-                        "createText": "Gambling machine",
-                    }
-                ]
-            },
-            {
-                "createElement": "div",
-                "classList": ["flex_column", "headingBox", "headingBox_style"],
-                "addClassList": ["div_h_one"],
-                "children": [
-                    {
-                        "createElement": "div",
-                        "classList": ["flex_row", "iconBox", "iconBoxStyle"],
-                        "addClassList": ["iconListZero"],
-                        "children": [
-                            {
-                                "createElement": "span",
-                                "classList": ["display_block", "material-symbols-outlined", "logoHeader"],
-                                "addClassList": ["logoZero"],
-                                "createText": "Casino playing_cards"
-                            },
-                            {
-                                "createElement": "span",
-                                "classList": ["display_block", "material-symbols-outlined", "logoHeader"],
-                                "addClassList": ["logoOne"],
-                                "createText": "Casino",
-                            }
-                        ]
-                    },
-                    {
-                        "createElement": "div",
-                        "classList": ["flex_row", "iconBox", "iconBoxStyle"],
-                        "addClassList": ["iconListZero"],
-                        "children": [
-                            {
-                                "createElement": "span",
-                                "classList": ["display_block", "material-symbols-outlined", "logoHeader"],
-                                "addClassList": ["logoZero"],
-                                "createText": "Casino"
-                            },
-                            {
-                                "createElement": "span",
-                                "classList": ["display_block", "material-symbols-outlined", "logoHeader"],
-                                "addClassList": ["logoOne"],
-                                "createText": "playing_cards Casino"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },  //header_parent
-    {
-        "createElement": "nav",
-        "classList": ["flex_row", "nav_gameList", "nav_style"],
-        "addClassList": ["control_nav_body"],
-        "children": [
-            // hier baue ich eine automatische btn_createrFabrik so brauche ich nicht immer btn oder span schreiben
-            // eine zwei ebenen Prinzip 1. die btn_propertys vergeben mit destructering
-            {
-                "createElement": "button",
-                "classList": ["flex_column", "btn", "primaryBtn", "primaryBtn_style"],
-                "addClassList": ["gameList"],
-                "dataset": "active_dropDown",
-                "children": [
-                    {
-                        "createElement": "img",
-                        "classList": ["display_block", "pokerChip_navIMG"],
-                        "addClassList": ["iconNav"],
-                        "srcObject": "game_img/pokerChip.png",
-                    },
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "font_family_game"],
-                        "addClassList": ["gaming_instruction"],
-                        "createText": "Poker Automat",
-                    }
-                ]
-            }
-        ]
-    },  //nav_parent 
-    {
-        "createElement": "main",
-        "classList": ["grid", "grid_property", "main_section", "main_sectionStyle"],
-        "addClassList": ["hallo"],
-        "children": [
-            {
-                "createElement": "header",
-                "classList": ["flex_row", "mainHeader", "browserMainHeader"],
-                "addClassList": "mobilMainHeader",
-                "id_code": "headerMain"
-            },
-            {
-                "createElement": "div",
-                "classList": ["flex_row", "leftSide", "browserLeftSide"],
-                "addClassList": "mobilLeftSide",
-                "id_code": "leftSideMain"
-            },
-            {
-                "createElement": "div",
-                "classList": ["grid", "displaySection", "outputStyle"],
-                "id_code": "displayMain",
-                "UI_DisplayActive": { "UI_control": "displayActive", "active": true, "children": "introContent"},
-                "functionName": "UI_DISPLAY_area",
-                "functionEvent": "UI_controlDisplay"
-            },
-            {
-                "createElement": "div",
-                "classList": ["flex_row", "rightSide", "browserRightSide"],
-                "addClassList": "mobilMainRightSide",
-                "id_code": "rightSideMain"
-            },
-            {
-                "createElement": "footer",
-                "classList": ["flex_row", "mainFooter", "browserMainFooter"],
-                "addClassList": "mobilMainFooter",
-                "id_code": "footerMain"
-            }
-
-        ]
-    },  //main_parent 
-    {
-        "createElement": "footer",
-        "classList": ["flex_row", "footer_section", "footer_style"],
-        "addClassList": ["footer_appControl"],
-        "children": [
-            {
-                "createElement": "div",
-                "classList": ["flex_row", "btnTextBox", "textBoxStyle"],
-                "addClassList": ["kontakt_section"],
-                "children": [
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "font_family_game", "footerText"],
-                        "addClassList": ["contactTextStyle"],
-                        "createText": "Kontakt"
-                    },
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "material-symbols-outlined", "footerText"],
-                        "addClassList": ["contactTextStyle"],
-                        "createText": "contacts_product"
-                    }
-                ]
-            },
-            {
-                "createElement": "div",
-                "classList": ["flex_row", "btnTextBox", "textBoxStyle"],
-                "addClassList": ["kontakt_section"],
-                "children": [
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "font_family_game", "footerText"],
-                        "addClassList": ["contactTextStyle"],
-                        "createText": "Impressum"
-                    },
-                    {
-                        "createElement": "span",
-                        "classList": ["display_block", "material-symbols-outlined", "footerText"],
-                        "addClassList": ["contactTextStyle"],
-                        "createText": "format_paragraph"
-                    }
-                ]
-            }
-        ]
-
-    }   //footer_parent
 ];
 
+// object with all section
 
+const mainData = {
 
-/*
-
-    span_content, h1 or other else text propertys from HTML5: 
+    "introTextDocuments": [
         {
-            "createElement": "",
-            "classList": ["display_block", "font_family_game"],
-            "addClassList": [""],
-            "createText": ""
-        }
-        this ist the object for icon's it give from google or fa fastyle icon's
-        google: "material-symbols-outlined", 
-        fa_icon: "fa...keyword..." or "fa" and the keyword is initiation with textCreater
-
-    ;
-    div_content, header, main this is a universal Object for create a htmlDom object:
-        {
-            "createElement": "",
-            "classList": [""],
-            "addClassList": [""],
-            "children": []
-        }
-    ;
-
-
-    gedanken zur meiner btnFabrik
-
-        functionEvent: "btnCreateFactory"
-
-        objectProperty: {
-                            //btnProperty's
-                            "classList": [""]    //hier konnte man auch einen anderen property Name benutzen
-                            "addClassList": [""]    //nur so waren alle gleich dies wurde die lesbarkeit foerdern 
-                            "dataset": "valueName"        
-                            "textChildren": {
-                                                "createText"["0", "1", .....u.s.w],    //takt geber und classList & addClassList sollen nur immer gecolont werden. 
-                                                "classList": [""],
-                                                "addClassList": [""],
-                                           
-                                            }   
-                        }
-
-
-                        "children": [
-            {
-                "createElement": "header",
-                "classList": ["flex_column", "gamingHeader", "gamingHeaderStyle"],
-                "addClassList": ["score_displayArea"],
-                "children": [
-                    {
-                        "createElement": "div",
-                        "classList": ["flex_row", "displayZone", "displayZoneStyle"],
-                        "addClassList": ["gameHeading"],
-                        "children": [
-                            {
-                                "createElement": "h2",
-                                "classList": ["display_block", "font_family_game"],
-                                "addClassList": ["headingGameTxt"],
-                                "createText": "Wie nenne ich das Spiel??"
-                            }
-                        ]
-                    },
-                    {
-                        "createElement": "div",
-                        "classList": ["flex_row", "displayZone", "displayZoneStyle"],
-                        "addClassList": ["score"],
-                        "children": [
-                            {
-                                "createElement": "div",
-                                "classList": ["flex_row", "displayScoreZone"],
-                                "addClassList": ["scoreZone"],
-                                "children": [
-                                    {
-                                        "createElement": "h3",
-                                        "classList": ["display_block", "font_family_game", "headingGameTxt"],
-                                        "addClassList": ["paymentText"],
-                                        "id_name": "euro",
-                                        "createText": "Guthaben:"
-                                    },
-                                    {
-                                        "createElement": "h3",
-                                        "classList": ["display_block", "font_family_game", "headingGameTxt"],
-                                        "addClassList": ["bigNumber"],
-                                        "id_name": "euro",
-                                        "createText": "10"
-                                    },
-                                    {
-                                        "createElement": "h3",
-                                        "classList": ["display_block", "font_family_game", "headingGameTxt"],
-                                        "addClassList": ["pointFont"],
-                                        "createText": "."
-                                    },
-                                    {
-                                        "createElement": "h3",
-                                        "classList": ["display_block", "font_family_game", "headingGameTxt"],
-                                        "addClassList": ["smallNumber"],
-                                        "id_name": "cent",
-                                        "createText": "00"
-                                    },
-                                    {
-                                        "createElement": "h3",
-                                        "classList": ["display_block", "font_family_game", "headingGameTxt"],
-                                        "addClassList": ["euroText"],
-                                        "createText": "Euro"
-                                    }
-                                ]
-                            },
-                            {
-                                "createElement": "div",
-                                "classList": ["flex_row", "displayScoreZone"],
-                                "addClassList": ["freeGameScore"],
-                                "children": [
-                                    {
-                                        "createElement": "h3",
-                                        "classList": ["display_block", "font_family_game", "headingGameTxt"],
-                                        "addClassList": ["textFreeGame"],
-                                        "createText": "Freispiel:"
-                                    },
-                                    {
-                                        "createElement": "h3",
-                                        "classList": ["display_block", "font_family_game", "headingGameTxt"],
-                                        "addClassList": ["freeGame_score"],
-                                        "id_name": "freeGame",
-                                        "createText": "0"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
+            "headerContent": {
+                "headerText": "Die Idee hinter meinem Poker-Spielautomaten"
             },
-            {
-                "createElement": "div",
-                "classList": ["flex_row", "leftSide_poker", "leftSide_pokerStyle"],
-                "addClassList": ["pictureContainer"],
-                "children": [
-                    {
-                        "createElement": "div",
-                        "classList": ["flex_row", "imgParentLeft", "img_parentStyle"],
-                        "addClassList": ["parentLeftSide"],
-                        "id_set": "parentLeft",
-                        "children": [
-                            {
-                                "createElement": "img",
-                                "classList": ["display_block", "imgLeft", "imgLeftStyle"],
-                                "addClassList": ["leftImg"],
-                                "srcObject": "game_img/Gemini_Generated_Image_7doioh7doioh7doi Kopie.jpeg",
-                            }
-                        ]
-                    }
+            "textArea": {
+                "classList": ["flex_row", "default_fontProp", "font_family_game"],
+                "addClassList": ["text_p"],
+                "textArea": [
+                    "Ursprünglich wollte ich mit einem eigenen Projekt meine Chancen auf einen Praktikumsplatz bei Merkur verbessern. Dafür habe ich verschiedene Spielideen durchdacht. vom klassischen Drei-Walzen-Automaten bis hin zu älteren Merkur-Spielautomaten.",
+                    "Schließlich entschied ich mich für einen Poker-Spielautomaten mit fünf Walzen. Dabei stellte mich besonders die Verteilung der Spielkarten vor eine Herausforderung. Nicht jede Anordnung ermöglichte die gewünschten Pokerkombinationen.",
+                    "Deshalb habe ich ganz klassisch mit Papier gearbeitet, verschiedene Kartenanordnungen ausprobiert und miteinander verglichen. Da ich jede reguläre Spielkarte nur einmal verwenden wollte, musste ich einige Kompromisse eingehen.",
+                    "Meine Lösung besteht aus 60 Positionen auf fünf Walzen, einschließlich Jokern und Leerfeldern. Dadurch konnte ich viele der gewünschten Kartenkombinationen berücksichtigen, auch wenn nicht jede Kombination möglich ist.",
+                    "Als Nächstes folgen die Gestaltung des Spielfeldes und die CSS-Animationen. Fehlendes Wissen werde ich mir dabei Schritt für Schritt aneignen.",
+                    "Mit diesem Projekt möchte ich zeigen, wie ich technische Herausforderungen angehe, selbstständig Lösungswege entwickle, Fehler analysiere und meine bisherigen Lösungen kontinuierlich verbessere."
                 ]
-            },
-            {
-                "createElement": "main",
-                "classList": ["flex_row", "display_flex_gambling", "display_flexStyle"],
-                "addClassList": ["main_displey_gambling"],
-                "children": [
-                    // überlegung ob ich ein canvas hierfür benutze so kann ich einen 9 : 3 display bauen 9 hoch 3 breit
-                    // so kann man auch eine art dreier system bauen. Oben mitte unten über diagonal, horizontal
-                    {
-                        "createElement": "div",
-                        "classList": ["flex_column", "valueDisplay"],
-                        "addClassList": ["boxLeft"],
-                        "children": [
-                            {
-                                "createElement": "div",
-                                "classList": ["flex_column", "cardContainer", "cardBox_style"],
-                                "addClassList": ["cardBox_zero"],
-                                "children": [
-                                    {
-                                        "createElement": "img",
-                                        "classList": ["flex_column", "card_img", "card_imgSettings"],
-                                        "addClassList": ["gamingCard"],
-                                        "srcObject": "game_img/poker_pic/takeToo.png"
-                                    }
-                                ]
-                            }
-
-                        ]
-                    },
-                    {
-                        "createElement": "div",
-                        "classList": ["flex_column", "valueDisplay"],
-                        "addClassList": ["displayZero"],
-                        "id_name": "displayId_zero",
-                        "children": [
-                            {
-                                "createElement": "div",
-                                "classList": ["flex_column", "cardContainer", "cardBox_style"],
-                                "addClassList": ["cardBox_zero"],
-                                "children": [
-                                    {
-                                        "createElement": "img",
-                                        "classList": ["flex_column", "card_img", "card_imgSettings"],
-                                        "addClassList": ["gamingCard"],
-                                        "srcObject": "game_img/poker_heart/herz_dame.png"
-                                    }
-                                ]
-                            }
-
-                        ]
-                    },
-                    {
-                        "createElement": "div",
-                        "classList": ["flex_column", "valueDisplay"],
-                        "addClassList": ["displayOne"],
-                        "id_name": "displayId_one",
-                        "children": [
-                            {
-                                "createElement": "div",
-                                "classList": ["flex_column", "cardContainer", "cardBox_style"],
-                                "addClassList": ["cardBox_one"],
-                                "children": [
-                                    {
-                                        "createElement": "img",
-                                        "classList": ["flex_column", "card_img", "card_imgSettings"],
-                                        "addClassList": ["gamingCard"],
-                                        "srcObject": "game_img/poker_pic/pick_dame_final.png"
-                                    }
-                                ]
-                            }
-                        ],
-                    },
-                    {
-                        "createElement": "div",
-                        "classList": ["flex_column", "valueDisplay"],
-                        "addClassList": ["displayTwo"],
-                        "id_name": "displayId_two",
-                        "children": [
-                            {
-                                "createElement": "div",
-                                "classList": ["flex_column", "cardContainer", "cardBox_style"],
-                                "addClassList": ["cardBox_one"],
-                                "children": [
-                                    {
-                                        "createElement": "img",
-                                        "classList": ["flex_column", "card_img", "card_imgSettings"],
-                                        "addClassList": ["gamingCard"],
-                                        "srcObject": "game_img/poker_pic/jack_pik.png"
-                                    }
-                                ]
-                            }
-                        ],
-                    },
-                    {
-                        "createElement": "div",
-                        "classList": ["flex_column", "valueDisplay"],
-                        "addClassList": ["boxRight"],
-                        "children": [
-                            {
-                                "createElement": "div",
-                                "classList": ["flex_column", "cardContainer", "cardBox_style"],
-                                "addClassList": ["cardBox_one"],
-                                "children": [
-                                    {
-                                        "createElement": "span",
-                                        "classList": ["flex_column", "noto-sans-symbols-2-regular"],
-                                        "addClassList": ["gamingCard"],
-                                        "createText": "🃓"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    // mit vier display einheiten arbeiten oder nur mit drei?! Genauso welche spiellogik baue ich auf ein.
-                    // Hier habe ich keine ahnung ich hatte mal multi multi von merkur als Automat hier kann man ja die art spiel 
-                    //prinzip kopieren nur ich weis nicht wie es rechtlich aus sieht an sich ist das prinzip einfsch drei gleiche 
-                    //sowie eine bestimmte Kombo können dir Punkte bescheren man könnte auch das poker prinzip kopieren mit FullHouse
-                    // straight flash Royal flash, paar, double paar, dies wäre einfach und simple umzusetzten ich muss nur die karten 
-                    // dafur einfugen. 32 karten jeweils 5 displays oder 4 und eine karte gibt man vor, per zufall  
-                ]
-            },
-            {
-                "createElement": "div",
-                "classList": ["flex_row", "rightSide_poker", "rightSide_pokerStyle"],
-                "addClassList": ["pictureContainer"],
-                "children": [
-                    {
-                        "createElement": "div",
-                        "classList": ["flex_row", "imgParentRight", "img_parentStyle"],
-                        "addClassList": ["parentRightSide"],
-                        "id_set": "parentRight",
-                        "children": [
-                            {
-                                "createElement": "img",
-                                "classList": ["display_block", "imgRight", "imgRightStyle"],
-                                "addClassList": ["rightImg"],
-                                "srcObject": "game_img/rightSide.jpeg",
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "createElement": "footer",
-                "classList": ["flex_row", "footerGame", "footerGameStyle"],
-                "addClassList": ["controlFooterGame"],
-                "id_set": "id_footerGame"
             }
-        ]
+        },
+        {
+            "headerContent": {
+                "headerText": "Die Gestaltung der Spielkarten"
+            },
+            "textArea": {
+                "classList": ["flex_row", "default_fontProp", "font_family_game"],
+                "addClassList": ["text_p"],
+                "textArea": [
+                    "Ursprünglich wollte ich für die grafische Darstellung Google Icons verwenden. Diese sahen zwar ansprechend aus, allerdings fehlte mir dabei das typische Poker-Feeling.",
+                    "Deshalb entschied ich mich, einzelne Bildelemente mithilfe künstlicher Intelligenz zu generieren und diese anschließend in Pixelmator Pro zu bearbeiten und zusammenzusetzen.",
+                    "Für die Gestaltung wählte ich einen Barockstil in Verbindung mit einem Flammenhintergrund. Dieses Design soll an moderne Spielautomaten erinnern und symbolisiert das „Spiel mit dem Feuer“. Jede Kartenkategorie erhielt dabei ihren eigenen Farbstil.",
+                    "Meine Stärke liegt darin, eine konkrete Vorstellung vom gewünschten Erscheinungsbild zu entwickeln und diese mit den verfügbaren technischen Möglichkeiten umzusetzen.",
+                    "Da ich sämtliche Projektbereiche selbstständig bearbeite, beschäftige ich mich nicht nur mit der Programmierung, sondern auch mit der grafischen Gestaltung und der Bedienung unterschiedlicher Software. Dadurch erweitere ich kontinuierlich meine technischen und gestalterischen Fähigkeiten."
+                ]
+            }
+        },
+        {
+            "headerContent": {
+                "headerText": "Um zu wachsen, muss man sich selbst kritisch hinterfragen"
+            },
+            "textArea": {
+                "classList": ["flex_row", "default_fontProp", "font_family_game"],
+                "addClassList": ["text_p"],
+                "textArea": [
+                    "Seit dem 1. Januar 2025 beschäftige ich mich intensiv mit JavaScript. Mithilfe von Fachliteratur, englischsprachigen Lernplattformen und eigenen Projekten habe ich mir Schritt für Schritt neue Kenntnisse angeeignet.",
+                    "Von kleinen Anwendungen entwickelte ich mich zunehmend zu umfangreicheren Projekten weiter. Dabei erarbeitete ich mir unter anderem den Umgang mit Objekten, Destructuring, Array-Methoden, rekursiven Funktionen und der dynamischen DOM-Erzeugung.",
+                    "Ich entwickle bewusst mit Vanilla JavaScript und verzichte in diesem Projekt auf zusätzliche Bibliotheken und Frameworks. Mein Ziel ist es, die technischen Zusammenhänge nicht nur anzuwenden, sondern auch grundlegend zu verstehen.",
+                    "Dabei hinterfrage ich regelmäßig meine bisherigen Lösungen. Fehler, Rückschläge und Phasen der Stagnation gehören für mich zum Lernprozess. Sie zeigen mir, an welchen Stellen ich mein Wissen vertiefen und meine Arbeitsweise verbessern kann.",
+                    "Auch deshalb habe ich mich für die Entwicklung eines Poker-Spielautomaten entschieden. Die Kombination aus Spielmechanik, grafischer Gestaltung, Animation und Softwareentwicklung stellt mich vor unterschiedliche Herausforderungen.",
+                    "Für mich steht nicht allein das fertige Ergebnis im Vordergrund, sondern auch die Erfahrung, die ich auf dem Weg dorthin sammle.",
+                    "Es ist die Herausforderung, an der man wächst."
+                ]
+            }
+        }
+    ],
 
-*/
+    "introDomFramework": [
+        {
+            "createElement": "div",
+            "classList": ["grid", "displaySection", "outputStyle"],
+            "addClassList": ["mobilDisplaySection"],
+            "children": [
+                {
+                    "createElement": "header",
+                    "classList": ["flex_row", "introHeader", "introHeaderBrowser"],
+                    "addClassList": ["introMobil"],
+                    "id_code": "introHeader",
+                    "children": [
+                        {
+                            "createElement": "h2",
+                            "classList": ["flex_row", "default_fontProp", "font_family_game"],
+                            "addClassList": ["introHeading_h2"],
+                            "id_code": "heading_ID"
+                        }
+                    ]
+                },
+                {
+                    "createElement": "article",
+                    "classList": ["flex_column", "articleIntro", "articleBrowser"],
+                    "addClassList": ["articleMobil"],
+                    "id_code": "introArticle"
+                },
+                {
+                    "createElement": "footer",
+                    "classList": ["flex_row", "introFooter", "introBrowserFooter"],
+                    "addClassList": ["introMobilFooter"],
+                    "id_code": "introFooter",
+                    "children": [
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_row", "btnBox", "boxStyle"],
+                            "addClassList": ["btnBoxZero"],
+                            "children": [
+                                {
+                                    "createElement": "button",
+                                    "classList": ["flex_row", "btn", "btnSecondary", "btnSecondStyle"],
+                                    "addClassList": ["btn_sub"],
+                                    "id_code": "btn_sub",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["flex_row", "btnTextStyle", "material-symbols-outlined"],
+                                            "addClassList": ["textZeroBtn"],
+                                            "createText": "skip_previous"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_row", "dotBox_setting", "boxStyle"],
+                            "addClassList": ["dotBox"]
+                        },
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_row", "btnBox", "boxStyle"],
+                            "addClassList": ["btnBoxOne"],
+                            "children": [
+                                {
+                                    "createElement": "button",
+                                    "classList": ["flex_row", "btn", "btnSecondary", "btnSecondStyle"],
+                                    "addClassList": ["btn_Add"],
+                                    "id_code": "btnAdd",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["flex_row", "btnTextStyle", "material-symbols-outlined"],
+                                            "addClassList": ["textZeroBtn"],
+                                            "createText": "skip_next"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "UI_DisplayActive": {
+                        "id_code": "introTextDocuments",
+                        "displayID": {
+                            "displayHeader": "heading_ID",
+                            "displayArticle": "introArticle",
+                            "display_dotBox": "dotBox"
+                        },
+                        "indexActive": true,
+                        "counterObject": {
+                            "articleCopy": null,
+                            "t_Index": 0,
+                            "intro_length": null,
+                            "contentText": null,
+                            "displayIDCopy": null,
+                            "dotActive": false,
+                            "dotBtnActive": null,
+                            "headerContent": null,
+                            "headerDisplay": null,
+                            "articleTag": null,
+                            "dotTag": null
+                        }
+                    },
+                    "booleanValue": { "introSideActive": true },
+                    "functionName": "creatorTextArea",
+                    "functionEvent": "controlIntroArea"
+                }
+            ]
+        }
+
+    ],
+
+    "bodyMainFramework": [
+        {
+            "createElement": "header",
+            "classList": ["flex_row", "header_gameBody", "header_style"],
+            "addClassList": ["controlHeader_section_body"],
+            "children": [
+                {
+                    "createElement": "div",
+                    "classList": ["flex_column", "headingBox", "headingBox_style"],
+                    "addClassList": ["div_h_zero"],
+                    "children": [
+                        {
+                            "createElement": "h1",
+                            "classList": ["display_block", "default_fontProp", "font_family_game"],
+                            "addClassList": ["h1_headerStyle"],
+                            "createText": "Casino Games"
+                        },
+                        {
+                            "createElement": "span",
+                            "classList": ["display_block", "font_family_game"],
+                            "addClassList": ["headerTextStyle"],
+                            "createText": "Gambling machine",
+                        }
+                    ]
+                },
+                {
+                    "createElement": "div",
+                    "classList": ["flex_column", "headingBox", "headingBox_style"],
+                    "addClassList": ["div_h_one"],
+                    "children": [
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_row", "iconBox", "iconBoxStyle"],
+                            "addClassList": ["iconListZero"],
+                            "children": [
+                                {
+                                    "createElement": "span",
+                                    "classList": ["display_block", "material-symbols-outlined", "logoHeader"],
+                                    "addClassList": ["logoZero"],
+                                    "createText": "Casino playing_cards"
+                                },
+                                {
+                                    "createElement": "span",
+                                    "classList": ["display_block", "material-symbols-outlined", "logoHeader"],
+                                    "addClassList": ["logoOne"],
+                                    "createText": "Casino",
+                                }
+                            ]
+                        },
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_row", "iconBox", "iconBoxStyle"],
+                            "addClassList": ["iconListZero"],
+                            "children": [
+                                {
+                                    "createElement": "span",
+                                    "classList": ["display_block", "material-symbols-outlined", "logoHeader"],
+                                    "addClassList": ["logoZero"],
+                                    "createText": "Casino"
+                                },
+                                {
+                                    "createElement": "span",
+                                    "classList": ["display_block", "material-symbols-outlined", "logoHeader"],
+                                    "addClassList": ["logoOne"],
+                                    "createText": "playing_cards Casino"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },  //header_parent
+        {
+            "createElement": "nav",
+            "classList": ["flex_row", "nav_gameList", "nav_style"],
+            "addClassList": ["control_nav_body"],
+            "children": [
+                {
+                    "createElement": "button",
+                    "classList": ["flex_column", "btn", "primaryBtn", "primaryBtn_style"],
+                    "addClassList": ["gameList"],
+                    "dataset": "gameStart",
+                    "id_code": "pokerData",
+                    "children": [
+                        {
+                            "createElement": "img",
+                            "classList": ["display_block", "pokerChip_navIMG"],
+                            "addClassList": ["iconNav"],
+                            "srcObject": "game_img/pokerChip.png",
+                        },
+                        {
+                            "createElement": "span",
+                            "classList": ["display_block", "font_family_game"],
+                            "addClassList": ["gaming_instruction"],
+                            "createText": "Poker Automat",
+                        }
+                    ]
+                }
+            ]
+        },  //nav_parent 
+        {
+            "createElement": "main",
+            "classList": ["grid", "grid_property", "main_sectionBrowserBody", "main_section_bodyStyle"],
+            "addClassList": ["mobilMainBody"],
+            "id_code": "displayMainDom",
+            "UI_DisplayActive": { "UI_control": "displayActive", "active": true },
+            "functionName": "UI_DISPLAY_area",
+            "functionEvent": "UI_controlDisplay"
+        },
+        {
+            "createElement": "footer",
+            "classList": ["flex_row", "footer_section", "footer_style"],
+            "addClassList": ["footer_appControl"],
+            "children": [
+                {
+                    "createElement": "div",
+                    "classList": ["flex_row", "btnTextBox", "textBoxStyle"],
+                    "addClassList": ["kontakt_section"],
+                    "children": [
+                        {
+                            "createElement": "span",
+                            "classList": ["display_block", "font_family_game", "footerText"],
+                            "addClassList": ["contactTextStyle"],
+                            "createText": "Kontakt"
+                        },
+                        {
+                            "createElement": "span",
+                            "classList": ["display_block", "material-symbols-outlined", "footerText"],
+                            "addClassList": ["contactTextStyle"],
+                            "createText": "contacts_product"
+                        }
+                    ]
+                },
+                {
+                    "createElement": "div",
+                    "classList": ["flex_row", "btnTextBox", "textBoxStyle"],
+                    "addClassList": ["contakt_section"],
+                    "children": [
+                        {
+                            "createElement": "span",
+                            "classList": ["display_block", "font_family_game", "footerText"],
+                            "addClassList": ["contactTextStyle"],
+                            "createText": "Impressum"
+                        },
+                        {
+                            "createElement": "span",
+                            "classList": ["display_block", "material-symbols-outlined", "footerText"],
+                            "addClassList": ["contactTextStyle"],
+                            "createText": "format_paragraph"
+                        }
+                    ]
+                }
+            ]
+
+        },
+        {
+            "UI_DisplayActive": { "UI_control": "introSideActive", "active": true, "id_code": "introDomFramework" },
+            "functionName": "UI_DISPLAY_area",
+            "functionEvent": "UI_toReadout_function"
+
+        }
+    ]
+
+};
+

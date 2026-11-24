@@ -1,38 +1,53 @@
 
 const UI_DISPLAY_area = {
 
+    displayActive: false,
+    displayMain: null,
+    displayMainDom: null,
+
     displayContentActive: {
-        introSideActive: true,
+        introSideActive: false,
         pokerGameActive: true,
-        testOne: false,
+        testOne: true,
         testTwo: true
     },
 
-    displayMain: null,
-    displayActive: false,
+    checkBooleanFunction(keyNameBoolean, valueBoolean) {
+        console.log(keyNameBoolean, valueBoolean);
+        console.log(this.displayContentActive);
 
-    UI_controlDisplay(metaObject, objectName, htmlDOM) {
+        Object.entries(this.displayContentActive).forEach(([propertyName, propertyValue]) => {
+            //console.log(propertyName, propertyValue);
+            if (propertyName !== keyNameBoolean) {
+                console.log(propertyName, keyNameBoolean);
+                if (propertyValue === valueBoolean) {
+                    this.displayContentActive[propertyName] = false;
+                };
+            } else {
+                if (propertyValue !== valueBoolean) {
+                    console.log(propertyValue, valueBoolean);
+                    this.displayContentActive[keyNameBoolean] = valueBoolean;
+                };
+            };
+
+        });
+        console.log(this.displayContentActive);
+
+    },
+
+    UI_controlDisplay(metaObject, objectName) {
 
         const { UI_control, active, children } = metaObject;
-        console.log(UI_control, active, children, htmlDOM);
-        if (!this.displayMain) { this.displayMain = htmlDOM };
-        if (!libraryUI[objectName][UI_control]) {
-            console.log(UI_control, active, children);
-            libraryUI[objectName][UI_control] = active;
-            // ist dies true entweder gleich ein object zum auswerten mitgeben oder spater ueberpruefen ob der displayDom active ist.
-            if (!children) {
-                console.error('error_404');
-            } else {
-                const checkLibrary = libraryUI[children] || null;
-                if (!checkLibrary) { return; };
-                const createNewArray = structuredClone(libraryUI[children]);
-                return createNewArray
-            }
+        if (typeof UI_DISPLAY_area[UI_control] !== 'boolean') { return }
+        if (UI_DISPLAY_area[UI_control] !== active) {
+            UI_DISPLAY_area[UI_control] = active;
+            if (!this.displayMainDom) {
+                this.displayMainDom = objectName;
+            };
         } else {
-            libraryUI[objectName][UI_control] = false;
-            //hier muss ich den dom loeschen lassen. Wenn ein neues Object dafuer geladen werden soll wieder an die render function senden.
+            UI_DISPLAY_area[UI_control] = active;
+            if (this.displayMainDom) { this.displayMainDom = null; }
         };
-        console.log(UI_control, active, libraryUI[objectName][UI_control], libraryUI[children], htmlDOM);
     },
 
     deleteFunction(domContainer, childObject) {
@@ -66,6 +81,22 @@ const UI_DISPLAY_area = {
         });
     },
 
+    UI_toReadout_function(metaObject, content) {
+
+        if (!Array.isArray(metaObject) && typeof metaObject !== 'object') { return; };
+        console.log(metaObject, content);
+        const { UI_control, active, id_code } = metaObject;
+        console.log(UI_control, active, id_code);
+        this.checkBooleanFunction(UI_control, active);
+        if (this.displayContentActive[UI_control] !== active) { console.error('this_is_not_equal'); };
+
+        const dataObject = mainData[id_code] || null;
+        if (dataObject === null || !parentBody.contains(this.displayMainDom)) { return };
+        console.log(dataObject, parentBody.contains(this.displayMainDom));
+        control_UI_engine.controlEngine(dataObject, this.displayMainDom);
+
+    },
+
 };
 
 const creatorTextArea = {
@@ -74,44 +105,33 @@ const creatorTextArea = {
     objectCopy: null,
 
 
-    checkLibraryFunction(object4Search) {
-        object4Search.introText = libraryUI[object4Search.introText];
-    },
-
-    controlIntroArea(content, name, booleanValue) {
-        console.log(content, booleanValue);
+    controlIntroArea(content, booleanObject) {
+        console.log(content, booleanObject);
         if (!content) { return };
 
-        const { introSideActive } = booleanValue;
-
-        if (!introSideActive) {
-            return;
-        } else {
-            Object.entries(booleanValue).forEach(([KeyCode, valueCode]) => UI_DISPLAY_area.initialisierungsFunction(KeyCode, valueCode));
-        };
-
-        if (!UI_DISPLAY_area.displayContentActive.introSideActive) { return }
-
-        this.checkLibraryFunction(content);
         if (this.objectCopy === null) { this.objectCopy = structuredClone(content) }
-
-        const { introText, indexActive, counterObject, displayID } = this.objectCopy;
-
+        const { id_code, displayID, indexActive, counterObject } = this.objectCopy;
+        console.log(id_code, displayID, indexActive, counterObject);
+        const textDocument = mainData[id_code] || null;
+        console.log(textDocument);
         if (!indexActive) {
             this.copyCounterObject = null;
         } else {
             this.copyCounterObject = structuredClone(counterObject);
-            this.copyCounterObject.intro_length = introText.length;
+            this.copyCounterObject.articleCopy = structuredClone(textDocument);
+            this.copyCounterObject.intro_length = textDocument.length;
             this.copyCounterObject.displayIDCopy = displayID;
             this.counterFunction();
 
         };
+
     },
 
     counterFunction() {
         if (!this.copyCounterObject.displayIDCopy) { return };
         const { displayHeader, displayArticle, display_dotBox } = this.copyCounterObject.displayIDCopy;
-        const { headerContent: headerElement, textArea } = this.objectCopy.introText[this.copyCounterObject.t_Index];
+
+        const { headerContent: headerElement, textArea } = this.copyCounterObject.articleCopy[this.copyCounterObject.t_Index];
         this.copyCounterObject.contentText = structuredClone(textArea);
         this.copyCounterObject.headerContent = structuredClone(headerElement);
 
@@ -200,10 +220,4 @@ const creatorTextArea = {
 
 };
 
-const libraryUI = {
-    "introContent": introContent,
-    "introChild_data": introChild_data,
-    "UI_DISPLAY_area": UI_DISPLAY_area,
-    "creatorTextArea": creatorTextArea,
-};
 

@@ -1,4 +1,7 @@
 @media screen and (max-width: 768px) {
+    .displaySection {
+        gap: 0.4em;
+    }
 
     .introMobil {
         text-align: center;
@@ -9,14 +12,21 @@
     }
 
     .articleBrowser {
+        height: 60dvh;
+        overflow-y: auto;
         justify-self: center;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
-        width: 100%;
+        min-width: 95dvw;
         padding: 0.75em;
         text-align: center;
         margin: 0.5em;
         gap: 1em;
+    }
+
+    .articleIntro {
+        background-color: #000000bb;
+        border-radius: 10px;
     }
 
     .text_p {

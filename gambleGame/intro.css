@@ -1,3 +1,9 @@
+.displaySection {
+    grid-area: displayArea;
+    grid-template-rows: 100px 1fr 75px;
+    background-color: #000000b5;
+}
+
 .introHeaderBrowser {
     justify-content: center;
     align-items: center;
@@ -8,7 +14,7 @@
 }
 
 .articleIntro {
-    background-color: #00000077;
+
     border-radius: 5px;
 }
 
@@ -26,6 +32,14 @@
     font-size: 1.2rem;
     line-height: 1.85;
     letter-spacing: 0.125em;
+}
+
+.introBrowserFooter {
+    justify-content: space-around;
+}
+
+.btnTextStyle {
+    font-size: 2.4rem;
 }
 
 .dotBox_setting {
@@ -49,6 +63,6 @@
 }
 
 .dotBtnActive {
-    background-color: rgb(97, 97, 255);
+    background-color: rgb(9, 9, 183);
     scale: 1.18;
 }

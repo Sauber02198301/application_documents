@@ -14,8 +14,8 @@ html {
 
 body {
     width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
 }
 
 .material-symbols-outlined {
@@ -70,6 +70,14 @@ body {
     justify-content: center;
 }
 
+.gameList:hover {
+    scale: 1.1;
+}
+
+.gameList:active {
+    scale: 0.95;
+}
+
 .login_textStyle {
     font-size: 1.555rem;
     letter-spacing: 2px;
@@ -80,15 +88,15 @@ body {
 }
 
 .body_section {
+    position: static;
+    min-height: 100dvh;
     grid-template-areas:
-        'header header header header'
-        'nav nav nav nav'
-        'main main main main'
-        'main main main main'
-        'footer footer footer footer'
+        'header'
+        'nav'
+        'main'
+        'footer'
     ;
-    grid-template-columns: 160px 1fr auto 100px;
-    grid-template-rows: 150px 120px 1fr 1fr 50px;
+    grid-template-rows: 150px 120px 1fr 50px;
 }
 
 .header_gameBody {
@@ -98,7 +106,8 @@ body {
 }
 
 .header_style {
-    background-image: linear-gradient(13deg, #1a0a84fd, #6967c9, #253bab72, #5f0079cc, #811d9066);
+    background-image: url(game_img/background.png);
+    /*background-image: linear-gradient(13deg, #1a0a84fd, #6967c9, #253bab72, #5f0079cc, #811d9066);*/
     border-bottom: solid 1px #00000054;
 }
 
@@ -106,6 +115,20 @@ body {
     gap: 1em;
     margin: 0.5em;
     justify-content: center;
+}
+
+.headingBox_style {
+    background-color: #000000a9;
+    box-shadow: 5px 5px 5px 0px #ffffff, inset 4px 4px 15px 0px #ffffff, 11px -3px 5px -1px rgba(255, 255, 255, 0);
+    border-radius: 10px;
+}
+
+.div_h_zero {
+    padding: 0.75em;
+}
+
+.iconBoxStyle {
+    margin: 0.5em;
 }
 
 .h1_headerStyle {
@@ -129,41 +152,17 @@ body {
 }
 
 .nav_style {
-    background-image: linear-gradient(100deg, #007d89c7, #88d8de7d, #12599281, #f5f5f549, #f5f5f518);
-    border-right: solid 1px #00000088;
+    background-image: linear-gradient(140deg, #00890d, #9dde88, #129228, #f5f5f5, #129228);
+    border-bottom: solid 1px #919191;
 }
 
-.main_section {
-    border-top: solid 1px #0000008e;
+.main_sectionBrowserBody {
+    background-image: url(game_img/background.png);
+    background-size: contain;
     grid-area: main;
     grid-template-areas:
-        'headingSection headingSection headingSection'
-        'leftSideSection displayArea rightSideSection'
-        'footerSection footerSection footerSection'
+        'displayArea'
     ;
-    grid-template-columns: 50px 1fr 50px;
-    grid-template-rows: 20px 1fr 20px;
-}
-
-.browserMainHeader {
-    grid-area: headingSection;
-}
-
-.browserLeftSide {
-    grid-area: leftSideSection;
-}
-
-.displaySection {
-    grid-area: displayArea;
-    grid-template-rows: 100px 1fr 75px;
-}
-
-.browserRightSide {
-    grid-area: rightSideSection;
-}
-
-.introBrowserFooter {
-    justify-content: space-around;
 }
 
 .browserMainFooter {
@@ -187,6 +186,6 @@ body {
 }
 
 .footer_style {
-    background-image: linear-gradient(40deg, #06c8de, #c0c0c0, #9a8989, #9a8989, #2d8083, #23898d, #c0c0c08c, #06c8de);
-    border-top: solid 1px #000000b2;
+    background-image: linear-gradient(140deg, #00890d, #9dde88, #129228, #f5f5f5, #129228);;
+    border-top: solid 1px #978888;
 }

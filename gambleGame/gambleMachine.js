@@ -101,9 +101,8 @@ const gambleMachine = {
 };
 
 const pokerSet = {
-    // das mache ich nochmal wenn ich die karten mal ausgelegt habe dann kann ich besser abschatzen wegen den walzen
-    "rollerZero": [
 
+    "rollerZero": [
         { "srcObject": "game_img/poker_cards/caroTwo.png", "id_code": "caroTwo", "alt_text": "Karo Zwei", "classList": [""], "addClassList": [""] }, // 0 = 1 ... caroTwo
         { "srcObject": "game_img/poker_cards/acePic.png", "id_code": "picAce", "alt_text": "Pik Ass", "classList": [""], "addClassList": [""] }, // 1 = 2 ... picAce
         { "srcObject": "game_img/poker_cards/heartFour.png", "id_code": "heartFour", "alt_text": "Herz Drei", "classList": [""], "addClassList": [""] }, //2 = 3 ... heartFour
@@ -115,11 +114,7 @@ const pokerSet = {
         { "srcObject": "game_img/poker_cards/caroTen.png", "id_code": "caroTen", "alt_text": "Karo Zehn", "classList": [""], "addClassList": [""] }, // caro 10
         { "emptyCont": null }, // emptyContainer
         { "srcObject": "game_img/poker_cards/heart_dame.png", "id_code": "heartDame", "alt_text": "Herz Dame", "classList": [""], "addClassList": [""] }, // heartDame
-        { "srcObject": "game_img/poker_cards/crossKing.png", "id_code": "kingCross", "alt_text": "Kreuz Koenig", "classList": [""], "addClassList": [""] } // kingCross
-/*
-        { "srcObject": "game_img/poker_cards/caroSeven.png", "id_code": "", "alt_text": "Karo Sieben", "classList": [""], "addClassList": [""] }, // 4 = 5 ... caroSeven
-        
-*/        
+        { "srcObject": "game_img/poker_cards/crossKing.png", "id_code": "kingCross", "alt_text": "Kreuz Koenig", "classList": [""], "addClassList": [""] } // kingCross       
     ],
 
     "rollerOne": [
@@ -135,7 +130,6 @@ const pokerSet = {
         { "srcObject": "game_img/poker_cards/jack_heart_card.png", "id_code": "heartJack", "alt_text": "HerzBube", "classList": [""], "addClassList": [""] }, //jackHeart
         { "emptyCont": null }, // emptyContainer
         { "srcObject": "game_img/poker_cards/caroKIng.png", "id_code": "caroKing", "alt_text": "Karo Koenig", "classList": [""], "addClassList": [""] } // picTen
-        
     ],
     
     "rollerTwo": [
@@ -150,8 +144,7 @@ const pokerSet = {
         { "srcObject": "game_img/poker_cards/heartTen.png", "id_code": "heartTen", "alt_text": "Herz zehn", "classList": [""], "addClassList": [""] },
         { "srcObject": "game_img/poker_cards/crossJack.png", "id_code": "crossJack", "alt_text": "Kreuz Bube", "classList": [""], "addClassList": [""] },
         { "srcObject": "game_img/poker_cards/caro_Dame.png", "id_code": "caroDame", "alt_text": "Karo Dame", "classList": [""], "addClassList": [""] },
-        { "srcObject": "game_img/poker_cards/picKing.png", "id_code": "picKing", "alt_text": "Pik Koenig", "classList": [""], "addClassList": [""] },
-        
+        { "srcObject": "game_img/poker_cards/picKing.png", "id_code": "picKing", "alt_text": "Pik Koenig", "classList": [""], "addClassList": [""] }
     ],
     "rollerThree": [
         { "srcObject": "game_img/poker_cards/krossTwo.png", "id_code": "crossTwo", "alt_text": "Kreuz Zwei", "classList": [""], "addClassList": [""] },
@@ -165,8 +158,7 @@ const pokerSet = {
         { "srcObject": "game_img/poker_cards/crossTen.png", "id_code": "crossTen", "alt_text": "Kreuz Zehn", "classList": [""], "addClassList": [""] },
         { "srcObject": "game_img/poker_cards/caroJack.png", "id_code": "caroJack", "alt_text": "Karo Bube", "classList": [""], "addClassList": [""] },
         { "srcObject": "game_img/poker_cards/pik_dame_final.png", "id_code": "picDame", "alt_text": "Pik Dame", "classList": [""], "addClassList": [""] },
-        { "emptyCont": null  },
-        
+        { "emptyCont": null  }
     ],
 
 
@@ -182,8 +174,7 @@ const pokerSet = {
         { "emptyCont": null },
         { "srcObject": "game_img/poker_cards/jack_pik.png", "id_code": "picJack", "alt_text": "Pik Bube", "classList": [""], "addClassList": [""] },
         { "srcObject": "game_img/poker_cards/crossDame.png", "id_code": "crossDame", "alt_text": "Kreuz Dame", "classList": [""], "addClassList": [""] },
-        { "srcObject": "game_img/poker_cards/heart_king.png", "id_code": "heartKing", "alt_text": "Herz Koenig", "classList": [""], "addClassList": [""] },
-        
+        { "srcObject": "game_img/poker_cards/heart_king.png", "id_code": "heartKing", "alt_text": "Herz Koenig", "classList": [""], "addClassList": [""] }
     ]
 
 };
@@ -195,7 +186,7 @@ const cardID = {
     "jokerTwo": {"card": "joker", "cardTyp": "specialCard", "attachaments": true},
     "jokerThree": {"card": "joker", "cardTyp": "specialCard", "attachaments": true},
     //ace
-    "picAce": { "card": "pic", "cardTyp": "ace", "color": "#000", "points": 14, "straightMin": 1 },  // straightMin muss an der WalzeZero geknüpft werden und dann nur als strasse wenn das ass als erstes ist ansonsten 14 hoehste karte
+    "picAce": { "card": "pic", "cardTyp": "ace", "color": "#000", "points": 14, "straightMin": 1 }, 
     "heartAce": { "card": "heart", "cardTyp": "ace", "color": "#f00", "points": 14 },
     "crossAce": { "card": "cross", "cardTyp": "ace", "color": "#000", "points": 14 },
     "caroAce": { "card": "caro", "cardTyp": "ace", "color": "#f00", "points": 14 },
@@ -258,6 +249,5 @@ const cardID = {
     "caroTwo": { "card": "caro", "cardTyp": "two", "color": "#f00", "points": 2 },
     "picTwo": { "card": "pic", "cardTyp": "two", "color": "#000", "points": 2 },
     "crossTwo": { "card": "cross", "cardTyp": "two", "color": "#000", "points": 2 },
-    "heartTwo": { "card": "heart", "cardTyp": "two", "color": "#f00", "points": 2 },
-    // notiz den hexaCode fuer black #000000 & #f00 verwenden
+    "heartTwo": { "card": "heart", "cardTyp": "two", "color": "#f00", "points": 2 }
 };
