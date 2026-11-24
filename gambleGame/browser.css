@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    width: 100%;
+    width: 100wh;
     height: 100vh;
     height: 100dvh;
 }
@@ -89,7 +89,7 @@ body {
 
 .body_section {
     position: static;
-    min-height: 100dvh;
+    max-height: 100vh;
     grid-template-areas:
         'header'
         'nav'

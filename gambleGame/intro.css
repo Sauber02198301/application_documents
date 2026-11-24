@@ -1,6 +1,6 @@
 .displaySection {
     grid-area: displayArea;
-    grid-template-rows: 100px 1fr 75px;
+    grid-template-rows: 80px 1fr 75px;
     background-color: #000000b5;
 }
 

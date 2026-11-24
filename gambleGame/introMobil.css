@@ -24,11 +24,6 @@
         gap: 1em;
     }
 
-    .articleIntro {
-        background-color: #000000bb;
-        border-radius: 10px;
-    }
-
     .text_p {
         font-size: 1.2rem;
         line-height: 1.85;
