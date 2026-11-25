@@ -1,10 +1,15 @@
 .displaySection {
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
     grid-area: displayArea;
-    grid-template-rows: 80px 1fr 75px;
+    grid-template-rows: 80px minmax(0, 1fr) 75px;
     background-image: linear-gradient(42deg, #000000f0, #000000a6, #0000004a, #00000000);
 }
 
 .introHeaderBrowser {
+    max-height: 80px;
+    min-height: 80px;
     justify-content: center;
     align-items: center;
 }
@@ -15,12 +20,13 @@
 
 .articleBrowser {
     justify-self: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 70%;
-    padding: 2em;
+    padding: 1em;
     margin: 0.5em;
     gap: 0.65em;
+    overflow-x: auto;
 }
 
 .text_p {
@@ -29,7 +35,13 @@
     letter-spacing: 0.125em;
 }
 
+.introFooter {
+    background-color: rgba(192, 192, 192, 0.136);
+}
+
 .introBrowserFooter {
+    max-height: 75px;
+    min-height: 75px;
     justify-content: space-around;
 }
 
