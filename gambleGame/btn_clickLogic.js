@@ -16,10 +16,18 @@ parentBody.addEventListener('click', (t) => {
 
             case 'gameStart':
                 console.log(btnPrimaryEvent);
-                const metaObject = libraryList[btnPrimaryEvent.id] || null;
-                if (!metaObject) { return };
-                console.log(metaObject);
+                const activePoker = {
+                    'UI_DisplayActive': {
+                        'UI_control': 'pokerGameActive',
+                        'active': true,
+                        'id_code': String(btnPrimaryEvent.id)
+                    },
+                    "functionName": "UI_DISPLAY_area",
+                    "functionEvent": "UI_toReadout_function"
+                };
 
+
+                UI_DISPLAY_area.btnInputEvaluation(Array(activePoker));
                 break;
             default: break;
         };

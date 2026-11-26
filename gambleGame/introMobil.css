@@ -1,5 +1,5 @@
 @media screen and (max-width: 768px) {
-    .mobilDisplaySection {
+    .mobilDisplaySectionIntro {
         height: 100%;
         overflow: hidden;
         grid-area: displayArea;

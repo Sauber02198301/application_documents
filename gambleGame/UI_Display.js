@@ -7,9 +7,9 @@ const UI_DISPLAY_area = {
 
     displayContentActive: {
         introSideActive: false,
-        pokerGameActive: true,
-        testOne: true,
-        testTwo: true
+        pokerGameActive: false,
+        testOne: false,
+        testTwo: false
     },
 
     checkBooleanFunction(keyNameBoolean, valueBoolean) {
@@ -22,6 +22,7 @@ const UI_DISPLAY_area = {
                 console.log(propertyName, keyNameBoolean);
                 if (propertyValue === valueBoolean) {
                     this.displayContentActive[propertyName] = false;
+                    this.deleteFunction()
                 };
             } else {
                 if (propertyValue !== valueBoolean) {
@@ -50,15 +51,13 @@ const UI_DISPLAY_area = {
         };
     },
 
-    deleteFunction(domContainer, childObject) {
+    deleteFunction() {
+        console.log('hey');
+        if (!this.displayMainDom) { return };
 
-        if (!domContainer) { return };
-
-        const displayDom = domContainer;
-
-        if (displayDom.innerHTML.trim() === '') {
+        if (this.displayMainDom.innerHTML.trim() !== '') {
             console.log('container ist voll');
-            displayDom.innerHTML = '';
+            this.displayMainDom.innerHTML = '';
         };
     },
 
@@ -96,6 +95,14 @@ const UI_DISPLAY_area = {
         control_UI_engine.controlEngine(dataObject, this.displayMainDom);
 
     },
+
+    btnInputEvaluation(code) {
+        console.log(code);
+        if (!this.displayMainDom || !code) { return };
+        console.log(code, this.displayMainDom);
+        control_UI_engine.controlEngine(code, this.displayMainDom);
+
+    }
 
 };
 

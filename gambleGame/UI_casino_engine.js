@@ -4,7 +4,6 @@ const parentBody = document.querySelector('.bodyInput');
 const libraryList = {
     "UI_DISPLAY_area": UI_DISPLAY_area,
     "creatorTextArea": creatorTextArea,
-    "pokerData": pokerData,
 };
 
 const control_UI_engine = {
@@ -91,9 +90,10 @@ const control_UI_engine = {
     },
 
     controlEngine(bodyGame, parentBody) {
+        let arrayCode = null;
 
-        if (!Array.isArray(bodyGame) && typeof bodyGame === 'object') { Array(bodyGame); };
-
+        if (!Array.isArray(bodyGame) && typeof bodyGame === 'object') { arrayCode = Array(bodyGame); };
+        arrayCode = bodyGame
         this.renderingEngine_UI(bodyGame, parentBody);
     }
 

@@ -1,4 +1,4 @@
-.displaySection {
+.browserDisplaySectionIntro {
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -57,6 +57,7 @@
     width: 15px;
     border-radius: 100%;
     background-color: #add8e6;
+    border: 1px solid #000000;
 }
 
 .dotBtn:hover {
@@ -65,6 +66,6 @@
 }
 
 .dotBtnActive {
-    background-color: rgb(9, 9, 183);
+    background-color: #000054;
     scale: 1.18;
 }

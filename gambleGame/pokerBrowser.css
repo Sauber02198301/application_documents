@@ -1,0 +1,8 @@
+.browserPokerDisplaySection {
+    display: grid;
+    grid-area: displayArea;
+    grid-template-rows: 100px 75px minmax(0, 1fr) 100px;
+    background-image: url(game_img/pokerBackground.jpeg);
+    background-size: cover;
+    margin: 1.5em;
+}
