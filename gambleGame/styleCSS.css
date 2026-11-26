@@ -1,0 +1,31 @@
+html,
+body {
+    background-image: linear-gradient(36deg, rgba(6, 6, 98, 0.5), rgba(93, 96, 245, 0.675), rgba(220, 12, 220, 0.806), rgba(6, 6, 98, 0.5));
+}
+
+.header_style {
+    background-image: url(game_img/background.png);
+    /*background-image: linear-gradient(13deg, #1a0a84fd, #6967c9, #253bab72, #5f0079cc, #811d9066);*/
+    border-bottom: solid 1px #00000054;
+}
+
+.headingBox_style {
+    background-color: #000000a9;
+    box-shadow: 5px 5px 5px 0px #ffffff, inset 4px 4px 15px 0px #ffffff, 11px -3px 5px -1px rgba(255, 255, 255, 0);
+    border-radius: 10px;
+}
+
+.nav_style {
+    background-image: linear-gradient(140deg, #00890d, #9dde88, #129228, #f5f5f5, #129228);
+    border-bottom: solid 1px #919191;
+}
+
+.main_section_bodyStyle {
+    background-image: url(game_img/background.png);
+    background-size: cover;
+}
+
+.footer_style {
+    background-image: linear-gradient(140deg, #00890d, #9dde88, #129228, #f5f5f5, #129228);
+    border-top: solid 1px #978888;
+}

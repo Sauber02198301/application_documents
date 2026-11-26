@@ -12,7 +12,6 @@ body {
     height: 100%;
     font-size: 100%;
     overflow-x: hidden;
-    background-image: linear-gradient(36deg, rgba(6, 6, 98, 0.5), rgba(93, 96, 245, 0.675), rgba(220, 12, 220, 0.806), rgba(6, 6, 98, 0.5));
 }
 
 .grid {
@@ -54,12 +53,9 @@ body {
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.881), 0px -1px 0px rgba(0, 0, 0, 0.881), 1px 0px 0px rgba(0, 0, 0, 0.881), -1px 0px 0px rgba(0, 0, 0, 0.881);
 }
 
-.body_section {
+.browserBody_settings {
     position: static;
-    max-height: 100vh;
-    min-height: 100vh;
-    max-height: 100dvh;
-    min-height: 100dvh;
+    height: 100dvh;
     grid-template-areas:
         'header'
         'nav'
@@ -69,38 +65,24 @@ body {
     grid-template-rows: 150px 100px minmax(0, 1fr) 50px;
 }
 
-.header_gameBody {
+.browser_header_sett {
     grid-area: header;
-    max-height: 150px;
-    min-height: 100px;
     justify-content: space-between;
-    padding: 0.5em 1.2em;
+    padding: 1em 1.2em;
 }
 
-.header_style {
-    background-image: url(game_img/background.png);
-    /*background-image: linear-gradient(13deg, #1a0a84fd, #6967c9, #253bab72, #5f0079cc, #811d9066);*/
-    border-bottom: solid 1px #00000054;
-}
-
-.headingBox {
-    gap: 1em;
-    margin: 0.5em;
+.headingBox_browser {
     justify-content: center;
-}
-
-.headingBox_style {
-    background-color: #000000a9;
-    box-shadow: 5px 5px 5px 0px #ffffff, inset 4px 4px 15px 0px #ffffff, 11px -3px 5px -1px rgba(255, 255, 255, 0);
-    border-radius: 10px;
 }
 
 .div_h_zero {
     padding: 0.75em;
+    align-items: center;
 }
 
-.iconBoxStyle {
-    margin: 0.5em;
+.div_h_one {
+    justify-content: space-around;
+    padding: 0.5em;
 }
 
 .h1_headerStyle {
@@ -115,18 +97,11 @@ body {
     font-size: 2.090rem
 }
 
-.nav_gameList {
+.nav_browser_sett {
     grid-area: nav;
     align-items: center;
-    width: 100%;
-    max-height: 100px;
-    min-height: 100px;
-    padding: 0.5em;
-}
-
-.nav_style {
-    background-image: linear-gradient(140deg, #00890d, #9dde88, #129228, #f5f5f5, #129228);
-    border-bottom: solid 1px #919191;
+    position: static;
+    padding: 1em;
 }
 
 .pokerChip_navIMG {
@@ -151,9 +126,6 @@ body {
 }
 
 .main_sectionBrowserBody {
-    height: 100%;
-    background-image: url(game_img/background.png);
-    background-size: contain;
     grid-area: main;
     grid-template-areas:
         'displayArea'
@@ -164,14 +136,11 @@ body {
     grid-area: footerSection;
 }
 
-.footer_section {
+.footer_browser_sett {
     grid-area: footer;
     justify-content: end;
+    align-items: center;
     padding: 0.5em;
     gap: 1.5em;
 }
 
-.footer_style {
-    background-image: linear-gradient(140deg, #00890d, #9dde88, #129228, #f5f5f5, #129228);
-    border-top: solid 1px #978888;
-}

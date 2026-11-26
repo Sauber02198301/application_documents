@@ -4,13 +4,13 @@
     body {
         width: 100dvw;
         min-height: 100dvh;
-        padding-top: env(safe-area-inset-top);
-        padding-bottom: env(safe-area-inset-bottom);
         background-image: linear-gradient(300deg, rgba(6, 6, 98, 0.5), rgba(93, 96, 245, 0.675), rgba(220, 12, 220, 0.806), rgba(6, 6, 98, 0.5));
     }
 
-    .body_section {
-        max-height: 100dvh;
+    .bodyMobil_settings {
+        height: 100dvh;
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
         position: static;
         grid-template-areas:
             'header'
@@ -18,12 +18,11 @@
             'main'
             'footer'
         ;
-        grid-template-rows: 120px 70px 1fr 60px;
+        grid-template-rows: 120px 70px minmax(0, 1fr) 60px;
     }
 
-    .header_gameBody {
-        position: sticky;
-        top: 0;
+    .mobil_header_sett {
+        position: static;
         justify-content: space-between;
         align-items: center;
         grid-area: header;
@@ -31,18 +30,11 @@
         gap: 0.6em;
     }
 
-    .headingBox {
-        gap: 0.5em;
-        margin: 0.3em;
+    .headingBox_mobil {
+        gap: 1.25em;
+        padding: 0.75em;
     }
 
-    .div_h_zero {
-        padding: 0.35em;
-    }
-
-    .iconBoxStyle {
-        margin: 0.2em;
-    }
 
     .h1_headerStyle {
         font-size: 2.020rem;
@@ -52,17 +44,20 @@
         font-size: 1.255rem;
     }
 
+    .div_h_one {
+        margin-right: 0.4em;
+        padding: 0.75em;
+    }
+
     .logoHeader {
         font-size: 1.9rem
     }
 
-    .nav_gameList {
-        position: sticky;
-        top: 100px;
+    .nav_mobil_sett {
+        width: 100%;
+        position: static;
         grid-area: nav;
         align-items: center;
-        width: 100%;
-        height: 100%;
         padding: 0.5em;
     }
 
@@ -95,10 +90,10 @@
         background-size: cover;
     }
 
-    .footer_section {
-        position: sticky;
-        bottom: 0;
+    .footer_mobil_sett {
+        position: static;
         grid-area: footer;
+        align-items: center;
     }
 
     .btn_login:active {

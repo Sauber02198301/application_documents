@@ -154,7 +154,7 @@ const mainData = {
                 {
                     "createElement": "header",
                     "classList": ["flex_row", "introHeader", "introHeaderBrowser"],
-                    "addClassList": ["introMobil"],
+                    "addClassList": ["intro_headerMobil"],
                     "id_code": "introHeader",
                     "children": [
                         {
@@ -261,12 +261,12 @@ const mainData = {
     "bodyMainFramework": [
         {
             "createElement": "header",
-            "classList": ["flex_row", "header_gameBody", "header_style"],
+            "classList": ["flex_row", "browser_header_sett", "mobil_header_sett", "header_style"],
             "addClassList": ["controlHeader_section_body"],
             "children": [
                 {
                     "createElement": "div",
-                    "classList": ["flex_column", "headingBox", "headingBox_style"],
+                    "classList": ["flex_column", "headingBox_browser", "mobil_header_sett", "headingBox_style"],
                     "addClassList": ["div_h_zero"],
                     "children": [
                         {
@@ -285,7 +285,7 @@ const mainData = {
                 },
                 {
                     "createElement": "div",
-                    "classList": ["flex_column", "headingBox", "headingBox_style"],
+                    "classList": ["flex_column", "headingBox_browser", "mobil_header_sett", "headingBox_style"],
                     "addClassList": ["div_h_one"],
                     "children": [
                         {
@@ -332,7 +332,7 @@ const mainData = {
         },  //header_parent
         {
             "createElement": "nav",
-            "classList": ["flex_row", "nav_gameList", "nav_style"],
+            "classList": ["flex_row", "nav_browser_sett", "nav_mobil_sett", "nav_style"],
             "addClassList": ["control_nav_body"],
             "children": [
                 {
@@ -360,8 +360,8 @@ const mainData = {
         },  //nav_parent 
         {
             "createElement": "main",
-            "classList": ["grid", "grid_property", "main_sectionBrowserBody", "main_section_bodyStyle"],
-            "addClassList": ["mobilMainBody"],
+            "classList": ["grid", "grid_property", "main_sectionBrowserBody", "mobilMainBody", "main_section_bodyStyle"],
+            "addClassList": ["control_mainsection"],
             "id_code": "displayMainDom",
             "UI_DisplayActive": { "UI_control": "displayActive", "active": true },
             "functionName": "UI_DISPLAY_area",
@@ -369,8 +369,8 @@ const mainData = {
         },
         {
             "createElement": "footer",
-            "classList": ["flex_row", "footer_section", "footer_style"],
-            "addClassList": ["footer_appControl"],
+            "classList": ["flex_row", "footer_browser_sett", "footer_mobil_sett", "footer_style"],
+            "addClassList": ["footer_Control"],
             "children": [
                 {
                     "createElement": "div",

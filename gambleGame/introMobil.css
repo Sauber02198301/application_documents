@@ -1,18 +1,23 @@
 @media screen and (max-width: 768px) {
-    .displaySection {
-        gap: 0.4em;
+    .mobilDisplaySection {
+        height: 100%;
+        overflow: hidden;
+        grid-area: displayArea;
+        grid-template-rows: 80px minmax(0, 1fr) 65px;
+        background-image: linear-gradient(42deg, #000000f0, #000000a6, #0000004a, #00000000);
     }
 
-    .introMobil {
+    .intro_headerMobil {
         text-align: center;
+        padding: 0.6em;
     }
 
     .introHeading_h2 {
         font-size: 1.8rem;
     }
 
-    .articleBrowser {
-        height: 60dvh;
+    .articleMobil {
+        height: auto;
         overflow-y: auto;
         justify-self: center;
         justify-content: start;
@@ -20,14 +25,17 @@
         min-width: 95dvw;
         padding: 0.75em;
         text-align: center;
-        margin: 0.5em;
-        gap: 1em;
     }
 
     .text_p {
         font-size: 1.2rem;
         line-height: 1.85;
         letter-spacing: 0.125em;
+    }
+
+    .introMobilFooter {
+        justify-content: space-around;
+        align-items: center;
     }
 
     .dotActive {
