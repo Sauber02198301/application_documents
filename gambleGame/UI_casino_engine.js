@@ -4,6 +4,7 @@ const parentBody = document.querySelector('.bodyInput');
 const libraryList = {
     "UI_DISPLAY_area": UI_DISPLAY_area,
     "creatorTextArea": creatorTextArea,
+    "pokerUI_function": pokerUI_function,
 };
 
 const control_UI_engine = {

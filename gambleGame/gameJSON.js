@@ -79,18 +79,18 @@ const mainData = {
     "pokerSet": {
 
         "rollerZero": [
-            { "srcObject": "game_img/poker_cards/caroTwo.png", "id_code": "caroTwo", "alt_text": "Karo Zwei", "classList": [""], "addClassList": [""] }, // 0 = 1 ... caroTwo
-            { "srcObject": "game_img/poker_cards/acePic.png", "id_code": "picAce", "alt_text": "Pik Ass", "classList": [""], "addClassList": [""] }, // 1 = 2 ... picAce
-            { "srcObject": "game_img/poker_cards/heartFour.png", "id_code": "heartFour", "alt_text": "Herz Drei", "classList": [""], "addClassList": [""] }, //2 = 3 ... heartFour
-            { "srcObject": "game_img/poker_cards/crossFive.png", "id_code": "crossFive", "alt_text": "Kreuz Fuenf", "classList": [""], "addClassList": [""] }, // 3 = 4 ... crossFive
-            { "srcObject": "game_img/poker_cards/caroSix.png", "id_code": "caroSix", "alt_text": "Karo Sechs", "classList": [""], "addClassList": [""] }, // 4 = 5 ... caroSix
-            { "srcObject": "game_img/poker_cards/joker.png", "id_code": "jokerZero", "alt_text": "Jocker", "classList": [""], "addClassList": [""] }, // 5 = 6 ... joker
-            { "srcObject": "game_img/poker_cards/heartEight.png", "id_code": "heartEight", "alt_text": "Herz Acht", "classList": [""], "addClassList": [""] }, // 6 = 7 ... heartEight
-            { "srcObject": "game_img/poker_cards/crossNine.png", "id_code": "crossNine", "alt_text": "Kreuz Neun", "classList": [""], "addClassList": [""] }, // crossNine
-            { "srcObject": "game_img/poker_cards/caroTen.png", "id_code": "caroTen", "alt_text": "Karo Zehn", "classList": [""], "addClassList": [""] }, // caro 10
-            { "emptyCont": null }, // emptyContainer
-            { "srcObject": "game_img/poker_cards/heart_dame.png", "id_code": "heartDame", "alt_text": "Herz Dame", "classList": [""], "addClassList": [""] }, // heartDame
-            { "srcObject": "game_img/poker_cards/crossKing.png", "id_code": "kingCross", "alt_text": "Kreuz Koenig", "classList": [""], "addClassList": [""] } // kingCross       
+            { "srcObject": "game_img/poker_cards/caroTwo.png", "id_code": "caroTwo", "alt_text": "Karo Zwei", "classList": ["flex_row", "browserPokerCard", "mobilPokerCard"], "addClassList": ["pokerCardStyle"] }, // 0 = 1 ... caroTwo
+            { "srcObject": "game_img/poker_cards/acePic.png", "id_code": "picAce", "alt_text": "Pik Ass", "classList": ["flex_row", "browserPokerCard", "mobilPokerCard"], "addClassList": ["pokerCardStyle"] }, // 1 = 2 ... picAce
+            { "srcObject": "game_img/poker_cards/heartFour.png", "id_code": "heartFour", "alt_text": "Herz Drei", "classList": ["flex_row", "browserPokerCard", "mobilPokerCard"], "addClassList": ["pokerCardStyle"] }, //2 = 3 ... heartFour
+            { "srcObject": "game_img/poker_cards/crossFive.png", "id_code": "crossFive", "alt_text": "Kreuz Fuenf", "classList": ["flex_row", "browserPokerCard", "mobilPokerCard"], "addClassList": ["pokerCardStyle"] }, // 3 = 4 ... crossFive
+            { "srcObject": "game_img/poker_cards/caroSix.png", "id_code": "caroSix", "alt_text": "Karo Sechs", "classList": ["flex_row", "browserPokerCard", "mobilPokerCard"], "addClassList": ["pokerCardStyle"] }, // 4 = 5 ... caroSix
+            { "srcObject": "game_img/poker_cards/joker.png", "id_code": "jokerZero", "alt_text": "Jocker", "classList": ["flex_row", "browserPokerCard", "mobilPokerCard"], "addClassList": ["pokerCardStyle"] }, // 5 = 6 ... joker
+            { "srcObject": "game_img/poker_cards/heartEight.png", "id_code": "heartEight", "alt_text": "Herz Acht", "classList": ["flex_row", "browserPokerCard", "mobilPokerCard"], "addClassList": ["pokerCardStyle"] }, // 6 = 7 ... heartEight
+            { "srcObject": "game_img/poker_cards/crossNine.png", "id_code": "crossNine", "alt_text": "Kreuz Neun", "classList": ["flex_row", "browserPokerCard", "mobilPokerCard"], "addClassList": ["pokerCardStyle"] }, // crossNine
+            { "srcObject": "game_img/poker_cards/caroTen.png", "id_code": "caroTen", "alt_text": "Karo Zehn", "classList": ["flex_row", "browserPokerCard", "mobilPokerCard"], "addClassList": ["pokerCardStyle"] }, // caro 10
+            { "srcObject": null }, // emptyContainer
+            { "srcObject": "game_img/poker_cards/heart_dame.png", "id_code": "heartDame", "alt_text": "Herz Dame", "classList": ["flex_row", "browserPokerCard", "mobilPokerCard"], "addClassList": ["pokerCardStyle"] }, // heartDame
+            { "srcObject": "game_img/poker_cards/crossKing.png", "id_code": "kingCross", "alt_text": "Kreuz Koenig", "classList": ["flex_row", "browserPokerCard", "mobilPokerCard"], "addClassList": ["pokerCardStyle"] } // kingCross       
         ],
 
         "rollerOne": [
@@ -217,7 +217,7 @@ const mainData = {
                                     "createElement": "span",
                                     "classList": ["flex_row", "play-regular", "ewert_defaultSize"],
                                     "addClassList": ["textTotal"],
-                                    "id_code": "textboxOne",
+                                    "id_code": "textDeposit",
                                     "createText": "Guthaben:"
                                 },
                                 {
@@ -230,7 +230,7 @@ const mainData = {
                                             "classList": ["flex_row", "play-regular", "ewert_defaultSize"],
                                             "addClassList": ["textTotal"],
                                             "id_code": "totalMoney",
-                                            "createText": "00.00"
+                                            "createText": "00.00" // platzhalter
                                         }
                                     ]
                                 }
@@ -245,19 +245,19 @@ const mainData = {
                                     "createElement": "span",
                                     "classList": ["flex_row", "play-regular", "ewert_defaultSize"],
                                     "addClassList": ["textTotal"],
-                                    "id_code": "textboxOne",
+                                    "id_code": "textStake",
                                     "createText": "Einsatz:"
                                 },
                                 {
                                     "createElement": "div",
                                     "classList": ["flex_row", "counterMoney", "counterMoneyMobil"],
-                                    "id_code": "moneyTotal",
+                                    "id_code": "output_moneyStake",
                                     "children": [
                                         {
                                             "createElement": "span",
                                             "classList": ["flex_row", "play-regular", "ewert_defaultSize"],
                                             "addClassList": ["textTotal"],
-                                            "id_code": "totalMoney",
+                                            "id_code": "moneyStake",
                                             "createText": "00.50"
                                         }
                                     ]
@@ -273,19 +273,19 @@ const mainData = {
                                     "createElement": "span",
                                     "classList": ["flex_row", "play-regular", "ewert_defaultSize"],
                                     "addClassList": ["textTotal"],
-                                    "id_code": "textboxOne",
+                                    "id_code": "textJoker",
                                     "createText": "Joker:"
                                 },
                                 {
                                     "createElement": "div",
                                     "classList": ["flex_row", "counterMoney", "counterMoneyMobil"],
-                                    "id_code": "moneyTotal",
+                                    "id_code": "jokerSet",
                                     "children": [
                                         {
                                             "createElement": "span",
                                             "classList": ["flex_row", "play-regular", "ewert_defaultSize"],
                                             "addClassList": ["textTotal"],
-                                            "id_code": "totalMoney",
+                                            "id_code": "jokerCounter",
                                             "createText": "0"
                                         }
                                     ]
@@ -304,31 +304,34 @@ const mainData = {
                             "createElement": "div",
                             "classList": ["flex_column", "browserRollSettings", "mobilRollSettings", "rollStyle"],
                             "addClassList": ["addSettings"],
-                            "id_code": "roll_zero",
+                            "id_code": "roll_zeroBox",
+                            "UI_DisplayActive": { "roll": "rollerZero", "libraryName": "pokerSet", "functionPokerEvent": "rollSettFunction", "rollActiveBoolean": "true" },
+                            "functionName": "pokerUI_function",
+                            "functionEvent": "checkInputFunction"
                         },
                         {
                             "createElement": "div",
                             "classList": ["flex_column", "browserRollSettings", "mobilRollSettings", "rollStyle"],
                             "addClassList": ["addSettings"],
-                            "id_code": "roll_One",
+                            "id_code": "roll_OneBox",
                         },
                         {
                             "createElement": "div",
                             "classList": ["flex_column", "browserRollSettings", "mobilRollSettings", "rollStyle"],
                             "addClassList": ["addSettings"],
-                            "id_code": "roll_Two",
+                            "id_code": "roll_TwoBox",
                         },
                         {
                             "createElement": "div",
                             "classList": ["flex_column", "browserRollSettings", "mobilRollSettings", "rollStyle"],
                             "addClassList": ["addSettings"],
-                            "id_code": "roll_Three",
+                            "id_code": "roll_ThreeBox",
                         },
                         {
                             "createElement": "div",
                             "classList": ["flex_column", "browserRollSettings", "mobilRollSettings", "rollStyle"],
                             "addClassList": ["addSettings"],
-                            "id_code": "roll_Four",
+                            "id_code": "roll_FourBox",
                         }
                     ]
 

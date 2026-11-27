@@ -227,4 +227,53 @@ const creatorTextArea = {
 
 };
 
+const pokerGameFuction = {
+
+    booleanRoll: null,
+
+
+};
+
+const pokerUI_function = {
+
+    rollSettFunction(rollSet) {
+        console.log(rollSet);
+        const {srcObject: srcSet = null, id_code, alt_text, classList, addClassList} = rollSet;
+        console.log(srcSet, id_code, alt_text, classList, addClassList);
+
+        if (!srcSet) {return};
+
+        const createObject = {
+            "createElement": "img",
+            "classList": classList,
+            "addClassList": addClassList,
+            "alt_text": alt_text,
+            "id_code": id_code,
+            "srcObject": srcSet
+        };
+        console.log(createObject);
+        return structuredClone(createObject);
+    },
+
+    checkInputFunction(objectProperties) {
+        console.log(objectProperties);
+        const { roll = null, libraryName, functionPokerEvent, rollActiveBoolean = null } = objectProperties;
+        console.log(roll, libraryName, functionPokerEvent, rollActiveBoolean);
+
+        const cardArray = mainData[libraryName][roll] || null;
+        if (!cardArray) { return; };
+        console.log(cardArray);
+
+        const createNewRollArray = [];
+
+        console.log(typeof this[functionPokerEvent] === 'function');
+        if (typeof this[functionPokerEvent] !== 'function') { return };
+
+        cardArray.forEach((cardArray) => createNewRollArray.push(this[functionPokerEvent](cardArray)));
+        console.log(createNewRollArray);
+
+        return structuredClone(createNewRollArray.filter(Boolean));
+    }
+};
+
 
