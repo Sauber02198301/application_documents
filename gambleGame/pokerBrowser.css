@@ -6,3 +6,52 @@
     background-size: cover;
     margin: 1.5em;
 }
+
+.browserPokerHeader {
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px #c9b7b7;
+    background-image: url(game_img/background.png);
+}
+
+.headingParentText_browser {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #220101e5;
+}
+
+.gamePoker_headingText_browser {
+    font-size: 2.955rem;
+    color: #e59600;
+}
+
+.gameCounterPoker_browser {
+    background-color: #000000d3;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textTotal {
+    color: #f0f8ff;
+}
+
+.browserPokerArea {
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    grid-template-rows: minmax(0,1fr);
+    justify-content: space-evenly;
+}
+
+.rollStyle{ 
+    background-color: #f0f8ff;
+}
+
+.browserPoker_footer {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pokerFooterStyle {
+    background-color: #000000d0;
+}

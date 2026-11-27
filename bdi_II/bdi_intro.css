@@ -1,7 +1,7 @@
 .display_section {
     height: 100%;
     padding: 0.4em;
-    margin: 1.3em;
+    overflow-x: auto;
 }
 
 .display_sectionStyle {
@@ -15,8 +15,11 @@
     gap: 1em;
 }
 
+.parentBoxIntro {
+    justify-content: center;
+}
+
 .article_box {
-    margin: 0.9em;
     padding: 0.3em;
     gap: 0.4em;
     border-bottom: solid 1px #00000036;

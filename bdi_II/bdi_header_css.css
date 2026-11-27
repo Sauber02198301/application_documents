@@ -10,9 +10,7 @@
     gap: 1.5em;
     z-index: 2;
     background-image: linear-gradient(93deg, #3792af, #ffffff78);
-    border: solid 1px #008b8b;
-    border-radius: 6px;
-    margin: 1.7em;
+    border-right: solid 1px #008b8b;
 }
 
 .psychiatry_h1_style {

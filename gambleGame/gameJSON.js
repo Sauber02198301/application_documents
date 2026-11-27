@@ -143,7 +143,7 @@ const mainData = {
             { "srcObject": "game_img/poker_cards/picThree.png", "id_code": "picThree", "alt_text": "Pik Drei", "classList": [""], "addClassList": [""] },
             { "srcObject": "game_img/poker_cards/crossFour.png", "id_code": "crossFour", "alt_text": "Kreuz Vier", "classList": [""], "addClassList": [""] },
             { "srcObject": "game_img/poker_cards/heartFive.png", "id_code": "heartFive", "alt_text": "Herz Fuenf", "classList": [""], "addClassList": [""] },
-            { "srcObject": "game_img/poker_cards/joker.png", "id_code": "jokerFour", "alt_text": "Joker", "classList": [""], "addClassList": [""] },
+            { "srcObject": "game_img/poker_cards/joker.png", "id_code": "jokerThree", "alt_text": "Joker", "classList": [""], "addClassList": [""] },
             { "srcObject": "game_img/poker_cards/picSeven.png", "id_code": "picSeven", "alt_text": "Pik Sieben", "classList": [""], "addClassList": [""] },
             { "srcObject": "game_img/poker_cards/crossEight.png", "id_code": "crossEight", "alt_text": "Kreuz Acht", "classList": [""], "addClassList": [""] },
             { "srcObject": "game_img/poker_cards/heartNine.png", "id_code": "heartNine", "alt_text": "Herz Neun", "classList": [""], "addClassList": [""] },
@@ -156,18 +156,6 @@ const mainData = {
 
     "pokerChildFramework": [
         {
-            "display_id": "pokerHeader",
-            "classList": ["block", "pokerFont", "pokerFont_browserSet", "pokerFont_mobilSet"],
-            "headerText": "Poker Fire Explode"
-            // den header noch einen poker style verpassen eine passenden font sowie ein geilen casino hintergrund. 
-            // hier stelle ich mir einen dunklen hintergrund vor mit gestapelten chips.
-        },
-        {
-            "display_id": "counterPoker",
-            // beim counter das gleiche ich brauche den gesamt wert weil das ja um kein echten geld einstz geht wuerde ich hier 20 euro vorgeben 
-            // das heist total, raise, freeGame, insgesamt drei 
-        },
-        {
             "display_id": "pokerMain",
             "classList": ["flex_column", "pokerLumberContainer_browser", "pokerLumberContainer_mobil"],
             "id_code": "lumber",
@@ -178,13 +166,11 @@ const mainData = {
                 { "roll": "rollerThree" },
                 { "roll": "rollerFour" },
             ]
-        },
-        {
-            "display_id": "pokerFooter",
-            // was brauche ich einen einsatz button + & - um den einsatz manuell festzulegen, einen start button man koennte auch einen rollenBrake einbauen
-            // id sub_money & add_raise_money
         }
     ],
+
+    // für spater die doppelten id's beheben sowie eine function schreiben die mir die Karten img einfügt, so muss ich nur die classList einfügen, bei den poker karte jokerFour habe ich in jokerThree umgeändert. 
+    // wenn das steht kommen die Spiellogik zum gelten hier habe ich grob einen aufbau im kopf. guthaben: 20, standart einsatz: 1, manuell einsatz: 0, sowie Joker dann booleans fuer gameOver die kann ich aber an einer controll function setzten der das guthaben überwacht bei jeden zug. oder nach der gewinn auswertung.
 
     "pokerDomFramework": [
         {
@@ -195,21 +181,157 @@ const mainData = {
             "children": [
                 {
                     "createElement": "header",
-                    "classList": ["flex_column", "browserPokerHeader", "mobilPokerHeader"],
+                    "classList": ["flex_row", "browserPokerHeader", "mobilPokerHeader"],
                     "addClassList": ["poker_headerStyle"],
-                    "id_code": "pokerHeader"
+                    "id_code": "pokerHeader",
+                    "children": [
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_row", "headingParentText_browser", "headingParentText_mobil"],
+                            "addClassList": ["centerBox"],
+                            "id_code": "headingText_parent",
+                            "children": [
+                                {
+                                    "createElement": "h2",
+                                    "classList": ["block", "ewert-regular", "ewert_defaultSize"],
+                                    "addClassList": ["gamePoker_headingText_browser", "gamePoker_headingText_mobil"],
+                                    "id_code": "mainPokerHeading",
+                                    "createText": "Poker Fire Explode"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "createElement": "div",
                     "classList": ["flex_row", "gameCounterPoker_browser", "gameCounterPoker_mobil"],
                     "addClassList": ["counterContainer"],
-                    "id_code": "counterPoker"
+                    "id_code": "counterPoker",
+                    "children": [
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_row", "counterMoneyBrowser_box", "counterMoneyMobil_box"],
+                            "addClassList": ["counterMoneySett"],
+                            "children": [
+                                {
+                                    "createElement": "span",
+                                    "classList": ["flex_row", "play-regular", "ewert_defaultSize"],
+                                    "addClassList": ["textTotal"],
+                                    "id_code": "textboxOne",
+                                    "createText": "Guthaben:"
+                                },
+                                {
+                                    "createElement": "div",
+                                    "classList": ["flex_row", "counterMoney", "counterMoneyMobil"],
+                                    "id_code": "moneyTotal",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["flex_row", "play-regular", "ewert_defaultSize"],
+                                            "addClassList": ["textTotal"],
+                                            "id_code": "totalMoney",
+                                            "createText": "00.00"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_row", "counterMoneyBrowser_box", "counterMoneyMobil_box"],
+                            "addClassList": ["counterRaseSett"],
+                            "children": [
+                                {
+                                    "createElement": "span",
+                                    "classList": ["flex_row", "play-regular", "ewert_defaultSize"],
+                                    "addClassList": ["textTotal"],
+                                    "id_code": "textboxOne",
+                                    "createText": "Einsatz:"
+                                },
+                                {
+                                    "createElement": "div",
+                                    "classList": ["flex_row", "counterMoney", "counterMoneyMobil"],
+                                    "id_code": "moneyTotal",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["flex_row", "play-regular", "ewert_defaultSize"],
+                                            "addClassList": ["textTotal"],
+                                            "id_code": "totalMoney",
+                                            "createText": "00.50"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_row", "counterMoneyBrowser_box", "counterMoneyMobil_box"],
+                            "addClassList": ["counterRaseSett"],
+                            "children": [
+                                {
+                                    "createElement": "span",
+                                    "classList": ["flex_row", "play-regular", "ewert_defaultSize"],
+                                    "addClassList": ["textTotal"],
+                                    "id_code": "textboxOne",
+                                    "createText": "Joker:"
+                                },
+                                {
+                                    "createElement": "div",
+                                    "classList": ["flex_row", "counterMoney", "counterMoneyMobil"],
+                                    "id_code": "moneyTotal",
+                                    "children": [
+                                        {
+                                            "createElement": "span",
+                                            "classList": ["flex_row", "play-regular", "ewert_defaultSize"],
+                                            "addClassList": ["textTotal"],
+                                            "id_code": "totalMoney",
+                                            "createText": "0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "createElement": "main",
-                    "classList": ["gird", "browserPokerArea", "mobilPokerArea"],
+                    "classList": ["grid", "browserPokerArea", "mobilPokerArea"],
                     "addClassList": ["pokerMainStyle"],
-                    "id_code": "pokerMain"
+                    "id_code": "pokerMain",
+                    "children": [
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_column", "browserRollSettings", "mobilRollSettings", "rollStyle"],
+                            "addClassList": ["addSettings"],
+                            "id_code": "roll_zero",
+                        },
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_column", "browserRollSettings", "mobilRollSettings", "rollStyle"],
+                            "addClassList": ["addSettings"],
+                            "id_code": "roll_One",
+                        },
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_column", "browserRollSettings", "mobilRollSettings", "rollStyle"],
+                            "addClassList": ["addSettings"],
+                            "id_code": "roll_Two",
+                        },
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_column", "browserRollSettings", "mobilRollSettings", "rollStyle"],
+                            "addClassList": ["addSettings"],
+                            "id_code": "roll_Three",
+                        },
+                        {
+                            "createElement": "div",
+                            "classList": ["flex_column", "browserRollSettings", "mobilRollSettings", "rollStyle"],
+                            "addClassList": ["addSettings"],
+                            "id_code": "roll_Four",
+                        }
+                    ]
+
                 },
                 {
                     "createElement": "footer",

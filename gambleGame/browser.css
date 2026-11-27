@@ -28,6 +28,41 @@ body {
     flex-direction: row;
 }
 
+.rubik-vinyl-regular {
+    font-family: "Rubik Vinyl", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rubik-burned-regular {
+  font-family: "Rubik Burned", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ewert-regular {
+  font-family: "Ewert", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rubik_vinylStyle_standardSize,
+.ewert_defaultSize {
+    font-size: 1.1rem;
+}
+
+.play-regular {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.play-bold {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .display_block {
     display: block;
 }
@@ -143,4 +178,3 @@ body {
     padding: 0.5em;
     gap: 1.5em;
 }
-
